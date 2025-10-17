@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Saiba o que é uma Bronquite, suas causas, principais sintomas, diagnóstico e formas de tratamento e prevenção. Conteúdo educativo da plataforma Observação Clínica." />
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+ <title>O que é uma sinusite e como tratar e prevenir dela | Observação Clínica</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        main { 
+  padding: 30px;
+   }
+
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ========================
+     SEU CONTEÚDO PRINCIPAL
+======================== -->
+<main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+
+    <div class="space-y-6 text-black text-base sm:text-lg">
+      <h1 class="text-2xl font-bold">O que é uma sinusite?</h1>
+<img src="/img/sinusite.webp" alt="TB" class="w-full h-auto rounded-xl shadow-lg">
+<p><strong>Sinusite</strong> é uma inflamação da mucosa que reveste os seios da face: cavidades cheias de ar localizadas ao redor do nariz, olhos e testa.
+Essa inflamação pode ser causada por vírus, bactérias, fungos ou até por alergias.</p>
+<p><strong>Tipos de sinusite</strong> a sinusite é classificada principalmente de acordo com a duração dos sintomas e a causa da inflamação. Ela pode ser aguda, subaguda ou crônica.</p>
+<p><strong>1. Sinusite Aguda</strong> é a forma mais comum e passageira da doença.
+Geralmente, aparece após um resfriado comum ou uma infecção viral das vias respiratórias.</p>
+<p><strong>Causas:</strong> vírus como os da gripe (influenza) ou resfriado (rinovírus). Em alguns casos, pode se tornar bacteriana, quando há acúmulo de muco e infecção secundária.</p>
+<p><strong>Sinais e sintomas</strong></p>
+<ul class="list-disc list-inside">
+<li>Nariz entupido e corrimento nasal espesso (amarelo ou verde).</li>
+<li>Dor e pressão na face (testa, bochechas, ao redor dos olhos).</li>
+<li>Dor de cabeça.</li>
+<li>Febre baixa.</li>
+<li>Tosse, principalmente à noite.</li>
+</ul>
+<p><STRONG>Tratamento da sinusite:</STRONG> geralmente melhora sozinha em 7 a 10 dias.
+Indicado: repouso, hidratação, lavagem nasal com soro fisiológico e uso de analgésicos ou descongestionantes (com orientação médica).
+Antibióticos só são usados se houver suspeita de infecção bacteriana.</p>
+<p><strong>2. Sinusite Subaguda:</strong> é uma forma intermediária, menos comum, em que os sintomas persistem por mais tempo que na aguda, mas ainda não se tornam crônicos.</p>
+<p><strong>Causas da sinusite:</strong> pode surgir após uma sinusite aguda mal curada.
+Infecções bacterianas persistentes.
+Fatores alérgicos que dificultam a recuperação total.</p>
+<p><strong>Sintomas:</strong> os mesmos da sinusite aguda, mas mais prolongados e geralmente menos intensos.
+Pode haver sensação constante de congestão e secreção nasal.</p>
+<p><strong>Tratamento:</strong> desobstrução nasal com soro fisiológico e medicamentos indicados por um médico.
+Em alguns casos, antibióticos de uso prolongado.
+Tratar possíveis alergias associadas.</p>
+</div>
+  <!-- Coluna direita -->
+<div class="space-y-6 font-serif text-black text-lg">
+<p><strong>3. Sinusite Crônica:</strong> é a forma persistente e recorrente da doença.
+A inflamação dura mais de 12 semanas, mesmo com tratamento adequado, ou retorna várias vezes ao ano.</p>
+<p><strong>Causas:</strong> alergias respiratórias (como rinite alérgica).
+Desvio de septo nasal, pólipos nasais ou outras alterações anatômicas.
+Infecções fúngicas ou exposição constante a poluentes.
+Problemas dentários (infecção em dentes superiores pode afetar o seio maxilar).</p>
+<p><strong>Sintomas da Sinusite:</strong> são:</p>
+<ul class="list-disc list-inside">
+<li>Congestão nasal persistente.</li>
+<li>Corrimento nasal espesso contínuo.</li>
+<li>Dor facial leve, mas constante.</li>
+<li>Perda parcial do olfato e paladar.</li>
+<li>Cansaço e sensação de pressão na cabeça.</li>
+</ul>
+<p><strong>Tratamento:</strong> acompanhamento com otorrinolaringologista.
+Uso de corticoides nasais, antialérgicos e lavagens com soro fisiológico.
+Tratamento de alergias e correção de problemas estruturais (como desvio de septo).
+Em casos mais graves, pode ser indicada cirurgia endoscópica para limpar e desobstruir os seios da face.</p>
+<p><strong>Tsransmissão da Sinusite:</strong>: a sinusite em si (a inflamação dos seios da face) não é uma doença diretamente transmissível, ou seja, não se “pega” sinusite de outra pessoa.
+O que pode ser transmitido são os vírus ou bactérias que causam as infecções respiratórias que levam à sinusite.</p>
+<p><strong>1. Transmissão de vírus respiratórios (forma indireta)</strong>: a maioria dos casos de sinusite começa com um resfriado comum ou gripe.
+Esses vírus são altamente contagiosos e se espalham por:</p>
+<ul class="list-disc list-inside">
+<li>Gotículas respiratórias expelidas ao tossir, espirrar ou falar.</li>
+<li>Contato direto com pessoas infectadas (beijos, apertos de mão, abraços).</li>
+<li>Contato indireto com superfícies contaminadas (copos, toalhas).</li>
+</ul>
+<p><strong>2. Transmissão de bactérias:</strong> as sinusites bacterianas geralmente aparecem como complicação de uma sinusite viral.
+Essas bactérias (como Streptococcus pneumoniae, Haemophilus influenzae, entre outras) não costumam ser transmitidas diretamente, pois elas já vivem naturalmente nas vias respiratórias de muitas pessoas.</p>
+<p><strong>3. Sinusite alérgica, fúngica ou crônica:</strong> esses tipos não são contagiosos.
+São causados por fatores internos ou ambientais, como:</p>
+<ul class="list-disc list-inside">
+<li>Alergias respiratórias (pó, mofo, ácaros, poluição).</li>
+<li>Fungos presentes no ar (em pessoas com imunidade baixa).</li>
+<li>Problemas anatômicos (como desvio de septo).</li>
+</ul>
+        <img src="/img/dr.png" alt="Doenças respiratórias" class="w-full h-40 rounded-xl object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Doenças respiratórias</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Informações sobre as principais condições respiratórias, como asma e pneumonia.
+          </p>
+  <a href="/saude-az/doencas-respiratorias.html" class="text-blue-600 text-sm font-bold hover:underline">VER OS TEMAS</a>
+</div>
+   </div>
+  </div>
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+      <p class="font-bold">Compartilhe:</p>
+      <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="social-button email" href="#" id="email-share">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+  </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="/politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="/terms.html" class="hover:text-gray-300">Termos e uso</a>
+  </div>
+</footer>
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+    .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+}
+</script>
+</body>
+</html>

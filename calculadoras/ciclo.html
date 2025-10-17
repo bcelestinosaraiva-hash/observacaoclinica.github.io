@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Aprenda como calcular o ciclo menstrual, identificar suas fases, reconhecer o período fértil e entender a duração média do ciclo. Conteúdo educativo da plataforma Observação Clínica." />
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+  <title>Como calcular o ciclo menstrual e identificar o período fértil | Observação Clínica</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        main { 
+  padding: 30px;
+   }
+
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+
+  /* ======= CALENDÁRIO AJUSTADO ======= */
+.calendar { 
+  margin-top: 20px; 
+  background: #fff; 
+  border-radius: 12px; 
+  padding: 12px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+}
+
+.calendar h4 { 
+  font-size: 16px; 
+  font-weight: bold; 
+  margin-bottom: 10px; 
+  text-align: center; 
+}
+
+.calendar .grid { 
+  display: grid; 
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 4px; 
+}
+
+.calendar .grid div { 
+  padding: 10px; 
+  text-align: center; 
+  font-size: 14px; 
+  border-radius: 6px; 
+  transition: all 0.3s; 
+}
+
+/* ======= CORES DAS DATAS ======= */
+.fertil {
+  background-color: rgb(173, 196, 240);
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid rgb(174, 193, 228);
+}
+
+.ovulacao {
+  background-color: rgb(238, 233, 131);
+  color: #0d0c0c;
+  font-weight: bold;
+  border: 2px solid #eeec94;
+}
+
+.menstruacao {
+  background-color: rgb(238, 145, 145);
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid rgb(243, 147, 147);
+}
+
+/* ======= LEGENDA ======= */
+.legenda {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+}
+.legenda span {
+  display: flex;
+  align-items: center;
+}
+.legenda div {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+.cor-menstruacao { background: rgb(243, 139, 139); }
+.cor-fertil { background: rgb(163, 190, 240); }
+.cor-ovulacao { background: rgba(235, 229, 126, 0.975); }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-400">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+<!-- ========================
+     SEU CONTEÚDO PRINCIPAL
+======================== -->
+
+<main class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-20">
+  <div class="grid md:grid-cols-2 gap-12 items-start space-y-8 font-serif text-black text-lg">
+    <!-- Coluna esquerda -->
+    <div class="space-y-8 font-serif text-black text-lg">
+<h3 class="text-2xl font-bold mt-2 text-center border-b-4 border-green-300 px-4 py-2 block mx-auto w-full">Calculadora de ciclo menstrual</h3>
+<br>É  uma ferramenta digital prática e confiável que utiliza o ciclo menstrual como referência para calcular e prever datas importantes relacionadas ao ciclo menstrual e à gestação.</p> <p>Com base no CM e na duração média do ciclo, ela permite identificar com precisão a próxima menstruação, o período fértil, o dia da ovulação e, em caso de gravidez, a data estimada do parto.<br>
+<br>Esta ferramenta esta composta por 4 funcionalidades que as seguintes: <strong>próxima menstruação </strong>, <strong> período fértil</strong>, <strong> período de ovulação</strong> e <strong>data provável de parto.</strong> É o primeiro dia em que o sangramento menstrual começa no ciclo mais recente. Essa data é usada como referência para calcular. <br>
+      <div class="bg-white border-l-4 border-black p-4 rounded shadow-md">
+  <p><strong>Aviso:</strong> As informações e ferramentas deste site têm caráter educativo e não substituem avaliação médica profissional. Consulte sempre um profissional de saúde.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg max-w-full">
+    <div class="space-y-1">
+      <div>
+  <label for="ultimaMenstruacao">Data da sua última menstruação</label>
+        <input type="date" id="ultimaMenstruacao" class="w-full border rounded p-2">
+      </div>
+      <!-- Duração do Ciclo -->
+      <div>
+        <label for="duracaoCiclo">Duração média do ciclo (em dias):</label>
+        <input type="number" id="duracaoCiclo" value="28" min="20" max="45" class="w-full border rounded p-2">
+      </div>
+      <!-- Botão -->
+      <div>
+  <div class="flex justify-center mt-2">
+<button 
+  onclick="calcularCiclo()" 
+  class="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 inline-block w-auto">CALCULAR</button>
+</div>
+   <!-- Resultado -->
+    <div class="resultado" id="resultado"></div>
+  </div>
+</button>
+  </div>
+  </div>
+          <div class="flex-none w-full relative px-1 sm:px-1 py-1">
+            <img src="/img/ig.jpg" alt="IMC" class="w-full h-45 sm:h-50 md:h-90 object-cover rounded-xl">
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
+              <div class="bg-black bg-opacity-40 rounded-xl px-3 sm:px-6 py-3">
+                <h3 class="text-lg sm:text-2xl font-bold text-white">Calcule a sua idade gestacional</h3>
+                <p class="text-sm sm:text-lg text-white mt-2 mb-3">Sigilo médico</p>
+                <a href="/calculadoras/ideade-gestacional.html"
+                  class="px-4 py-2 bg-orange-500 text-white font-semibold rounded hover:bg-orange-600 transition text-sm sm:text-base">Calcule a sua IG</a>
+              </div>
+
+              </div>
+              </div>
+<p> <strong>O ciclo menstrual</strong> é o período de tempo entre o primeiro dia de sangramento de uma menstruação (DUM) e o dia anterior à próxima menstruação, durante o qual o corpo da mulher se prepara para uma possível gravidez.</p>
+  </div>
+   <div class="space-y-8 font-serif text-black text-lg">
+      <div class="flex justify-center md:block">
+    <img src="/img/calendario.png" alt="calendario menstrual" class="w-full h-auto rounded-xl shadow-lg">
+     </div>
+<p><strong>Importância</strong>: a duração da menstruação ajuda a avaliar a saúde do ciclo menstrual e detectar possíveis alterações hormonais ou problemas ginecológicos.</p>
+ <p><strong>O período fértil:</strong> o intervalo do ciclo menstrual em que a mulher tem maior probabilidade de engravidar, ou seja, os dias em que o óvulo está disponível para ser fecundado pelo espermatozoide.</p>
+<p>A data provável de parto <strong>(DPP):</strong> é uma estimativa da data em que o bebê deve nascer. Ela não é uma data exata, mas um cálculo baseado no ciclo menstrual da gestante ou em exames de imagem (como a ultrassonografia).</p>
+<p>A data provável de concepção <strong> (DPC):</strong> é a estimativa do dia em que ocorreu a fecundação, ou seja, quando o espermatozoide encontrou o óvulo.</p>
+<p><strong>A ovulação:</strong> é o processo natural do ciclo reprodutivo feminino em que o ovário libera um óvulo maduro, tornando possível a fecundação. Esse evento ocorre, em média, uma vez por ciclo menstrual e representa o período de maior fertilidade da mulher.</p>
+<br>Durante a primeira fase do ciclo, os folículos ovarianos começam a se desenvolver sob ação dos hormônios produzidos pela hipófise (principalmente o FSH). Quando um desses folículos atinge a maturidade, ocorre um pico do hormônio LH, que provoca sua ruptura e a consequente liberação do óvulo. <br>
+<br>Esse óvulo é então captado pelas trompas de Falópio, onde pode se encontrar com um espermatozoide e dar início ao processo de concepção. Caso não seja fecundado, ele se desintegra em poucas horas e será eliminado junto ao revestimento do útero durante a menstruação.<br>
+  </div>
+    </div>
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+    <p class="font-bold"> Partilhe:</p>
+    <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="social-button email" href="#" id="email-share">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+    </div>
+      </div>
+        </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+  </div>
+  </div>
+  <!-- Cookie Banner -->
+<div id="cookieConsent" class="cookie-consent hidden">
+  <p>
+    🍪 Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados. Veja nossa <a href="/politicas.html">política de privacidade</a>.
+  </p>
+  <div class="buttons">
+    <button id="acceptCookies">Aceitar</button>
+    <button id="denyCookies">Recusar</button>
+  </div>
+</div>
+<style>
+  .cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    background: linear-gradient(135deg, #3c2457, #080808);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    max-width: 95%;
+  }
+
+  .cookie-consent.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .cookie-consent p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1 1 300px;
+  }
+
+  .cookie-consent a {
+    color: #ffecb3;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+
+  .cookie-consent .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-shrink: 0;
+  }
+
+  .cookie-consent button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  #acceptCookies {
+    background-color: #ffecb3;
+    color: #333;
+  }
+
+  #acceptCookies:hover {
+    background-color: #fafaf9;
+    transform: scale(1.05);
+  }
+
+  #denyCookies {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+
+  #denyCookies:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 50px) {
+    .cookie-consent {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+    .cookie-consent .buttons {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .cookie-consent button {
+      flex: 1;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const consent = document.getElementById("cookieConsent");
+    const acceptBtn = document.getElementById("acceptCookies");
+    const denyBtn = document.getElementById("denyCookies");
+
+    function daysBetween(date1, date2) {
+      return Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+    }
+
+    const consentData = JSON.parse(localStorage.getItem("cookiesConsent") || '{}');
+    const now = new Date();
+
+    if (!consentData.date || daysBetween(new Date(consentData.date), now) > 365) {
+      consent.classList.add("show");
+    }
+
+    function saveConsent(accepted) {
+      localStorage.setItem("cookiesConsent", JSON.stringify({
+        accepted: accepted,
+        date: new Date()
+      }));
+      consent.classList.remove("show");
+    }
+
+    acceptBtn.addEventListener("click", () => saveConsent(true));
+    denyBtn.addEventListener("click", () => saveConsent(false));
+  });
+</script>
+  </div>
+     </main>
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="/politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="/terms.html" class="hover:text-gray-300">Termos e uso</a>
+  </div>
+</footer>
+
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+
+  // Função para criar cookies
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+  // Função para ler cookies
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+    }
+    return "";
+  }
+  // Mostrar banner apenas se cookie não existir
+  window.addEventListener('load', () => {
+    if(getCookie("cookiesAccepted") === "true") {
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+  });
+  // Aceitar cookies
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    setCookie("cookiesAccepted", "true", 365); // cookie válido por 1 ano
+    document.getElementById('cookie-banner').style.display = 'none';
+  });
+  // Menu Mobile
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+// scripts de calculo
+function calcularCiclo() {
+  const dataUltimaStr = document.getElementById("ultimaMenstruacao").value;
+  const duracao = parseInt(document.getElementById("duracaoCiclo").value);
+  const resultadoDiv = document.getElementById("resultado");
+  if (!dataUltimaStr || isNaN(duracao)) {
+    resultadoDiv.innerHTML = "<p>Por favor, preencha todos os campos.</p>";
+    return;
+  }
+  const ultima = new Date(dataUltimaStr);
+  const proxima = new Date(ultima);
+  proxima.setDate(proxima.getDate() + duracao);
+  const ovulacao = new Date(proxima);
+  ovulacao.setDate(ovulacao.getDate() - 14);
+  const periodoInicio = new Date(ovulacao);
+  periodoInicio.setDate(periodoInicio.getDate() - 3);
+  const periodoFim = new Date(ovulacao);
+  periodoFim.setDate(periodoFim.getDate() + 3);
+
+  const parto = new Date(ovulacao);
+  parto.setDate(parto.getDate() + 280);
+
+  const format = (d, showYear = true) => d.toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    ...(showYear && { year: 'numeric' })
+  });
+
+resultadoDiv.innerHTML = `
+  <section class="bg-white p-4 rounded-lg shadow-md space-y-3 text-sm">
+    <h3 class="text-lg font-bold text-black-700">
+      O seu período fértil será de ${format(periodoInicio, false)} a ${format(periodoFim, false)}.
+    </h3>
+    <p>A sua próxima menstruação está prevista para o dia <strong>${format(proxima)}</strong>.</p>
+    <p>Se engravidar neste período, a data prevista para o nascimento do bebê será: <strong>${format(parto)}</strong>.</p>
+    ${gerarCalendario(periodoInicio, periodoFim, ovulacao, proxima)}
+  </section>
+`;
+}
+
+function gerarCalendario(periodoInicio, periodoFim, ovulacao, proximaMenstruacao) {
+  const ano = periodoInicio.getFullYear();
+  const mes = periodoInicio.getMonth();
+  const diasNoMes = new Date(ano, mes + 1, 0).getDate();
+
+  let html = `
+    <div>
+      <h4 class="text-center font-bold mb-1">
+        ${periodoInicio.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })
+          .replace(/^./, str => str.toUpperCase())}
+      </h4>
+      <div class="grid grid-cols-7 gap-1 text-center text-sm sm:text-base">
+        <div class="font-bold">Seg</div>
+        <div class="font-bold">Ter</div>
+        <div class="font-bold">Qua</div>
+        <div class="font-bold">Qui</div>
+        <div class="font-bold">Sex</div>
+        <div class="font-bold">Sáb</div>
+        <div class="font-bold">Dom</div>
+  `;
+  const primeiroDia = new Date(ano, mes, 1).getDay();
+  const offset = (primeiroDia === 0) ? 6 : primeiroDia - 1;
+
+for (let dia = 1; dia <= diasNoMes; dia++) {
+  const data = new Date(ano, mes, dia);
+  let classe = '';
+
+  if (data.toDateString() === proximaMenstruacao.toDateString()) {
+    classe = 'menstruacao'; // prioridade 1
+  } else if (data.toDateString() === ovulacao.toDateString()) {
+    classe = 'ovulacao'; // prioridade 2
+  } else if (data >= periodoInicio && data <= periodoFim) {
+    classe = 'fertil'; // prioridade 3
+  }
+
+  html += `<div class="${classe} p-2 rounded">${dia}</div>`;
+}
+  html += `
+</div>
+<div class="flex justify-around mt-1 text-xs">
+  <span class="flex items-center"><div class="cor-menstruacao w-4 h-4 rounded-full mr-1"></div> Menstruação</span>
+  <span class="flex items-center"><div class="cor-fertil w-4 h-4 rounded-full mr-1"></div> Fértil</span>
+  <span class="flex items-center"><div class="cor-ovulacao w-4 h-4 rounded-full mr-1"></div> Ovulação</span>
+</div>
+</div>
+
+  `;
+  return html;
+}
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+</script>
+</script>
+</body>
+</html>
+
+
+

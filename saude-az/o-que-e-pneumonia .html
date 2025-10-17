@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Saiba como se prevenir, tratatr e as causas da pneumonia sendo uma doença respiratória">
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+  <title>O que e pneumonia? | Observação Clínic</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        
+    .btn-download {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #f2f0f0;
+      background-color: #070707;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+   .btn-container {
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+      margin-top: 40px;        /* espaçamento acima do botão */
+    }
+.banner {
+  width: 100%;
+  height: 70px;
+  background-image: url('img/banner.jpg'); /* 👈 aqui */
+  background-size: cover;
+  background-position: center;
+}
+        main { 
+  padding: 30px;
+   }
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+<!-- ========================
+     SEU CONTEÚDO PRINCIPAL
+======================== -->
+<main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+    <!-- Coluna esquerda -->
+    <div class="space-y-6 text-black text-base sm:text-lg">
+      <h1 class="text-2xl font-bold"> O que é uma pneumonia?</h1>
+      <img src="/img/pneumonia.webp" alt="hipertensao" class="w-full h-auto rounded-xl shadow-lg">  
+<p>A <strong>pneumonia:</strong> é uma infecção nos pulmões que faz com que os alvéolos (pequenas bolsas de ar nos pulmões) fiquem cheios de pus ou líquido. Isso dificulta a respiração e a troca de oxigênio no corpo.</p>
+<p><strong>As causas da pneumonia:</strong>a pneumonia pode ser causada por:</p>
+<ul class="list-disc list-inside">
+<li>Bactérias: como Streptococcus pneumoniae (a mais comum)</li>
+<li>Vírus: como o da gripe ou o coronavírus (COVID-19)</li>
+<li>Fungos: mais comum em pessoas com imunidade baixa</li>
+</ul>
+<p><strong>Principais sintomas e sinais</strong></p>
+<ul class="list-disc list-inside">
+<li>Tosse (seca ou com catarro)</li>
+<li>Febre e calafrios</li>
+<li>Falta de ar ou respiração rápida</li>
+<li>Dor no peito, principalmente ao respirar fundo</li>
+<li>Cansaço e fraqueza</li>
+<p>Em crianças pequenas ou idosos: confusão, sonolência ou falta de apetite</p>
+</ul>
+<p><strong>Prevenção da pneumonia</strong></p>
+<ul class="list-disc list-inside">
+<li>Vacinas (pneumocócica, gripe, COVID-19)</li>
+<li>Lavar bem as mãos</li>
+<li>Evitar fumar</li>
+<li>Manter boa alimentação e hidratação</li>
+</ul>
+<p><strong>Fisiopatologia da Pneumonia</strong>: A pneumonia inicia-se quando micro-organismos, como bactérias ou vírus, alcançam os alvéolos pulmonares e vencem as defesas naturais do trato respiratório. A presença do agente infeccioso provoca uma intensa resposta inflamatória, caracterizada pela liberação de citocinas, recrutamento de neutrófilos e extravasamento de líquidos e proteínas para dentro dos alvéolos. Esse processo leva ao acúmulo de exsudato, tornando o tecido pulmonar pesado e diminuindo a oxigenação sanguínea, o que explica sintomas como febre, tosse e falta de ar.</p>
+<p><strong>Periodo de incubação:</strong> o período de incubação é o tempo entre a entrada do agente infeccioso no organismo e o aparecimento dos primeiros sintomas. Na pneumonia, esse período varia de acordo com o tipo de agente causador:</p>
+<p>1. Pneumonia Bacteriana: Streptococcus pneumoniae: geralmente 1 a 3 dias.
+
+Haemophilus influenzae: cerca de 2 a 4 dias.
+
+Em casos de pneumonia adquirida na comunidade, os sintomas costumam surgir de forma rápida, com febre, calafrios e tosse produtiva.</p>
+<p>2. Pneumonia Viral: Influenza (gripe): 1 a 4 dias.
+
+SARS-CoV-2 (COVID-19): 2 a 14 dias, com média de 5 dias.
+
+O início dos sintomas é geralmente gradual, começando com febre, tosse seca e mal-estar geral.</p>
+<p>3. Pneumonia Fúngica: O período de incubação é mais variável, podendo durar de dias a semanas, dependendo da imunidade do indivíduo e do tipo de fungo.
+
+Pessoas com imunidade comprometida podem apresentar sintomas mais lentos e progressivos.</p>
+<p><strong>Transmissão da Pneumonia:</strong> A pneumonia não é uma doença única, mas sim uma condição causada por diversos agentes infecciosos: bactérias, vírus ou fungos. A forma de transmissão depende do agente envolvido.</p>
+<p class="text-center text-md font-bold mb-2"><strong>Formas de transmissão da Pneumonia</strong></p>
+<div class="max-w-md mx-auto overflow-x-auto rounded-lg shadow-lg border border-gray-200">
+  <table class="min-w-full text-left text-sm">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-3 py-2 text-gray-700 font-bold text-center">Tipos</th>
+        <th class="px-3 py-2 text-gray-700 font-bold text-center">Transmissão</th>
+        <th class="px-3 py-2 text-gray-700 font-bold text-center">Observações</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-blue-300">
+        <td class="px-3 py-2">Bacteriana</td>
+        <td class="px-3 py-2">Gotículas, aspiração de secreções</td>
+        <td class="px-3 py-2">Contato directo</td>
+      </tr>
+      <tr class="bg-green-200">
+        <td class="px-3 py-2">Viral</td>
+        <td class="px-3 py-2">Gotículas, superfícies contaminadas</td>
+        <td class="px-3 py-2">Pode ocorrer antes do início dos sintomas</td>
+      </tr>
+      <tr class="bg-yellow-300">
+        <td class="px-3 py-2">Fúngica</td>
+        <td class="px-3 py-2">Inalação de esporos do ambiente</td>
+        <td class="px-3 py-2">Não se transmite de pessoa para pessoa</td>
+      </tr>
+    </tbody>
+  </table>
+</div>  
+</div>
+  <!-- Coluna direita -->
+<div class="space-y-6 font-serif text-black text-lg">
+<p>Durante sua evolução, a pneumonia passa por quatro fases clássicas: congestão, com vasodilatação e acúmulo inicial de líquido; hepatização vermelha, quando há infiltração de hemácias e fibrina; hepatização cinzenta, marcada pela degradação das células e persistência do exsudato; e, por fim, a resolução, em que os macrófagos removem os detritos e o tecido pulmonar se regenera.</p>
+<p><strong>Complicações da Pneumonia:</strong> a pneumonia, quando não tratada adequadamente ou em casos mais graves, pode gerar várias complicações locais e sistêmicas. Elas decorrem da propagação da infecção ou da resposta inflamatória intensa do organismo.</p>
+<p><strong>Derrame Pleural:</strong> O derrame pleural ocorre quando o processo inflamatório da pneumonia se estende até a pleura, levando ao acúmulo de líquido no espaço pleural. Esse líquido pode ser seroso ou purulento e, quando em grande volume, comprime o pulmão, dificultando a respiração e causando dor torácica. O tratamento depende da gravidade, podendo variar desde antibióticos até drenagem pleural.</p>
+<p><strong>Abscesso Pulmonar:</strong> O abscesso pulmonar ocorre quando uma área do pulmão infectado sofre necrose, formando uma cavidade cheia de pus. É causado principalmente por bactérias piogênicas e se manifesta com tosse produtiva, expectoração purulenta e, às vezes, mau cheiro. O tratamento envolve antibióticos de longo prazo e, em alguns casos, drenagem cirúrgica.</p>
+<p><strong>Bacteremia e Sepse</strong>: Quando as bactérias responsáveis pela pneumonia invadem a corrente sanguínea, ocorre a bacteremia, que pode evoluir para sepse. Nessa situação, o corpo reage com uma inflamação generalizada, levando à queda da pressão arterial, febre alta e disfunção de múltiplos órgãos.</p>
+<p><strong>Insuficiência Respiratória Aguda:</strong> insuficiência respiratória acontece quando os pulmões não conseguem garantir oxigenação adequada ao sangue devido à extensa inflamação alveolar. O indivíduo apresenta respiração acelerada, cianose (coloração azulada da pele) e fadiga intensa. Frequentemente requer oxigenoterapia ou ventilação mecânica até que o quadro pulmonar se resolva.</p>
+<p><strong>Síndrome do Desconforto Respiratório Agudo (SDRA):</strong> A SDRA é uma complicação grave em que há inflamação difusa e permeabilidade aumentada nos capilares pulmonares, levando ao acúmulo de líquido nos alvéolos. O resultado é uma troca gasosa severamente comprometida, com hipoxemia intensa. É uma condição potencialmente fatal, que exige ventilação mecânica e cuidados intensivos rigorosos.</p>
+<p><strong>Tratamento da Pneumonia:</strong> O tratamento da pneumonia tem como objetivo eliminar o agente causador, controlar a inflamação e restabelecer a função respiratória. A abordagem varia conforme a causa (bacteriana, viral ou fúngica), a gravidade dos sintomas e o estado geral do paciente. O diagnóstico precoce e o início rápido da terapia são fundamentais para evitar complicações e acelerar a recuperação.</p>
+<p><strong>Pneumonia Bacteriana:</strong> É tratada com antibióticos, escolhidos de acordo com o provável agente causador e o perfil do paciente. Os medicamentos mais utilizados incluem penicilinas, macrolídeos, cefalosporinas ou quinolonas. Em casos leves, o tratamento pode ser feito em casa, com acompanhamento médico. Já nos casos graves, o paciente é hospitalizado para receber antibióticos por via intravenosa, oxigênio e hidratação venosa.</p>
+<p><strong>Pneumonia Viral:</strong> As pneumonias causadas por vírus, como influenza ou SARS-CoV-2 (COVID-19), geralmente não necessitam de antibióticos, pois esses medicamentos não atuam contra vírus. O tratamento é sintomático, com antitérmicos para controlar a febre, analgésicos para dor e repouso e hidratação. Em alguns casos, podem ser indicados antivirais específicos, como o oseltamivir para gripe ou antivirais para COVID-19, conforme orientação médica.</p>
+<p><strong>Pneumonia Fúngica:</strong> Esse tipo é mais raro e ocorre em pessoas com imunidade baixa. O tratamento é feito com antifúngicos específicos, como anfotericina B ou fluconazol, dependendo do fungo envolvido. Por ser uma forma mais resistente, exige acompanhamento hospitalar e controle rigoroso do sistema imunológico do paciente.</p>
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="/img/asma.png" alt="Diabetes" class="w-full h-40 rounded-xl object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Asma</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Conheça sintomas, causas e cuidados para o controle eficaz de asma.
+          </p>
+          <a href="/saude-az/asma-sintomas-tratamento.html" class="text-blue-600 text-sm font-semibold hover:underline">VER TEMA</a>
+     </div>
+    </div>
+</div>
+</div>
+
+<!-- (todo o seu conteúdo permanece igual aqui) -->
+
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+      <p class="font-bold">Compartilhe:</p>
+      <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="social-button email" href="#" id="email-share">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+  </div>
+  </div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="terms.html" class="hover:text-gray-300">Termos e uso</a>
+</footer>
+
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+    .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+}
+</script>
+</body>
+</html>

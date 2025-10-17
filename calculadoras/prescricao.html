@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Faça prescrições medicas e acompanhe o seu tratamento sendo paciente ou profissional de saude.">
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+<title>Como fazer uma prescrição de medicamentos com base o peso do paciente na Observação clínica</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        
+    .btn-download {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #f2f0f0;
+      background-color: #070707;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+   .btn-container {
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+      margin-top: 40px;        /* espaçamento acima do botão */
+    }
+.banner {
+  width: 100%;
+  height: 70px;
+  background-image: url('img/banner.jpg'); /* 👈 aqui */
+  background-size: cover;
+  background-position: center;
+}
+        main { 
+  padding: 30px;
+   }
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+<main class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-20">
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+ <div class="space-y-10 font-serif text-black text-lg">
+<h2 class="text-2xl font-bold mt-2 text-center border-b-4 border-green-300 px-4 py-2 block mx-auto w-fit">
+  Calculadora de prescrição médica</h2>
+<p>É uma ferramenta de calcular a prescrição médica com forme o esquema posológico local. Onde o profissional e o paciente terá de escolher o tipo de fármaco ou medicamento lembrando que a cada medicamento tem suas respectivas constantes e colocar o seu peso e verá a prescrição.</p>
+      <div class="bg-white border-l-4 border-black p-4 rounded shadow-md">
+  <p><strong>Aviso:</strong> As informações e ferramentas deste site têm caráter educativo e não substituem avaliação médica profissional. Consulte sempre um profissional de saúde.</p>
+</div>        
+<div class="bg-white p-6 rounded-lg  text-black max-w-full">
+        <label class="block mb-2">Escolhe o seu fármacos para calcular.
+          <select id="drug-select" class="w-full border px-2 py-1 rounded">
+            <option value="Artesunato">Artesunato injet. 60 mg</option>
+            <option value="Ceftriaxona">Ceftriaxona injet. 1000 mg</option>
+            <option value="Cloranfenicol">Cloranfenicol 1000 mg</option>
+            <option value="Gentamicina">Gentamicina inject. 80 mg</option>
+            <option value="Paracetamol">Paracetamol injet. 1000 mg</option>
+            <option value="Paracetamol susp">Paracetamol susp. 120 mg</option>
+            <option value="Prazequantel">Prazequantel, comp 600 mg</option>
+             <option value="Penicilina cristalizada">Penicilina cristalizada, Injet. 1.000.000 UI</option>
+            <option value="Diazepam">Diazepam, inject 10 mg/ 2 ml</option>
+            <option value="Metronidazol">Metronidazol, inj. 500 mg/100 ml</option>
+            <option value="Ampicilina">Ampicilina, inj. 500 mg/5 ml</option>
+            <option value="Metronidazol susp">Metronidazol, susp. 200 mg/5 ml</option>
+            <option value="Ibuprofeno susp">Ibuprofeno, susp. 100 mg/5 ml</option>
+            <option value="Cotrimoxazol susp">Cotrimoxazol, susp. 240 mg/5 ml</option>
+            <option value="Azitromicina susp">Azitromicina, susp. 200 mg/5 ml</option>
+            <option value="Eritromicina susp">Eritromicina, susp. 250 mg/5 ml</option>
+          </select>
+        </label>
+        <label class="block mb-2">Peso do paciente (kg)
+          <input id="drug-weight" type="number" value="10" min="0" step="0.1" class="w-full border px-2 py-1 rounded">
+        </label>
+        <div class="text-sm">Constante do fármaco:</div>
+        <div class="result font-semibold" id="drug-constant"> </div>
+        <div class="text-sm">Dose total calculada:</div>
+        <div class="result font-semibold" id="drug-total"> mg</div>
+        <div class="text-sm">Dose por toma:</div>
+        <div class="result font-semibold" id="drug-per-dose"> mg</div>
+        <div class="details text-sm mt-2" id="drug-detail"></div>
+      </div>
+  <p class="bg-white-100 border-l-4 border-blue-500 text-black p-4 rounded shadow-md" role="alert">
+  <strong>Calcule também:</strong><a href="diluicao.html" class="hover:text-gray-400"> Dose conforme  prescrição médica na reconstituição ou diluição.</a></p>
+<br><strong>Dosagem</strong> é a determinação da quantidade exata de um medicamento ou substância que deve ser administrada a um paciente para alcançar um efeito terapêutico desejado de forma segura. Ela leva em conta diversos fatores, como peso, idade, condição clínica, função dos órgãos e via de administração. Por exemplo um paciente que toma <strong>Paracetamol de 500 mg</strong> 8 em 8 horas, a sua dosagem sera de 1500 mg em 24 horaas, isto é 1500 mg divide pela 3 tomas, que é igual a 500 mg.<br>
+<br><strong>Dose</strong> é a quantidade específica de um medicamento ou substância que deve ser administrada de uma vez a um paciente. Ela é apenas uma parte da dosagem total, que também envolve frequência, duração e via de administração, por exemplo: um <strong>Paracetamol cp 500mg</strong> logo a dose é 500mg<br>
+<br><strong>Posologia</strong> é o conjunto de informações sobre como um medicamento deve ser administrado para que seja eficaz e seguro. Ela envolve quantidade, frequência, via e duração do tratamento.<br>
+      </div>
+    <!-- LADO DIREITO: INTRODUÇÃO + IMAGEM + NUTRIÇÃO BÁSICA -->
+    <div class="space-y-8 font-serif text-black text-lg">
+      <div class="flex justify-center md:block">
+    <img src="/img/prescrição.jpg" alt="Observação clínica" class="w-full h-auto rounded-xl shadow-lg">
+     </div>
+     <p>As observações em uma prescrição médica ou cálculo posológico são parte essencial do processo de tratamento, pois complementam as informações principais como dose, frequência, via e duração do medicamento. Elas fornecem orientações práticas que ajudam o paciente a utilizar o fármaco de forma correta e segura, além de dar maior clareza ao profissional de saúde que irá administrar ou acompanhar o uso.</p>
+    <br><strong>O que é intoxicação medicamentosa?</strong><br>
+    <br>É a condição em que a quantidade de um medicamento no organismo ultrapassa os níveis seguros, causando efeitos adversos que podem variar de leves a graves, dependendo do fármaco, da dose e do paciente.<br>
+  <br><strong>Prevenção da intoxicação medicamentosa:</strong> a prevenção da intoxicação medicamentosa é fundamental para garantir que o tratamento seja eficaz e seguro. Pequenos cuidados no momento da prescrição, administração e armazenamento já reduzem significativamente o risco de complicações.<br> 
+<br><strong>1. Calcular sempre a dose com base no peso e/ou idade:</strong> Cada paciente tem características únicas. Crianças, idosos e pessoas com doenças crônicas exigem cálculos específicos. A posologia deve ser ajustada individualmente, considerando peso corporal, idade, função renal e hepática.<br>
+<br><strong>2. Respeitar a dose máxima diária:</strong> Todo medicamento possui um limite seguro de administração em 24 horas. Ultrapassar esse valor pode causar toxicidade, mesmo em pacientes sem fatores de risco. Exemplos clássicos são o paracetamol (máx. 4 g/dia em adultos) e o ibuprofeno (máx. 3,2 g/dia em adultos).<br>
+<br><strong>3. Usar apenas sob prescrição médica:</strong> A automedicação aumenta muito o risco de intoxicação. Apenas o profissional de saúde pode avaliar a indicação correta, dose adequada, duração do tratamento e possíveis interações com outros medicamentos.<br>
+</div>
+</div>
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+    <p class="font-bold"> Partilhe:</p>
+    <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="social-button email" href="#" id="email-share">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+  </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+</div>
+</div>
+<!-- Cookie Banner -->
+<div id="cookieConsent" class="cookie-consent hidden">
+  <p>
+    🍪 Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados. Veja nossa <a href="/politicas.html">política de privacidade</a>.
+  </p>
+  <div class="buttons">
+    <button id="acceptCookies">Aceitar</button>
+    <button id="denyCookies">Recusar</button>
+  </div>
+</div>
+<style>
+  .cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    background: linear-gradient(135deg, #3c2457, #080808);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    max-width: 95%;
+  }
+
+  .cookie-consent.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .cookie-consent p {
+    margin: 0;
+    font-size: 14px;
+    flex: 1 1 300px;
+  }
+
+  .cookie-consent a {
+    color: #ffecb3;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+
+  .cookie-consent .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-shrink: 0;
+  }
+
+  .cookie-consent button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  #acceptCookies {
+    background-color: #ffecb3;
+    color: #333;
+  }
+
+  #acceptCookies:hover {
+    background-color: #fafaf9;
+    transform: scale(1.05);
+  }
+
+  #denyCookies {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+
+  #denyCookies:hover {
+    background-color: #ff3b3b;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 50px) {
+    .cookie-consent {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+    .cookie-consent .buttons {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    .cookie-consent button {
+      flex: 1;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const consent = document.getElementById("cookieConsent");
+    const acceptBtn = document.getElementById("acceptCookies");
+    const denyBtn = document.getElementById("denyCookies");
+
+    function daysBetween(date1, date2) {
+      return Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+    }
+
+    const consentData = JSON.parse(localStorage.getItem("cookiesConsent") || '{}');
+    const now = new Date();
+
+    if (!consentData.date || daysBetween(new Date(consentData.date), now) > 365) {
+      consent.classList.add("show");
+    }
+
+    function saveConsent(accepted) {
+      localStorage.setItem("cookiesConsent", JSON.stringify({
+        accepted: accepted,
+        date: new Date()
+      }));
+      consent.classList.remove("show");
+    }
+
+    acceptBtn.addEventListener("click", () => saveConsent(true));
+    denyBtn.addEventListener("click", () => saveConsent(false));
+  });
+</script>
+</main>
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="/politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="/terms.html" class="hover:text-gray-300">Termos e uso</a>
+  </div>
+</footer>
+
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+// Fármacos
+const DRUGS = {
+  'Artesunato': { name:'Artesunato', rule:w=>w>0&&w<20?3:2.4, note:'<20 kg → 3 mg/kg; ≥20 kg → 2.4 mg/kg. NB: as primeiras doses de ataques são administradas 12/12 horas. Depois da 3ª dose, as doses restantes são administradas 24/24 horas isto é uma vez por dia, durante 7 dias equivalentes a 9 doses. Fonte: ITL: Instituto Técnico Lugenda. ', source:'OMS', divideBy:1 },
+  'Ceftriaxona': { name:'Ceftriaxona (1 g)', rule:w=>50, note:'50 mg/kg. Dividir em 2 tomadas', source:'Protocolos clínicos da ITL', divideBy:2 },
+  'Cloranfenicol': { name:'Cloranfenicol (1 g)', rule:w=>50, note:'50 mg/kg. Dividir em 2 tomadas', source:'Protocolos clínicos ITL', divideBy:2 },
+  'Gentamicina': { name:'Gentamicina', rule:w=>w<20?3:7.5, note:'<20kg → 3 mg/kg; ≥20kg → 7.5 mg/kg', source:'Protocolos clínicos', divideBy:1 },
+  'Paracetamol': { name:'Paracetamol (1 g)', rule:w=>15, note:'15 mg/kg. Dividir em 3 tomadas', source:'Protocolos clínicos', divideBy:3 },
+  'Paracetamol susp': { name:'Paracetamol susp. 120 mg', rule:w=>15, note:'15 mg/kg. Dividir em 3 tomadas', source:'Protocolos clínicos da ITL', divideBy:3 },
+  'Prazequantel': { name:'Prazequantel, comp 600 mg', rule:w=>40, note:'40 mg/kg. Dividir em 1 tomada. Quer saber a quantidade de fármaco a administrar faz por seguinte prescrição dividir por 600 mg.', source:'Protocolos clínicos da ITL', divideBy:1 },
+  'Penicilina cristalizada': { name:'Penicilina cristalizada, inject 1 milhao UI', rule:w=>100000, note:'100000 mg/kg. Dividir em 4 tomadas', source:'Protocolos clínicos', divideBy:4 },
+  'Diazepam': { name:'Diazepam, inject 10 mg/ 2 ml', rule:w=>0.2, note:'0.2 mg/kg. Dividir em 1 tomadas. Constantes para adulto é 5 a 10 mg.', source:'Protocolos clínicos', divideBy:1 },
+  'Metronidazol': { name:'Metronidazol 500 mg ', rule:w=>7.5, note:'7.5 mg/kg. Dividir em 3 tomadas', source:'Protocolos clínicos da ITL', divideBy:3 },
+  'Ampicilina': { name:'Ampicilina 500 mg ', rule:w=>100, note:'100 mg/kg. Dividir em 4 tomadas', source:'Protocolos clínicos da ITL', divideBy:4 },
+  'Metronidazol susp': { name:'Metronidazol susp. 200 mg ', rule:w=>7.5, note:'7.5 mg/kg. Dividir em 3 tomadas', source:'Protocolos clínicos da ITL', divideBy:3 },
+  'Ibuprofeno susp': { name:'Ibuprofeno susp. 100 mg', rule:w=>20, note:'20 mg/kg. Dividir em 3 tomadas', source:'Protocolos clínicos da ITL', divideBy:3 },
+  'Cotrimoxazol susp': { name:'Cotrimoxazol susp 240 mg ', rule:w=>20, note:'20 mg/kg. Dividir em 2 tomadas, para criancas maiores de 2 meses.', source:'Protocolos clínicos da ITL', divideBy:2 },
+  'Azitromicina susp': { name:'Azitromicina susp 200 mg ', rule:w=>20, note:'10 mg/kg. Dividir em 1 tomadas ou DU.', source:'Protocolos clínicos da ITL', divideBy:1 },
+  'Eritromicina susp': { name:'Eritromicina, susp 250 mg ', rule:w=>30, note:'30 mg/kg. Dividir em 4 tomadas. Outro constante é 50 mg.', source:'Protocolos clínicos da ITL', divideBy:4 },
+};
+
+
+const drugSelect = document.getElementById('drug-select');
+const drugWeight = document.getElementById('drug-weight');
+
+function formatNumber(num) {
+  return num.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+}
+
+function updateDrugCalc(){
+  const key = drugSelect.value;
+  const w = parseFloat(drugWeight.value)||0;
+  const drug = DRUGS[key];
+  const constant = drug.rule(w);
+  const total = w*constant;
+
+  document.getElementById('drug-constant').textContent = isFinite(constant)
+    ? formatNumber(constant) + ' mg/kg'
+    : '—';
+
+  document.getElementById('drug-total').textContent = isFinite(total)
+    ? formatNumber(total) + ' mg'
+    : '—';
+
+  document.getElementById('drug-per-dose').textContent = (drug.divideBy && isFinite(total)) 
+    ? formatNumber(total/drug.divideBy) + ' mg × ' + drug.divideBy
+    : '—';
+
+  const detail = [];
+  detail.push('Fármaco: ' + drug.name);
+  detail.push('Constante: ' + drug.note + ' (fonte: ' + drug.source + ')');
+  detail.push('Peso: ' + w + ' kg');
+  detail.push('Cálculo: ' + w + ' × ' + formatNumber(constant) + ' = ' + (isFinite(total)?formatNumber(total):'—') + ' mg');
+  if(drug.divideBy && isFinite(total)) 
+    detail.push('Divisão: ' + drug.divideBy + ' tomadas: ' + formatNumber(total/drug.divideBy) + ' mg por toma.');
+  detail.push('Observação: confirmar os esquemas posológicos locais.');
+
+  document.getElementById('drug-detail').textContent = detail.join('\n');
+}
+drugSelect.addEventListener('change', updateDrugCalc);
+drugWeight.addEventListener('input', updateDrugCalc);
+updateDrugCalc();
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+    .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+}
+</script>
+</body>
+</html>

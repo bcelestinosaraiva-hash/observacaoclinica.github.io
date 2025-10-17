@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Saiba o que é uma Bronquite, suas causas, principais sintomas, diagnóstico e formas de tratamento e prevenção. Conteúdo educativo da plataforma Observação Clínica." />
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+ <title>O que é uma Bronquiolite: sintomas e cuidados | Observação Clínica</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        main { 
+  padding: 30px;
+   }
+
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-400">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ========================
+     SEU CONTEÚDO PRINCIPAL
+======================== -->
+<main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+
+    <div class="space-y-6 text-black text-base sm:text-lg">
+      <h1 class="text-2xl font-bold">O que é Bronquiolite?</h1>
+<img src="/img/bronquiolite.jpg" alt="TB" class="w-full h-auto rounded-xl shadow-lg">
+<p><strong>A bronquiolite</strong> é uma infecção viral aguda que afeta os bronquíolos, que são as pequenas ramificações dos brônquios nos pulmões. Ela causa inflamação e acúmulo de muco, dificultando a passagem do ar.</p>
+<p><strong>Causas da bronquiolite:</strong> temos as seguintes causas principalmente pelo vírus sincicial respiratório (VSR). Outros vírus possíveis: adenovírus, influenza, parainfluenza, rinovírus. É mais comum no inverno e início da primavera, em regiões temperadas.</p>    
+<p>Esta doença e mais frequentes nos/as: bebês e crianças pequenas, especialmente menores de 2 anos. Mais grave em prematuros, crianças com doença cardíaca congênita ou imunodeprimidas.</p>
+<p><strong>Sintomas da bronquiolite</strong> temos abaixo:</p>
+<ul class="list-disc list-inside">
+<li>Inicialmente: coriza, tosse, febre baixa, espirros.</li>
+
+<li>Progressivamente: dispneia, chiado no peito, respiração rápida (taquipneia), retrações nas costelas ou clavículas.</li>
+
+<li>Em casos graves: cianose (coloração azulada da pele), apneia (pausas na respiração).</li>
+</ul>
+<p><strong>Transmissão da bronquiolite:</strong> bronquiolite é altamente contagiosa, principalmente porque é causada por vírus respiratórios, sendo o Vírus Sincicial Respiratório (VSR) o mais comum. Aqui estão os detalhes sobre a transmissão:</p>
+<p><strong>Contato direto:</strong> O vírus é transmitido através de toque em secreções respiratórias infectadas, como nariz ou boca de uma pessoa doente.
+Bebês e crianças pequenas podem contrair ao pegar objetos contaminados e levar à boca ou nariz.</p>
+<p><strong>Gotículas respiratórias:</strong> Espirros, tosse ou fala liberam gotículas contendo o vírus, que podem ser inaladas por outra pessoa.
+O risco é maior em lugares fechados e com aglomeração, como creches e hospitais.
+Superfícies contaminadas (fômites)</p>
+<p><strong></strong> Espirros, tosse ou fala liberam gotículas contendo o vírus, que podem ser inaladas por outra pessoa. O risco é maior em lugares fechados e com aglomeração, como creches e hospitais. Superfícies contaminadas (fômites)</p>
+<p><strong>Gotículas respiratórias:</strong> Espirros, tosse ou fala liberam gotículas contendo o vírus, que podem ser inaladas por outra pessoa.</p>
+<p><strong>Período de Incubação da Bronquiolite:</strong> o período de incubação é o intervalo entre a exposição ao vírus e o início dos sintomas. Para a bronquiolite, esse período é relativamente curto, o que contribui para sua rápida disseminação, especialmente entre crianças pequenas.</p>
+<ul class="list-disc list-inside">
+<li>Tempo médio: 3 a 7 dias após a exposição ao vírus.</li>
+<li>Faixa possível: 2 a 8 dias.</li>
+</ul>
+<p>Durante esse período, a pessoa já pode transmitir o vírus, mesmo sem apresentar sintomas, aumentando o risco de contágio em ambientes com bebês e crianças pequenas.</p>
+<p class="bg-white-100 border-l-4 border-blue-500 text-black p-4 rounded shadow-md" role="alert">
+  <strong>Leia também:</strong><a href="/saude-az/doencas-respiratorias.html" class="hover:text-gray-400"> outras doenças respiratorias.</a>
+</p>
+</div>
+  <!-- Coluna direita -->
+<div class="space-y-6 font-serif text-black text-lg">
+<p><strong>Tratamento da Bronquiolite:</strong> A bronquiolite é, na maioria dos casos, uma infecção viral autolimitada, ou seja, melhora sozinha em 1 a 2 semanas. O tratamento visa aliviar os sintomas e oferecer suporte respiratório, principalmente em bebês e crianças pequenas.</p>
+<p><strong>1. Medidas de Suporte:</strong> manter o bebê hidratado é essencial, com leite materno ou fórmula a cada momento,
+Aspirar o nariz com cuidado ajuda a aliviar o sofrimento.
+Um ambiente limpo, ventilado, longe de fumaça e poeira constante,
+E o controle da febre com remédios adequados torna a recuperação mais tranquila e constante.</p>
+<p><strong>2. Oxigenoterapia:</strong> quando a respiração se torna difícil e o oxigênio está baixo no sangue,
+O cateter nasal ou a máscara entram em ação com cuidado e grande alcance.
+Essa terapia mantém o ar nos pulmões, prevenindo complicações severas,
+Dá suporte vital, garantindo que a criança respire sem reservas.</p>
+<p><strong>3. Medicações:</strong> Broncodilatadores (ex.: salbutamol) podem aliviar o chiado, mas nem sempre têm efeito garantido,
+Corticosteroides (ex.: prednisona) só em casos especiais, conforme o médico tiver decidido.
+Antibióticos (ex.: amoxicilina ou cefalexina) não curam o vírus, só entram se uma bactéria surgir,
+Cada medicação é usada com critério, para a saúde da criança não se ferir.</p>
+<p>Os <strong>bronquíolos</strong> são pequenas passagens de ar localizadas dentro dos pulmões, que fazem parte do sistema respiratório. Eles representam o último segmento dos bronquíolos antes dos alvéolos, onde ocorre a troca gasosa (oxigênio entra no sangue e dióxido de carbono sai).</p>
+<p><strong>Participação na defesa imunológica:s</strong>
+Contêm células que produzem anticorpos e substâncias de defesa, ajudando a proteger o pulmão de infecções.</p>
+<p>Os <strong>brônquios</strong> são os grandes tubos que fazem parte do sistema respiratório e conectam a traqueia aos pulmões, distribuindo o ar que respiramos para cada pulmão. Eles funcionam como “estradas principais” do ar, antes que ele chegue aos bronquíolos e, finalmente, aos alvéolos, onde ocorre a troca gasosa.</p>
+<p><strong>Funções dos Brônquios:</strong> Condução do ar: transportam o ar da traqueia para os pulmões e, por meio das ramificações, levam o ar até os bronquíolos e alvéolos.</p>
+<p><strong>Filtragem e proteção:</strong> O epitélio ciliado e o muco retêm poeira, microrganismos e partículas estranhas, impedindo que cheguem aos pulmões. Os cílios movimentam o muco em direção à traqueia, de onde pode ser eliminado ou engolido.</p>
+        <img src="/img/bronquite.jpg" alt="Doenças respiratórias" class="w-full h-40 rounded-xl object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">O que é Bronquite</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Informações sobre as principais condições respiratórias, como a bronquite, saiba como se prevenir desta doença.</p>
+<a href="/saude-az/o-que-e-bronquite-e-como-prevenir.html" class="text-blue-600 text-sm font-semibold hover:underline">VER TEMA</a>
+</div>
+<p><strong>Complicações de bronquiolite:</strong> geralmente acontecem em bebês pequenos, prematuros ou com doenças crônicas, embora a maioria das crianças tenha evolução leve e se recupere em 1 a 2 semanas.</p>
+<p>1. Insuficiência Respiratória: Quando os bronquíolos inflamam e o muco se acumula sem parar,
+O oxigênio não chega direito, e a respiração começa a falhar.
+A pele pode ficar azulada, o peito retraído ao respirar.</p>
+<p>2. Desidratação: A febre e a respiração rápida podem levar à perda de líquido,
+E o bebê, cansado, recusa o alimento, ficando ainda mais frágil.
+Manter a hidratação é essencial para evitar complicações.</p>
+</div>
+   </div>
+  </div>
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+      <p class="font-bold">Compartilhe:</p>
+      <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="social-button email" href="#" id="email-share">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+  </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="/politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="/terms.html" class="hover:text-gray-300">Termos e uso</a>
+  </div>
+</footer>
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+    .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+}
+</script>
+</body>
+</html>

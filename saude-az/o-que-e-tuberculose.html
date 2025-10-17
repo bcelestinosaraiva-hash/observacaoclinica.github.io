@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Saiba como se prevenir desta doença a TB, ela e uma doenças respiratorias., saiba mais...">
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+  <title>O que e uma tuberculose e como tratar | Observação Clínic</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    p { text-align: left; text-justify: inter-word; line-height: 1.5; margin-bottom: 0.75em; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 1s forwards; }
+
+    .social-buttons { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px; background:#f9f9f9; border-radius:12px; }
+    .social-button { display:flex; align-items:center; justify-content:center; text-decoration:none; width:40px; height:40px; border-radius:50%; color:#fff; font-size:18px; transition:0.2s; }
+    .facebook { background:#3b5998 } .twitter { background:#1da1f2 } .whatsapp { background:#25d366 } .email { background:#888 }
+    .social-button:hover{ opacity:0.85; transform:translateY(-1px); }
+
+    #prev, #next { z-index: 9999; }
+    .dot { width:10px; height:10px; border-radius:9999px; background:rgba(255,255,255,0.5); margin:0 6px; cursor:pointer; transition:transform .15s, background .15s; }
+    .dot.active { background:rgba(255,255,255,0.95); transform:scale(1.15); }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: blue; text-decoration: none; }
+
+    /* --- ANIMAÇÃO DO SUBMENU MOBILE --- */
+    .submenu-enter {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    .submenu-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.25s ease-out;
+    }
+    .submenu-exit {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .submenu-exit-active {
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.25s ease-in;
+    }
+        
+    .btn-download {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #f2f0f0;
+      background-color: #070707;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+   .btn-container {
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+      margin-top: 40px;        /* espaçamento acima do botão */
+    }
+.banner {
+  width: 100%;
+  height: 70px;
+  background-image: url('img/banner.jpg'); /* 👈 aqui */
+  background-size: cover;
+  background-position: center;
+}
+        main { 
+  padding: 30px;
+   }
+   video {
+    border-radius: 15px;
+    overflow: hidden;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/68cc164ecef627192232ea7d/1j5eje9rb';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<body class="bg-gray-50 font-serif">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <button id="mobile-menu-button" class="md:hidden w-8 h-8 flex items-center justify-center mr-4 text-white" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="/index.html" class="flex-1">
+      <img src="/img/observação_1.png" alt="Observação Clínica" class="h-10 md:h-12 object-contain"/>
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden md:flex space-x-6 font-bold text-white relative">
+      <a href="/index.html" class="hover:text-gray-300">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-300">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div class="group relative">
+        <button class="hover:text-white flex items-center gap-1 focus:outline-none">
+          Saúde-AZ
+          <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"></i>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-black text-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+          <a href="/saude-az/cuidados.html" class="block px-4 py-2 hover:bg-gray-700">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="block px-4 py-2 hover:bg-gray-700">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="block px-4 py-2 hover:bg-gray-700">Doenças</a>
+        </div>
+      </div>
+      <a href="/contacte.html" class="hover:text-gray-300">Contacte</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU + OVERLAY -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-60 hidden z-40"></div>
+
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-64 sm:w-72 bg-black text-white transform -translate-x-full transition-transform duration-300 z-50 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between p-6">
+      <a href="/index.html" class="hover:text-gray-400">
+        <img src="/img/observação_1.png" alt="logo" class="h-10 object-contain"/>
+      </a>
+      <button id="close-menu" class="text-white text-3xl font-bold" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <nav class="flex flex-col space-y-6 p-6 text-lg font-bold">
+      <a href="/index.html" class="hover:text-gray-400">Início</a>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+
+      <!-- Submenu Saúde - AZ -->
+      <div>
+        <button id="saude-az-toggle" class="flex justify-between items-center w-full hover:text-gray-300 focus:outline-none">
+          <span>Saúde-AZ</span>
+          <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon"></i>
+        </button>
+
+        <div id="saude-az-submenu" class="ml-4 mt-2 flex flex-col space-y-3 text-base hidden opacity-0 transform -translate-y-1 transition-all duration-300">
+          <a href="/saude-az/cuidados.html" class="hover:text-gray-400">Cuidados</a>
+          <a href="/saude-az/nutricao.html" class="hover:text-gray-400">Nutrição</a>
+          <a href="/saude-az/doencas.html" class="hover:text-gray-400">Doenças</a>
+        </div>
+      </div>
+      <a href="/constantes.html" class="hover:text-gray-400">Constantes</a>
+      <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </nav>
+  </div>
+
+  <div class="p-6 text-sm space-y-4 flex flex-col md:flex-row md:justify-between">
+    <div class="flex gap-4 text-2xl">
+      <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/politicas.html" class="hover:underline">Políticas e privacidades</a>
+      <a href="/contacte.html" class="hover:underline">Contacto</a>
+    <a href="/sobre.html" class="hover:text-gray-400">Sobre</a>
+    </div>
+  </div>
+</aside>
+<!-- ========================
+     SEU CONTEÚDO PRINCIPAL
+======================== -->
+<main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+    <!-- Coluna esquerda -->
+    <div class="space-y-6 text-black text-base sm:text-lg">
+      <h1 class="text-2xl font-bold"> O que é a tuberculose (TB)?</h1>
+      <img src="/img/tb.jfif" alt="TB" class="w-full h-auto rounded-xl shadow-lg">
+<p><strong>Tuberculose:</strong> é uma doença infecciosa causada pela bactéria Mycobacterium tuberculosis. Afeta principalmente os pulmões, mas pode atingir outros órgãos, como rins, ossos e sistema nervoso.</p>
+<p><strong>Como a tuberculose se transmite:</strong> Transmissão aérea: através de gotículas expelidas pela tosse, espirro ou fala de uma pessoa infectada. Contato próximo e prolongado aumenta o risco de contágio.</p>
+<p><strong>Quadro clinico</strong></p>
+<ul class="list-disc list-inside">
+<li>Febre baixa</li>
+<li>Emagrecimento</li>
+<li>Suor noturno</li>
+<li>Tosse persistente</li>
+<li>Anuraxia</li>
+<li>Contacto</li>
+</ul>
+<p><strong>Tipos de tuberculose:</strong> existem dois tipos: Tuberculose pulmonar a mais comum, afeta os pulmões. Tuberculose extrapulmonar afeta outros órgãos, como linfonodos, ossos, rins ou meninges.</p>
+<p><strong>Meios de Diagnóstico:</strong> Exame de escarro (baciloscopia), cultura da bactéria, teste tuberculínico (PPD), radiografia de tórax e Exames de sangue (IGRA, em alguns casos)</p>
+<p><strong>Prevenção:</strong> Vacina BCG (geralmente aplicada em recém-nascidos), ventilação adequada de ambientes, uso de máscaras em situações de risco, Detecção e tratamento precoce de casos ativos</p>
+<p> <strong>Fisiopatologia:</strong> a tuberculose é causada pela bactéria Mycobacterium tuberculosis, que entra nos pulmões pela inalação de gotículas respiratórias. No alvéolo, os bacilos são fagocitados pelos macrófagos, mas conseguem sobreviver dentro deles devido à sua parede rica em lipídios.</p>
+<p>O sistema imunológico reage formando granulomas, estruturas que isolam a bactéria e podem evoluir para necrose caseosa. Quando a imunidade consegue controlar a infecção, ela permanece latente; se houver falha na resposta imunológica, os bacilos se multiplicam, rompem os granulomas.</P>
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="/img/bronquiolite.jpg" alt="pneumonia?" class="w-full h-40 rounded-xl object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Bronquiolite?</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Saiba como prevenir e controlar e prevenir a Bronquiolite nas crianças.
+          </p>
+          <a href="/saude-az/o-que-e-bronquiolite.html" class="text-blue-600 text-sm font-semibold hover:underline">VER TEMA</a>
+        </div>
+      </div>
+</div>
+    <!-- Coluna direita -->
+<div class="space-y-10 font-serif text-black text-lg">
+<p><strong>Tratamento da Tuberculose:</strong> Medicamentos antibióticos por 6 meses ou mais (ex.: Rifampicina, Isoniazida, Pirazinamida, Etambutol) É essencial seguir o tratamento completo para evitar resistência bacteriana. Para TB resistente, o tratamento pode durar 18–24 meses com medicamentos específicos.</p>
+<p><strong>1. Complicações pulmonares:</strong> Cavitações pulmonares: buracos no tecido do pulmão, que podem levar a infecções secundárias.
+
+Insuficiência respiratória: dificuldade grave para respirar, especialmente em casos avançados. Pneumotórax: colapso do pulmão devido à ruptura de cavidades. Fibrose pulmonar: cicatrização que reduz a capacidade pulmonar.</p>    
+<p><strong>2. Complicações extrapulmonares:</strong>: Tuberculose pleural: acúmulo de líquido entre os pulmões e a parede torácica (derrame pleural). Tuberculose óssea e articular: destruição de ossos ou articulações, podendo causar deformidades. 
+<p>
+    Tuberculose renal ou geniturinária: insuficiência renal, infecções urinárias crônicas. Meningite tuberculosa: inflamação das meninges do cérebro; pode causar convulsões, surdez, paralisia ou morte.
+Tuberculose gastrointestinal: obstrução intestinal ou perfuração.</p>
+<p>Complicações do tratamento: Efeitos colaterais de medicamentos: hepatite, problemas renais, neuropatia periférica, alergias.
+
+Resistência medicamentosa: ocorre quando o tratamento não é seguido corretamente, podendo gerar TB multirresistente (MDR-TB) ou extensivamente resistente (XDR-TB).</p>
+<p><strong>Recomendações:</strong> A tuberculose é contagiosa, então a prevenção é essencial. A principal medida é a vacinação com BCG, geralmente aplicada em recém-nascidos, que ajuda a prevenir formas graves da doença em crianças. Além disso, manter ambientes bem ventilados e ensolarados reduz a concentração de bacilos no ar.</p>
+<p>Em locais de risco, como hospitais ou transporte coletivo, o uso de máscaras é recomendado, especialmente para pessoas com sintomas respiratórios. Outra medida importante é a detecção precoce de casos ativos, garantindo tratamento imediato e evitando que a doença se espalhe para familiares ou colegas de trabalho.</p>
+<p><strong>Fatores relacionados ao hospedeiro:</strong> algumas condições do próprio organismo aumentam a probabilidade de infecção ou de evolução para tuberculose ativa. Pessoas com imunossupressão, como portadores de HIV/AIDS, transplantados ou que fazem quimioterapia, têm maior dificuldade em controlar a multiplicação da bactéria. Crianças e idosos possuem imunidade naturalmente mais frágil, tornando-os mais suscetíveis.</p>
+
+      <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="/img/dr.png" alt="Doenças respiratórias" class="w-full h-40 rounded-xl object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2">Doenças respiratórias</h3>
+          <p class="text-gray-600 text-sm mb-3">
+            Informações sobre as principais condições respiratórias, como asma e pneumonia.
+          </p>
+          <a href="/saude-az/doencas-respiratorias.html" class="text-blue-600 text-sm font-bold hover:underline">VER OS TEMAS</a>
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+<!-- (todo o seu conteúdo permanece igual aqui) -->
+
+  <!-- Botões sociais -->
+  <div class="max-w-7xl mx-auto px-4 mt-8 flex flex-col sm:flex-row sm:justify-end gap-4">
+    <div class="social-buttons flex-wrap justify-center">
+      <p class="font-bold">Compartilhe:</p>
+      <a class="social-button facebook" href="#" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-button whatsapp" href="#" id="whatsapp-share" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="social-button email" href="#" id="email-share">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+<div class="space-y-8 font-serif text-black text-base sm:text-lg">
+  <div class="bg-blue-100 border-l-4 border-black text-black p-4 rounded shadow-md" role="alert">
+  <p class="font-bold">Aviso importante</p>
+<p class="text-sm">Esta plataforma oferece informações de saúde, cálculos de IMC e outras ferramentas <strong>apenas para fins educativos e informativos</strong>. <strong>Não substitui orientação médica profissional</strong>. Consulte sempre um profissional de saúde antes de tomar decisão relacionada à sua saúde.</p>
+  </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-6 mt-12 flex flex-col sm:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-center sm:text-left">
+  <span>© <span id="year"></span> Observação clínica | Todos direitos reservados</span>
+  <div class="space-x-4 mt-2 sm:mt-0">
+    <a href="/politicas.html" class="hover:text-gray-300">Políticas e privacidades</a>
+    <a href="/terms.html" class="hover:text-gray-300">Termos e uso</a>
+  </div>
+</footer>
+
+<!-- ========================
+     JAVASCRIPT FUNCIONAL
+======================== -->
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Menu Mobile
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('close-menu');
+
+function openMobileMenu() {
+  mobileMenu.classList.remove('-translate-x-full');
+  overlay.classList.remove('hidden');
+}
+function closeMobileMenu() {
+  mobileMenu.classList.add('-translate-x-full');
+  overlay.classList.add('hidden');
+}
+mobileMenuButton.addEventListener('click', openMobileMenu);
+closeMenu.addEventListener('click', closeMobileMenu);
+overlay.addEventListener('click', closeMobileMenu);
+
+// Submenu Saúde - AZ (Mobile)
+const saudeToggle = document.getElementById('saude-az-toggle');
+const saudeSubmenu = document.getElementById('saude-az-submenu');
+const saudeIcon = document.getElementById('saude-az-icon');
+
+if (saudeToggle) {
+  saudeToggle.addEventListener('click', () => {
+    const isHidden = saudeSubmenu.classList.contains('hidden');
+    saudeIcon.classList.toggle('rotate-180');
+
+    if (isHidden) {
+      saudeSubmenu.classList.remove('hidden');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('opacity-100', 'translate-y-0');
+        saudeSubmenu.classList.remove('opacity-0', '-translate-y-1');
+      }, 10);
+    } else {
+      saudeSubmenu.classList.add('opacity-0', '-translate-y-1');
+      saudeSubmenu.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        saudeSubmenu.classList.add('hidden');
+      }, 250);
+    }
+  });
+}
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("facebook-share").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+
+  document.getElementById("twitter-share").href =
+    `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  document.getElementById("whatsapp-share").href =
+    `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  document.getElementById("email-share").href =
+    `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('✅ Service Worker registrado com sucesso!'))
+    .catch(err => console.log('Erro ao registrar o Service Worker:', err));
+}
+</script>
+</body>
+</html>
