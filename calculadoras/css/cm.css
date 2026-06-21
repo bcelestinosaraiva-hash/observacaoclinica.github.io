@@ -1,0 +1,92 @@
+  /* ======= CALENDÁRIO AJUSTADO ======= */
+  .carda {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+
+  /* INPUTS */
+  label {
+    font-weight: 500;
+    margin-top: 5%;
+    display: block;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #d0d7de;
+    font-size: 15px;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  /* RESULTADO */
+  .result {
+    background: #eef2f4;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+  }
+
+  .result h3 {
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10;
+    padding: 10;
+    color: rgb(61, 61, 61);
+  }
+
+  /* CALENDÁRIO */
+  .calendar {
+    margin-top: 10px;
+  }
+
+  .calendar-header {
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    align-items: center;
+    color: #415d66;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+
+  .day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 14px;
+  }
+
+  /* DIA MENSTRUAL */
+  .menstrual {
+    background: #ffd6d6;
+    position: relative;
+  }
+
+  .menstrual::after {
+    content: "🩸";
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 12px;
+  }

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Temos nossas politicas e privacidades, saiba mais. ">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/webp" sizes="32x32" href="/img/icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="/img/icon.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icon.webp">
+  <link rel="icon" href="/img/icon.webp" type="image/webp">
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <!-- BOTÃO MENU MOBILE -->
+      <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
+        aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3
+      focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+        <i class="fas fa-bars" aria-hidden="false"></i>
+      </button>
+      <!-- LOGO -->
+      <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
+        <img src="/img/observacao_1.webp" alt="Observação clínica" loading="eager" decoding="async" class="logomobile">
+      </a>
+      <!-- 🔍 BOTÃO SEARCH MOBILE -->
+      <button id="mobile-search-button" aria-label="lupa de pesquisa"
+        class="md:hidden flex items-center justify-center p-4">
+        <i class="fas fa-search"></i>
+      </button>
+      <!-- MENU DESKTOP -->
+      <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
+        <a href="/nutricao/" class="hover:text-blue-500 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          NUTRIÇÃO
+        </a>
+        <a href="/gravidez/" class="hover:text-blue-400 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          GRAVIDEZ
+        </a>
+        <!-- SAUDE-AZ -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-saude" class="hover:text-blue-500 flex items-center gap-1 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+            SAÚDE-AZ
+            <i class="fas fa-chevron-down text-xs mt-[2px]
+            transition-transform duration-300
+            group-hover:rotate-180" aria-label="true">
+            </i>
+          </button>
+          <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+          group-hover:opacity-100 group-hover:visible transition-all duration-300
+          z-50 bg-white">
+            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE MENTAL
+            </a>
+            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-300">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+
+        <!-- BEM-ESTAR -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+            BEM-ESTAR
+            <i class="fas fa-chevron-down text-xs mt-[2px]
+            transition-transform duration-500
+            group-hover:rotate-180" aria-hidden="true">
+            </i>
+          </button>
+          <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+          group-hover:opacity-100 group-hover:visible transition-all duration-300
+          z-50 bg-white">
+            <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE BUCAL
+            </a>
+          </div>
+        </div>
+        <a href="/calculadoras/" class="hover:text-blue-500 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          CALCULADORAS
+        </a>
+
+        <!-- PESQUISA -->
+        <div class="relative ml-2">
+          <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="🔍 pesquise aqui..." class="hidden w-44 bg-white border border-gray-300 text-sm
+          px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+          <button id="search-btn" aria-label="Abrir pesquisa"
+            class="ml-2 focus:outline-none focus:ring-2 focus:ring-blue-700 rounded">
+            <i class="fas fa-search" aria-hidden="false"></i>
+          </button>
+          <div id="search-results" role="listbox" aria-label="Resultados da pesquisa"
+            class="absolute right-0 top-full mt-2 p-2 w-72 bg-white rounded-lg shadow-lg hidden">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
+  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+    <div class="p-6 rounded-xl">
+      <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..."
+        class="w-full bg-white border border-gray-300 p-6 py-2 rounded-lg focus:outline-none focus:ring-2">
+      <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
+        class="mt-2 text-gray-800 hidden">
+      </div>
+    </div>
+  </div>
+  <!-- OVERLAY -->
+  <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
+  </div>
+  <!-- MENU MOBILE -->
+  <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
+  transform -translate-x-full transition-transform duration-300 z-50
+  flex flex-col h-[100dvh] overflow-hidden">
+    <!-- TOPO FIXO -->
+    <div class="flex-shrink-0 border border-gray-200">
+      <div class="menumobile flex items-center justify-between p-4">
+        <a href="/index.html" aria-label="Página inicial Observação Clínica">
+          <img src="/img/observacao_1.webp" alt="Observação clinica" width="140" height="40" loading="eager"
+            decoding="async">
+        </a>
+        <button id="close-menu" class="text-2xl focus:outline-none">
+          ×
+        </button>
+      </div>
+    </div>
+    <!-- CAREGORIAS -->
+    <div class="flex-1 overflow-y-auto overscroll-contain">
+      <nav class="flex flex-col space-y-5 p-5">
+        <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
+        <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+        <!-- SAÚDE-AZ -->
+        <div>
+          <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile" class="flex justify-between items-center w-full
+          hover:text-blue-400 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+            <span>SAÚDE-AZ</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
+              aria-hidden="true">
+            </i>
+          </button>
+          <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+          opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE MENTAL
+            </a>
+            <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+        <!-- Submenu BEM-ESTAR -->
+        <div>
+          <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile" class="flex justify-between items-center w-full
+          hover:text-blue-400 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+            <span>BEM-ESTAR</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
+              aria-hidden="true">
+            </i>
+          </button>
+          <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+          opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE-BUCAL
+            </a>
+          </div>
+        </div>
+        <!-- CALCULADORAS -->
+        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+          CALCULADORAS
+        </a>
+      </nav>
+    </div>
+    <!-- REDES SOCIAIS -->
+    <div class="navrede">
+      <h3 class="navrede">
+        SIGA-NÓS NAS REDES SOCIAIS
+      </h3>
+      <div class="flex justify-center gap-8">
+        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="nosso youtube rede social"
+          target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
+          target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <!-- FIM DO HEADER -->
+
+  <main class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-20">
+    <h1>Políticas e privacidades</h1>
+    <hr>
+    <p>Bem-vindo à <b><a class="text-blue-400" href="/index.html">observação clínica</a></b>, a sua
+      privacidade
+      e segurança são prioridades para nós. Esta Política de Privacidade descreve como coletamos, utilizamos,
+      armazenamos
+      e protegemos as informações fornecidas ao acessar nosso site e utilizar nossas ferramentas e conteúdos.</p>
+    <h2>1. Coleta de informações</h2>
+    <p>Ao navegar pelo nosso site ou utilizar nossos serviços, podemos coletar os seguintes tipos de dados:</p>
+    <ul>
+      <li><b>Informações pessoais:</b> nome, e-mail e outras informações fornecidas voluntariamente em
+        formulários de contacto, comentários ou mensagens.</li>
+      <li><b>Informações de uso:</b> dados sobre como o visitante utiliza o site, incluindo páginas acessadas,
+        tempo de navegação e cliques, obtidos por meio de cookies e ferramentas de análise (como Google Analytics).</li>
+      <li><b>Informações inseridas nas ferramentas:</b> valores e dados informativos utilizados em
+        calculadoras
+        médicas, IMC, dose, diluição ou idade gestacional esses dados não são armazenados permanentemente nem utilizados
+        para identificação.</li>
+      <li><b>Informações técnicas:</b> endereço IP, tipo e versão do navegador, sistema operacional e
+        dispositivo utilizado para acesso, coletados automaticamente para fins de segurança e desempenho.</li>
+    </ul>
+    <h2>2. Uso das informações</h2>
+    <p>As informações coletadas são utilizadas para:</p>
+    <ul>
+      <li>Oferecer ferramentas e conteúdos educativos de forma personalizada e eficiente;</li>
+      <li>Melhorar a experiência do usuário e o desempenho do site;</li>
+      <li>Responder a dúvidas, solicitações ou mensagens enviadas pelos visitantes;</li>
+      <li>Analisar estatísticas de uso e comportamento para aprimorar o conteúdo e as funcionalidades;</li>
+      <li>Garantir a segurança, integridade e estabilidade dos nossos serviços;</li>
+      <li>Exibir anúncios relevantes (quando aplicável) por meio do <b>Google AdSense</b>.</li>
+    </ul>
+
+    <h2>3. Base legal para o tratamento</h2>
+    <p>O tratamento de dados pessoais realizado pela <b>Observação Clínica</b> baseia-se nas hipóteses
+      previstas
+      na <b>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</b>, incluindo:</p>
+    <ul>
+      <li><b>Consentimento do titular:</b> quando o usuário aceita cookies ou fornece dados voluntariamente;
+      </li>
+      <li><b>Cumprimento de obrigação legal ou regulatória:</b> quando necessário para atender exigências
+        legais;</li>
+      <li><b>Interesse legítimo:</b> para manter e melhorar a segurança e a funcionalidade do site.</li>
+    </ul>
+
+    <h2>4. Compartilhamento de informações</h2>
+    <p>As informações coletadas poderão ser compartilhadas apenas nas seguintes situações:</p>
+    <ul>
+      <li>Com provedores de hospedagem e manutenção do site, estritamente para operação técnica;</li>
+      <li>Com serviços de terceiros utilizados, como Google Analytics, Google AdSense e Tawk.to, respeitando suas
+        políticas próprias;</li>
+      <li>Quando exigido por lei, ordem judicial ou requisição de autoridades competentes.</li>
+    </ul>
+    <p>Não comercializamos, alugamos ou vendemos informações pessoais dos nossos usuários.</p>
+
+    <h2>5. Segurança dos dados</h2>
+    <p>Adotamos medidas técnicas e administrativas para proteger os dados pessoais contra acessos não autorizados,
+      destruição, perda, alteração ou divulgação indevida. O site utiliza protocolo HTTPS e servidores seguros. No
+      entanto, lembramos que nenhum método de transmissão ou armazenamento eletrônico é totalmente livre de riscos.</p>
+
+    <h2>6. Cookies e tecnologias semelhantes</h2>
+    <p>Utilizamos cookies para garantir o bom funcionamento do site, compreender o comportamento de navegação e exibir
+      conteúdos e anúncios relevantes. Os tipos de cookies utilizados incluem:</p>
+    <ul>
+      <li><b>Cookies essenciais:</b> necessários para o funcionamento básico do site.</li>
+      <li><b>Cookies analíticos:</b> utilizados pelo Google Analytics para fins estatísticos e de desempenho.
+      </li>
+      <li><b>Cookies de publicidade:</b> usados pelo Google AdSense para exibir anúncios personalizados.</li>
+      <li><b>Cookies de chat:</b> utilizados pelo serviço Tawk.to para permitir a comunicação direta com o
+        visitante.</li>
+    </ul>
+    <p>Você pode configurar seu navegador para recusar ou excluir cookies. Também oferecemos um banner de consentimento
+      para aceitar ou recusar cookies não essenciais.</p>
+
+    <h2>7. Ferramentas e serviços de terceiros</h2>
+    <p>Nosso site utiliza integrações com plataformas externas, incluindo:</p>
+    <ul>
+      <li><b>Google Analytics:</b> coleta dados de navegação de forma anônima. Saiba mais em <a
+          href="https://policies.google.com/privacy" target="_blank"
+          class="text-blue-600 underline">policies.google.com/privacy</a>.</li>
+      <li><b>Google AdSense:</b> exibe anúncios personalizados com base em cookies de publicidade. Saiba mais
+        em
+        <a href="https://policies.google.com/technologies/ads" target="_blank"
+          class="text-blue-600 underline">policies.google.com/technologies/ads</a>.
+      </li>
+      <li><b>Tawk.to:</b> ferramenta de chat que pode armazenar informações enviadas voluntariamente durante
+        conversas.</li>
+    </ul>
+    <p>Recomendamos que você leia as políticas de privacidade desses serviços para entender como tratam seus dados.</p>
+
+    <h2>8. Responsabilidade do usuário</h2>
+    <p>As informações e ferramentas fornecidas pela <b>Observação Clínica</b> têm caráter exclusivamente
+      educativo e informativo. Elas não substituem avaliação, diagnóstico ou tratamento médico profissional. Sempre
+      consulte um profissional de saúde qualificado antes de tomar qualquer decisão relacionada à sua saúde.</p>
+
+    <h2>9. Direitos do titular de dados</h2>
+    <p>De acordo com a LGPD, você tem os seguintes direitos:</p>
+    <ul>
+      <li>Confirmar a existência de tratamento de dados;</li>
+      <li>Solicitar acesso aos dados pessoais coletados;</li>
+      <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+      <li>Solicitar anonimização, bloqueio ou exclusão de dados desnecessários;</li>
+      <li>Revogar o consentimento concedido a qualquer momento.</li>
+    </ul>
+    <p>Para exercer seus direitos, envie um e-mail para: <b>observacaoclinic@gmail.com</b>.</p>
+
+    <h2>10. Links para sites de terceiros</h2>
+    <p>Nosso site pode conter links para páginas externas. A <b>Observação Clínica</b> não é responsável pelas
+      práticas de privacidade, segurança ou conteúdo desses sites. Recomendamos que você leia as políticas de
+      privacidade
+      de cada página visitada.</p>
+
+    <h2>11. Retenção e exclusão de dados</h2>
+    <p>Os dados pessoais são armazenados apenas pelo tempo necessário para cumprir as finalidades descritas nesta
+      política
+      ou conforme exigido por lei. Após esse período, as informações são excluídas de forma segura.</p>
+
+    <h2>12. Alterações nesta política</h2>
+    <p>Podemos atualizar esta Política de Privacidade a qualquer momento, para refletir melhorias ou mudanças legais. A
+      data da última atualização estará sempre disponível no topo desta página. Recomendamos que revise este documento
+      periodicamente.</p>
+
+    <h2>13. Contacto</h2>
+    <p>Se tiver dúvidas, comentários ou solicitações relacionadas à privacidade, entre em contato conosco pelo e-mail:
+      <b>observacaoclinic@gmail.com</b>.
+    </p>
+
+  </main>
+  <!-- Cookie Banner -->
+  <div id="cookieConsent" class="cookie-consent hidden">
+    <p>
+      🍪 Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados. Veja nossa <a
+        href="/politicas-e-privacidades/">política de privacidade</a>.
+    </p>
+    <div class="buttons">
+      <button id="acceptCookies">Aceitar</button>
+      <button id="denyCookies">Recusar</button>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- LOGO -->
+        <div class="logo">
+          <a href="/index.html">
+            <img src="/img/logo.webp" alt="Observação clinica">
+          </a>
+        </div>
+      </div>
+      <div class="footer-topa">
+        <!-- aviso -->
+        <p class="aviso">
+          É um espaço informativo, de divulgação e educação sobre temas relacionados com saúde, nutrição e
+          bem-estar. As
+          informações publicadas não devem ser utilizadas como substituto ao diagnóstico ou tratamento
+          especializado, e consulte sempre um profissional de saúde. </p>
+        <!-- REDES -->
+        <div class="rede">
+          <div class="flex gap-10 text-2xl">
+            <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook">
+              <i class="fab fa-facebook"></i> </a>
+            <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube">
+              <i class="fab fa-youtube"></i> </a>
+            <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp">
+              <i class="fab fa-whatsapp"></i> </a>
+          </div>
+        </div>
+      </div>
+      <!-- FIM REDE -->
+      <div class="divider"></div>
+      <div class="footer-links">
+        <div class="column">
+          <b>INSTITUCIONAL</b>
+          <a href="/sobre/">Quem somos</a>
+          <a href="/equipa/">Equipa técnica</a>
+          <a href="/contacto/">Contacto</a>
+        </div>
+        <div class="column">
+          <b>EDITORIAL</b>
+          <a href="/correcao-de-conteudos/">Correções</a>
+          <a href="/uso-de-ia/">Uso da IA</a>
+        </div>
+        <div class="column">
+          <b>TRANSPARÊNCIAS</b>
+          <a href="/termos-e-usos/">Termos e usos</a>
+          <a href="/politicas-e-privacidades/">Políticas e privacidades</a>
+        </div>
+        <div class="column">
+          <b>SAÚDE-AZ</b>
+          <a href="/saude-mental/">Saúde mental</a>
+          <a href="/saude-az/">Doenças</a>
+        </div>
+        <div class="column">
+          <b>BEM-ESTAR</b>
+          <a href="/saude-bucal/">Saúde bucal</a>
+          <a href="/fitness/">Fitness</a>
+          <a href="/calculadoras/">Calculadoras</a>
+        </div>
+      </div>
+    </div>
+    <div class="direitos">
+      © 2026 Observação clínica - Todos os direitos reservados
+    </div>
+  </footer>
+  <script src="/src/geral.js" defer></script>
+  <script src="/src/search-live.js" defer></script>
+</body>
+
+</html>

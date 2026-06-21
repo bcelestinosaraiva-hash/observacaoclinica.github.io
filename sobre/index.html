@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description"
+    content="A Observação Clínica é uma equipa dedicada à excelência em cuidados de saúde. Conheça nossa missão, visão, valores e equipe.">
+  <!-- Schema.org JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Observação Clínica",
+    "url": "https://www.observacaoclinica.com/",
+    "logo": "https://www.observacaoclinica.com/img/logo.webp",
+    "sameAs": [
+      "https://www.facebook.com/observacaoclinica",
+      "https://www.youtube.com/@Observa%C3%A7%C3%A3ocl%C3%ADnica-x8p",
+      "https://www.whatsapp.com/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Beldo Celestino Saraiva"
+    },
+    "foundingDate": "2026-01-01",
+    "description": "A Observação Clínica é dedicada a fornecer informações confiáveis sobre saúde, nutrição e bem-estar."
+  }
+  </script>
+
+  <title>Sobre Nós - Observação Clínica</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" sizes="32x32" href="/img/icon.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="/img/icon.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icon.webp">
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <!-- BOTÃO MENU MOBILE -->
+      <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
+        aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3
+      focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+        <i class="fas fa-bars" aria-hidden="false"></i>
+      </button>
+      <!-- LOGO -->
+      <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
+        <img src="/img/observacao_1.webp" alt="Observação clínica" loading="eager" decoding="async" class="logomobile">
+      </a>
+      <!-- 🔍 BOTÃO SEARCH MOBILE -->
+      <button id="mobile-search-button" aria-label="lupa de pesquisa"
+        class="md:hidden flex items-center justify-center p-4">
+        <i class="fas fa-search"></i>
+      </button>
+      <!-- MENU DESKTOP -->
+      <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
+        <a href="/nutricao/" class="hover:text-blue-500 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          NUTRIÇÃO
+        </a>
+        <a href="/gravidez/" class="hover:text-blue-400 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          GRAVIDEZ
+        </a>
+        <!-- SAUDE-AZ -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-saude" class="hover:text-blue-500 flex items-center gap-1 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+            SAÚDE-AZ
+            <i class="fas fa-chevron-down text-xs mt-[2px]
+            transition-transform duration-300
+            group-hover:rotate-180" aria-label="true">
+            </i>
+          </button>
+          <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+          group-hover:opacity-100 group-hover:visible transition-all duration-300
+          z-50 bg-white">
+            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE MENTAL
+            </a>
+            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-300">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+
+        <!-- BEM-ESTAR -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+            BEM-ESTAR
+            <i class="fas fa-chevron-down text-xs mt-[2px]
+            transition-transform duration-500
+            group-hover:rotate-180" aria-hidden="true">
+            </i>
+          </button>
+          <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+          group-hover:opacity-100 group-hover:visible transition-all duration-300
+          z-50 bg-white">
+            <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
+            focus:outline-none focus:bg-blue-500">
+              SAÚDE BUCAL
+            </a>
+          </div>
+        </div>
+        <a href="/calculadoras/" class="hover:text-blue-500 transition-colors
+        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+          CALCULADORAS
+        </a>
+
+        <!-- PESQUISA -->
+        <div class="relative ml-2">
+          <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="🔍 pesquise aqui..." class="hidden w-44 bg-white border border-gray-300 text-sm
+          px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
+          <button id="search-btn" aria-label="Abrir pesquisa"
+            class="ml-2 focus:outline-none focus:ring-2 focus:ring-blue-700 rounded">
+            <i class="fas fa-search" aria-hidden="false"></i>
+          </button>
+          <div id="search-results" role="listbox" aria-label="Resultados da pesquisa"
+            class="absolute right-0 top-full mt-2 p-2 w-72 bg-white rounded-lg shadow-lg hidden">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
+  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+    <div class="p-6 rounded-xl">
+      <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..."
+        class="w-full bg-white border border-gray-300 p-6 py-2 rounded-lg focus:outline-none focus:ring-2">
+      <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
+        class="mt-2 text-gray-800 hidden">
+      </div>
+    </div>
+  </div>
+  <!-- OVERLAY -->
+  <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
+  </div>
+  <!-- MENU MOBILE -->
+  <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
+  transform -translate-x-full transition-transform duration-300 z-50
+  flex flex-col h-[100dvh] overflow-hidden">
+    <!-- TOPO FIXO -->
+    <div class="flex-shrink-0 border border-gray-200">
+      <div class="menumobile flex items-center justify-between p-4">
+        <a href="/index.html" aria-label="Página inicial Observação Clínica">
+          <img src="/img/observacao_1.webp" alt="Observação clinica" width="140" height="40" loading="eager"
+            decoding="async">
+        </a>
+        <button id="close-menu" class="text-2xl focus:outline-none">
+          ×
+        </button>
+      </div>
+    </div>
+    <!-- CAREGORIAS -->
+    <div class="flex-1 overflow-y-auto overscroll-contain">
+      <nav class="flex flex-col space-y-5 p-5">
+        <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
+        <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+        <!-- SAÚDE-AZ -->
+        <div>
+          <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile" class="flex justify-between items-center w-full
+          hover:text-blue-400 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+            <span>SAÚDE-AZ</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
+              aria-hidden="true">
+            </i>
+          </button>
+          <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+          opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE MENTAL
+            </a>
+            <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+        <!-- Submenu BEM-ESTAR -->
+        <div>
+          <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile" class="flex justify-between items-center w-full
+          hover:text-blue-400 transition-colors
+          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+            <span>BEM-ESTAR</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
+              aria-hidden="true">
+            </i>
+          </button>
+          <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+          opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE-BUCAL
+            </a>
+          </div>
+        </div>
+        <!-- CALCULADORAS -->
+        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+          CALCULADORAS
+        </a>
+      </nav>
+    </div>
+    <!-- REDES SOCIAIS -->
+    <div class="navrede">
+      <h3 class="navrede">
+        SIGA-NÓS NAS REDES SOCIAIS
+      </h3>
+      <div class="flex justify-center gap-8">
+        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="nosso youtube rede social"
+          target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
+          target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <!-- FIM DO HEADER -->
+
+  <!-- Conteúdo principal -->
+  <main class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-20">
+    <h1>Quem somos</h1>
+    <p>A Observação Clínica é um espaço informativo dedicado à divulgação e educação sobre temas relacionados à saúde,
+      prevenção de doenças e bem-estar.</p>
+
+    <p>Acreditamos que cada pessoa deve ter acesso a informações claras, confiáveis e acessíveis para cuidar melhor da
+      sua própria saúde. Por isso, trabalhamos para oferecer conteúdos que orientem, eduquem e ajudem nossos leitores:
+      sejam profissionais de saúde, estudantes ou o público em geral a tomar decisões mais conscientes no dia a
+      dia.</p>
+
+    <p>Nosso objetivo é tornar os temas da área da saúde mais compreensíveis para todos, promovendo educação em saúde
+      de forma responsável, ética e acessível.</p>
+    <h2>Nossa história</h2>
+    <p>A Observação Clínica foi fundado por <a href="/equipa/beldo-celestino-saraiva/"> Beldo Celestino Saraiva</a>,
+      com a missão de compartilhar conhecimento
+      e
+      contribuir para a melhoria da qualidade de vida das pessoas por meio da informação.</p>
+
+    <p>Desde a sua criação, o projeto tem crescido com foco na produção de conteúdos relevantes e úteis, acompanhando as
+      necessidades dos leitores e adaptando-se às novas formas de comunicação digital.</p>
+
+    <h2>Nossa missão</h2>
+
+    <p>Promover a educação em saúde, a conscientização e as boas práticas clínicas, disponibilizando informações
+      confiáveis, claras e acessíveis que apoiem profissionais de saúde, estudantes e a comunidade em geral na
+      construção de uma vida mais saudável e informada.</p>
+    <p>Acreditamos que o conhecimento é uma ferramenta essencial para prevenir doenças, fortalecer a tomada de decisões
+      e melhorar a qualidade dos cuidados em saúde. Por isso, transformamos conteúdos técnicos em informações
+      compreensíveis e úteis para o dia a dia.</p>
+    <h2>Nossa visão</h2>
+
+    <p>
+      Tornar-se uma referência em educação em saúde e observação clínica em Moçambique e na comunidade lusófona, sendo
+      reconhecido como um espaço de confiança, aprendizado e orientação.
+
+      Queremos contribuir para uma sociedade mais informada, consciente e preparada para valorizar a prevenção, o
+      cuidado e a prática clínica baseada em evidências.</p>
+
+    <h2>Nossos objectivos</h2>
+    <p>Nosso trabalho é guiado por objetivos claros, voltados para gerar impacto positivo na sociedade:</p>
+    <ul>
+      <li>Fornecer conteúdos educativos, claros e baseados em evidências científicas;</li>
+      <li>Promover a prevenção de doenças e a educação em saúde;</li>
+      <li>Apoiar boas práticas clínicas, com responsabilidade e respeito ao sigilo profissional;</li>
+      <li>Servir como ponte entre o conhecimento científico e a comunidade;</li>
+      <li>Incentivar o aprendizado contínuo de estudantes e profissionais da área da saúde.</li>
+    </ul>
+
+    <h2>Nossos valores</h2>
+    <p>Os valores do Observação Clínica refletem a forma como atuamos:</p>
+    <ul>
+      <li>Ética e responsabilidade profissional,</li>
+      <li>Humanização no cuidado em saúde,</li>
+      <li>Compromisso com evidências científicas,</li>
+      <li>Respeito, empatia e confidencialidade,</li>
+      <li>Incentivo ao aprendizado contínuo</li>
+    </ul>
+    <h2>Como produzimos o nosso conteúdo</h2>
+    <p>Todo o conteúdo do Observação Clínica é desenvolvido com rigor, responsabilidade e compromisso com a qualidade da
+      informação.
+      Buscamos fontes confiáveis, atualizadas e cientificamente validadas, com o objetivo de oferecer conteúdos claros,
+      objetivos e úteis para diferentes públicos.
+    </p>
+    <h2>Termos de usos</h2>
+    <p>As informações disponibilizadas no Observação Clínica têm caráter exclusivamente informativo e educativo. O
+      conteúdo apresentado não substitui diagnóstico, tratamento ou acompanhamento médico profissional. Recomendamos
+      sempre a consulta com um profissional de saúde qualificado, leia os nossos <a href="/termos-e-usos/">termos de
+        uso</a>
+    </p>
+    <h2>Política de privacidade</h2>
+    <p>Valorizamos a privacidade dos nossos usuários e garantimos o tratamento seguro e responsável de todas as
+      informações fornecidas, leia as <a href="/politicas-e-privacidades/">nossas políticas e privacidade.</a></p>
+
+    <h2>Fale conosco</h2>
+    <h3>Tem alguma dúvida, sugestão ou feedback?</h3>
+    <p>Estamos disponíveis para ouvir você e melhorar continuamente o nosso conteúdo. Entre em contacto conosco <a
+        href="/contacto/">aqui</a>.</p>
+    <p class="text-center"><b>Observação Clínica — saúde na tua mão.</b></p>
+  </main>
+  <!-- Cookie Banner -->
+  <div id="cookieConsent" class="cookie-consent hidden">
+    <p>
+      🍪 Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados. Veja nossa <a
+        href="/politicas-e-privacidades/">política de privacidade</a>.
+    </p>
+    <div class="buttons">
+      <button id="acceptCookies">Aceitar</button>
+      <button id="denyCookies">Recusar</button>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- LOGO -->
+        <div class="logo">
+          <a href="/index.html">
+            <img src="/img/logo.webp" alt="Observação clinica">
+          </a>
+        </div>
+      </div>
+      <div class="footer-topa">
+        <!-- aviso -->
+        <p class="aviso">
+          É um espaço informativo, de divulgação e educação sobre temas relacionados com saúde, nutrição e
+          bem-estar. As
+          informações publicadas não devem ser utilizadas como substituto ao diagnóstico ou tratamento
+          especializado, e consulte sempre um profissional de saúde. </p>
+        <!-- REDES -->
+        <div class="rede">
+          <div class="flex gap-10 text-2xl">
+            <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook">
+              <i class="fab fa-facebook"></i> </a>
+            <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube">
+              <i class="fab fa-youtube"></i> </a>
+            <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp">
+              <i class="fab fa-whatsapp"></i> </a>
+          </div>
+        </div>
+      </div>
+      <!-- FIM REDE -->
+      <div class="divider"></div>
+      <div class="footer-links">
+        <div class="column">
+          <b>INSTITUCIONAL</b>
+          <a href="/sobre/">Quem somos</a>
+          <a href="/equipa/">Equipa técnica</a>
+          <a href="/contacto/">Contacto</a>
+        </div>
+        <div class="column">
+          <b>EDITORIAL</b>
+          <a href="/correcao-de-conteudos/">Correções</a>
+          <a href="/uso-de-ia/">Uso da IA</a>
+        </div>
+        <div class="column">
+          <b>TRANSPARÊNCIAS</b>
+          <a href="/termos-e-usos/">Termos e usos</a>
+          <a href="/politicas-e-privacidades/">Políticas e privacidades</a>
+        </div>
+        <div class="column">
+          <b>SAÚDE-AZ</b>
+          <a href="/saude-mental/">Saúde mental</a>
+          <a href="/saude-az/">Doenças</a>
+        </div>
+        <div class="column">
+          <b>BEM-ESTAR</b>
+          <a href="/saude-bucal/">Saúde bucal</a>
+          <a href="/fitness/">Fitness</a>
+          <a href="/calculadoras/">Calculadoras</a>
+        </div>
+      </div>
+    </div>
+    <div class="direitos">
+      © 2026 Observação clínica - Todos os direitos reservados
+    </div>
+  </footer>
+  <script src="/src/geral.js" defer></script>
+  <script src="/src/search-live.js" defer=""></script>
+</body>
+
+</html>
