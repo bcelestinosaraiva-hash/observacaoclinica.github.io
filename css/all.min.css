@@ -41,6 +41,12 @@
     font-weight: 400;
 }
 
+.fa-regular.fa-clock {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
 @font-face {
     font-family: "Font Awesome 6 Brands";
     font-style: normal;
