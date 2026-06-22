@@ -169,50 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ==========================
-// FORM (FORMSPREE)
-// ==========================
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
-  const feedback = document.getElementById("feedback");
-
-  if (!form || !feedback) return;
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const mensagem = document.getElementById("mensagem")?.value || "";
-
-    if (mensagem.length < 100) {
-      feedback.textContent = "A mensagem deve ter no mínimo 100 caracteres.";
-      feedback.style.color = "red";
-      return;
-    }
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" }
-      });
-
-      if (response.ok) {
-        feedback.textContent = "Mensagem enviada com sucesso!";
-        feedback.style.color = "green";
-        form.reset();
-      } else {
-        feedback.textContent = "Erro ao enviar. Tente novamente.";
-        feedback.style.color = "red";
-      }
-    } catch (error) {
-      feedback.textContent = "Erro de conexão. Verifique sua internet.";
-      feedback.style.color = "red";
-    }
-  });
-});
-
-// ==========================
 // FUNÇÕES DE SHARE MANUAL
 // ==========================
 function shareWhatsApp() {
