@@ -7,7 +7,7 @@ import {
     update
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
-// CONFIG FIREBASE (OK)
+// CONFIG FIREBASE
 const firebaseConfig = {
     apiKey: "AIzaSyADiwNWsL36ZBYPVbalBdR9KuxI2EH4PSE",
     authDomain: "avaliacaode-site.firebaseapp.com",
@@ -18,7 +18,7 @@ const firebaseConfig = {
     appId: "1:400865041393:web:1ee771e269c2d11ec58250"
 };
 
-// INIT
+// INIT FIREBASE (CORRIGIDO)
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
@@ -34,13 +34,13 @@ function getVisitorId() {
     return id;
 }
 
-// FEEDBACK UI
+// ABRIR FEEDBACK
 function abrirFeedback() {
     const feedback = document.getElementById("feedback");
     if (feedback) feedback.style.display = "block";
 }
 
-// PROTEGER ERROS DE REDE (IMPORTANTE)
+// SAFE GET (evita crashes de rede)
 async function safeGet(refPath) {
     try {
         return await get(refPath);
@@ -86,9 +86,12 @@ window.enviar = async function () {
     const artigo = window.location.pathname.replace(/\//g, "_");
     const visitor = getVisitorId();
 
-    await update(ref(db, `avaliacoes/${artigo}/${visitor}`), {
-        comentario: msg
-    });
+    await update(
+        ref(db, `avaliacoes/${artigo}/${visitor}`),
+        {
+            comentario: msg
+        }
+    );
 
     alert("Obrigado!");
 };
@@ -120,5 +123,7 @@ async function carregarEstatisticas() {
     if (smallEl) smallEl.innerText = `(${total} avaliações)`;
 }
 
-// INIT DOM
-document.addEventListener("DOMContentLoaded", carregarEstatisticas);
+// INIT
+window.addEventListener("load", () => {
+    setTimeout(carregarEstatisticas, 500);
+});
