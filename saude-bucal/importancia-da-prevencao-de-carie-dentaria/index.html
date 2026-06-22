@@ -112,7 +112,7 @@
     <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
+<body>
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -325,14 +325,14 @@
     <!-- FIM DO HEADER -->
     <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <section class="space-y-6">
-            <h1>Importância da prevenção de cáries para a saúde bucal</h1>
+            <h1>Importância da prevenção de cáries para saúde bucal</h1>
             <!-- DATA DE ATUALIZACAO -->
             <div class="meta">
                 <i class="fa-regular fa-clock"></i>
-                Atualizado em Maio de 2026
+                Atualizado em maio de 2026
             </div>
             <div class="autora">
-                <img src="/img/Beldo.webp" loading="eager" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
+                <img src="/img/Beldo.webp" loading="eager" class="object-cover rounded-full" alt="Autor">
                 <div class="autora-info">
                     Revisão:
                     <a href="/equipa/beldo-celestino-saraiva/" aria-label="Beldo Celestino Saraiva">Beldo Celestino
@@ -559,27 +559,6 @@
                     </h3>
                 </a>
             </article>
-
-            <article>
-                <a href="/saude-az/hipertensao-arterial-mas-porque/">
-                    <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial"
-                        loading="lazy" class="w-full h-40 object-cover">
-                    <span class="tag">HIPERTENSÃO</span>
-                    <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba
-                        mais.
-                    </h3>
-                </a>
-            </article>
-
-            <article>
-                <a href="/saude-az/7-sintomas-de-meningite-que-parecem-gripe/">
-                    <img src="/img/meningite.webp" loading="lazy" alt="7-sintomas-de-meningite-que-parecem-gripe"
-                        class="w-full h-40 object-cover">
-                    <span class="tag">MENINGITE</span>
-                    <h3>7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca, saiba mais...
-                    </h3>
-                </a>
-            </article>
         </aside>
     </main>
     <!-- MENSAGEM RELACIONADAS -->
@@ -734,7 +713,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/src/search-live.js" defer></script>

@@ -108,7 +108,7 @@
     <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="saude-mental/o-que-e-mioclonia/">
+<body>
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -326,10 +326,10 @@
             <!-- DATA DE ATUALIZACAO -->
             <div class="meta">
                 <i class="fa-regular fa-clock"></i>
-                Atualizado em Junho de 2026
+                Atualizado em junho de 2026
             </div>
             <div class="autora">
-                <img src="/img/Beldo.webp" loading="eager" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
+                <img src="/img/Beldo.webp" loading="eager" class="object-cover rounded-full" alt="Autor">
                 <div class="autora-info">
                     Revisão:
                     <a href="/equipa/beldo-celestino-saraiva/" aria-label="Beldo Celestino Saraiva">Beldo Celestino
@@ -425,11 +425,10 @@
             <h2>Factores e as causas que podem favorecer esse tipo de espasmo</h2>
             <ul>
                 <li>
-                    AVC: <a href="/saude-az/o-que-e-avc/">Acidente vascular cerebral</a>; tumores cerebrais; lesões
+                    AVC: <a href="/saude-az/o-que-e-avc/">acidente vascular cerebral</a>; tumores cerebrais; lesões
                     na medula espinhal;</li>
                 <li>Insuficiência renal; insuficiência hepática; falta prolongada de oxigenação cerebral; intoxicações;
                 </li>
-
                 <li>Reações medicamentosas; doenças autoimunes; doença de Parkinson; doença de Alzheimer e doença de
                     Huntington.</li>
             </ul>
@@ -516,6 +515,10 @@
             <h2 class="referencia">BIBLIOGRÁFICAS</h2>
             <div class="panel">
                 <ul>
+                    <li>Cleveland Clinic. Myoclonus: What It Is, Causes, Symptoms and Treatment.
+                        <a href="https://my.clevelandclinic.org/health/diseases/15301-myoclonus" target="_blank">
+                            https://my.clevelandclinic.org/health/</a>
+                    </li>
                     <li>BRASIL. Ministério da Saúde. Saúde Bucal: orientações para a população. Brasília: Ministério
                         da Saúde, 2022.</li>
                     <li>PEREIRA, Antonio Carlos; SOUSA, Maria Aparecida. Odontologia preventiva e saúde coletiva.
@@ -710,7 +713,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/src/search-live.js" defer></script>
