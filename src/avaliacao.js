@@ -1,12 +1,13 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import {
     getDatabase,
     ref,
     get,
     set,
     update
-} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-database.js";
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
+// CONFIG FIREBASE (OK)
 const firebaseConfig = {
     apiKey: "AIzaSyADiwNWsL36ZBYPVbalBdR9KuxI2EH4PSE",
     authDomain: "avaliacaode-site.firebaseapp.com",
@@ -17,9 +18,11 @@ const firebaseConfig = {
     appId: "1:400865041393:web:1ee771e269c2d11ec58250"
 };
 
+// INIT
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+// ID VISITANTE
 function getVisitorId() {
     let id = localStorage.getItem("visitor_id");
 
@@ -31,21 +34,32 @@ function getVisitorId() {
     return id;
 }
 
+// FEEDBACK UI
 function abrirFeedback() {
     const feedback = document.getElementById("feedback");
     if (feedback) feedback.style.display = "block";
 }
 
-window.avaliar = async function (voto) {
+// PROTEGER ERROS DE REDE (IMPORTANTE)
+async function safeGet(refPath) {
+    try {
+        return await get(refPath);
+    } catch (e) {
+        console.error("Erro Firebase GET:", e);
+        return null;
+    }
+}
 
+// AVALIAR
+window.avaliar = async function (voto) {
     const artigo = window.location.pathname.replace(/\//g, "_");
     const visitor = getVisitorId();
 
     const votoRef = ref(db, `avaliacoes/${artigo}/${visitor}`);
 
-    const snap = await get(votoRef);
+    const snap = await safeGet(votoRef);
 
-    if (snap.exists()) {
+    if (snap && snap.exists()) {
         alert("Você já avaliou este artigo.");
         return;
     }
@@ -60,9 +74,9 @@ window.avaliar = async function (voto) {
     carregarEstatisticas();
 };
 
+// ENVIAR COMENTÁRIO
 window.enviar = async function () {
-
-    const msg = document.getElementById("mensagem").value.trim();
+    const msg = document.getElementById("mensagem")?.value?.trim();
 
     if (!msg) {
         alert("Escreva uma mensagem.");
@@ -72,25 +86,20 @@ window.enviar = async function () {
     const artigo = window.location.pathname.replace(/\//g, "_");
     const visitor = getVisitorId();
 
-    await update(
-        ref(db, `avaliacoes/${artigo}/${visitor}`),
-        {
-            comentario: msg
-        }
-    );
+    await update(ref(db, `avaliacoes/${artigo}/${visitor}`), {
+        comentario: msg
+    });
 
     alert("Obrigado!");
 };
 
+// ESTATÍSTICAS
 async function carregarEstatisticas() {
-
     const artigo = window.location.pathname.replace(/\//g, "_");
 
-    const snap = await get(
-        ref(db, `avaliacoes/${artigo}`)
-    );
+    const snap = await safeGet(ref(db, `avaliacoes/${artigo}`));
 
-    if (!snap.exists()) return;
+    if (!snap || !snap.exists()) return;
 
     const dados = snap.val();
 
@@ -99,16 +108,17 @@ async function carregarEstatisticas() {
 
     for (const i in dados) {
         total++;
-        if (dados[i].voto === "Sim") sim++;
+        if (dados[i]?.voto === "Sim") sim++;
     }
 
-    const percent = Math.round((sim / total) * 100);
+    const percent = total ? Math.round((sim / total) * 100) : 0;
 
-    document.querySelector(".percent").innerText = percent + "%";
-    document.querySelector("small").innerText = `(${total} avaliações)`;
+    const percentEl = document.querySelector(".percent");
+    const smallEl = document.querySelector("small");
+
+    if (percentEl) percentEl.innerText = percent + "%";
+    if (smallEl) smallEl.innerText = `(${total} avaliações)`;
 }
 
-document.addEventListener(
-    "DOMContentLoaded",
-    carregarEstatisticas
-);
+// INIT DOM
+document.addEventListener("DOMContentLoaded", carregarEstatisticas);
