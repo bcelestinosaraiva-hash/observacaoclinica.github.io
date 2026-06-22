@@ -57,7 +57,7 @@
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="calculadoras/como-calcular-o-ciclo-menstrual/">
+<body>
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -288,10 +288,14 @@
         datas importantes relacionadas ao ciclo menstrual e à gestação. Com base no CM e na duração média do ciclo, ela
         permite identificar com precisão a próxima menstruação.</p>
 
-      <section class="warning">
-        <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
-          substituir a orientação médicas, consulte sempre um profissional de saúde.</p>
-      </section>
+      <p>O ciclo menstrual é o intervalo de tempo entre o primeiro dia de uma menstruação e o primeiro dia da
+        menstruação seguinte. Conhecer a duração do ciclo ajuda a prever a próxima menstruação, identificar o período
+        fértil e reconhecer possíveis alterações que podem indicar problemas de saúde.</p>
+
+      <h2>O que é o ciclo menstrual?</h2>
+      <p>O ciclo menstrual é um processo natural controlado por hormônios, que prepara o organismo para uma possível
+        gravidez. Em adultos, a duração normal varia entre 21 e 35 dias, enquanto em adolescentes pode haver maior
+        irregularidade nos primeiros anos após a menarca.</p>
 
       <p>É o primeiro dia em que o sangramento menstrual começa no ciclo mais recente. Essa data é
         usada como referência para calcular.
@@ -318,15 +322,39 @@
         <div id="resultado" class="result"></div>
       </section>
 
-      <p>O ciclo menstrual é o período de tempo entre o primeiro dia de sangramento de uma menstruação (DUM) e o
-        dia anterior à próxima menstruação, durante o qual o corpo da mulher se prepara para uma possível gravidez.</p>
+      <h2>Como prever próxima menstruação?</h2>
+      <p>Prever a sua próxima menstruação é relativamente simples quando o ciclo menstrual é regular. Para isso, é
+        necessário conhecer a duração média do seu ciclo menstrual, que corresponde ao número de dias
+        entre o primeiro dia de uma menstruação e o primeiro dia da menstruação seguinte.</p>
+
+      <h2>Passo 1: Identifique o primeiro dia da última menstruação</h2>
+      <p>Primeiro dia da última menstruação: 5 de junho. Esse dia é considerado o início de um novo ciclo menstrual.</p>
+      <h2>Passo 2: Saiba quantos dias dura o seu ciclo</h2>
+      <p>A maioria das mulheres apresenta ciclos entre 21 e 35 dias, sendo o ciclo de 28 dias um dos mais comuns.
+        Suponha que o seu ciclo dure, em média, 28 dias.</p>
+
+      <h2>Passo 3: Adicione a duração do ciclo ao primeiro dia da última menstruação</h2>
+      <p>Se o primeiro dia da última menstruação foi 5 de junho e o ciclo dura 28 dias, a próxima menstruação será
+        esperada aproximadamente 28 dias depois.</p>
+
+      <p> <b>Exemplo:</b>
+        5 de junho → Dia 1 do ciclo
+        12 de junho → Dia 8
+        19 de junho → Dia 15
+        26 de junho → Dia 22
+        3 de julho → Dia 29 (início do próximo ciclo)</p>
+      <p> <b>Resultado:</b> a próxima menstruação é esperada por volta de 3 de julho.</p>
+
+      <h2>Como fazer a contagem corretamente?</h2>
+      <p>É importante entender que o cálculo é feito do primeiro dia de uma menstruação ao primeiro dia da seguinte, e
+        não contando quantos dias a menstruação dura.</p>
+
       <p><b>Importância</b>: a duração da menstruação ajuda a avaliar a saúde do ciclo menstrual e detectar
         possíveis alterações hormonais ou problemas ginecológicos.</p>
 
       <p>A ovulação é o processo natural do ciclo reprodutivo feminino em que o <b> ovário libera um óvulo
           maduro</b> , tornando possível a fecundação. Esse evento ocorre, em média, uma vez por ciclo menstrual e
-        representa o
-        período de maior fertilidade da mulher.</p>
+        representa o período de maior fertilidade da mulher.</p>
 
       <p>Esse óvulo é então captado pelas trompas de Falópio, onde pode se encontrar com um espermatozoide e dar início
         ao processo de concepção. Caso não seja fecundado, ele se desintegra em poucas horas e será eliminado junto ao
@@ -396,16 +424,6 @@
             loading="lazy" class="w-full h-40 object-cover">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
-          </h3>
-        </a>
-      </article>
-
-      <article>
-        <a href="/saude-az/asma-sintomas-tratamento/" aria-label="asma">
-          <img src="/img/asma.webp" alt="Asma é doença inflamatória crônica das vias respiratórias caracterizada"
-            loading="lazy" class="w-full h-40 object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>Asma é doença inflamatória crônica das vias respiratórias caracterizada pela, saiba mais.
           </h3>
         </a>
       </article>
@@ -564,8 +582,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/calculadoras/src/ciclo.js" defer></script>
   <script src="/src/search-live.js" defer></script>

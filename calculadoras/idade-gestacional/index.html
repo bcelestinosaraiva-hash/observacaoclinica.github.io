@@ -67,7 +67,7 @@
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="idade-gestacional/">
+<body>
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -279,10 +279,10 @@
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
         <i class="fa-regular fa-clock"></i>
-        Atualizado em Maio de 2026
+        Atualizado em maio de 2026
       </div>
       <div class="autora">
-        <img src="/img/Beldo.webp" loading="eager" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
+        <img src="/img/Beldo.webp" loading="eager" class="object-cover rounded-full" alt="Autor">
         <div class="autora-info">
           Revisão:
           <a href="/equipa/beldo-celestino-saraiva/">Beldo Celestino Saraiva</a><br>
@@ -299,23 +299,25 @@
       <p>Temos a calculadora abaixo para calcular a sua idade gestacional, colocando o seu DUM e o dia que a gestante se
         apresentou na unidade ou dia atual.</p>
 
-      <section class="warning">
-        <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
-          substituir a orientação médicas, consulte sempre um profissional de saúde.</p>
-      </section>
+      <p>A idade gestacional corresponde ao tempo de gravidez contado em semanas e dias, desde o primeiro dia da última
+        menstruação (DUM). Esse cálculo é essencial para acompanhar o desenvolvimento do bebê e estimar a data provável
+        do parto (DPP).</p>
+
+      <p>Embora a gestação completa dure, em média, 40 semanas (280 dias), apenas cerca de 5% dos bebês nascem
+        exatamente na data prevista. Por isso, a data do parto é sempre uma estimativa.</p>
 
       <p>Informe a sua <b>DUM</b> ou data da última menstruação e a sua <b>DAUS</b> ou data de apresentação na unidade
         sanitária para obter a idade gestacional (semanas + dias) e a data provável de parto.</p>
 
-      <section class="grid gap-3 w-full" aria-label="calculadora de iadade gestacional">
+      <section aria-label="calculadora de iadade gestacional">
         <div>
           <h2 class="text-center">Calculadora de idade gestacional</h2>
           <label aria-label="data da ultima menstruacao">Data da última menstruação (DUM)</label>
           <input id="dum" type="date" class="w-full border border-gray-300 rounded px-3 py-2" aria-label="data">
         </div>
         <div>
-          <label class="block text-sm" aria-label="dia da apresentacao na us">Dia de apresentação na unidade
-            sanitária</label>
+          <label class="block text-sm" aria-label="dia da apresentacao na us">Dia de apresentação na US ou dia
+            actual</label>
           <input id="apresentacao" type="date" class="w-full rounded border border-gray-300 px-3 py-2"
             aria-label="apresentacao">
         </div>
@@ -324,7 +326,7 @@
           <input id="cycle" type="number" min="20" max="40" value="28" aria-label="comprimento do ciclo"
             class="w-full  border border-gray-300 rounded px-3 py-2">
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-5">
           <button id="calcBtn" onclick="calcular()" style="width: 40%; height: 50px; border: none; 
                     border-radius: 10px; background: #015d81; color: #ffffff; font-size: 16px;
                     font-weight: bold; cursor: pointer; transition: .3s;">
@@ -332,7 +334,7 @@
           </button>
         </div>
         </div>
-        <div id="alert" class="hidden p-2 rounded-lg"></div>
+        <div id="alert" class="hidden p-2 rounded-lg mt-5"></div>
         <div id="resultCard" class="hidden">
           <h3>RESULTADOS: A SUA GRÁVIDA É DE:</h3>
           <div class="grid md:grid-cols-2 gap-2">
@@ -416,28 +418,30 @@
           </div>
         </section>
       </section>
-      <!-- LADO DIREITO: BARRA LATERAL -->
-      <aside class="space-y-6 mt-10">
-        <article>
-          <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
-            <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
-              loading="lazy" class="w-full h-40 object-cover">
-            <span class="tag">DOENÇAS E CONDIÇÕES</span>
-            <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
-            </h3>
-          </a>
-        </article>
+    </section>
 
-        <article>
-          <a href="/saude-az/hipertensao-arterial-mas-porque/" aria-label="hipertensão e elavacao persistente">
-            <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial" loading="lazy"
-              class="w-full h-40 object-cover">
-            <span class="tag">HIPERTENSÃO</span>
-            <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba mais.
-            </h3>
-          </a>
-        </article>
-      </aside>
+    <!-- LADO DIREITO: BARRA LATERAL -->
+    <aside class="space-y-6 mt-10">
+      <article>
+        <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
+          <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
+            loading="lazy" class="w-full h-40 object-cover">
+          <span class="tag">DOENÇAS E CONDIÇÕES</span>
+          <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
+          </h3>
+        </a>
+      </article>
+
+      <article>
+        <a href="/saude-az/hipertensao-arterial-mas-porque/" aria-label="hipertensão e elavacao persistente">
+          <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial" loading="lazy"
+            class="w-full h-40 object-cover">
+          <span class="tag">HIPERTENSÃO</span>
+          <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba mais.
+          </h3>
+        </a>
+      </article>
+    </aside>
   </main>
   <!-- SECCAO DE CALCULADORAS -->
   <section class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-5">
@@ -581,7 +585,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/calculadoras/src/idadegesta.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>

@@ -173,7 +173,7 @@
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="calculadoras/como-calcular-dextrose">
+<body>
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -379,16 +379,17 @@
     </div>
   </aside>
   <!-- FIM DO HEADER -->
+
   <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
     <section class="space-y-6">
       <h1>Como calcular o Bolo de dextrose 10%?</h1>
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
         <i class="fa-regular fa-clock"></i>
-        Atualizado em Abril de 2026
+        Atualizado em abril de 2026
       </div>
       <div class="autora">
-        <img src="/img/Beldo.webp" loading="lazy" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
+        <img src="/img/Beldo.webp" loading="lazy" class="object-cover rounded-full" alt="Autor">
         <div class="autora-info">
           Revisão:
           <a href="/equipa/beldo-celestino-saraiva/">Beldo Celestino Saraiva</a><br>
@@ -402,6 +403,13 @@
       <p>A calculadora de bolo de dextrose é um instrumento clínico (manual ou digital) que estima o bolo de glicose
         intravenosa necessário com base o peso do paciente. Para calcular tem a ferramenta: onde poderá colocar o peso
         do paciente e verá a prescrição em ml de dextrose 5% e 50%.</p>
+
+      <p>O bolo de dextrose 10% (D10%) é uma solução intravenosa utilizada para corrigir episódios de hipoglicemia
+        (níveis baixos de glicose no sangue), especialmente em recém-nascidos, crianças e pacientes que necessitam de
+        reposição rápida de glicose.</p>
+      <p>O cálculo correto é fundamental para garantir a administração segura e eficaz da
+        solução.</p>
+
 
       <section class="warning">
         <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
@@ -524,7 +532,7 @@
           </table>
         </div>
 
-        <h2>Tratamento de hipoglicemia nos adultos</h2>
+        <h2>Tratamento de hipoglicemia adultos</h2>
 
         <p>Administrar 15–20 g de carbohidrato simples por via oral (ex.: suco, glicose, açúcar), dependendo da
           consciência da vítima pode administrar glugacon. Reavaliar glicemia em 15 minutos (“regra dos 15”).</p>
@@ -537,6 +545,12 @@
           sangue
           de forma rápida e prática, geralmente em casa. Ele é essencial para pessoas com diabetes ou para quem
           precisa monitorar a glicemia regularmente.</p>
+
+        <p>O cálculo do bolo de dextrose 10% baseia-se principalmente no peso corporal do paciente e na dose prescrita
+          em mL/kg. A fórmula Volume (mL) = Peso (kg) × Dose (mL/kg) permite determinar a quantidade necessária para
+          corrigir rapidamente a hipoglicemia.</p>
+        <p> Devido aos riscos associados, a administração deve ser feita apenas por
+          profissionais de saúde capacitados e de acordo com protocolos clínicos estabelecidos.</p>
         <hr>
         <!-- SHAREING-->
         <div class="compartilhamento">
@@ -602,16 +616,6 @@
             loading="lazy" class="w-full h-40 object-cover">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
-          </h3>
-        </a>
-      </article>
-
-      <article>
-        <a href="/saude-az/asma-sintomas-tratamento/" aria-label="asma">
-          <img src="/img/asma.webp" alt="Asma é doença inflamatória crônica das vias respiratórias caracterizada"
-            loading="lazy" class="w-full h-40 object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>Asma é doença inflamatória crônica das vias respiratórias caracterizada pela, saiba mais.
           </h3>
         </a>
       </article>
@@ -778,8 +782,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/calculadoras/src/dextrose.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>

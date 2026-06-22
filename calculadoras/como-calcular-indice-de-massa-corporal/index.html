@@ -112,7 +112,7 @@
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="como-calcular-indice-de-massa-corporal/">
+<body>
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -330,7 +330,7 @@
         Atualizado em Abril de 2026
       </div>
       <div class="autora">
-        <img src="/img/Beldo.webp" loading="eager" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
+        <img src="/img/Beldo.webp" loading="eager" class="object-cover rounded-full" alt="Autor">
         <div class="autora-info">
           Revisão:
           <a href="/equipa/beldo-celestino-saraiva/">Beldo Celestino Saraiva</a><br>
@@ -348,10 +348,9 @@
       <p>Calcule o seu IMC na ferramente abaixo e controle o seu estado nutricional, escolhendo o seu genero,
         preenchendo a sua idade, altura e peso.</p>
 
-      <section class="warning">
-        <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
-          substituir a orientação médicas, consulte sempre um profissional de saúde.</p>
-      </section>
+      <h2>O que é o Índice de Massa Corporal?</h2>
+      <p>O Índice de Massa Corporal é um indicador que relaciona o peso corporal com a altura. O resultado permite
+        classificar o indivíduo em diferentes categorias de peso.</p>
 
       <p>Para calcular o seu IMC, por favor insira os seus dados nos campos em branco abaixo.</p>
 
@@ -437,17 +436,6 @@
             href="https://www.who.int/publications/i/item/9789240082830" target="_blank"
             rel="noopener noreferrer">organização mundial da saúde</a>.</p>
 
-        <h2>Causas da desnutrição</h2>
-        <ul>
-          <li>Alimentação insuficiente,</li>
-          <li>Problemas de absorção,</li>
-          <li>Doenças ou condições especiais,</li>
-          <li>Estilo de vida e pobreza.</li>
-        </ul>
-        <p>
-          No que resulta deficiência de calorias e proteinas.
-        </p>
-
         <p>Obesidade é a condição caracterizada pelo excesso de gordura corporal que pode prejudicar a saúde. É
           geralmente identificada pelo Índice de Massa Corporal (IMC), sendo considerada obesidade quando o IMC é
           igual ou superior a 30.</p>
@@ -465,6 +453,12 @@
           manter as funções vitais, garantir energia, promover o crescimento, reparar tecidos e fortalecer o sistema
           imunológico. Os nutrientes podem ser divididos em dois grandes grupos: macronutrientes e
           micronutrientes.</p>
+
+        <p>O Índice de Massa Corporal (IMC) é uma ferramenta simples e amplamente utilizada para avaliar se o peso está
+          adequado em relação à altura. O cálculo é feito dividindo-se o peso em quilogramas pela altura ao quadrado em
+          metros.</p>
+        <p>Embora seja útil para identificar alterações no peso, o IMC deve ser interpretado juntamente com
+          outros indicadores de saúde para uma avaliação mais completa.</p>
         <hr>
         <!-- SHAREING-->
         <div class="compartilhamento">
@@ -513,32 +507,11 @@
     <!-- LADO DIREITO: BARRA LATERAL -->
     <aside class="space-y-6 mt-10">
       <article>
-        <a href="/gravidez/sintomas-de-gravidez/">
-          <img src="/img/sintomasdegravidez.webp"
-            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança" loading="lazy"
-            class="w-full h-40 object-cover">
-          <span class="tag">SINTOMAS DE GRAVIDEZ</span>
-          <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
-          </h3>
-        </a>
-      </article>
-
-      <article>
         <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
           <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
             loading="lazy" class="w-full h-40 object-cover">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
-          </h3>
-        </a>
-      </article>
-
-      <article>
-        <a href="/saude-az/asma-sintomas-tratamento/" aria-label="asma">
-          <img src="/img/asma.webp" alt="Asma é doença inflamatória crônica das vias respiratórias caracterizada"
-            loading="lazy" class="w-full h-40 object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>Asma é doença inflamatória crônica das vias respiratórias caracterizada pela, saiba mais.
           </h3>
         </a>
       </article>
@@ -698,7 +671,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/calculadoras/src/imc.js" defer></script>
   <script src="/src/search-live.js" defer></script>

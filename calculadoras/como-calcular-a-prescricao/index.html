@@ -63,12 +63,11 @@
   <link rel="icon" type="image/webp" sizes="16x16" href="/img/icon.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/icon.webp">
   <link rel="icon" href="/img/icon.webp" type="image/webp">
-  <!-- CSS -->
   <link rel="stylesheet" href="/css/all.min.css">
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 
-<body data-artigo="como-calcular-a-prescricao/">
+<body>
   <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -281,7 +280,7 @@
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
         <i class="fa-regular fa-clock"></i>
-        Atualizado em Junho de 2026
+        Atualizado em junho de 2026
       </div>
       <div class="autora">
         <img src="/img/Beldo.webp" loading="lazy" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
@@ -299,13 +298,20 @@
         paciente terá de escolher o tipo de fármaco ou medicamento lembrando que a cada medicamento tem suas respectivas
         constantes e colocar o seu peso e verá a prescrição.</p>
 
-      <section class="warning">
-        <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
-          substituir a orientação médicas, consulte sempre um profissional de saúde.</p>
-      </section>
+      <p>A prescrição de medicamentos baseada no peso corporal é uma prática fundamental para garantir a segurança e a
+        eficácia do tratamento. Esse método é amplamente utilizado em crianças, idosos e em medicamentos que exigem
+        doses precisas, reduzindo o risco de subdosagem ou intoxicação.</p>
+
+      <h2>Por que o peso do paciente é importante?</h2>
+      <p>O peso influencia diretamente a distribuição e a eliminação dos medicamentos pelo organismo. Uma dose
+        inadequada pode causar:</p>
+      <ul>
+        <li>Falha no tratamento; efeitos colaterais graves; </li>
+        <li>Toxicidade medicamentosa; maior risco de complicações.</li>
+      </ul>
 
       <!-- CALCULADORAS-->
-      <div class="max-w-6xl bg-white w-full rounded shadow p-4">
+      <section>
         <h2 class="text-center">Calculadora de prescrição</h2>
         <h3 class="text-center py-2">Escolhe o seu medicamento</h3>
         <select id="drug-select" class="w-full border border-gray-300 rounded py-2"
@@ -342,9 +348,13 @@
         <div class="result" id="drug-per-dose"> mg</div>
         <div class="details text-sm mt-4" id="drug-detail">
         </div>
-      </div>
+      </section>
 
-      <p> <b>Dosagem</b> é a determinação da quantidade exata de um medicamento ou substância que deve ser
+      <p>O cálculo da prescrição médica com base no peso é um procedimento essencial para garantir a administração
+        segura e eficaz dos medicamentos. A fórmula peso corporal × dose recomendada permite individualizar o
+        tratamento, principalmente em crianças e pacientes que necessitam de doses precisas.</p>
+
+      <p> <b>Dosagem</b> é a quantidade exata de um medicamento ou substância que deve ser
         administrada
         a um paciente para alcançar um efeito terapêutico desejado de forma segura. Ela leva em conta diversos
         fatores,
@@ -442,9 +452,8 @@
     <aside class="space-y-6 mt-10">
       <article>
         <a href="/gravidez/sintomas-de-gravidez/">
-          <img src="/img/sintomasdegravidez.webp"
-            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança" loading="lazy"
-            class="w-full h-40 object-cover">
+          <img src="/img/sintomasdegravidez.webp" alt="Sintomas de gravidez: como identificar os primeiros"
+            loading="lazy" class="w-full h-40 object-cover">
           <span class="tag">SINTOMAS DE GRAVIDEZ</span>
           <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
           </h3>
@@ -623,7 +632,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/calculadoras/src/medicamentos.js" defer></script>
   <script src="/src/search-live.js" defer></script>
