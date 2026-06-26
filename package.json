@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./css/style.css --minify"
-  },
-  "devDependencies": {
-    "tailwindcss": "^4.2.2",
-    "@tailwindcss/cli": "^4.2.2"
+    "build": "echo 'no build needed'"
   }
 }
