@@ -413,72 +413,49 @@
         <hr>
       </section>
 
-      <!-- AVALIACAO DE CONTEUDO-->
-      <section>
-        <p><span><i class="fa-solid fa-thumbs-up"></i></span> <span class="percent">Carregando...</span>
-          acham este conteúdo muito útil.</p>
-        <small>(carregando avaliações...)</small>
-        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
-        <div class="buttons">
-          <button class="btna btn-yes" onclick="avaliar('Sim')">
-            <i class="fa-solid fa-thumbs-up"></i> SIM
-          </button>
-          <button class="btna btn-no" onclick="avaliar('Não')">
-            <i class="fa-solid fa-thumbs-down"></i> NÃO
-          </button>
-        </div>
-        <div id="feedback" class="hidden">
-          <p class="success">✔ Obrigado pela avaliação volte sempre!</p>
-          <p>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</p>
-          <textarea id="mensagem" placeholder="Escreva sua mensagem..."></textarea>
-          <button class="submit-btn" onclick="enviar()">ENVIAR</button>
-        </div>
-      </section>
-    </section>
-    <!-- #FIM DE AVALIACAO-->
-    <!-- LADO DIREITO: BARRA LATERAL -->
-    <aside class="space-y-6 mt-10">
-      <article>
-        <a href="/gravidez/sintomas-de-gravidez/">
-          <img src="/img/sintomasdegravidez.webp"
-            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança" loading="lazy"
-            class="w-full h-40 object-cover">
-          <span class="tag">SINTOMAS DE GRAVIDEZ</span>
-          <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
-          </h3>
-        </a>
-      </article>
+      <!-- LADO DIREITO: BARRA LATERAL -->
+      <aside class="space-y-6 mt-10">
+        <article>
+          <a href="/gravidez/sintomas-de-gravidez/">
+            <img src="/img/sintomasdegravidez.webp"
+              alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança" loading="lazy"
+              class="w-full h-40 object-cover">
+            <span class="tag">SINTOMAS DE GRAVIDEZ</span>
+            <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
+            </h3>
+          </a>
+        </article>
 
-      <article>
-        <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
-          <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
-            loading="lazy" class="w-full h-40 object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e as sua prevenções, saiba mais.
-          </h3>
-        </a>
-      </article>
+        <article>
+          <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
+            <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
+              loading="lazy" class="w-full h-40 object-cover">
+            <span class="tag">DOENÇAS E CONDIÇÕES</span>
+            <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e as sua prevenções, saiba mais.
+            </h3>
+          </a>
+        </article>
 
-      <article>
-        <a href="/saude-az/asma-sintomas-tratamento/" aria-label="asma">
-          <img src="/img/asma.webp" alt="Asma é doença inflamatória crônica das vias respiratórias caracterizada"
-            loading="lazy" class="w-full h-40 object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>Asma é doença inflamatória crônica das vias respiratórias caracterizada pela, saiba mais.
-          </h3>
-        </a>
-      </article>
+        <article>
+          <a href="/saude-az/asma-sintomas-tratamento/" aria-label="asma">
+            <img src="/img/asma.webp" alt="Asma é doença inflamatória crônica das vias respiratórias caracterizada"
+              loading="lazy" class="w-full h-40 object-cover">
+            <span class="tag">DOENÇAS E CONDIÇÕES</span>
+            <h3>Asma é doença inflamatória crônica das vias respiratórias caracterizada pela, saiba mais.
+            </h3>
+          </a>
+        </article>
 
-      <article>
-        <a href="/saude-az/hipertensao-arterial-mas-porque/" aria-label="hipertensão e elavacao persistente">
-          <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial" loading="lazy"
-            class="w-full h-40 object-cover">
-          <span class="tag">HIPERTENSÃO</span>
-          <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba mais.
-          </h3>
-        </a>
-      </article>
-    </aside>
+        <article>
+          <a href="/saude-az/hipertensao-arterial-mas-porque/" aria-label="hipertensão e elavacao persistente">
+            <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial" loading="lazy"
+              class="w-full h-40 object-cover">
+            <span class="tag">HIPERTENSÃO</span>
+            <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba mais.
+            </h3>
+          </a>
+        </article>
+      </aside>
   </main>
 
   <!-- SECCAO DE CALCULADORAS -->
@@ -623,9 +600,6 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
-  <script src="/src/avaliacao.js" defer></script>
   <script src="/calculadoras/src/diluicao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>
