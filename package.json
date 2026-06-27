@@ -1,8 +1,16 @@
 {
   "name": "observacao-clinica",
   "version": "1.0.0",
-  "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas",
+  "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde.",
+  "type": "commonjs",
   "scripts": {
-    "build": "echo 'no build needed'"
+    "build": "npx @tailwindcss/cli -i ./css/input.css -o ./css/style.min.css --minify",
+    "watch": "npx @tailwindcss/cli -i ./css/input.css -o ./css/style.min.css --watch"
+  },
+  "author": "Beldo Celestino Saraiva",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
   }
 }
