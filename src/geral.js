@@ -262,7 +262,3 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.style.display = "inline-block";
   });
 });
-
-
-
-

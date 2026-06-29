@@ -130,11 +130,6 @@
     text-decoration: inherit;
   }
 
-  b,
-  strong {
-    font-weight: bolder;
-  }
-
   code,
   kbd,
   samp,
@@ -1883,6 +1878,7 @@
   }
 }
 
+
 /* RESET */
 *,
 *::before,
@@ -1890,14 +1886,29 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: Rubik, Arial, Helvetica, sans-serif;
+html,
+body {
+  margin: 0px;
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
   background: #ffffff;
 }
 
-body {
-  text-rendering: optimizeLegibility;
+h1,
+h2,
+p {
+  line-height: 1.6;
 }
+
+strong {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(61, 61, 61);
+  padding: 0px;
+  margin-top: 4px;
+}
+
 
 /* TITULOS */
 h1 {
@@ -1910,7 +1921,7 @@ h1 {
   margin-top: 10px;
 }
 
-/* TELAS MAIORES MOBILE */
+/* telas maiores */
 @media (min-width: 768px) {
   h1 {
     font-size: 24px;
@@ -2185,7 +2196,13 @@ ol li::before {
   }
 }
 
-/* Grid  */
+/* Main layout */
+main {
+  background: inherit;
+  padding: 20px;
+  margin-top: 70px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -2210,7 +2227,33 @@ ol li::before {
   background: linear-gradient(180deg, transparent 20px, rgba(0, 0, 0, 0.45))
 }
 
+/* YOUTUBE*/
+.youtube-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
 
+.youtube-section {
+  font-size: 28px;
+  font-weight: 600;
+  font-size: 24;
+  margin-bottom: 25px;
+  color: #242323;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.video-card {
+  background: #e3eaeb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
 
 .thumb {
   width: 100%;
@@ -2223,6 +2266,10 @@ ol li::before {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.video-info {
+  padding: 18px;
 }
 
 /* Lista com bolinhas azuis */
@@ -2292,8 +2339,10 @@ ul li::before {
 
 /* Conteúdo */
 .cartao-content {
-  flex: 1;
+  padding: 5px;
+  flex: 5px;
 }
+
 
 /* Grid */
 .now {
@@ -2321,23 +2370,21 @@ ul li::before {
   }
 
   .now img {
-    width: 100%;
-    height: 180px;
+    width: 500px;
+    height: 200px;
     object-fit: cover;
-    display: block;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 600px) {
   .now {
     grid-template-columns: 1fr;
   }
 
   .now img {
-    width: 100%;
+    width: 720px;
     height: 180px;
     object-fit: cover;
-    display: block;
   }
 }
 
@@ -2347,10 +2394,9 @@ ul li::before {
   }
 
   .now img {
-    width: 100%;
+    width: 720px;
     height: 180px;
     object-fit: cover;
-    display: block;
   }
 }
 
@@ -2415,8 +2461,8 @@ ul li::before {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: rgb(61, 61, 61);
-  margin-top: 100px;
+  color: rgb(97, 96, 96);
+  margin: 13px;
 }
 
 /* 💻 Desktop */
@@ -2512,7 +2558,7 @@ ul a {
   display: flex;
   gap: 30px;
   margin-top: 4px;
-  flex-shrink: 0;
+  flex-shrink: 0px;
 }
 
 .cookie-consent button {
@@ -2545,7 +2591,7 @@ ul a {
   transform: scale(1.05);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 50px) {
   .cookie-consent {
     flex-direction: column;
     align-items: flex-start;
@@ -2585,7 +2631,7 @@ ul a {
 
 .panel {
   display: none;
-  padding: 2px 2px;
+  padding: 2px, 2px;
   margin-top: 0px;
   background: inherit;
 }
@@ -2601,7 +2647,7 @@ ul a {
 
 .logo img {
   width: 200px;
-  height: auto;
+  height: 52px;
 }
 
 .footer-top,
@@ -2750,7 +2796,7 @@ ul a {
   cursor: pointer;
 }
 
-.rede a:hover {
+.rede a :hover {
   color: #000000;
   cursor: pointer;
 }
@@ -2835,7 +2881,7 @@ ul a {
 
 .autora img {
   width: 40px;
-  height: 43px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -3095,7 +3141,7 @@ ul a {
 /* CARD */
 .calculadora {
   position: relative;
-  z-index: 2;
+  z-index: 2px;
   overflow: hidden;
   min-height: 260px;
   border-radius: 10px;
@@ -3271,7 +3317,7 @@ textarea {
 
 /* NOSSAS REDES SOCIAIS */
 .navrede {
-  display: block;
+  display: fixed;
   text-align: center;
   margin-top: -100px;
 }
@@ -3397,6 +3443,7 @@ cite a {
   font-style: normal;
   color: rgb(61, 61, 61);
   position: relative;
+  box-shadow: #000;
 }
 
 /* FIM DE AVISO DO SITE AO CONTEUDO  */

@@ -91,4 +91,4 @@ fs.writeFileSync(
 
 console.log(`✔ Sitemap atualizado com ${urls.length} URLs.`);
 
-// Remover duplicados: node src/sitemap.js
+// CODE PRA RODAR----: node src/sitemap.js
