@@ -767,13 +767,6 @@ ul a {
     max-width: 800px;
 }
 
-/* MENU MOBILE */
-.menumobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /* TEXTO */
 .aviso {
     font-weight: 200;
@@ -798,9 +791,6 @@ ul a {
     transition: 0.2s;
 }
 
-.column a:hover {
-    color: #000;
-}
 
 /* RESPONSIVO */
 @media (min-width: 600px) {
@@ -814,7 +804,7 @@ ul a {
 
     .logomobile {
         width: 180px;
-        height: 60px;
+        height: auto;
     }
 }
 
@@ -859,14 +849,6 @@ ul a {
 .logomobile {
     width: 140px;
     height: auto;
-}
-
-/* LOGO HEADER NO PC */
-@media (min-width: 1200px) {
-    .logomobile {
-        width: 180px;
-        height: auto;
-    }
 }
 
 .rede {
@@ -920,15 +902,6 @@ ul a {
     padding: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-}
-
-.column a {
-    display: block;
-    font-size: 14px;
-    color: #000000;
-    text-decoration: underline;
-    margin-bottom: 6px;
-    transition: 0.2s;
 }
 
 .column a:hover {

@@ -1,26 +1,51 @@
-// ===== MENU MOBILE =====
+// ======================================
+// OBSERVAÇÃO CLÍNICA - GERAL.JS
+// ======================================
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ======================================
   // ELEMENTOS
-  const mobileMenu = document.getElementById("mobile-menu");
-  const openBtn = document.getElementById("mobile-menu-button");
-  const closeBtn = document.getElementById("close-menu");
-  const overlay = document.getElementById("overlay-main");
+  // ======================================
 
-  // Submenus mobile
-  const saudeToggle = document.getElementById("saude-az-toggle-mobile");
-  const saudeMenu = document.getElementById("saude-az-submenu-mobile");
-  const saudeIcon = document.getElementById("saude-az-icon-mobile");
-  const bemToggle = document.getElementById("bemestar-toggle-mobile");
-  const bemMenu = document.getElementById("bemestar-submenu-mobile");
-  const bemIcon = document.getElementById("fitness-icon-mobile");
+  const $ = (id) => document.getElementById(id);
 
-  // Pesquisa
-  const searchBtn = document.getElementById("search-btn");
-  const searchInput = document.getElementById("search-input");
+  // MENU
+  const mobileMenu = $("mobile-menu");
+  const openBtn = $("mobile-menu-button");
+  const closeBtn = $("close-menu");
+  const overlay = $("overlay-main");
 
-  // =========================
-  // CONTROLE DE SCROLL (SEM DELAY)
-  // =========================
+  // SUBMENUS
+  const saudeToggle = $("saude-az-toggle-mobile");
+  const saudeMenu = $("saude-az-submenu-mobile");
+  const saudeIcon = $("saude-az-icon-mobile");
+
+  const bemToggle = $("bemestar-toggle-mobile");
+  const bemMenu = $("bemestar-submenu-mobile");
+  const bemIcon = $("fitness-icon-mobile");
+
+  // PESQUISA
+  const searchBtn = $("search-btn");
+  const searchInput = $("search-input");
+
+  // COOKIES
+  const consent = $("cookieConsent");
+  const acceptBtn = $("acceptCookies");
+  const denyBtn = $("denyCookies");
+
+  // SHARE
+  const fb = $("facebook-share");
+  const tw = $("twitter-share");
+  const wa = $("whatsapp-share");
+  const email = $("email-share");
+
+
+
+  // ======================================
+  // MENU MOBILE
+  // ======================================
+
   let scrollPosition = 0;
 
   function lockScroll() {
@@ -28,237 +53,256 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
     document.body.style.width = "100%";
   }
 
   function unlockScroll() {
+
     document.body.style.position = "";
     document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
     document.body.style.width = "";
+
     window.scrollTo(0, scrollPosition);
   }
-  // =========================
-  // MENU MOBILE
-  // =========================
+
   function openMenu() {
+
     mobileMenu.classList.remove("-translate-x-full");
-    overlay.classList.remove("show");
-    lockScroll(); // 🔥 trava scroll instantaneamente
+
+    overlay.classList.remove("hidden");
+
+    lockScroll();
   }
 
   function closeMenu() {
+
     mobileMenu.classList.add("-translate-x-full");
+
     overlay.classList.add("hidden");
 
     unlockScroll();
   }
-  openBtn.addEventListener("click", openMenu);
-  closeBtn.addEventListener("click", closeMenu);
-  overlay.addEventListener("click", closeMenu);
 
-  // Fechar com ESC
+  if (openBtn) openBtn.addEventListener("click", openMenu);
+
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+  if (overlay) overlay.addEventListener("click", closeMenu);
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMenu();
-  });
-  // =========================
-  // SUBMENUS MOBILE
-  // =========================
-  function toggleSubmenu(menu, icon, button) {
-    const isOpen = !menu.classList.contains("hidden");
 
-    if (isOpen) {
+    if (e.key === "Escape") closeMenu();
+
+  });
+
+
+
+  // ======================================
+  // SUBMENUS
+  // ======================================
+
+  function toggleSubmenu(menu, icon, button) {
+
+    const aberto = !menu.classList.contains("hidden");
+
+    if (aberto) {
+
       menu.classList.add("hidden");
+
       menu.classList.remove("opacity-100", "translate-y-0");
+
       menu.classList.add("opacity-0", "-translate-y-1");
+
       icon.classList.remove("rotate-180");
+
       button.setAttribute("aria-expanded", "false");
+
     } else {
+
       menu.classList.remove("hidden");
 
       requestAnimationFrame(() => {
+
         menu.classList.remove("opacity-0", "-translate-y-1");
+
         menu.classList.add("opacity-100", "translate-y-0");
+
       });
 
       icon.classList.add("rotate-180");
+
       button.setAttribute("aria-expanded", "true");
+
     }
+
   }
 
-  if (saudeToggle) {
-    saudeToggle.addEventListener("click", () => {
-      toggleSubmenu(saudeMenu, saudeIcon, saudeToggle);
-    });
-  }
+  if (saudeToggle)
+    saudeToggle.addEventListener("click", () =>
+      toggleSubmenu(saudeMenu, saudeIcon, saudeToggle)
+    );
 
-  if (bemToggle) {
-    bemToggle.addEventListener("click", () => {
-      toggleSubmenu(bemMenu, bemIcon, bemToggle);
-    });
-  }
+  if (bemToggle)
+    bemToggle.addEventListener("click", () =>
+      toggleSubmenu(bemMenu, bemIcon, bemToggle)
+    );
 
-  // =========================
-  // PESQUISA (DESKTOP)
-  // =========================
+
+
+  // ======================================
+  // PESQUISA
+  // ======================================
+
   if (searchBtn && searchInput) {
-    searchBtn.addEventListener("click", () => {
-      if (searchInput.classList.contains("hidden")) {
-        searchInput.classList.remove("hidden");
-        searchInput.focus();
-      } else {
-        searchInput.classList.add("hidden");
-      }
+
+    searchBtn.addEventListener("click", (e) => {
+
+      e.stopPropagation();
+
+      searchBtn.style.display = "none";
+
+      searchInput.style.display = "block";
+
+      searchInput.focus();
+
     });
-  }
-});
-// ===== MENU MOBILE FIM =====
 
-// ==========================
-// COOKIES
-// ==========================
-document.addEventListener("DOMContentLoaded", function () {
-  const consent = document.getElementById("cookieConsent");
-  const acceptBtn = document.getElementById("acceptCookies");
-  const denyBtn = document.getElementById("denyCookies");
+    searchInput.addEventListener("click", (e) => {
 
-  if (!consent || !acceptBtn || !denyBtn) return;
+      e.stopPropagation();
 
-  function daysBetween(date1, date2) {
-    return Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
-  }
+    });
 
-  const consentData = JSON.parse(localStorage.getItem("cookiesConsent") || "{}");
-  const now = new Date();
+    document.addEventListener("click", () => {
 
-  if (!consentData.date || daysBetween(new Date(consentData.date), now) > 365) {
-    consent.classList.add("show");
+      searchInput.style.display = "none";
+
+      searchBtn.style.display = "inline-block";
+
+    });
+
   }
 
-  function saveConsent(accepted) {
-    localStorage.setItem("cookiesConsent", JSON.stringify({
-      accepted,
-      date: new Date()
-    }));
-    consent.classList.remove("show");
+
+
+  // ======================================
+  // COOKIES
+  // ======================================
+
+  if (consent && acceptBtn && denyBtn) {
+
+    const dados = JSON.parse(localStorage.getItem("cookiesConsent") || "{}");
+
+    const hoje = new Date();
+
+    if (
+      !dados.date ||
+      (hoje - new Date(dados.date)) / 86400000 > 365
+    ) {
+      consent.classList.add("show");
+    }
+
+    function salvar(aceitou) {
+
+      localStorage.setItem(
+        "cookiesConsent",
+        JSON.stringify({
+          accepted: aceitou,
+          date: new Date(),
+        })
+      );
+
+      consent.classList.remove("show");
+    }
+
+    acceptBtn.addEventListener("click", () => salvar(true));
+
+    denyBtn.addEventListener("click", () => salvar(false));
+
   }
 
-  acceptBtn.addEventListener("click", () => saveConsent(true));
-  denyBtn.addEventListener("click", () => saveConsent(false));
-});
 
-// ==========================
-// SHARE LINKS
-// ==========================
-document.addEventListener("DOMContentLoaded", function () {
-  const pageUrl = encodeURIComponent(window.location.href);
+
+  // ======================================
+  // SHARE LINKS
+  // ======================================
+
+  const pageUrl = encodeURIComponent(location.href);
+
   const pageTitle = encodeURIComponent(document.title);
 
-  const fb = document.getElementById("facebook-share");
-  const tw = document.getElementById("twitter-share");
-  const wa = document.getElementById("whatsapp-share");
-  const email = document.getElementById("email-share");
+  if (fb)
+    fb.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
 
-  if (fb) fb.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-  if (tw) tw.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
-  if (wa) wa.href = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
-  if (email) email.href = `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+  if (tw)
+    tw.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+
+  if (wa)
+    wa.href = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
+
+  if (email)
+    email.href = `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
+
 });
 
-// ==========================
-// FUNÇÕES DE SHARE MANUAL
-// ==========================
+
+
+// ======================================
+// SHARE MANUAL
+// ======================================
+
 function shareWhatsApp() {
-  const url = window.location.href;
-  const text = "Veja isso:";
-  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + url)}`, "_blank");
+
+  window.open(
+
+    `https://api.whatsapp.com/send?text=${encodeURIComponent("Veja isso: " + location.href)}`,
+
+    "_blank"
+
+  );
+
 }
 
 function shareFacebook() {
-  const url = window.location.href;
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+
+  window.open(
+
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(location.href)}`,
+
+    "_blank"
+
+  );
+
 }
 
 function sharePinterest() {
-  const url = window.location.href;
-  const image = "";
-  const text = document.title;
 
   window.open(
-    `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(image)}&description=${encodeURIComponent(text)}`,
+
+    `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(location.href)}&description=${encodeURIComponent(document.title)}`,
+
     "_blank"
+
   );
+
 }
 
 function shareNative() {
-  const url = window.location.href;
 
   if (navigator.share) {
+
     navigator.share({
+
       title: document.title,
-      url: url
+
+      url: location.href
+
     });
+
   } else {
+
     alert("Use WhatsApp ou Facebook para partilhar.");
+
   }
+
 }
-
-// ===== PESQUISA PC =====
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("search-btn");
-  const input = document.getElementById("search-input");
-
-  if (!btn || !input) {
-    console.log("Elemento não encontrado");
-    return;
-  }
-
-  btn.onclick = function () {
-    if (input.style.display === "block") {
-      input.style.display = "none";
-    } else {
-      input.style.display = "block";
-      input.focus();
-    }
-  };
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("search-btn");
-  const input = document.getElementById("search-input");
-
-  if (!btn || !input) {
-    console.log("Elemento não encontrado");
-    return;
-  }
-
-  btn.onclick = function () {
-    btn.style.display = "none"; // 👈 esconde a lupa
-    input.style.display = "block";
-    input.focus();
-  };
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("search-btn");
-  const input = document.getElementById("search-input");
-
-  btn.onclick = function (e) {
-    e.stopPropagation(); // evita fechar imediatamente
-    btn.style.display = "none";
-    input.style.display = "block";
-    input.focus();
-  };
-
-  input.addEventListener("click", function (e) {
-    e.stopPropagation(); // evita fechar quando clicar dentro
-  });
-
-  document.addEventListener("click", function () {
-    input.style.display = "none";
-    btn.style.display = "inline-block";
-  });
-});
