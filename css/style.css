@@ -1,4 +1,4 @@
-/* RESET */
+/* MEU CSS PERSONALIZADO */
 *,
 *::before,
 *::after {
@@ -12,8 +12,8 @@ body {
     background: #ffffff;
 }
 
+/* TITULOS E PARAGRAFOS */
 
-/* TITULOS */
 h1 {
     font-style: normal;
     font-weight: 600;
@@ -126,8 +126,19 @@ h4 {
 }
 
 /*MEU HEADER*/
+header nav a,
+header nav button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+
 header {
-    min-height: 64px;
+    min-height: 18px;
 }
 
 header,
@@ -767,6 +778,13 @@ ul a {
     max-width: 800px;
 }
 
+/* MENU MOBILE */
+.menumobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* TEXTO */
 .aviso {
     font-weight: 200;
@@ -791,6 +809,9 @@ ul a {
     transition: 0.2s;
 }
 
+.column a:hover {
+    color: #000;
+}
 
 /* RESPONSIVO */
 @media (min-width: 600px) {
@@ -802,9 +823,9 @@ ul a {
         text-align: center;
     }
 
-    .logomobile {
+    header img {
         width: 180px;
-        height: auto;
+        height: 60px;
     }
 }
 
@@ -846,9 +867,17 @@ ul a {
 }
 
 /* LOGO HEADER NO MOBILE ESQUERDO */
-.logomobile {
+header img {
     width: 140px;
     height: auto;
+}
+
+/* LOGO HEADER NO PC */
+@media (min-width: 1200px) {
+    header img {
+        width: 180px;
+        height: auto;
+    }
 }
 
 .rede {
@@ -902,6 +931,15 @@ ul a {
     padding: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+}
+
+.column a {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: underline;
+    margin-bottom: 6px;
+    transition: 0.2s;
 }
 
 .column a:hover {
@@ -1548,18 +1586,13 @@ cite a {
 }
 
 .linkar {
-    width: 100%;
+    width: 60%;
     height: 50px;
     border: none;
     border-radius: 6px;
-    background: #0279a8;
+    background: #00638a;
     color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    padding: 10px;
-}
-
-.linkar:hover {
-    background: #0284c7;
 }
