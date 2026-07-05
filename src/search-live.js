@@ -103,10 +103,9 @@ function doSearch(query, container) {
 
   container.innerHTML = results.length
     ? results.map(r =>
-      `<a href="${r.url}" class="block py-2 p-2 hover:bg-blue-800">${r.title}</a>`
+      `<a href="${r.url}" class="block py-2 p-2 hover:text-blue-400">${r.title}</a>`
     ).join('')
-    : `<div class="p-3 text-gray-600">Sem resultados, iremos atualizar</div>`;
-
+    : `<div class="p-3 text-gray-500">Sem resultados, iremos atualizar</div>`;
   container.classList.remove('hidden');
 }
 

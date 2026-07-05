@@ -118,7 +118,6 @@
 
 html,
 body {
-    margin: 0px;
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
     background: #ffffff;
 }
@@ -242,14 +241,7 @@ header nav button {
     display: flex;
     align-items: center;
     height: 40px;
-    line-height: 1;
     white-space: nowrap;
-}
-
-
-
-header {
-    min-height: 18px;
 }
 
 header,
@@ -272,19 +264,25 @@ nav {
         color: rgb(61, 61, 61);
         border-bottom: 1px solid #E5E7EB;
         padding-bottom: 16px;
-        margin-top: 16px;
+        margin-top: 20px;
     }
-}
 
-/*MINHA NAV MOBILE SPAN*/
-nav span {
-    font-weight: 500;
-    font-style: normal;
-    font-size: 14px;
-    margin: -6px;
-    color: inherit;
-    line-height: 24px;
-    border: #0660ce;
+    nav span {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        color: inherit;
+        line-height: 24px;
+    }
+
+    nav {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14px;
+        color: inherit;
+        line-height: 24px;
+        padding: 20px;
+    }
 }
 
 header a:hover,
@@ -374,12 +372,6 @@ a img {
     object-fit: cover;
 }
 
-span a {
-    font-weight: 600;
-    text-decoration: underline;
-    color: inherit;
-}
-
 /*MARCACAO ESTILIZADAS) */
 ol {
     counter-reset: item;
@@ -450,51 +442,6 @@ main {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent 20px, rgba(0, 0, 0, 0.45))
-}
-
-/* YOUTUBE*/
-.youtube-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-.youtube-section {
-    font-size: 28px;
-    font-weight: 600;
-    font-size: 24;
-    margin-bottom: 25px;
-    color: #242323;
-}
-
-.videos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.video-card {
-    background: #e3eaeb;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.thumb {
-    width: 100%;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-}
-
-.thumb iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.video-info {
-    padding: 18px;
 }
 
 /* Lista com bolinhas azuis */
@@ -934,9 +881,9 @@ ul a {
         text-align: center;
     }
 
-    header img {
+    footer img {
         width: 180px;
-        height: 60px;
+        height: auto;
     }
 }
 
@@ -1544,7 +1491,7 @@ textarea {
 .navrede {
     display: fixed;
     text-align: center;
-    margin-top: -100px;
+    margin-top: -80px;
 }
 
 .navrede h3 {
@@ -1697,7 +1644,7 @@ cite a {
 }
 
 .linkar {
-    width: 60%;
+    width: 100%;
     height: 50px;
     border: none;
     border-radius: 6px;
@@ -1705,5 +1652,6 @@ cite a {
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
+    margin-top: 10px;
     cursor: pointer;
 }
