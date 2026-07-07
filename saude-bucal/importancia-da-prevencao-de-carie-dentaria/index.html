@@ -104,29 +104,35 @@
 }
 </script>
     <!-- FAVICON -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/webp" href="/img/icon.webp">
-    <link rel="apple-touch-icon" href="/img/icon.webp">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Observação clínica" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <!-- FEED RSS -->
+    <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/output.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 shadow-sm z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
             <!-- BOTÃO MENU MOBILE -->
             <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
-                aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3
-      focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
                 <i class="fas fa-bars" aria-hidden="false"></i>
             </button>
             <!-- LOGO -->
             <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-                <img src="/img/observacao_1.webp" alt="Observação clínica" loading="eager" decoding="async"
-                    class="logomobile">
+                <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
+                    decoding="async">
             </a>
             <!-- 🔍 BOTÃO SEARCH MOBILE -->
             <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -135,19 +141,17 @@
             </button>
             <!-- MENU DESKTOP -->
             <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
-                <a href="/nutricao/" class="hover:text-blue-500 transition-colors
-        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
                     NUTRIÇÃO
                 </a>
-                <a href="/gravidez/" class="hover:text-blue-400 transition-colors
-        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                <a href="/gravidez/" class="hover:text-blue-400 transition-colors">
                     GRAVIDEZ
                 </a>
                 <!-- SAUDE-AZ -->
                 <div class="group relative">
                     <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-saude" class="hover:text-blue-500 flex items-center gap-1 transition-colors
-          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                        aria-controls="submenu-saude"
+                        class="hover:text-blue-400 flex items-center gap-1 transition-colors">
                         SAÚDE-AZ
                         <i class="fas fa-chevron-down text-xs mt-[2px]
             transition-transform duration-300
@@ -157,16 +161,13 @@
                     <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300
           z-50 bg-white">
-                        <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
-            focus:outline-none focus:bg-blue-500">
+                        <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
                             SAÚDE MENTAL
                         </a>
-                        <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
-            focus:outline-none focus:bg-blue-500">
+                        <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
                             SAÚDE ÍNTIMA
                         </a>
-                        <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
-            focus:outline-none focus:bg-blue-300">
+                        <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-400">
                             DOENÇAS GERAIS
                         </a>
                     </div>
@@ -175,58 +176,52 @@
                 <!-- BEM-ESTAR -->
                 <div class="group relative">
                     <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors
-          focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                        aria-controls="submenu-bemestar"
+                        class="hover:text-blue-500 flex items-center gap-1 transition-colors">
                         BEM-ESTAR
-                        <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-500
-            group-hover:rotate-180" aria-hidden="true">
+                        <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
+                            aria-hidden="true">
                         </i>
                     </button>
                     <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
-                        <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
-            focus:outline-none focus:bg-blue-500">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                        <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
                             FITNESS
                         </a>
-                        <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:bg-blue-500
-            focus:outline-none focus:bg-blue-500">
+                        <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
                             SAÚDE BUCAL
                         </a>
                     </div>
                 </div>
-                <a href="/calculadoras/" class="hover:text-blue-500 transition-colors
-        focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">
+                <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
                     CALCULADORAS
                 </a>
-
-                <!-- PESQUISA -->
-                <div class="relative ml-2">
-                    <input id="search-input" aria-label="Pesquisar no site" type="text"
-                        placeholder="🔍 pesquise aqui..." class="hidden w-44 bg-white border border-gray-300 text-sm
-          px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700">
-                    <button id="search-btn" aria-label="Abrir pesquisa"
-                        class="ml-2 focus:outline-none focus:ring-2 focus:ring-blue-700 rounded">
+                <!-- PESQUISA NO PC-->
+                <div class="relative">
+                    <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="Pesquise aqui..."
+                        class="hidden w-44 bg-white border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300">
+                    <button id="search-btn" aria-label="Abrir pesquisa">
                         <i class="fas fa-search" aria-hidden="false"></i>
                     </button>
                     <div id="search-results" role="listbox" aria-label="Resultados da pesquisa"
-                        class="absolute right-0 top-full mt-2 p-2 w-72 bg-white rounded-lg shadow-lg hidden">
+                        class="absolute top-full right-0 mt-4 hidden w-60 bg-white rounded-lg z-50">
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+
     <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
     <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
         <div class="p-6 rounded-xl">
-            <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..."
-                class="w-full bg-white border border-gray-300 p-6 py-2 rounded-lg focus:outline-none focus:ring-2">
+            <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
+       focus:outline-none focus:ring-0 focus:border-gray-300">
             <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
                 class="mt-2 text-gray-800 hidden">
             </div>
         </div>
     </div>
+
     <!-- OVERLAY -->
     <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
     </div>
@@ -238,8 +233,8 @@
         <div class="flex-shrink-0 border border-gray-200">
             <div class="menumobile flex items-center justify-between p-4">
                 <a href="/index.html" aria-label="Página inicial Observação Clínica">
-                    <img src="/img/observacao_1.webp" alt="Observação clinica" width="140" height="40" loading="eager"
-                        decoding="async">
+                    <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clinica" width="140"
+                        height="40" loading="eager" decoding="async">
                 </a>
                 <button id="close-menu" class="text-2xl focus:outline-none">
                     ×
@@ -248,15 +243,13 @@
         </div>
         <!-- CAREGORIAS -->
         <div class="flex-1 overflow-y-auto overscroll-contain">
-            <nav class="flex flex-col space-y-5 p-5">
+            <nav class="flex flex-col">
                 <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
                 <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
                 <!-- SAÚDE-AZ -->
                 <div>
                     <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
-                        class="flex justify-between items-center w-full
-          hover:text-blue-400 transition-colors
-          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
                         <span>SAÚDE-AZ</span>
                         <i class="fas fa-chevron-down text-sm transition-transform duration-300"
                             id="saude-az-icon-mobile" aria-hidden="true">
@@ -278,9 +271,7 @@
                 <!-- Submenu BEM-ESTAR -->
                 <div>
                     <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
-                        class="flex justify-between items-center w-full
-          hover:text-blue-400 transition-colors
-          focus:outline-none focus:ring-2 focus:ring-blue-300 rounded">
+                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
                         <span>BEM-ESTAR</span>
                         <i class="fas fa-chevron-down text-sm transition-transform duration-300"
                             id="fitness-icon-mobile" aria-hidden="true">
@@ -324,6 +315,7 @@
         </div>
     </aside>
     <!-- FIM DO HEADER -->
+
     <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <section class="space-y-6">
             <h1>Importância da prevenção de cáries para saúde bucal</h1>
@@ -333,7 +325,7 @@
                 Atualizado em maio de 2026
             </div>
             <div class="autora">
-                <img src="/img/Beldo.webp" loading="eager" class="object-cover rounded-full" alt="Autor">
+                <img src="/img/Beldo.webp" fetchpriority="high" class="object-cover rounded-full" alt="Autor">
                 <div class="autora-info">
                     Revisão:
                     <a href="/equipa/beldo-celestino-saraiva/" aria-label="Beldo Celestino Saraiva">Beldo Celestino
@@ -346,7 +338,7 @@
                 </div>
             </div>
             <!-- IMAGEM -->
-            <img src="/img/carie-dentaria.webp" loading="lazy" alt="a importancia-da-prevencao-de-carie-dentaria"
+            <img src="/img/carie-dentaria.webp" fetchpriority="high" alt="a importancia-da-prevencao-de-carie-dentaria"
                 class="w-full h-auto rounded">
             <!-- CONTEUDO-->
             <p>A prevenção de cáries é fundamental para manter a saúde bucal e garantir uma boa qualidade de vida. As
@@ -473,7 +465,7 @@
             <hr>
             <section>
                 <div class="shareing">
-                    <strong>COMPARTILHE</strong>
+                    <span>COMPARTILHE</span>
                     <div class="iconsa">
                         <div class="icona facebook" onclick="shareFacebook()">
                             <i class="fab fa-facebook-f"></i>
@@ -508,8 +500,9 @@
         <aside class="space-y-6 mt-10">
             <article>
                 <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
-                    <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
-                        loading="lazy" class="w-full h-40 object-cover">
+                    <img src="/img/ebola-como.webp" fetchpriority="high"
+                        alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
+                        class="w-full h-40 object-cover">
                     <span class="tag">DOENÇAS E CONDIÇÕES</span>
                     <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
                     </h3>
@@ -518,7 +511,7 @@
 
             <article>
                 <a href="/saude-intima/o-que-e-candidiase-vaginal/">
-                    <img src="/img/candidiasevaginal.webp" alt="O que é candidíase vaginal" loading="lazy"
+                    <img src="/img/candidiasevaginal.webp" fetchpriority="high" alt="O que é candidíase vaginal"
                         class="w-full h-40 object-cover">
                     <span class="tag">DOENÇAS E CONDIÇÕES</span>
                     <h3>O que é candidíase vaginal: sinais e sintomas, causas, prevenção e tratamento, saiba mais.
@@ -528,8 +521,9 @@
 
             <article>
                 <a href="/saude-intima/o-que-e-clotrimazol-creme-vaginal/">
-                    <img src="/img/clotrimazol.webp" alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado"
-                        loading="lazy" class="w-full h-40 object-cover">
+                    <img src="/img/clotrimazol.webp" fetchpriority="high"
+                        alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado"
+                        class="w-full h-40 object-cover">
                     <span class="tag">ANTIFÚNGICOS</span>
                     <h3>O que é Clotrimazol 2% creme vaginal, para que é utilizado este medicamentos, saiba mais.
                     </h3>
@@ -605,10 +599,9 @@
                     alt="   Hipertensão é uma elevação persistente da pressão arterial acima dos valores normais">
                 <div class="cartao-content">
                     <span class="tag">HIPERTENSÃO</span>
-                    <a href="/saude-az/hipertensao-arterial-mas-porque">
-                        <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores.</h3>
-                    </a>
-                </div>
+                    <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores.</h3>
+            </a>
+        </div>
         </div>
         </div>
     </section>

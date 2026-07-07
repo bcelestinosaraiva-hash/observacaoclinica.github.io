@@ -178,7 +178,15 @@ h2 {
 }
 
 hr {
-    border-color: #cdcdce;
+    border-color: #dbdbdb;
+}
+
+span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgb(61, 61, 61);
 }
 
 /* SUB TITUTO SUB */
@@ -1054,7 +1062,6 @@ header img {
 .autora img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
 }
 
 .autora-info {
@@ -1405,87 +1412,6 @@ header img {
 }
 
 /* FIM DAS CALCULADORAS */
-
-
-
-
-/* AVALIACAO DE CONTEUDO */
-.percent {
-    color: #006d8f;
-    font-weight: bold;
-}
-
-.like {
-    background: #006d8f;
-    color: #006d8f;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.btna {
-    flex: 1;
-    padding: 15px;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.fa-thumbs-up {
-    color: #2da4c8;
-    margin-right: 8px;
-}
-
-.fa-thumbs-down {
-    color: #7c0d01;
-    margin-right: 8px;
-}
-
-.btn-yes {
-    background: #cef0fa;
-    color: #035770;
-}
-
-.btn-no {
-    background: #ffd4d4;
-    color: #8f1103;
-}
-
-.success {
-    color: #2ecc71;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-textarea {
-    width: 100%;
-    height: 120px;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    resize: none;
-}
-
-.submit-btn {
-    width: 100%;
-    height: 50px;
-    padding-bottom: 40px 40px;
-    margin-top: 10px;
-    padding: 15px;
-    background: #29a1c5;
-    color: #fff;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* FIM DE  AVALIACAO DE CONTEUDO */
 
 /* NOSSAS REDES SOCIAIS */
 .navrede {

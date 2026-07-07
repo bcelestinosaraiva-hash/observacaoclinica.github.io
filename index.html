@@ -11,7 +11,6 @@
   <link rel="canonical" href="https://www.observacaoclinica.com">
   <!-- INDEXAÇÃO -->
   <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta name="author" content="Beldo Celestino Saraiva">
@@ -26,7 +25,7 @@
   <meta name="twitter:description"
     content="Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.">
   <meta name="twitter:image" content="https://www.observacaoclinica.com/img/observacao_1.webp">
-  <!-- SCHEMA DO MEU HOMEPAGE -->
+  <!-- SCHEMA DA HOMEPAGE -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,11 +34,13 @@
       "@type": "Organization",
       "@id": "https://www.observacaoclinica.com/#organization",
       "name": "Observação Clínica",
-      "url": "https://www.observacaoclinica.com",
+      "url": "https://www.observacaoclinica.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.observacaoclinica.com/img/logo.webp"
       },
+      "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.",
+      "foundingDate": "2026",
       "sameAs": [
         "https://www.facebook.com/share/1Dut1QANZu/",
         "https://youtube.com/@observacaoclinica-x8p",
@@ -47,28 +48,29 @@
       ]
     },
     {
-      "@type": "Website",
+      "@type": "WebSite",
       "@id": "https://www.observacaoclinica.com/#website",
-      "url": "https://www.observacaoclinica.com",
+      "url": "https://www.observacaoclinica.com/",
       "name": "Observação Clínica",
+      "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.",
       "publisher": {
         "@id": "https://www.observacaoclinica.com/#organization"
       },
-      "inLanguage": "pt-PT",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.observacaoclinica.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": "pt-PT"
     },
     {
       "@type": "MedicalWebPage",
       "@id": "https://www.observacaoclinica.com/#webpage",
-      "url": "https://www.observacaoclinica.com",
+      "url": "https://www.observacaoclinica.com/",
       "name": "Observação Clínica",
-      "description": "Portal de educação em saúde com informações confiáveis sobre doenças, sintomas, nutrição, gravidez e bem-estar.",
+      "description": "Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-05-18",
       "isPartOf": {
         "@id": "https://www.observacaoclinica.com/#website"
+      },
+      "publisher": {
+        "@id": "https://www.observacaoclinica.com/#organization"
       },
       "about": [
         {
@@ -88,9 +90,6 @@
           "name": "Asma"
         }
       ],
-      "publisher": {
-        "@id": "https://www.observacaoclinica.com/#organization"
-      },
       "inLanguage": "pt-PT"
     },
     {
@@ -98,21 +97,36 @@
       "@id": "https://www.observacaoclinica.com/#author",
       "name": "Beldo Celestino Saraiva",
       "url": "https://www.observacaoclinica.com/equipa/",
+      "jobTitle": "Fundador",
       "worksFor": {
         "@id": "https://www.observacaoclinica.com/#organization"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.observacaoclinica.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://www.observacaoclinica.com/"
+        }
+      ]
     }
-
   ]
 }
-"datePublished": "2026-01-01",
-"dateModified": "2026-05-18"
 </script>
-  <title>Observação clínica: doenças, sintomas, sinais, nutrição e os cuidados de saúde..</title>
+  <title>Observação clínica: doenças, sintomas, sinais, nutrição e os cuidados de saúde</title>
   <!-- FAVICON -->
-  <link rel="icon" type="image/webp" href="/img/icon.webp">
-  <link rel="apple-touch-icon" href="/img/icon.webp">
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Observação clínica" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- CSS -->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -129,19 +143,16 @@
         aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
         <i class="fas fa-bars" aria-hidden="false"></i>
       </button>
-
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
         <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
           decoding="async">
       </a>
-
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
         class="md:hidden flex items-center justify-center p-4">
         <i class="fas fa-search"></i>
       </button>
-
       <!-- MENU DESKTOP -->
       <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
         <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
@@ -315,10 +326,6 @@
     </div>
   </aside>
   <!-- FIM DO HEADER -->
-
-
-
-
   <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
     <!-- H1 principal -->
     <div>
@@ -359,11 +366,11 @@
     <!-- SE -->
     <section class="now">
       <article>
-        <a href="/fitness/treino-para-ganhar-massa-muscular/">
-          <img src="/img/exercicios-para-ganhar-massa.webp" class="w-full h-40 object-cover" fetchpriority="high"
-            loading="lazy" alt="Treino de força e hipertrofia funcional: para ganhar massa e melhorar o corpo">
-          <span class="tag">TREINO DE FORÇA</span>
-          <h3>Treino de força e hipertrofia funcional: para ganhar massa e melhorar o corpo, saiba mais.</h3>
+        <a href="/saude-intima/o-que-sao-colicas-menstruais/">
+          <img src="/img/colicas-menstruais.webp" class="w-full h-40 object-cover" fetchpriority="high" loading="lazy"
+            alt="Cólicas menstruais: sinais e sintomas e como aliviar de forma natural">
+          <span class="tag">CÓLICAS MENSTRUAIS</span>
+          <h3>Cólicas menstruais: sinais e sintomas e como aliviar de forma natural e o que fazer, leia mais</h3>
         </a>
       </article>
 
@@ -484,7 +491,7 @@
       <div class="cartao">
         <img src="/img/sinais-de-parto.webp" loading="lazy" alt="O que é uma bronquite, sinais e sintomas">
         <div class="cartao-content">
-          <a href="gravidez/sinais-de-trabalho-de-parto/">
+          <a href="/gravidez/sinais-de-trabalho-de-parto/">
             <div class="tag">SINAIS DE PARTO</div>
             <h3>Sinais de trabalho de parto: como identificar e quando ir ao hospital</h3>
           </a>
@@ -497,7 +504,6 @@
 
     <!--CALCULADORAS -->
     <h2>Ferramentas interativas</h2>
-    <hr style="margin: 15px;">
     <div class="calculadoras-container">
       <!-- CARD 1 -->
       <a href="/calculadoras/como-calcular-indice-de-massa-corporal/" class="calculadora"
