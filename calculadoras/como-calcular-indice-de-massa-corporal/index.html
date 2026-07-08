@@ -118,6 +118,7 @@
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/calculadoras/css/imc.css">
 </head>
 
 <body>
@@ -340,34 +341,54 @@
       <p>Calcule o seu IMC na ferramente abaixo e controle o seu estado nutricional, escolhendo o seu genero,
         preenchendo a sua idade, altura e peso.</p>
 
+
+      <p>Aprender <b>como calcular índice de massa corporal (IMC)</b> permite compreender melhor o próprio corpo e tomar
+        decisões mais conscientes sobre alimentação, atividade física e acompanhamento profissional.</p>
+
       <h2>O que é o Índice de Massa Corporal?</h2>
       <p>O Índice de Massa Corporal é um indicador que relaciona o peso corporal com a altura. O resultado permite
         classificar o indivíduo em diferentes categorias de peso.</p>
 
-      <p>Para calcular o seu IMC, por favor insira os seus dados nos campos em branco abaixo.</p>
+      <h2>Como calcular índice de massa corporal (IMC)</h2>
+      <p>Para calcular o IMC corretamente, siga estes passos:</p>
 
-      <section>
+      <ul>
+        <li>Pese-se em uma balança confiável. </li>
+        <li> Meça sua altura em metros.</li>
+        <li> Multiplique a altura por ela mesma.</li>
+        <li> Divida o peso pelo valor obtido.</li>
+      </ul>
+
+      <p> <b>Exemplo prático:</b></p>
+      <ul>
+        <li> Peso: 80 kg</li>
+        <li>Altura: 1,75 m</li>
+        <li> Altura²: 1,75 × 1,75 = 3,06</li>
+        <li>IMC: 80 ÷ 3,06 = 26,1</li>
+      </ul>
+
+      <section class="seccao-imc">
         <h2 class="text-center">Calculadora de Índice de Massa
           Corporal
         </h2>
         <label class="block mb-2" aria-label="Selecionr sexo">Selecione o teu sexo (opcional)</label>
-        <div class="flex space-x-2 mb-4 rounded-lg">
-          <button id="sexo-mulher" class="flex-1 py-2 bg-blue-100 rounded">Mulher</button>
-          <button id="sexo-homem" class="flex-1 py-2 bg-blue-100 rounded">Homem</button>
+        <div class="flex space-x-2 mb-4 escolhersexo">
+          <button id="sexo-mulher" class="flex-1 py-2">Mulher</button>
+          <button id="sexo-homem" class="flex-1 py-2">Homem</button>
         </div>
-        <label class="block mb-2">Idade em (anos):</label>
+        <label aria-label="idade">Idade em (anos):</label>
         <input type="number" id="idade" placeholder="Ex: 35"
           class="w-full border border-gray-300 px-3 py-2 rounded mb-4">
-        <label class="block mb-2">Altura em (cm):</label>
+        <label aria-label="altura">Altura em (cm):</label>
         <input type="number" id="altura" placeholder="Ex: 165"
           class="w-full border border-gray-300 px-3 py-2 rounded mb-4">
-        <label class="block mb-2">Peso em (kg):</label>
+        <label aria-label="peso">Peso em (kg):</label>
         <input type="number" id="peso" placeholder="Ex: 62,5" step="0.1"
           class="w-full border border-gray-300 px-3 py-2 rounded mb-4">
         <div class="flex justify-center mt-2">
           <button id="calcular" style="width: 40%; height: 50px; border: none; 
                     border-radius: 10px; background: #015d81; color: #ffffff; font-size: 15px;
-                    font-weight: bold; cursor: pointer; transition: .3s;">
+                    font-weight: bold; cursor: pointer;">
             CALCULAR
           </button>
         </div>
@@ -375,103 +396,70 @@
         </div>
       </section>
 
-      <div class="space-y-8">
-        <div class="overflow-x-auto">
-          <h2 class="text-center">Classificação de IMC segundo OMS</h2>
-          <table class="w-full text-xs sm:text-sm border-collapse rounded-xl overflow-hidden mt-5">
-            <thead>
-              <tr class="bg-gray-200 text-gray-800 text-center">
-                <th class="px-3 py-2">Valores</th>
-                <th class="px-3 py-2">Classificação</th>
-                <th class="px-3 py-2">Riscos</th>
-              </tr>
-            </thead>
-            <tbody class="text-white text-center">
-              <tr class="bg-blue-400">
-                <td class="px-3 py-2">≤ 18,5</td>
-                <td>Baixo peso</td>
-                <td>Baixo</td>
-              </tr>
-              <tr class="bg-green-500">
-                <td class="px-3 py-2">18,5 – 24,9</td>
-                <td>Normal</td>
-                <td>Normal</td>
-              </tr>
-              <tr class="bg-yellow-400 text-center">
-                <td class="px-3 py-2">25 – 29,9</td>
-                <td>Sobrepeso</td>
-                <td>Leve</td>
-              </tr>
-              <tr class="bg-orange-500">
-                <td class="px-3 py-2">30 – 34,9</td>
-                <td>Obesidade I</td>
-                <td>Moderado</td>
-              </tr>
-              <tr class="bg-red-500">
-                <td class="px-3 py-2">35 – 39,9</td>
-                <td>Obesidade II</td>
-                <td>Grave</td>
-              </tr>
-              <tr class="bg-red-800">
-                <td class="px-3 py-2">≥ 40</td>
-                <td>Obesidade III</td>
-                <td>Muito Grave</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Desnutrição é uma condição caracterizada pela ingestão insuficiente de nutrientes essenciais ou pela
-          incapacidade do organismo de utilizá-los adequadamente. Isso compromete a energia, a força, o crescimento e
-          o funcionamento saudável do corpo.</p>
-        <p>Pode afetar pessoas de todas as idades, mas é especialmente grave em
-          crianças, gestantes, idosos e indivíduos com doenças crônicas, segundo a <a
-            href="https://www.who.int/publications/i/item/9789240082830" target="_blank"
-            rel="noopener noreferrer">organização mundial da saúde</a>.</p>
+      <h2>Principais causas das alterações do IMC</h2>
+      <p>Um IMC elevado normalmente resulta de um desequilíbrio entre a quantidade de energia consumida e a energia
+        gasta pelo organismo. Alimentação rica em alimentos ultraprocessados, consumo excessivo de bebidas açucaradas
+        e sedentarismo são factores frequentemente associados ao ganho de peso.</p>
 
-        <p>Obesidade é a condição caracterizada pelo excesso de gordura corporal que pode prejudicar a saúde. É
-          geralmente identificada pelo Índice de Massa Corporal (IMC), sendo considerada obesidade quando o IMC é
-          igual ou superior a 30.</p>
+      <p>Além disso, factores genéticos também influenciam a tendência para desenvolver excesso de peso. Algumas
+        pessoas
+        apresentam maior predisposição genética para acumular gordura corporal, embora os hábitos de vida continuem a
+        desempenhar um papel fundamental.</p>
 
-        <h2>Prevenção de obesidade</h2>
-        <p>Para prevenir a obesidade, deve se evitar sedentarismo, isto é praticar as actividades físicas. Não fumar e
-          não consumir as bebidas alcoólicas, medir sempre o seu peso para sempre controlar o seu IMC (índice de massa
-          corporal), calcule também, <a href="/calculadoras/como-calcular-o-ciclo-menstrual/">o seu ciclo menstrual
-            e identificar a minha próxima
-            menstruação</a>.
-        </p>
+      <p>Por outro lado, um IMC abaixo do recomendado pode estar relacionado com alimentação insuficiente, doenças
+        crónicas, problemas digestivos, alterações hormonais ou outras condições médicas que afetam a absorção ou o
+        consumo de nutrientes.</p>
 
-        <p><b>Nutrição</b> é o processo pelo qual o organismo obtém e utiliza os nutrientes presentes nos
-          alimentos para
-          manter as funções vitais, garantir energia, promover o crescimento, reparar tecidos e fortalecer o sistema
-          imunológico. Os nutrientes podem ser divididos em dois grandes grupos: macronutrientes e
-          micronutrientes.</p>
+      <p>Desnutrição é uma condição caracterizada pela ingestão insuficiente de nutrientes essenciais ou pela
+        incapacidade do organismo de utilizá-los adequadamente. Isso compromete a energia, a força, o crescimento e
+        o funcionamento saudável do corpo.</p>
+      <p>Pode afetar pessoas de todas as idades, mas é especialmente grave em
+        crianças, gestantes, idosos e indivíduos com doenças crônicas, segundo a <a
+          href="https://www.who.int/publications/i/item/9789240082830" target="_blank"
+          rel="noopener noreferrer">organização mundial da saúde</a>.</p>
 
-        <p>O Índice de Massa Corporal (IMC) é uma ferramenta simples e amplamente utilizada para avaliar se o peso está
-          adequado em relação à altura. O cálculo é feito dividindo-se o peso em quilogramas pela altura ao quadrado em
-          metros.</p>
-        <p>Embora seja útil para identificar alterações no peso, o IMC deve ser interpretado juntamente com
-          outros indicadores de saúde para uma avaliação mais completa.</p>
-        <hr>
-        <!-- SHAREING-->
-        <div class="compartilhamento">
-          <div class="shareing">
-            <span>COMPARTILHE</span>
-            <div class="iconsa">
-              <div class="icona facebook" onclick="shareFacebook()">
-                <i class="fab fa-facebook-f"></i>
-              </div>
-              <div class="icona whatsapp" onclick="shareWhatsApp()">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="icona pinterest" onclick="sharePinterest()">
-                <i class="fab fa-pinterest-p"></i>
-              </div>
-              <div class="icona share-icona" onclick="shareNative()">
-                <i class="fas fa-share-alt"></i>
-              </div>
+      <p><b>Nutrição</b> é o processo pelo qual o organismo obtém e utiliza os nutrientes presentes nos
+        alimentos para
+        manter as funções vitais, garantir energia, promover o crescimento, reparar tecidos e fortalecer o sistema
+        imunológico. Os nutrientes podem ser divididos em dois grandes grupos: macronutrientes e
+        micronutrientes.</p>
+
+      <h2>Quando procurar um profissional de saúde</h2>
+      <p>É aconselhável procurar um profissional de saúde quando o IMC indicar baixo peso, excesso de peso ou
+        obesidade, especialmente se existirem sintomas associados ou doenças crónicas.</p>
+
+      <p>Também é importante procurar avaliação caso ocorra perda ou ganho de peso sem explicação, dificuldade para
+        controlar o peso ou dúvidas sobre alimentação e atividade física.</p>
+
+      <p>O acompanhamento profissional permite uma avaliação completa, considerando fatores que o IMC sozinho não
+        consegue identificar.</p>
+
+      <p>Aprender como calcular índice de massa corporal (IMC) é uma forma simples de acompanhar o próprio peso e
+        identificar possíveis alterações que merecem atenção. O IMC ajuda a classificar se o peso está abaixo, dentro
+        ou acima da faixa considerada adequada para adultos.
+      </p>
+      <hr>
+      <!-- SHAREING-->
+      <div class="compartilhamento">
+        <div class="shareing">
+          <span>COMPARTILHE</span>
+          <div class="iconsa">
+            <div class="icona facebook" onclick="shareFacebook()">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="icona whatsapp" onclick="shareWhatsApp()">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="icona pinterest" onclick="sharePinterest()">
+              <i class="fab fa-pinterest-p"></i>
+            </div>
+            <div class="icona share-icona" onclick="shareNative()">
+              <i class="fas fa-share-alt"></i>
             </div>
           </div>
-          <hr>
+        </div>
+        <hr>
+
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -642,9 +630,7 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
-  <script src="/src/avaliacao.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/calculadoras/src/imc.js" defer></script>
   <script src="/src/search-live.js" defer></script>

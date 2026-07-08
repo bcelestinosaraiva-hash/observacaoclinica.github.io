@@ -105,6 +105,7 @@
 }
 </script>
 
+
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -477,6 +478,38 @@
                 assistência médica no momento adequado. Em caso de dúvidas, o obstetra deve ser sempre consultado para
                 avaliação individualizada.
             </p>
+
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
+            <hr>
+            <section class="avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
             <hr>
             <!-- SHAREING-->
             <div class="compartilhamento">
@@ -514,6 +547,7 @@
             </section>
             <hr>
         </section>
+
         <!-- LADO DIREITO: BARRA LATERAL -->
         <aside class="space-y-6 mt-10">
             <article>
@@ -707,6 +741,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/search-live.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>

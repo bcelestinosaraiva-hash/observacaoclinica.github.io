@@ -1,0 +1,391 @@
+/* ==========================================================================
+   Calculadora de IMC — estilos
+   Paleta: fundo clínico claro, acento petróleo, cores semânticas por
+   classificação (azul = abaixo do peso, verde = normal, laranja = sobrepeso,
+   vermelhos crescentes = obesidade I/II/III)
+   Tipografia: "Outfit" para títulos/números, "Inter" para corpo e dados
+   ========================================================================== */
+:root {
+    --azul-abaixo: #2563eb;
+    --azul-abaixo-bg: #eff6ff;
+    --verde-normal: #16a34a;
+    --verde-normal-bg: #f0fdf4;
+    --laranja-sobre: #f59e0b;
+    --laranja-sobre-bg: #fffbeb;
+    --vermelho-ob1: #ef4444;
+    --vermelho-ob1-bg: #fef2f2;
+    --vermelho-ob2: #dc2626;
+    --vermelho-ob2-bg: #fef2f2;
+    --vermelho-ob3: #b91c1c;
+    --vermelho-ob3-bg: #fef1f1;
+    --petroleo: #015d81;
+    --petroleo-escuro: #01415c;
+    --texto-principal: #0f2733;
+    --texto-secundario: #5b7480;
+    --borda: #dbe4e8;
+    --fundo-card: #ffffff;
+    --sombra: 0 12px 32px -12px rgba(1, 65, 92, 0.18);
+    --raio-sm: 10px;
+    --raio-md: 16px;
+    --raio-lg: 22px;
+}
+
+/* ---------- estrutura geral da secção ---------- */
+.seccao-imc {
+    color: var(--texto-principal);
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 36px 32px 32px;
+    background: #ffffff;
+    border-radius: var(--raio-lg);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.seccao-imc input[type="number"] {
+    width: 100%;
+    border: 1.5px solid var(--borda);
+    padding: 12px 14px;
+    border-radius: var(--raio-sm);
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    font-size: 0.98rem;
+    color: var(--texto-principal);
+    background: #fafcfd;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.seccao-imc input[type="number"]::placeholder {
+    color: #a9bac2;
+}
+
+.seccao-imc input[type="number"]:hover {
+    border-color: #b9cdd6;
+}
+
+.seccao-imc input[type="number"]:focus {
+    outline: none;
+    border-color: var(--petroleo);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(1, 93, 129, 0.12);
+}
+
+/* ---------- seletor de sexo (segmented control) ---------- */
+
+
+.space-x-2>*+* {
+    margin-left: 8px;
+}
+
+.escolhersexo {
+    border-radius: var(--raio-sm);
+    padding: 4px;
+    background: #e2e3e5;
+}
+
+.seccao-imc button[id^="sexo-"] {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--texto-secundario);
+    background: transparent;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.seccao-imc button[id^="sexo-"].bg-blue-300 {
+    background: transparent;
+    color: var(--texto-secundario);
+}
+
+.seccao-imc button[id^="sexo-"].bg-purple-300 {
+    background: var(--fundo-card);
+    color: var(--petroleo-escuro);
+    box-shadow: 0 2px 8px rgba(1, 65, 92, 0.15);
+}
+
+/* ---------- botão calcular ---------- */
+.flex.justify-center {
+    justify-content: center;
+}
+
+#calcular {
+    background: linear-gradient(135deg, var(--petroleo), var(--petroleo-escuro)) !important;
+    letter-spacing: 0.04em;
+    box-shadow: 0 10px 24px -8px rgba(1, 93, 129, 0.55);
+}
+
+#calcular:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -8px rgba(1, 93, 129, 0.6);
+}
+
+
+/* ==========================================================================
+   Cartão de resultado
+   ========================================================================== */
+.resultado-card {
+    margin-top: 20px;
+    padding-top: 24px;
+    border-top: 1px dashed var(--borda);
+    animation: entrar .45s ease both;
+}
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imc-valor {
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.classificacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    width: fit-content;
+    margin: 0 auto 18px;
+}
+
+.check,
+.xis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+/* checagem = fundo verde, X = fundo da própria cor da classificação */
+.check {
+    background: var(--verde-normal);
+}
+
+.xis {
+    background: currentColor;
+}
+
+.recomendacao {
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--petroleo);
+    border-radius: var(--raio-sm);
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--texto-principal);
+    margin-bottom: 22px;
+}
+
+.recomendacao strong {
+    display: block;
+    color: rgb(61, 61, 61);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+    margin-bottom: 4px;
+}
+
+/* ---------- tabela de faixas de IMC ---------- */
+
+.tabela-imc {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tabela-imc>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    background: #ffffff;
+    border: 1px solid transparent;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.tabela-imc span:first-child {
+    font-weight: 600;
+}
+
+.tabela-imc span:last-child {
+    font-variant-numeric: tabular-nums;
+    opacity: .8;
+}
+
+/* cor semântica fixa de cada faixa (texto discreto quando não ativa) */
+.tabela-imc .baixo {
+    color: var(--azul-abaixo);
+}
+
+.tabela-imc .normal {
+    color: var(--verde-normal);
+}
+
+.tabela-imc .sobre {
+    color: var(--laranja-sobre);
+}
+
+.tabela-imc .ob1 {
+    color: var(--vermelho-ob1);
+}
+
+.tabela-imc .ob2 {
+    color: var(--vermelho-ob2);
+}
+
+.tabela-imc .ob3 {
+    color: var(--vermelho-ob3);
+}
+
+/* linha ativa = a classificação atual do utilizador, destacada */
+.tabela-imc>div.ativo {
+    background: currentColor;
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.25);
+}
+
+.tabela-imc>div.ativo span {
+    color: #ffffff !important;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Classes de cor por classificação (aplicadas ao valor, badge e recomendação)
+   ========================================================================== */
+
+.classe-baixo {
+    color: var(--azul-abaixo);
+}
+
+.classe-normal {
+    color: var(--verde-normal);
+}
+
+.classe-sobre {
+    color: var(--laranja-sobre);
+}
+
+.classe-ob1 {
+    color: var(--vermelho-ob1);
+}
+
+.classe-ob2 {
+    color: var(--vermelho-ob2);
+}
+
+.classe-ob3 {
+    color: var(--vermelho-ob3);
+}
+
+.classificacao.classe-baixo {
+    background: var(--azul-abaixo-bg);
+}
+
+.classificacao.classe-normal {
+    background: var(--verde-normal-bg);
+}
+
+.classificacao.classe-sobre {
+    background: var(--laranja-sobre-bg);
+}
+
+.classificacao.classe-ob1 {
+    background: var(--vermelho-ob1-bg);
+}
+
+.classificacao.classe-ob2 {
+    background: var(--vermelho-ob2-bg);
+}
+
+.classificacao.classe-ob3 {
+    background: var(--vermelho-ob3-bg);
+}
+
+.recomendacao.classe-baixo {
+    border-left-color: var(--azul-abaixo);
+}
+
+.recomendacao.classe-normal {
+    border-left-color: var(--verde-normal);
+}
+
+.recomendacao.classe-sobre {
+    border-left-color: var(--laranja-sobre);
+}
+
+.recomendacao.classe-ob1 {
+    border-left-color: var(--vermelho-ob1);
+}
+
+.recomendacao.classe-ob2 {
+    border-left-color: var(--vermelho-ob2);
+}
+
+.recomendacao.classe-ob3 {
+    border-left-color: var(--vermelho-ob3);
+}
+
+/* ---------- responsivo ---------- */
+
+@media (max-width: 520px) {
+    .seccao-imc {
+        margin: 0;
+        border-radius: 0;
+        padding: 28px 20px 24px;
+        max-width: 100%;
+    }
+
+    .imc-valor {
+        font-size: 2.1rem;
+    }
+}
+
+/* ---------- acessibilidade: foco visível ---------- */
+
+.seccao-imc button:focus-visible,
+.seccao-imc input:focus-visible {
+    outline: 3px solid var(--petroleo);
+    outline-offset: 2px;
+}
+
+/* ---------- respeita preferência de menos movimento ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .resultado-card,
+    #calcular {
+        animation: none !important;
+        transition: none !important;
+    }
+}
