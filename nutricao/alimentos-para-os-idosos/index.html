@@ -57,6 +57,8 @@
 }
 </script>
   <title>Alimentos para idosos: garantindo saúde e qualidade de vida dos idosos| Observação clínica</title>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -65,7 +67,7 @@
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- CSS -->
-  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,8 +86,8 @@
       </button>
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -105,14 +107,11 @@
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -124,15 +123,13 @@
             </a>
           </div>
         </div>
-
         <!-- BEM-ESTAR -->
         <div class="group relative">
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -144,6 +141,7 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
@@ -161,9 +159,8 @@
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -172,7 +169,6 @@
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
@@ -192,7 +188,8 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
@@ -203,8 +200,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -225,8 +221,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -238,12 +233,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
@@ -286,8 +283,32 @@
         </div>
       </div>
 
+      <p>Os alimentos para idosos desempenham um papel fundamental na manutenção da saúde, da autonomia e da qualidade
+        de vida durante o envelhecimento. Com o passar dos anos, o organismo sofre mudanças naturais que afetam o
+        metabolismo, a digestão, o apetite e a absorção de nutrientes.</p>
+
+      <p>Por esse motivo, uma alimentação equilibrada
+        torna-se ainda mais importante para preservar a força muscular, fortalecer o sistema imunitário e reduzir o
+        risco de doenças crónicas.</p>
+
+      <p>Além de fornecer energia para as atividades diárias, uma dieta saudável contribui para manter os ossos fortes,
+        proteger o coração, favorecer o funcionamento do cérebro e melhorar o bem-estar geral.</p>
+
       <p>O envelhecimento é um processo natural que traz diversas alterações fisiológicas, como diminuição da
         massa muscular, alterações na digestão, alterações ósseas e redução do apetite.</p>
+
+      <h2>O que são alimentos para idosos?</h2>
+      <p>Os alimentos para idosos são aqueles que fornecem os nutrientes necessários para atender às mudanças
+        fisiológicas que ocorrem com o envelhecimento. Não se trata de uma dieta especial, mas de uma alimentação
+        variada, equilibrada e adaptada às necessidades individuais de cada pessoa.</p>
+
+      <p>À medida que a idade avança, o organismo pode necessitar de menos calorias, porém continua precisando de
+        quantidades adequadas de proteínas, vitaminas, minerais, fibras e líquidos. Dessa forma, a qualidade da
+        alimentação torna-se mais importante do que a quantidade consumida.</p>
+
+      <p>Uma alimentação saudável nessa fase da vida ajuda a preservar a massa muscular, reduzir o risco de desnutrição,
+        controlar doenças crónicas e favorecer a independência nas atividades do dia a dia.</p>
+
       <p>
         Esses factores tornam a
         alimentação adequada essencial para prevenir doenças, manter a funcionalidade e promover qualidade de vida na
@@ -347,8 +368,77 @@
       <h2>Escolha alimentos frescos sempre que possível</h2>
       <p>reparar refeições com alimentos frescos é recomendado porque reduz o <b>consumo de
           ultraprocessados</b>,
-        que
-        geralmente são ricos em aditivos químicos, sódio e gorduras ruins, e pobres em nutrientes essenciais.</p>
+        que geralmente são ricos em aditivos químicos, sódio e gorduras ruins, e pobres em nutrientes essenciais.</p>
+
+      <h2>Como é feita a avaliação nutricional do idoso</h2>
+      <p>A avaliação nutricional é realizada por médicos, nutricionistas, enfermeiros e outros profissionais de saúde.
+        Ela inclui a análise do peso, da altura, do índice de massa corporal, da circunferência muscular e da evolução
+        recente do estado nutricional.</p>
+      <p>Também são avaliados os hábitos alimentares, a presença de doenças crónicas, os medicamentos utilizados e
+        possíveis dificuldades para mastigar, engolir ou preparar os alimentos.</p>
+      <p>Quando necessário, exames laboratoriais podem ser solicitados para identificar alterações como anemia,
+        deficiência de vitaminas ou problemas relacionados ao metabolismo.</p>
+
+      <h2>Como melhorar a alimentação dos idosos</h2>
+      <p>A alimentação deve ser adaptada às necessidades individuais e respeitar as preferências culturais e alimentares
+        da pessoa idosa. Refeições pequenas e frequentes costumam ser mais bem aceites por quem apresenta redução do
+        apetite.</p>
+      <p>Preparações simples, saborosas e com boa apresentação podem estimular o consumo de alimentos. Quando houver
+        dificuldade para mastigar, os alimentos podem ser preparados com consistência mais macia, sem perder o valor
+        nutricional.</p>
+      <p>Também é importante reduzir o consumo de alimentos ultraprocessados, ricos em sal, açúcar e gorduras saturadas.
+        Priorizar alimentos frescos contribui para uma dieta mais saudável.</p>
+
+      <h2>Quando procurar um profissional de saúde</h2>
+      <ol>
+        <li>O idoso deve procurar avaliação profissional quando apresentar perda de peso sem explicação, diminuição
+          importante do apetite, dificuldade para mastigar ou engolir, cansaço persistente ou sinais de desnutrição.
+        </li>
+        <li>Também é recomendado procurar orientação quando houver doenças que exijam adaptações alimentares, como
+          diabetes, hipertensão arterial, doença renal ou problemas gastrointestinais.</li>
+        <li>O acompanhamento regular permite identificar precocemente alterações nutricionais e estabelecer um plano
+          alimentar adequado às necessidades individuais.</li>
+      </ol>
+
+      <p>Os <b>alimentos para idosos</b> desempenham um papel essencial na promoção da saúde, da energia e da qualidade
+        de vida. Uma alimentação equilibrada, rica em proteínas, vitaminas, minerais, fibras e líquidos, contribui para
+        preservar a força muscular, fortalecer os ossos, proteger o sistema cardiovascular e favorecer o envelhecimento
+        saudável.</p>
+
+      <p>Além da escolha adequada dos alimentos, é importante manter hábitos saudáveis, praticar atividade física
+        conforme orientação profissional e realizar acompanhamento periódico com a equipa de saúde. Dessa forma, é
+        possível prevenir deficiências nutricionais e melhorar o bem-estar durante a terceira idade.</p>
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
       <!-- SHAREING-->
       <hr>
       <section>
@@ -383,8 +473,9 @@
             Geriatria
             e Gerontologia, v. 20, n. 5, p. 765–773, 2017.</li>
 
-          <li>UNICEF. Alimentação saudável para idosos. Disponível em:
-            <a href="https://www.unicef.org/brazil/saude-alimentacao-idosos">
+          <li>TUA SAUDE. Alimentação saudável para idosos. Disponível em:
+            <a href="https://www.tuasaude.com/news/2026/04/03/alimentos-que-ajudam-a-manter-a-massa-muscular-e-prevenir-a-fraqueza-em-idosos/"
+              target="_blank" rel="noopener noreferrer">
               Alimentação saudável para idosos.
             </a>
           </li>
@@ -579,6 +670,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

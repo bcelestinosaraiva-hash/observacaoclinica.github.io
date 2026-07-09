@@ -68,6 +68,8 @@
   "dateModified": "2026-01-01"
 }
 </script>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -75,9 +77,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <!-- FEED RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- CSS -->
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -96,8 +97,8 @@
       </button>
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -117,14 +118,11 @@
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -136,15 +134,13 @@
             </a>
           </div>
         </div>
-
         <!-- BEM-ESTAR -->
         <div class="group relative">
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -156,6 +152,7 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
@@ -173,9 +170,8 @@
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -184,7 +180,6 @@
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
@@ -204,7 +199,8 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
@@ -215,8 +211,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -237,8 +232,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -250,12 +244,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
@@ -297,53 +293,84 @@
         </div>
       </div>
       <!-- #CONTEUDO-->
-      <p>A introdução alimentar aos 6 meses de idade é uma fase muito importante no desenvolvimento do
-        bebê. É o
-        momento em que ele começa a experimentar novos sabores, texturas e aprende a comer além do leite materno ou
-        fórmula. Abaixo está um resumo completo e simples sobre como fazer isso da melhor forma:</p>
-      <h2>Quando o seu bebé deve começar comer ?</h2>
+      <p>A <b>introdução de alimentos complementares aos 6 meses</b> representa uma etapa muito importante no
+        crescimento e desenvolvimento da criança. Nessa fase, o leite materno continua sendo o alimento principal, mas
+        já não é suficiente para suprir todas as necessidades nutricionais do bebé. Por isso, novos alimentos passam a
+        fazer parte da alimentação de forma gradual, segura e equilibrada.</p>
 
+      <p>Iniciar a alimentação complementar no momento adequado ajuda a fornecer energia, vitaminas, minerais e
+        proteínas essenciais para o desenvolvimento saudável. Além disso, favorece a aprendizagem de novos sabores,
+        texturas e hábitos alimentares que podem influenciar positivamente a saúde ao longo da vida.</p>
+
+      <h2>O que é a introdução de alimentos complementares?</h2>
+      <p>A introdução de alimentos complementares é o processo de oferecer alimentos sólidos ou semissólidos ao bebé
+        enquanto o aleitamento materno continua. O objetivo é complementar os nutrientes fornecidos pelo leite materno
+        ou pela fórmula infantil, e não substituí-los imediatamente.</p>
+
+      <p>A <a href="https://www.who.int/" target="_blank" rel="noopener">Organização
+          Mundial da Saúde</a> recomenda que os bebés sejam alimentados exclusivamente com leite materno
+        durante os primeiros seis meses de vida. Após esse período, torna-se necessário introduzir alimentos variados e
+        nutricionalmente adequados, mantendo o <b>aleitamento materno</b> até os dois anos ou mais, sempre que possível.
+      </p>
+
+      <p>Essa fase também contribui para o desenvolvimento da mastigação, da coordenação motora oral e da aceitação de
+        diferentes alimentos. A criança aprende gradualmente a participar das refeições da família, respeitando seu
+        ritmo e sua capacidade de explorar novos sabores.</p>
+
+      <h2>Quando o seu bebé deve começar comer ?</h2>
       <p>O seu bebê deve iniciar aos 6 meses completos, o
         facto de introduzir os alimentos complementares, a criança deve sempre se alimentar do <a
           href="/nutricao/aleitamento-materno/"> leite
           materno até aos seus 2 anos de idades</a>.
         Antes disso, o bebê deve receber apenas leite materno (ou fórmula, se for o caso).</p>
 
-      <blockquote>Introdução dos alimentos complementares inicia aos seus 6 meses de idade nas crianças e deve se
-        alimentar de leite materno. <cite>Fonte: <a href="https://www.who.int/" target="_blank"
-            rel="noopener">Organização
-            Mundial da Saúde</a></cite></blockquote>
-      <h2>Os sinais de prontidão para comer</h2>
-
+      <h2>Sinais de que o bebé está pronto para iniciar a alimentação</h2>
+      <p>Os sinais de prontidão costumam aparecer por volta dos seis meses. Entretanto, cada criança possui seu próprio
+        ritmo de desenvolvimento, razão pela qual a idade deve ser considerada juntamente com a avaliação clínica.</p>
+      <p>Entre os principais sinais estão a capacidade de permanecer sentado com apoio, controlar a cabeça e o pescoço,
+        abrir a boca quando o alimento é oferecido e demonstrar curiosidade durante as refeições familiares. Os
+        principais sinais incluem:</p>
       <ul>
-        <li>Sustentar o pescoço e sentar com apoio; mostrar interesse pelos alimentos;</li>
-        <li>Levar objectos à boca e abrir a boca quando oferecido alimentos.</li>
+        <li>Sentar-se com apoio.</li>
+        <li>Manter bom controlo da cabeça.</li>
+        <li>Demonstrar interesse pelos alimentos.</li>
+        <li>Levar objetos à boca.</li>
+        <li>Redução do reflexo de empurrar alimentos com a língua.</li>
       </ul>
 
-      <h2>Como alimentar o seu bebé ?</h2>
+      <h2>Como é feita a avaliação da alimentação infantil?</h2>
+      <p>Durante as consultas de acompanhamento infantil, médicos, enfermeiros e nutricionistas avaliam o crescimento, o
+        ganho de peso e a evolução do desenvolvimento da criança.</p>
+
+      <p>Os profissionais também observam se a alimentação está adequada para a idade, verificando a frequência das
+        refeições, os alimentos oferecidos, a consistência da comida e possíveis dificuldades na alimentação.</p>
+
+      <p>Quando necessário, podem ser solicitados exames laboratoriais para investigar deficiências nutricionais, como
+        anemia por deficiência de ferro, especialmente em crianças com fatores de risco.</p>
+
+      <h2>Como deve ser a alimentação complementar?</h2>
       <p>Comece com alimentos amassados ou em pedaços bem macios (não é necessário
         liquidificar), sabendo que as crianças tem: <a href="/nutricao/as-necessidades-nutricionais-das-criancas/">as
           necessidades
           nutricionais das crianças de acordo a faixa etária</a>, é muito importante se basear na idade de cada criança
         e o tipo de alimentos.</p>
-      <ul>
-        <li>Sem muito sal, açúcar, mel ou temperos fortes,</li>
-        <li>Ofereça 2 a 3 refeições por dia no início,</li>
-        <li>Introduza um alimento novo de cada vez, observando possíveis reações alérgicas.</li>
-      </ul>
-      <p><b>Grupos alimentares importantes:</b> o prato do bebê deve ser colorido e variado. Inclua:</p>
-      <ul>
-        <li>Cereais e tubérculos: arroz, batata, mandioca, aveia, macarrã,</li>
-        <li>Leguminosas: feijão, lentilha, ervilha,</li>
-        <li>Proteínas: carnes bem cozida, frango, peixe sem espinha,</li>
-        <li>Verduras e legumes: abobrinha, cenoura, beterraba, couve,</li>
-        <li>Frutas: banana, mamão, maçã, pera, manga, melancia (pedaços ou amassadas).</li>
-      </ul>
-      <p><b>Água</b>: a partir do momento em que o bebê inicia a introdução alimentar, por volta dos 6
+      <p>Frutas frescas, legumes, verduras, cereais, tubérculos, feijões, carnes, ovos e peixes podem fazer parte da
+        alimentação, desde que preparados de maneira adequada para a idade.</p>
+
+      <p>É importante evitar açúcar, mel antes de um ano de idade, refrigerantes, bebidas açucaradas, alimentos
+        ultraprocessados, excesso de sal e produtos industrializados.</p>
+
+      <p>As refeições devem acontecer em ambiente tranquilo, sem distrações como televisão ou telemóveis. O adulto deve
+        incentivar, mas nunca forçar a criança a comer, respeitando seus sinais de fome e saciedade.</p>
+
+      <p><b>Água</b>: a partir do momento em que o bebê inicia a <b>introdução alimentar</b>, por volta dos 6
         meses de idade, é importante começar a oferecer água regularmente. Até os 6 meses, o leite materno, é suficiente
-        para manter o bebê bem
-        hidratado, mesmo em dias quentes.
+        para manter o bebê bem hidratado, mesmo em dias quentes.
       </p>
+
+      <p>O leite materno continua sendo um componente fundamental da alimentação durante todo esse período, fornecendo
+        nutrientes, proteção imunológica e vínculo afectivo.</p>
+
       <p>
         o entanto, quando os alimentos sólidos são introduzidos, o corpo do bebê
         passa a precisar de uma quantidade extra de líquidos para auxiliar na digestão, no funcionamento do intestino e
@@ -362,7 +389,7 @@
       <p>A textura deve ser espessa e não líquida, o que facilita o aprendizado da mastigação e evita engasgos.
         Exemplos: purê de batata amassado, feijão com arroz bem cozidos e amassados, frutas como banana, mamão ou
         abacate amassados</p>
-      <p>De 8 a 9 meses – alimentos picadinhos e mais firmes: o bebê já tem mais controle da língua e da
+      <p>De 8 a 9 meses: alimentos picadinhos e mais firmes: o bebê já tem mais controle da língua e da
         mastigação, mesmo que ainda não tenha dentes.
         Os alimentos podem ser picados, desfiados ou cortados em pequenos pedaços macios, permitindo que o bebê explore
         melhor a comida e pratique mastigar.
@@ -373,12 +400,57 @@
         alimentos mais firmes, participando ativamente das refeições familiares. A comida deve ser a mesma da família,
         adaptada apenas na consistência (bem cozida, cortada em pedaços menores) e sem adição de sal, açúcar ou temperos
         fortes.</p>
-      <p> <b>Dica importante:</b> evite manter o bebê por muito tempo apenas em papinhas lisas isso pode
-        dificultar o
-        desenvolvimento da mastigação e causar resistência a novas texturas no futuro.
-        Cada bebê tem seu próprio ritmo, mas a progressão deve ser constante e incentivada com paciência, segurança e
-        variedade.</p>
 
+      <h2>Como prevenir problemas durante a introdução alimentar?</h2>
+      <p>A prevenção começa com o respeito ao momento adequado para iniciar a alimentação complementar. Introduzir
+        alimentos apenas quando a criança apresentar maturidade suficiente reduz diversos riscos.</p>
+      <p>Também é importante manter boas práticas de higiene durante o preparo dos alimentos, lavar corretamente frutas
+        e verduras, utilizar água potável e conservar os alimentos em condições adequadas.</p>
+      <p>Oferecer uma alimentação variada desde o início contribui para o desenvolvimento de hábitos saudáveis. A
+        repetição da oferta de determinados alimentos pode ser necessária, pois é comum que o bebé precise experimentar
+        várias vezes antes de aceitar um novo sabor.</p>
+
+      <h2>Quando procurar um profissional de saúde?</h2>
+      <p>A maioria das crianças realiza a introdução alimentar sem dificuldades importantes. Ainda assim, algumas
+        situações exigem avaliação profissional.</p>
+
+      <p>Procure orientação médica ou de outro profissional de saúde se a criança apresentar dificuldade persistente
+        para engolir alimentos, recusar praticamente todos os alimentos por várias semanas, não ganhar peso
+        adequadamente, apresentar sinais de alergia após a alimentação ou episódios frequentes de engasgamento.</p>
+      <p>Também é recomendado procurar acompanhamento quando existirem dúvidas sobre o crescimento, a alimentação ou a
+        quantidade adequada de alimentos para cada fase do desenvolvimento infantil.</p>
+
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <hr>
       <!-- SHAREING-->
       <div class="compartilhamento">
@@ -629,6 +701,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

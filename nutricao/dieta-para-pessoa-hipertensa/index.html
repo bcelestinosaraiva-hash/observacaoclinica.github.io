@@ -24,6 +24,10 @@
   <meta name="twitter:description"
     content="Na alimentação voltada para o controle da hipertensão, é essencial dar preferência a alimentos in natura e pouco processados, como frutas, verduras, legumes.">
   <meta name="twitter:image" content="https://www.observacaoclinica.com/img/hipertensao.webp">
+  <title>Dieta para hipertensos: alimentação saudável para controlar a pressão alta
+    | Observação Clínica</title>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -31,9 +35,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <!-- FEED RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- CSS -->
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -52,8 +55,8 @@
       </button>
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -73,14 +76,11 @@
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -92,15 +92,13 @@
             </a>
           </div>
         </div>
-
         <!-- BEM-ESTAR -->
         <div class="group relative">
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -112,6 +110,7 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
@@ -129,9 +128,8 @@
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -140,7 +138,6 @@
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
@@ -160,7 +157,8 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
@@ -171,8 +169,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -193,8 +190,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -206,12 +202,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
@@ -233,7 +231,6 @@
     </div>
   </aside>
   <!-- FIM DO HEADER -->
-
 
   <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
     <section class="space-y-6">
@@ -282,11 +279,10 @@
         manter uma alimentação equilibrada e hábitos de vida saudáveis é fundamental para prevenir e controlar a
         hipertensão.</p>
 
-      <blockquote>Adoptar hábitos alimentares saudáveis e melhoria de estilo de vida são estratégias eficazes e muito
-        importante para controlo da hipertensão alta de forma natural. <cite>Fonte: <a
-            href="https://www.heart.org/en/health-topics/high-bloo%20d-pressure/changes-you-can-make-to-manage-high-blood-pressure/the-dash-diet"
-            target="_blank">American heart association</a></cite>
-      </blockquote>
+      <p>A <a href="https://www.heart.org/en/health-topics/house-calls/la-presion-arterial-alta-el-asesino-silencioso"
+          target="_blank" rel="noopener noreferrer">Associação americana do coração,</a> recomenda adoptar hábitos
+        alimentares saudáveis e melhoria de estilo de vida são estratégias eficazes e muito importante para controlo da
+        hipertensão alta de forma natural. </p>
 
       <h2> Princípios de uma dieta para hipertensos</h2>
       <p>
@@ -369,6 +365,38 @@
         significativo para doenças cardiovasculares, acidentes vasculares cerebrais (AVC) e insuficiência renal.</p>
       <p>Além do acompanhamento médico, a alimentação desempenha um papel essencial no controle da pressão arterial,
         prevenindo complicações e melhorando a qualidade de vida.</p>
+
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <hr>
       <!-- SHAREING-->
       <div class="compartilhamento">
@@ -395,17 +423,17 @@
       <section class="panel">
         <ul>
           <li>AMERICAN HEART ASSOCIATION (AHA). High Blood Pressure and Nutrition: <a
-              href="https://www.heart.org/en/health-topics/high-bloo d-pressure/changes-you-can-make-to-manage-high-blood-pressure/the-dash-diet"
-              target="_blank">https://www.heart.org/en/health-topics/high-bloo
+              href="https://www.heart.org/en/health-topics/house-calls/la-presion-arterial-alta-el-asesino-silencioso"
+              target="_blank" rel="noopener noreferrer">https://www.heart.org/en/health-topics/high-bloo
               d-pressure/changes-you-can-make-to-manage-high-blood-pressure/the-dash-diet</a>
           </li>
           <li>NATIONAL HEART, LUNG, AND BLOOD INSTITUTE (NHLBI). DASH Eating Plan.
-            <a href="https://www.nhlbi.nih.gov/education/dash-eating-plan"
-              target="_blank">https://www.nhlbi.nih.gov/education</a>
+            <a href="https://www.nhlbi.nih.gov/education/dash-eating-plan" target="_blank"
+              rel="noopener noreferrer">https://www.nhlbi.nih.gov/education</a>
           </li>
           <li>MINISTÉRIO DA SAÚDE (Brasil). Hipertensão arterial, disponível em: <a
-              href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/h/hipertensao-arterial"
-              target="_blank">https:/
+              href="https://www.gov.br/saude/pt-br/assuntos/saude-brasil/eu-quero-me-alimentar-melhor/noticias/2022/como-deve-ser-a-alimentacao-de-uma-pessoa-adulta-com-obesidade-hipertensao-e-diabetes"
+              target="_blank" rel="noopener noreferrer">https:/
               /www.gov.br/saude/hipertenso</a></li>
         </ul>
       </section>
@@ -609,6 +637,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

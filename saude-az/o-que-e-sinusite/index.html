@@ -70,6 +70,8 @@
 }
 </script>
   <title>O que é sinusite: os sinais e sintomas e sua prevenção | Observação Clínica</title>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -77,9 +79,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <!-- FEED RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- CSS -->
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -98,8 +99,8 @@
       </button>
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -119,14 +120,11 @@
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -138,15 +136,13 @@
             </a>
           </div>
         </div>
-
         <!-- BEM-ESTAR -->
         <div class="group relative">
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -158,6 +154,7 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
@@ -175,9 +172,8 @@
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -186,7 +182,6 @@
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
@@ -206,7 +201,8 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
@@ -217,8 +213,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -239,8 +234,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -252,12 +246,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">

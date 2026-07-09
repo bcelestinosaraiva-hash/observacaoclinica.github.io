@@ -116,6 +116,8 @@
   }
 }
 </script>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -124,7 +126,7 @@
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- CSS -->
-  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -143,8 +145,8 @@
       </button>
       <!-- LOGO -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
@@ -164,14 +166,11 @@
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -183,15 +182,13 @@
             </a>
           </div>
         </div>
-
         <!-- BEM-ESTAR -->
         <div class="group relative">
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -203,6 +200,7 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
@@ -220,9 +218,8 @@
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -231,7 +228,6 @@
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
@@ -251,7 +247,8 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
@@ -262,8 +259,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -284,8 +280,7 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -297,12 +292,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
@@ -346,25 +343,35 @@
           </div>
         </div>
       </div>
+      <p>O aleitamento materno é uma das formas mais eficazes de promover a saúde do bebê e contribuir para o bem-estar
+        da mãe. O leite materno fornece todos os nutrientes necessários para o crescimento saudável nos primeiros meses
+        de vida, além de oferecer proteção contra diversas doenças. Ao mesmo tempo, a amamentação fortalece o vínculo
+        afetivo entre mãe e filho, trazendo benefícios físicos e emocionais para ambos.</p>
 
-      <p>O aleitamento materno é o acto de alimentar o bebê com o leite produzido pelas glândulas mamárias da
-        mãe, seja de forma direta (no seio) ou indireta (por meio da ordenha e oferta do leite).</p>
-
-      <p>O <b>leite materno</b> é um alimento completo, natural e adaptado às necessidades fisiológicas do
-        bebê, sendo reconhecido mundialmente como o melhor e mais seguro alimento para os primeiros meses de vida.</p>
-
-      <p>O leite que sai nos primeiros dias, é um líquido amarelado que contém substâncias que ajudam a proteger o bebé
-        contra infecções; por isso é importante dar de mamar logo após o parto.</p>
+      <p>Embora seja um processo natural, amamentar pode apresentar desafios, principalmente nas primeiras semanas após
+        o parto. Com informação de qualidade e apoio adequado, muitas dificuldades podem ser superadas.</p>
 
       <p>Não há horário para se amamentar; quanto
         mais o bebé mamar, mais leite a mãe produzirá mais leite; o leite de peito nunca se estraga e nunca é impróprio
         para o bebé.</p>
 
-      <blockquote>O aleitamento materno deve ser exclusivo até os 6 meses de
-        idade é complementado com outros alimentos até os dois anos ou mais.<cite>Fonte: <a href="https://www.who.int/"
-            target="_blank" rel="noopener noreferrer">Organização
-            Mundial da Saúde</a></cite>
-      </blockquote>
+      <h2>O que é o aleitamento materno?</h2>
+      <p>
+        O aleitamento materno é a alimentação do bebê com o leite produzido pelas mamas da mãe. Esse leite contém
+        proteínas, gorduras, vitaminas, minerais, água e diversos componentes imunológicos que ajudam a proteger o
+        recém-nascido contra infecções e outras doenças.</p>
+
+      <p>Nos primeiros dias após o parto, a mãe produz o colostro, um leite espesso e amarelado, rico em anticorpos e
+        nutrientes essenciais. Apesar de ser produzido em pequena quantidade, ele atende às necessidades do bebê e
+        desempenha um papel importante no fortalecimento do sistema imunológico.</p>
+
+      <p>À medida que os dias passam, o leite materno adapta sua composição conforme o crescimento da criança. Essa
+        capacidade de atender às diferentes fases do desenvolvimento torna o leite humano um alimento único.</p>
+
+      <p>A <a href="https://www.who.int/" target="_blank" rel="noopener noreferrer">Organização
+          Mundial da Saúde</a></cite> recomenda o aleitamento materno exclusivo durante os primeiros seis meses de
+        vida. Após esse período, a amamentação pode continuar juntamente com a alimentação complementar adequada até
+        dois anos ou mais.</p>
 
       <p>Além de nutrir, ele protege contra diversas doenças e fortalece o vínculo afectivo entre mãe e filho. Do ponto
         de vista social e econômico, o aleitamento também representa economia familiar e menor impacto para os sistemas
@@ -413,7 +420,7 @@
         4 graus. Pode-se conservar o leite no congelador: até 3 meses a uma temperatura não superior a -18 graus.</p>
       <h2>Importância do aleitamento materno</h2>
       <p>O leite materno é considerado o “alimento de ouro” para o recém-nascido. Ele contém todos os nutrientes
-        necessários nos primeiros meses de vida: proteínas, gorduras, carboidratos, vitaminas, minerais, enzimas e
+        necessários nos primeiros meses de vida: proteínas, gorduras, carbohidratos, vitaminas, minerais, enzimas e
         anticorpos em proporções ideais.</p>
 
       <h2>Benefícios para o bebê</h2>
@@ -426,8 +433,10 @@
         <li>Redução de doenças crônicas: diminui o risco de obesidade, diabetes tipo 2, hipertensão e outras doenças
           na
           vida adulta.</li>
-        <li>Fortalecimento do vínculo afectivo: o contato pele a pele promove segurança e apego emocional.
+
+        <li>Fortalecimento do vínculo afectivo: o contacto pele a pele promove segurança e apego emocional.
         </li>
+
         <li>
           Além dos benefícios físicos, aleitamento materno exclusivo desempenha um papel muito pertinente no bebê porque
           ajuda no desenvolvimento emocional do mesmo.
@@ -468,9 +477,100 @@
         relação
         emocional e garantindo segurança e conforto ao bebê.</p>
 
+      <h2>Principais causas que podem dificultar a amamentação</h2>
+
+      <p>A produção de leite normalmente ocorre de forma natural após o nascimento do bebê. Entretanto, diversos
+        factores
+        podem dificultar o processo de amamentação. </p>
+
+      <p>Uma das causas mais comuns é a pega inadequada. Quando o bebê não consegue abocanhar corretamente a aréola,
+        pode haver dor, fissuras nos mamilos e dificuldade para retirar leite suficiente.</p>
+
+      <p>Outro factor frequente é a falta de orientação logo após o parto. Muitas mães iniciam a amamentação sem receber
+        informações sobre posição, pega correta e manejo das dificuldades iniciais.</p>
+
+      <p>Além disso, factores emocionais, como ansiedade, estresse e cansaço, podem interferir na experiência da
+        amamentação. Algumas condições médicas maternas ou do bebê também podem exigir acompanhamento especializado.</p>
+
+      <h2>Sintomas e sinais relacionados às dificuldades na amamentação</h2>
+      <p>A amamentação não deve causar dor intensa de forma persistente. Quando isso acontece, geralmente existe alguma
+        dificuldade que merece avaliação.</p>
+
+      <p>Fissuras nos mamilos, sensação de endurecimento das mamas, ingurgitamento mamário e dificuldade do bebê em
+        ganhar peso podem indicar problemas durante o aleitamento. Em alguns casos, também podem surgir sinais de
+        mastite, uma inflamação da mama que necessita de avaliação médica. Os principais sinais que merecem atenção
+        incluem:</p>
+
+      <ul>
+        <li>Dor intensa durante as mamadas.</li>
+        <li> Fissuras persistentes nos mamilos.</li>
+        <li> Vermelhidão e calor nas mamas.</li>
+        <li> Febre associada à dor mamária.</li>
+        <li> Bebê com dificuldade para sugar.</li>
+        <li> Pouco ganho de peso do recém-nascido.</li>
+      </ul>
+      <p>O reconhecimento precoce desses sinais permite iniciar medidas que favorecem a continuidade da amamentação.</p>
       <h2>Quando procurar ajuda de um profissional de saúde?</h2>
-      <p>Se a mãe sentir dor intensa, dificuldade na pega ou o bebê não estiver ganhando peso, é importante procurar um
-        profissional de saúde para avaliação e orientação adequada.</p>
+      <p>É importante procurar um profissional de saúde quando houver dor intensa durante a amamentação, febre,
+        vermelhidão persistente nas mamas, secreção incomum ou dificuldade do bebê para mamar.</p>
+      <p>Também é recomendável buscar orientação se o recém-nascido apresentar pouco ganho de peso, sonolência excessiva
+        durante as mamadas ou número reduzido de fraldas molhadas.</p>
+      <p>Receber ajuda precoce aumenta as chances de manter uma amamentação segura e confortável para mãe e bebê.</p>
+      <p>O aleitamento materno representa um dos investimentos mais importantes para a saúde infantil e materna. Além de
+        fornecer todos os nutrientes necessários nos primeiros meses de vida, fortalece o sistema imunológico do bebê,
+        promove o vínculo afetivo e oferece benefícios duradouros para a mãe.</p>
+
+      <h2>Perguntas frequentes: FAQ</h2>
+      <h3>1. Até que idade o bebê deve ser amamentado?</h3>
+      <p> A Organização Mundial da Saúde recomenda aleitamento materno exclusivo até os seis meses e continuidade da
+        amamentação, juntamente com alimentação complementar adequada, até dois anos ou mais.</p>
+
+      <h3>2. O leite materno é suficiente para o bebê?</h3>
+      <p>Sim. Durante os primeiros seis meses de vida, o leite materno oferece água, energia e nutrientes suficientes
+        para a maioria dos bebés saudáveis. </p>
+
+      <h3>3. É normal sentir dor ao amamentar?</h3>
+      <p> Pode existir algum desconforto inicial, mas dor intensa ou persistente não é considerada normal e deve ser
+        avaliada por um profissional de saúde.</p>
+
+      <h3>4. O estresse pode interferir na amamentação?</h3>
+      <p> O estresse pode dificultar o processo de amamentação e a ejeção do leite. O apoio familiar e profissional
+        pode ajudar a reduzir essas dificuldades.</p>
+
+      <h3> 5. Quando devo procurar ajuda para amamentar? </h3>
+      <p>Sempre que houver dor intensa, febre, fissuras importantes, dificuldades na pega ou quando o bebê não estiver
+        ganhando peso adequadamente.</p>
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
 
       <!-- SHAREING-->
       <hr>
@@ -748,6 +848,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

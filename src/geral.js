@@ -1,5 +1,5 @@
 // ======================================
-// OBSERVAÇÃO CLÍNICA - GERAL.JS
+// OBSERVAÇÃO CLÍNICA
 // ======================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,7 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBtn = $("search-btn");
   const searchInput = $("search-input");
 
-
+  // SHARE LINKS (ajuste os IDs abaixo para os que existem no seu HTML)
+  const fb = $("share-facebook");
+  const tw = $("share-twitter");
+  const wa = $("share-whatsapp");
+  const email = $("share-email");
 
 
   // ======================================
@@ -73,15 +77,15 @@ document.addEventListener("DOMContentLoaded", () => {
     unlockScroll();
   }
 
-  if (openBtn) openBtn.addEventListener("click", openMenu);
+  if (openBtn && mobileMenu && overlay) openBtn.addEventListener("click", openMenu);
 
-  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+  if (closeBtn && mobileMenu && overlay) closeBtn.addEventListener("click", closeMenu);
 
-  if (overlay) overlay.addEventListener("click", closeMenu);
+  if (overlay && mobileMenu) overlay.addEventListener("click", closeMenu);
 
   document.addEventListener("keydown", (e) => {
 
-    if (e.key === "Escape") closeMenu();
+    if (e.key === "Escape" && mobileMenu && overlay) closeMenu();
 
   });
 
@@ -92,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ======================================
 
   function toggleSubmenu(menu, icon, button) {
+
+    if (!menu || !icon || !button) return;
 
     const aberto = !menu.classList.contains("hidden");
 
@@ -194,12 +200,45 @@ document.addEventListener("DOMContentLoaded", () => {
   if (email)
     email.href = `mailto:?subject=${pageTitle}&body=${pageTitle}%0A${pageUrl}`;
 
+
+  // ======================================
+  // COOKIES (unificado aqui dentro do mesmo DOMContentLoaded)
+  // ======================================
+
+  const banner = $("cookie-banner");
+  const acceptBtn = $("acceptCookies");
+  const rejectBtn = $("rejectCookies");
+
+  if (banner) {
+
+    if (!localStorage.getItem("cookieConsent")) {
+      setTimeout(function () {
+        banner.style.display = "block";
+      }, 4000); // 4000ms = 4 segundos
+    }
+
+    if (acceptBtn)
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+        // Coloque aqui o código do Google Analytics
+        // ou Google AdSense, se desejar carregar
+        // somente após o consentimento.
+      });
+
+    if (rejectBtn)
+      rejectBtn.addEventListener("click", function () {
+        localStorage.setItem("cookieConsent", "rejected");
+        banner.style.display = "none";
+      });
+
+  }
+
 });
 
 
-
 // ======================================
-// SHARE MANUAL
+// SHARE MANUAL (funções globais, chamadas via onclick="" no HTML)
 // ======================================
 
 function shareWhatsApp() {
@@ -255,24 +294,3 @@ function shareNative() {
     alert("Use WhatsApp ou Facebook para partilhar.");
   }
 }
-
-// COOKIES
-document.addEventListener("DOMContentLoaded", function () {
-  const banner = document.getElementById("cookie-banner");
-  if (!localStorage.getItem("cookieConsent")) {
-    setTimeout(function () {
-      banner.style.display = "block";
-    }, 4000); // 4000ms = 4 segundos
-  }
-  document.getElementById("acceptCookies").addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "accepted");
-    banner.style.display = "none";
-    // Coloque aqui o código do Google Analytics
-    // ou Google AdSense, se desejar carregar
-    // somente após o consentimento.
-  });
-  document.getElementById("rejectCookies").addEventListener("click", function () {
-    localStorage.setItem("cookieConsent", "rejected");
-    banner.style.display = "none";
-  });
-});
