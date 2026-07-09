@@ -17,6 +17,20 @@
   <!-- FEED RSS -->
   <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
   <!-- CSS -->
+  <style>
+    .sucesso-msg {
+      color: #16a34a;
+      /* verde */
+      background-color: #f0fdf4;
+      /* fundo verde bem claro, opcional */
+      border: 1px solid #bbf7d0;
+      /* opcional, se erro-msg tiver borda */
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+    }
+  </style>
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -33,16 +47,21 @@
         aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
         <i class="fas fa-bars" aria-hidden="false"></i>
       </button>
+
       <!-- LOGO -->
+      <!-- width/height adicionados: sem isso o navegador não reserva espaço
+         e o header "pula" assim que a imagem termina de carregar -->
       <a href="/index.html" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clínica" loading="eager"
-          decoding="async">
+        <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px;width:auto;">
       </a>
+
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
       <button id="mobile-search-button" aria-label="lupa de pesquisa"
         class="md:hidden flex items-center justify-center p-4">
         <i class="fas fa-search"></i>
       </button>
+
       <!-- MENU DESKTOP -->
       <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
         <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
@@ -51,19 +70,17 @@
         <a href="/gravidez/" class="hover:text-blue-400 transition-colors">
           GRAVIDEZ
         </a>
+
         <!-- SAUDE-AZ -->
         <div class="group relative">
           <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px]
-            transition-transform duration-300
-            group-hover:rotate-180" aria-label="true">
-            </i>
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300
-          z-50 bg-white">
+          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -82,8 +99,7 @@
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
             <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
@@ -95,9 +111,11 @@
             </a>
           </div>
         </div>
+
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
+
         <!-- PESQUISA NO PC-->
         <div class="relative">
           <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="Pesquise aqui..."
@@ -114,7 +132,9 @@
   </header>
 
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 margem left-0 w-full bg-white rounded-xl z-50 hidden">
+  <!-- classe "margem" removida: não existia no Tailwind nem em CSS custom,
+     e sem efeito nenhum ela só deixava dúvida sobre o posicionamento real -->
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
        focus:outline-none focus:ring-0 focus:border-gray-300">
@@ -127,6 +147,7 @@
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
+
   <!-- MENU MOBILE -->
   <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
   transform -translate-x-full transition-transform duration-300 z-50
@@ -143,19 +164,20 @@
         </button>
       </div>
     </div>
-    <!-- CAREGORIAS -->
+
+    <!-- CATEGORIAS -->
     <div class="flex-1 overflow-y-auto overscroll-contain">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
         <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+
         <!-- SAÚDE-AZ -->
         <div>
           <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -170,14 +192,14 @@
             </a>
           </div>
         </div>
+
         <!-- Submenu BEM-ESTAR -->
         <div>
           <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true">
-            </i>
+              aria-hidden="true"></i>
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
           opacity-0 transform -translate-y-1 transition-all duration-300">
@@ -189,12 +211,14 @@
             </a>
           </div>
         </div>
+
         <!-- CALCULADORAS -->
-        <a href="/calculadoras/" class=" border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
         </a>
       </nav>
     </div>
+
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
@@ -219,93 +243,114 @@
 
   <main class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-20">
     <div class="grid md:grid-cols-2 gap-12 items-start">
-      <!-- LADO ESQUERDO: IMC + NUTRIÇÃO DETALHADA -->
+      <!-- COLUNA ESQUERDA: FORMULÁRIO DE CONTACTO -->
       <div class="space-y-10 text-black text-lg">
-        <h1>Formulário para falar connosco</h1>
-        <p>Reservamos este espaço para você falar com a equipe do site. Mande suas sugestões, elogios, e todas as suas
-          críticas ou dúvidas.</p>
-        <div class="bg-blue-50 border-l-4 border-blue-300 p-4 rounded-lg">
-          <p><b>Atenção:</b> A observação clínica não se destina a esclarecer dúvidas a respeito de tratamentos,
-            medicamentos, resultados de exames, ou prestar sequer primeira ou segunda opinião médica, questões sobre
-            estes assuntos não serão respondidas as suas perguntas.
-          </p>
-        </div>
-
+        <h1>Fale Connosco</h1>
+        <p>
+          Este espaço foi criado para você entrar em contacto com a nossa equipa.
+          Envie as suas sugestões, elogios, críticas ou dúvidas, a sua opinião
+          é importante para continuarmos a melhorar.
+        </p>
+        <p>
+          <b>Atenção:</b> Este canal não se destina ao esclarecimento de dúvidas
+          sobre tratamentos, medicamentos ou resultados de exames, nem à emissão
+          de primeira ou segunda opinião médica. Perguntas relacionadas a estes
+          temas não serão respondidas por este formulário.
+        </p>
         <!-- Formulário -->
-        <form id="contact-form" <form="" action="https://formspree.io/f/mkgvedrz" method="POST">
-          <!-- Campo email -->
-          <div>
-            <label for="email" class="block mb-1">Seu email</label>
-            <input type="email" name="email" id="email" required="" placeholder="seuemail@exemplo.com"
-              class="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-indigo-300">
-          </div>
-          <!-- Campo objetivo -->
-          <div>
-            <label for="objetivo" class="block mb-1">Objectivo</label>
-            <input type="text" name="objetivo" id="objetivo" required="" placeholder="Ex: Pedido de informação"
-              class="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-indigo-300">
-          </div>
+        <section id="feedback" aria-labelledby="feedback-titulo">
+          <h2 id="feedback-titulo" class="sr-only">Formulário de contacto</h2>
 
-          <!-- Campo mensagem -->
-          <div>
-            <label for="mensagem" class="block mb-1">Sua mensagem</label>
-            <textarea name="mensagem" id="mensagem" rows="5" required="" minlength="100"
-              placeholder="Escreva sua mensagem (mínimo 100 caracteres)..."
-              class="w-full border border-gray-300 rounded px-3 py-2 focus:ring focus:ring-indigo-300"></textarea>
-          </div>
-          <!-- Botão -->
-          <div class="flex justify-center">
-            <button type="submit"
-              class="w-32 py-2 bg-black text-white rounded hover:bg-gray-800 transition">Enviar</button>
-          </div>
-        </form>
-        <!-- Feedback -->
-        <p id="form-feedback" class="mt-4 text-center"></p>
+          <form id="form-feedback" novalidate>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="O seu nome" class="campo-input" autocomplete="name"
+              required>
+
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="o-seu@email.com" class="campo-input"
+              autocomplete="email" required>
+
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva a sua mensagem..."
+              required></textarea>
+
+            <p id="erro-form" class="erro-msg" role="alert" style="display:none;"></p>
+
+            <button type="submit" class="submit-btn" onclick="enviar(); return false;">
+              ENVIAR
+            </button>
+          </form>
+
+          <p id="sucesso-form" class="sucesso-msg" role="status" style="display:none;">
+            Mensagem enviada com sucesso! Entraremos em contacto em breve.
+          </p>
+        </section>
 
       </div>
-      <!-- Localização -->
-      <!-- Coluna direita: Localização -->
-      <div class="space-y-10 text-black text-lg">
-        <h2>Outros meios de contactos e sugestões</h2>
-        <p>A observação clínica, aceita sugestões e recomendações, de modo possamos melhorar os nossos serviços,
-          atendimento aos utentes desta plataforma.</p>
-        <ul class="space-y-4 text-gray-700 text-sm sm:text-base">
-          <li class="flex items-start gap-3">
-            <i class="fas fa-map-marker-alt text-red-500 text-lg mt-1"></i>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Nampula,+Moçambique" target="_blank"
-              class="hover:underline">
-              Moçambique, Nampula<br>
+
+      <!-- COLUNA DIREITA: LOCALIZAÇÃO E OUTROS CONTACTOS -->
+      <div class="space-y-10 text-black text-lg mt-10">
+        <h2>Outros Meios de Contacto</h2>
+        <p>
+          A Observação Clínica acolhe sugestões e recomendações que nos ajudem a
+          melhorar continuamente os nossos serviços e o atendimento aos utentes
+          desta plataforma.
+        </p>
+        <div class="space-y-4 text-gray-700 text-sm sm:text-base">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-red-500 text-lg mt-1" aria-hidden="true"></i>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nampula,+Moçambique" target="_blank"
+              rel="noopener noreferrer" class="hover:underline">
+              Nampula, Moçambique
             </a>
-          </li>
-          <li class="flex items-start gap-3">
-            <i class="fas fa-phone text-green-600 text-lg mt-1"></i>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-phone text-green-600 text-lg mt-1" aria-hidden="true"></i>
             <a href="tel:+258844902583" class="hover:underline">
-              Ligue: +258 84 490 2583
+              +258 84 490 2583
             </a>
-          </li>
-          <li class="flex items-start gap-3">
-            <i class="fas fa-envelope text-blue-600 text-lg mt-1"></i> observacaoclinic@gmail.com
-          </li>
-          <li class="flex items-start gap-3">
-            <i class="fab fa-whatsapp text-green-500 text-lg mt-1"></i>
-            <a href="https://wa.me/258844902583" target="_blank" class="hover:underline">Observação clínica</a>
-          </li>
-        </ul>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fas fa-envelope text-blue-600 text-lg mt-1" aria-hidden="true"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=observacaoclinic@gmail.com&su=Contacto%20via%20site"
+              target="_blank" rel="noopener noreferrer" class="hover:underline">
+              observacaoclinic@gmail.com
+            </a>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fab fa-whatsapp text-green-500 text-lg mt-1" aria-hidden="true"></i>
+            <a href="https://wa.me/258844902583" target="_blank" rel="noopener noreferrer" class="hover:underline">
+              Falar via WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- Cookie Banner -->
-  <div id="cookieConsent" class="cookie-consent hidden">
-    <p>
-      🍪 Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados. Veja nossa <a
-        href="/politicas-e-privacidades/">política de privacidade</a>.
-    </p>
-    <div class="buttons">
-      <button id="acceptCookies">Aceitar</button>
-      <button id="denyCookies">Recusar</button>
+  <!-- Cookie Banner - HTML + CSS + JavaScript -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <h3>🍪 Utilizamos Cookies</h3>
+      <p>
+        Utilizamos cookies para melhorar sua experiência de navegação,
+        analisar o tráfego do site e exibir anúncios personalizados.
+        Você pode aceitar ou recusar os cookies não essenciais.
+        Ao clicar em <b>"Aceitar"</b>, você concorda com nossa
+        <a href="/politica-de-cookies/">política de cookies</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies" class="btn-primary">
+          Aceitar
+        </button>
+        <button id="rejectCookies" class="btn-secondary">
+          Recusar
+        </button>
+      </div>
     </div>
   </div>
+  <!-- FIM DE COOKIES -->
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
@@ -372,6 +417,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/contacto.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>
 </body>

@@ -29,16 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBtn = $("search-btn");
   const searchInput = $("search-input");
 
-  // COOKIES
-  const consent = $("cookieConsent");
-  const acceptBtn = $("acceptCookies");
-  const denyBtn = $("denyCookies");
-
-  // SHARE
-  const fb = $("facebook-share");
-  const tw = $("twitter-share");
-  const wa = $("whatsapp-share");
-  const email = $("email-share");
 
 
 
@@ -184,45 +174,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-
-  // ======================================
-  // COOKIES
-  // ======================================
-
-  if (consent && acceptBtn && denyBtn) {
-
-    const dados = JSON.parse(localStorage.getItem("cookiesConsent") || "{}");
-
-    const hoje = new Date();
-
-    if (
-      !dados.date ||
-      (hoje - new Date(dados.date)) / 86400000 > 365
-    ) {
-      consent.classList.add("show");
-    }
-
-    function salvar(aceitou) {
-
-      localStorage.setItem(
-        "cookiesConsent",
-        JSON.stringify({
-          accepted: aceitou,
-          date: new Date(),
-        })
-      );
-
-      consent.classList.remove("show");
-    }
-
-    acceptBtn.addEventListener("click", () => salvar(true));
-
-    denyBtn.addEventListener("click", () => salvar(false));
-
-  }
-
-
-
   // ======================================
   // SHARE LINKS
   // ======================================
@@ -302,7 +253,26 @@ function shareNative() {
   } else {
 
     alert("Use WhatsApp ou Facebook para partilhar.");
-
   }
-
 }
+
+// COOKIES
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookie-banner");
+  if (!localStorage.getItem("cookieConsent")) {
+    setTimeout(function () {
+      banner.style.display = "block";
+    }, 4000); // 4000ms = 4 segundos
+  }
+  document.getElementById("acceptCookies").addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "accepted");
+    banner.style.display = "none";
+    // Coloque aqui o código do Google Analytics
+    // ou Google AdSense, se desejar carregar
+    // somente após o consentimento.
+  });
+  document.getElementById("rejectCookies").addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "rejected");
+    banner.style.display = "none";
+  });
+});

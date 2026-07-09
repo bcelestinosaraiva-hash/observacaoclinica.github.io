@@ -108,6 +108,20 @@
     content: "\f231";
 }
 
+.fa-envelope::before {
+    content: "\f0e0";
+}
+
+.fa-map-marker-alt::before {
+    content: "\f3c5";
+}
+
+.fa-phone::before {
+    content: "\f095";
+}
+
+
+
 
 /* MEU CSS PERSONALIZADO */
 *,
@@ -694,99 +708,6 @@ ul a {
     }
 }
 
-/* MEUS COOKIES */
-.cookie-consent {
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%) translateY(150%);
-    background: linear-gradient(135deg, #000000, #000000);
-    border-radius: 10px;
-    padding: 15px 40px;
-    display: flex;
-    flex-wrap: wrap;
-    color: #ffffff;
-    align-items: center;
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    max-width: 95%;
-    z-index: 10;
-}
-
-.cookie-consent.show {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-}
-
-.cookie-consent p {
-    font-weight: 300;
-    line-height: 20px;
-    color: #ffffff;
-    margin: 5px;
-    font-size: 14px;
-    flex: 2px;
-}
-
-.cookie-consent a {
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: underline;
-}
-
-.cookie-consent .buttons {
-    display: flex;
-    gap: 30px;
-    margin-top: 4px;
-    flex-shrink: 0px;
-}
-
-.cookie-consent button {
-    padding: 20px;
-    border-radius: 6px;
-    border: none;
-    font-weight: 200;
-    line-height: 20px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-#acceptCookies {
-    background-color: #03408f;
-    color: #ffffff;
-}
-
-#acceptCookies:hover {
-    background-color: #1463ca;
-    transform: scale(1.05);
-}
-
-#denyCookies {
-    background-color: #7c1111;
-    color: #ffffff;
-}
-
-#denyCookies:hover {
-    background-color: #fa2828;
-    transform: scale(1.05);
-}
-
-@media (max-width: 50px) {
-    .cookie-consent {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 20px;
-    }
-
-    .cookie-consent .buttons {
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 10px;
-    }
-
-    .cookie-consent button {
-        flex: 1;
-    }
-}
 
 /*REFERENCIAS BIBLIOGRAFICAS*/
 .referencia {
@@ -1755,3 +1676,114 @@ small {
 }
 
 /* FIM DE AVALIACAO DE CONTEUDO */
+
+
+/*CSS DE COOKIES */
+.cookie-banner {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .18);
+    padding: 22px;
+    z-index: 999999;
+    animation: fadeUp .4s ease;
+    display: none;
+}
+
+.cookie-content h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.cookie-content p {
+    margin: 0;
+    line-height: 1.7;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+
+.cookie-content a {
+    color: #01589e;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Só em telas de PC (a partir de 769px) */
+@media (min-width: 769px) {
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.btn-primary {
+    background: #1976d2;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    background: #1565c0;
+}
+
+.btn-secondary {
+    background: #d4d4d4;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.btn-secondary:hover {
+    background: #dcdcdc;
+}
+
+@media(max-width:600px) {
+    .cookie-banner {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 18px;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+    }
+
+    .cookie-buttons button {
+        width: 100%;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
