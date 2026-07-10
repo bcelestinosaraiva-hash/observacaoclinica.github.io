@@ -427,9 +427,12 @@
             </ul>
 
             <p>Como promover uma gravidez saudável</p>
-            <p>Embora não seja possível prevenir todos os sintomas da gravidez, algumas medidas ajudam a promover uma
-                gestação saudável. O planeamento reprodutivo, a alimentação equilibrada e o controlo de doenças crónicas
-                antes da gravidez são importantes.</p>
+            <p>Embora não seja possível prevenir todos os sintomas da gravidez, algumas medidas ajudam a <a
+                    href="/gravidez/como-promover-uma-gravidez-saudavel/" target="_blank" rel="noopener">promover uma
+                    gestação saudável</a>. O
+                planeamento reprodutivo, a alimentação equilibrada e o controlo de doenças crónicas antes da gravidez
+                são importantes.</p>
+
             <p>Manter consultas regulares durante o pré-natal permite identificar precocemente possíveis complicações e
                 acompanhar o desenvolvimento do bebé.</p>
 
@@ -462,8 +465,36 @@
                 urinária são manifestações frequentes, mas variam entre as mulheres e não confirmam, por si só, uma
                 gravidez.</p>
 
-
-
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
+            <hr>
+            <section class=" avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
             <hr>
             <!-- SHAREING-->
             <div class="compartilhamento">
@@ -720,6 +751,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/search-live.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>

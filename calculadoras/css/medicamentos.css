@@ -1,0 +1,218 @@
+#rx-calculadora {
+    --rx-primary: #0d7377;
+    --rx-primary-dark: #0a5a5d;
+    --rx-primary-light: #e6f5f3;
+    --rx-accent: #b45309;
+    --rx-accent-light: #fef3e2;
+    --rx-text: #1e293b;
+    --rx-text-muted: #64748b;
+    --rx-border: #dce7e5;
+    --rx-bg: #f4faf9;
+    --rx-white: #ffffff;
+    --rx-radius: 16px;
+    --rx-shadow: 0 4px 20px rgba(13, 115, 119, 0.08), 0 1px 3px rgba(13, 115, 119, 0.06);
+
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    color: var(--rx-text);
+    max-width: 100%;
+    margin: 2.5rem auto;
+    padding: 2.25rem 2rem 2rem;
+    background: var(--rx-white);
+    border: 1px solid var(--rx-border);
+    border-radius: var(--rx-radius);
+    box-shadow: var(--rx-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+/* barra de assinatura no topo — remete a um traçado de pulso/monitor */
+#rx-calculadora::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--rx-primary) 0%, #4fb3ac 50%, var(--rx-primary) 100%);
+}
+
+/* ---------- Cabeçalhos ---------- */
+#rx-calculadora h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--rx-primary-dark);
+    letter-spacing: -0.01em;
+    margin: 0.25rem 0 0.5rem;
+}
+
+#rx-calculadora h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--rx-text-muted);
+    margin: 0.25rem 0;
+}
+
+#rx-calculadora h3.text-center.p-2 {
+    background: var(--rx-accent-light);
+    color: #92400e;
+    border: 1px solid #f4d9ae;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem !important;
+    font-size: 0.9rem;
+    margin: 1.5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#rx-calculadora h3.text-center.p-2::before {
+    content: "⚠";
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* ---------- Campo: escolha do medicamento ---------- */
+#rx-calculadora select#drug-select {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--rx-text);
+    background-color: var(--rx-white);
+    border: 1.5px solid var(--rx-border) !important;
+    border-radius: 10px !important;
+    padding: 0.7rem 2.25rem 0.7rem 0.9rem !important;
+    margin-bottom: 1.25rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%230d7377' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#rx-calculadora select#drug-select:hover {
+    border-color: var(--rx-primary) !important;
+}
+
+#rx-calculadora select#drug-select:focus {
+    outline: none;
+    border-color: var(--rx-primary) !important;
+    box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.15);
+}
+
+/* ---------- Campo: peso do paciente ---------- */
+#rx-calculadora label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem !important;
+}
+
+#rx-calculadora input#drug-weight {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--rx-primary-dark);
+    border: 1.5px solid var(--rx-border) !important;
+    border-radius: 10px !important;
+    padding: 0.65rem 0.9rem !important;
+    margin-top: 0.4rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#rx-calculadora input#drug-weight:hover {
+    border-color: var(--rx-primary) !important;
+}
+
+#rx-calculadora input#drug-weight:focus {
+    outline: none;
+    border-color: var(--rx-primary) !important;
+    box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.15);
+}
+
+/* ---------- Bloco de resultado ---------- */
+#rx-calculadora strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--rx-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 1.75rem 0 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--rx-primary-light);
+}
+
+#rx-calculadora>div.text-sm,
+#rx-calculadora>div:not(.result):not(.details) {
+    font-size: 0.85rem;
+    color: rgb(0, 0, 0);
+    margin-top: 0.9rem;
+}
+
+#rx-calculadora .result {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--rx-primary-dark);
+    background: var(--rx-primary-light);
+    border: 1px solid #bfe4e1;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.25rem;
+}
+
+/* destaque extra para a dose por toma, o número mais importante na prática */
+#rx-calculadora #drug-per-dose {
+    color: var(--rx-white);
+    background: linear-gradient(135deg, var(--rx-primary) 0%, var(--rx-primary-dark) 100%);
+    border: none;
+    box-shadow: 0 4px 12px rgba(13, 115, 119, 0.25);
+}
+
+/* ---------- Painel de detalhes / explicação ---------- */
+#rx-calculadora .details {
+    white-space: pre-line;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: rgb(0, 0, 0);
+    background: white;
+    border: 1px solid var(--rx-border);
+    border-left: 4px solid var(--rx-primary);
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    margin-top: 1.5rem !important;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 480px) {
+    #rx-calculadora {
+        margin: 1.25rem 0.75rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    #rx-calculadora h2 {
+        font-size: 1.25rem;
+    }
+
+    #rx-calculadora .result {
+        font-size: 1.2rem;
+    }
+}
+
+/* ---------- Acessibilidade: foco visível para navegação por teclado ---------- */
+#rx-calculadora select:focus-visible,
+#rx-calculadora input:focus-visible {
+    outline: 2px solid var(--rx-primary-dark);
+    outline-offset: 2px;
+}
+
+/* ---------- Respeita preferência de movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+    #rx-calculadora * {
+        transition: none !important;
+    }
+}

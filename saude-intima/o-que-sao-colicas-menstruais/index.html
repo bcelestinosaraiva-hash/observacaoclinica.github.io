@@ -412,10 +412,10 @@
             <p>Nem sempre é possível evitar completamente as cólicas, mas alguns hábitos saudáveis podem reduzir sua
                 intensidade e frequência.</p>
 
-            <blockquote>Beber água ajuda a reduzir a retenção de líquidos e contribui para o corpo ou organismo
-                funcionar adequadamente. <cite>Fonte: <a href="https://www.mayoclinic.org/" target="_blank">Clinic mayo
-                        - Cólica menstrual</a></cite>
-            </blockquote>
+            <p>Beber água ajuda a reduzir a retenção de líquidos e contribui para o corpo ou organismo
+                funcionar adequadamente para <a href="https://www.mayoclinic.org/" target="_blank">aliviar as cólicas
+                    menstruais</a>.
+            </p>
 
             <ol>
                 <li>Pratique exercícios físicos: a atividade física ajuda a melhorar a circulação sanguínea
@@ -476,6 +476,19 @@
                 </li>
             </ul>
 
+            <h2>Hábitos que podem ajudar a prevenir cólicas intensas</h2>
+            <p>Embora nem sempre seja possível evitar completamente as <a
+                    href="https://www.who.int/news-room/fact-sheets/detail/menstrual-health" target="_blank">cólicas
+                    menstruais</a>,
+                alguns hábitos podem ajudar a reduzir a sua intensidade. Manter uma rotina de exercício físico, dormir
+                bem, evitar o tabaco e controlar o stress são medidas importantes para o equilíbrio hormonal e o
+                bem-estar geral.</p>
+
+            <p>Registar o ciclo menstrual também pode ser útil para identificar padrões de dor, duração dos sintomas e
+                alterações fora do habitual. Esta informação pode ajudar tanto a mulher como o profissional de saúde
+                durante uma eventual avaliação.</p>
+
+
             <h2>Quando procurar ajuda médica</h2>
             <p>Embora as cólicas menstruais sejam comuns, alguns sinais indicam a necessidade de avaliação médica.</p>
 
@@ -503,6 +516,38 @@
                 uso adequado de tratamentos recomendados por profissionais de saúde podem ajudar significativamente no
                 controle dos sintomas.
             </p>
+
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
+            <hr>
+            <section class="avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
             <!-- SHAREING-->
             <hr>
             <section>
@@ -593,7 +638,7 @@
 
     <!-- MENSAGEM RELACIONADAS -->
     <section class="max-w-6xl w-full mx-auto px-4">
-        <h2>Mensagens relacionadas</h2>
+        <h2>Mensagens em destaque</h2>
         <hr>
         <div class="agora">
             <div class="cartao">
@@ -752,6 +797,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/src/search-live.js" defer></script>

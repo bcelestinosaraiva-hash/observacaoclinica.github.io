@@ -72,6 +72,7 @@
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/calculadoras/css/idadegestacional.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/output.css">
 </head>
@@ -290,9 +291,18 @@
       <p>Temos a calculadora abaixo para calcular a sua idade gestacional, colocando o seu DUM e o dia que a gestante se
         apresentou na unidade ou dia atual.</p>
 
-      <p>A idade gestacional corresponde ao tempo de gravidez contado em semanas e dias, desde o primeiro dia da última
-        menstruação (DUM). Esse cálculo é essencial para acompanhar o desenvolvimento do bebê e estimar a data provável
-        do parto (DPP).</p>
+      <h2>O que é a idade gestacional</h2>
+      <p>A idade gestacional corresponde ao tempo de evolução da gravidez, sendo normalmente expressa em semanas e dias.
+        Ao contrário do que muitas pessoas imaginam, este cálculo não começa na data da <b>fecundação</b>, mas sim no
+        primeiro dia da última menstruação, conhecido na medicina como DUM (Data da Última Menstruação).</p>
+
+      <p>Este método é utilizado internacionalmente porque a maioria das mulheres consegue recordar a data da última
+        menstruação, enquanto o momento exato da fecundação raramente é conhecido.</p>
+
+      <p>A idade gestacional corresponde ao tempo de <a href="/gravidez/como-promover-uma-gravidez-saudavel/">gravidez
+        </a> contado em semanas e dias, desde o primeiro ia da última menstruação (DUM). Esse cálculo é
+        essencial para acompanhar o desenvolvimento do bebê e estimar a
+        data provável do parto (DPP).</p>
 
       <p>Embora a gestação completa dure, em média, 40 semanas (280 dias), apenas cerca de 5% dos bebês nascem
         exatamente na data prevista. Por isso, a data do parto é sempre uma estimativa.</p>
@@ -300,7 +310,7 @@
       <p>Informe a sua <b>DUM</b> ou data da última menstruação e a sua <b>DAUS</b> ou data de apresentação na unidade
         sanitária para obter a idade gestacional (semanas + dias) e a data provável de parto.</p>
 
-      <section aria-label="calculadora de iadade gestacional">
+      <section id="gest-calculadora" aria-label="calculadora de iadade gestacional">
         <div>
           <h2 class="text-center">Calculadora de idade gestacional</h2>
           <label aria-label="data da ultima menstruacao">Data da última menstruação (DUM)</label>
@@ -315,15 +325,14 @@
         <div>
           <label aria-label="opcional duracao">Comprimento do ciclo (opcional)</label>
           <input id="cycle" type="number" min="20" max="40" value="28" aria-label="comprimento do ciclo"
-            class="w-full  border border-gray-300 rounded px-3 py-2">
+            class="w-full border border-gray-300 rounded px-3 py-2">
         </div>
         <div class="flex justify-center mt-5">
-          <button id="calcBtn" onclick="calcular()" style="width: 40%; height: 50px; border: none; 
-                    border-radius: 10px; background: #015d81; color: #ffffff; font-size: 16px;
-                    font-weight: bold; cursor: pointer; transition: .3s;">
+          <button id="calcBtn" style="width: 40%; height: 50px; border: none; 
+              border-radius: 10px; background: #015d81; color: #ffffff; font-size: 16px;
+              font-weight: bold; cursor: pointer; transition: .3s;">
             CALCULAR
           </button>
-        </div>
         </div>
         <div id="alert" class="hidden p-2 rounded-lg mt-5"></div>
         <div id="resultCard" class="hidden">
@@ -347,46 +356,107 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <p><b>Observação</b>: cálculo aproximado, em casos de ciclos irregulares ou dúvida, confirme com
-          USG precoce ou <b>ecografia obstétrica precoce</b> ou com o serviço de obstetrícia, <a
-            href="/calculadoras/como-calcular-o-ciclo-menstrual/">calcule também o seu
-            ciclo menstrual, para saber a sua próxima menstruação</a>.</p>
+      <h2>Como calcular a provável data do parto</h2>
+      <p>A previsão do nascimento do bebé é habitualmente realizada através da <a
+          href="https://www.valesaude.com.br/saude-v/regra-de-naegele-saiba-por-que-e-importante-na-gravidez/"
+          target="_blank" rel="noopener"> Regra de
+          Naegele</a>, um método simples utilizado em todo o mundo. O cálculo consiste em adicionar um ano à data da
+        última menstruação, subtrair três meses e acrescentar sete dias.</p>
 
-        <ul>
-          <li>Gravidez pré-termo: é quando o bebê nasce antes de 37 semanas completas de gestação (ou seja, antes de
-            259 dias contados a partir da última menstruação).</li>
-          <li>Gravidez a termo: é quando a gestação atinge uma idade em que o bebê já pode nascer com boa maturidade,
-            que
-            é de 37 a 41 semanas, chance alta de adaptação fora do útero.</li>
-          <li>Gravidez pós-termo: é quando a gestação ultrapassa 42 semanas completas (ou seja, mais de 294 dias
-            contados a partir da última menstruação).</li>
-        </ul>
-        <p>O feto continua a crescer, mas a placenta pode começar a funcionar menos
-          eficientemente, reduzindo a nutrição e oxigenação do feto. </p>
-        <hr>
-        <!-- SHAREING-->
-        <div class="compartilhamento">
-          <div class="shareing">
-            <span>COMPARTILHE</span>
-            <div class="iconsa">
-              <div class="icona facebook" onclick="shareFacebook()">
-                <i class="fab fa-facebook-f"></i>
-              </div>
-              <div class="icona whatsapp" onclick="shareWhatsApp()">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="icona pinterest" onclick="sharePinterest()">
-                <i class="fab fa-pinterest-p"></i>
-              </div>
-              <div class="icona share-icona" onclick="shareNative()">
-                <i class="fas fa-share-alt"></i>
-              </div>
-            </div>
+      <h2>Calculadoras online de idade gestacional</h2>
+      <p>Actualmente existem diversas calculadoras digitais que permitem estimar rapidamente a idade gestacional e a
+        data provável do parto.</p>
+
+      <p>Estas ferramentas utilizam os mesmos princípios empregados pelos profissionais de saúde e podem facilitar o
+        acompanhamento da gravidez.</p>
+
+      <p>No entanto, os resultados apresentados são apenas estimativas e não substituem a avaliação médica nem os exames
+        realizados durante o pré-natal.</p>
+
+      <p>Sempre que existirem dúvidas sobre a idade gestacional ou sobre o desenvolvimento da gravidez, deverá ser
+        consultado um médico obstetra.</p>
+
+      <h2>A importância do acompanhamento pré-natal</h2>
+      <p>Independentemente da idade gestacional calculada, todas as grávidas devem iniciar o acompanhamento pré-natal o
+        mais precocemente possível.</p>
+
+      <p>As consultas permitem monitorizar a saúde da mãe e do bebé, identificar fatores de risco, acompanhar o
+        crescimento fetal e fornecer orientações sobre alimentação, atividade física, vacinação e sinais de alerta
+        durante a gravidez.</p>
+      <p>O acompanhamento regular reduz significativamente o risco de complicações e contribui para uma gestação mais
+        segura.</p>
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class=" avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
           </div>
-          <hr>
         </div>
       </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
+      <!-- SHAREING-->
+      <hr>
+      <section>
+        <div class="shareing">
+          <span>COMPARTILHE</span>
+          <div class="iconsa">
+            <div class="icona facebook" onclick="shareFacebook()">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="icona whatsapp" onclick="shareWhatsApp()">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="icona pinterest" onclick="sharePinterest()">
+              <i class="fab fa-pinterest-p"></i>
+            </div>
+            <div class="icona share-icona" onclick="shareNative()">
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+        <hr>
+      </section>
+      <h2 class="referencia">BIBLIOGRÁFICAS</h2>
+      <section class="panel">
+        <ul>
+          <li> Organização Mundial da Saúde (OMS). <a
+              href="https://www.who.int/teams/sexual-and-reproductive-health-and-research" target="_blank"
+              rel="noopener"> Sexual and Reproductive Health </a> </li>
+          <li> MedlinePlus. <a href="https://medlineplus.gov/pregnancy.html" target="_blank" rel="noopener"> Pregnancy
+            </a> </li>
+          <li> Centers for Disease Control and Prevention (CDC). <a href="https://www.cdc.gov/pregnancy/"
+              target="_blank" rel="noopener"> Pregnancy </a> </li>
+          <li> Serviço Nacional de Saúde (SNS 24). <a href="https://www.sns24.gov.pt/tema/gravidez/" target="_blank"
+              rel="noopener"> Gravidez </a> </li>
+        </ul>
+      </section>
+      <hr>
+
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -565,6 +635,10 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
   <script src="/calculadoras/src/idadegesta.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>

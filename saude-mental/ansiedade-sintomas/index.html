@@ -336,6 +336,9 @@
 
             <p>A ansiedade é uma resposta natural do organismo diante de situações de perigo, pressão ou incerteza. Em
                 níveis moderados, ela pode ser útil, ajudando na adaptação e na tomada de decisões.</p>
+            <p>Compreender os sintomas, identificar as causas e conhecer estratégias para controlar a ansiedade são
+                passos importantes para melhorar a qualidade de vida e procurar ajuda quando necessário.</p>
+
             <p>No entanto, quando
                 se torna intensa, frequente ou desproporcional, passa a ser um problema de saúde que pode afectar
                 profundamente o bem-estar físico, emocional e social.</p>
@@ -351,7 +354,10 @@
             <p>De acordo a Organização Mundial da Saúde (OMS, 2016): aproximadamente 264 milhões de pessoas
                 no mundo sofrem de algum tipo de transtorno de ansiedade, o Brasil um dos países com maior
                 prevalência, atingindo mais de 18 milhões de pessoas. <a href="https://www.who.int/"
-                    target="_blank">Organização Mundial da Saúde (OMS, 2016)</a></p>
+                    target="_blank">Organização Mundial da Saúde (OMS, 2016)</a>.</p>
+            <p>Os transtornos de ansiedade envolvem uma preocupação intensa e persistente que ultrapassa o controlo da
+                pessoa e provoca sofrimento emocional ou limitações nas atividades diárias.</p>
+
 
             <h2>Ansiedade: sintomas mais comuns</h2>
             <p>Os sintomas de ansiedade podem variar de intensidade e frequência, mas geralmente envolvem três
@@ -444,9 +450,21 @@
                 <li>Quando há sofrimento emocional significativo.</li>
             </ul>
 
+            <h2>A importância do acompanhamento psicológico</h2>
+            <p>Quando a ansiedade interfere significativamente na vida da pessoa, procurar apoio psicológico é uma
+                decisão importante. O acompanhamento por um psicólogo permite compreender os pensamentos, emoções e
+                comportamentos associados à ansiedade, desenvolvendo estratégias mais eficazes para lidar com ela.</p>
+
             <h2>Causas e factores de risco</h2>
             <p>A etiologia da ansiedade é multifatorial, envolvendo interações de factores genéticos, neurobiológicos e
                 ambientais. Entre os principais incluem-se:</p>
+
+            <p>A terapia cognitivo-comportamental, por exemplo, é uma abordagem bastante utilizada no tratamento dos
+                transtornos de ansiedade. Esta terapia ajuda a identificar padrões de pensamento prejudiciais e
+                desenvolver formas mais equilibradas de interpretar as situações.</p>
+            <p>Em alguns casos, um médico pode recomendar tratamento medicamentoso, especialmente quando os sintomas são
+                intensos ou persistentes. A utilização de medicamentos deve ser sempre feita com acompanhamento
+                profissional.</p>
 
             <ul>
                 <li>Histórico familiar de transtornos de ansiedade. </li>
@@ -483,6 +501,38 @@
                     </li>
                 </ul>
 
+
+                <!-- AVALIAÇÃO DE CONTEÚDO -->
+                <hr>
+                <section class="avaliacao-secao">
+                    <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                    <div class="buttonsa">
+                        <button class="btna btn-yes" onclick="avaliar('Sim')">
+                            <i class="fa-solid fa-thumbs-up"></i> SIM
+                        </button>
+                        <button class="btna btn-no" onclick="avaliar('Não')">
+                            <i class="fa-solid fa-thumbs-down"></i> NÃO
+                        </button>
+                    </div>
+                    <div id="feedback" style="display:none;">
+                        <p class="success" id="msg-sucesso" style="display:none;">
+                            ✔ Obrigado pela avaliação, volte sempre!
+                        </p>
+                        <div id="form-feedback">
+                            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                            <label for="nome" class="campo-label">Nome</label>
+                            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                            <label for="email" class="campo-label">Email</label>
+                            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                            <label for="mensagem" class="campo-label">Mensagem</label>
+                            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
                 <hr>
                 <!-- SHAREING-->
                 <div class="compartilhamento">
@@ -509,15 +559,31 @@
                 <section class="panel">
                     <ul>
                         <li>
-                            Organização Mundial da Saúde. Saúde mental e bem-estar
+                            Organização Mundial da Saúde (OMS).
+                            <a href="https://www.who.int/health-topics/mental-health" target="_blank">
+                                Saúde mental e bem-estar emocional
+                            </a>
                         </li>
 
                         <li>
-                            Manual Diagnóstico e Estatístico de Transtornos Mentais (DSM-5)
+                            Serviço Nacional de Saúde (SNS 24).
+                            <a href="https://www.sns24.gov.pt/tema/saude-mental/" target="_blank">
+                                Saúde mental e apoio psicológico
+                            </a>
                         </li>
 
                         <li>
-                            Hofmann, S. G. Tratamentos baseados em evidências para ansiedade
+                            National Health Service (NHS).
+                            <a href="https://www.nhs.uk/mental-health/conditions/anxiety-disorders/" target="_blank">
+                                Anxiety disorders: sintomas e tratamento
+                            </a>
+                        </li>
+
+                        <li>
+                            National Institute of Mental Health (NIMH).
+                            <a href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank">
+                                transtornos de ansiedade
+                            </a>
                         </li>
                     </ul>
                 </section>
@@ -584,7 +650,7 @@
     </main>
     <!-- MENSAGEM RELACIONADAS -->
     <section class="max-w-6xl w-full mx-auto px-4">
-        <h2>Mensagens relacionadas</h2>
+        <h2>Mensagens em destaque</h2>
         <hr>
         <div class="agora">
             <div class="cartao">
@@ -611,12 +677,12 @@
 
         <!-- cartao 3 -->
         <div class="cartao">
-            <a href="/saude-mental/ansiedade-sintomas/">
-                <img src="/img/ansiedade.webp" loading="lazy"
+            <a href="/saude-intima/o-que-sao-colicas-menstruais/">
+                <img src="/img/colicas-menstruais.webp" loading="lazy"
                     alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
                 <div class="cartao-content">
-                    <span class="tag">ANSIEDADE</span>
-                    <h3>A ansiedade é resposta natural do organismo diante de situações.</h3>
+                    <span class="tag">COLICAS MENSTRUAIS</span>
+                    <h3>Cólicas menstruais: sinais e sintomas e como aliviar de forma natural</h3>
             </a>
         </div>
         </div>
@@ -747,6 +813,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/search-live.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>

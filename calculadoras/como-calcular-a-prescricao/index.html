@@ -73,6 +73,7 @@
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/calculadoras/css/medicamentos.css">
   <link rel="stylesheet" href="/css/output.css">
 </head>
 
@@ -288,8 +289,18 @@
         paciente terá de escolher o tipo de fármaco ou medicamento lembrando que a cada medicamento tem suas respectivas
         constantes e colocar o seu peso e verá a prescrição.</p>
 
-      <p>A prescrição de medicamentos baseada no peso corporal é uma prática fundamental para garantir a segurança e a
-        eficácia do tratamento. Esse método é amplamente utilizado em crianças, idosos e em medicamentos que exigem
+      <h2>O que é uma prescrição médica?</h2>
+      <p>A prescrição médica é um documento emitido por um profissional de saúde legalmente autorizado, no qual são
+        indicados os medicamentos necessários para o tratamento de um determinado problema de saúde. </p>
+      <p>Para além do nome
+        do medicamento, a prescrição inclui normalmente a dose, a frequência de administração, a duração do tratamento,
+        a via de administração e outras orientações específicas.</p>
+
+      <p>A prescrição de medicamentos baseada no peso corporal é <a
+          href="https://haiweb.org/encyclopaedia/who-guide-to-good-prescribing/" target="_blank" rel="noopener"> uma
+          prática fundamental para garantir a segurança e a
+          eficácia do tratamento</a>. Esse método é amplamente utilizado em crianças, idosos e em medicamentos que
+        exigem
         doses precisas, reduzindo o risco de subdosagem ou intoxicação.</p>
 
       <h2>Por que o peso do paciente é importante?</h2>
@@ -299,13 +310,14 @@
         <li>Falha no tratamento; efeitos colaterais graves; </li>
         <li>Toxicidade medicamentosa; maior risco de complicações.</li>
       </ul>
-
+      <p>Em crianças, esta relação é ainda mais importante, uma vez que os órgãos se encontram em desenvolvimento e a
+        administração de doses inadequadas pode comprometer a eficácia do tratamento ou aumentar o risco de toxicidade.
+      </p>
       <!-- CALCULADORAS-->
-      <section>
+      <section id="rx-calculadora">
         <h2 class="text-center">Calculadora de prescrição</h2>
-        <h3 class="text-center py-2">Escolhe o seu medicamento</h3>
-        <select id="drug-select" class="w-full border border-gray-300 rounded py-2"
-          aria-label="escolhe o seu medicamento">
+        <h3 class="text-center">Escolhe o seu medicamento</h3>
+        <select id="drug-select" class="w-full  rounded py-2" aria-label="escolhe o seu medicamento">
           <option value="Artesunato">Artesunato inject. 60 mg</option>
           <option value="Artesunato (Arginina)">Artesunato (Arginina) inject. 60 mg</option>
           <option value="Ceftriaxona">Ceftriaxona inject. 1000 mg</option>
@@ -324,7 +336,7 @@
           <option value="Azitromicina susp">Azitromicina, susp. 200 mg/5 ml</option>
           <option value="Eritromicina susp">Eritromicina, susp. 250 mg/5 ml</option>
         </select>
-        <label class="block mb-4" aria-label="peso do paciente">Peso do paciente em (kg)
+        <label aria-label="peso do paciente">Peso do paciente em (kg)
           <input id="drug-weight" type="number" value="10" min="0" step="0.1"
             class="w-full border border-gray-300 px-2 py-1 rounded">
         </label>
@@ -336,7 +348,7 @@
         <div class="result" id="drug-total"> mg</div>
         <div class="text-sm">Dose por toma:</div>
         <div class="result" id="drug-per-dose"> mg</div>
-        <div class="details text-sm mt-4" id="drug-detail">
+        <div class="details " id="drug-detail">
         </div>
       </section>
 
@@ -390,6 +402,49 @@
           interações com outros medicamentos.
         </li>
       </ol>
+
+      <h2>Como evitar erros relacionados com medicamentos</h2>
+      <p>Os erros de medicação continuam a representar uma das principais causas evitáveis de eventos adversos nos
+        serviços de saúde. Muitos destes erros estão relacionados com cálculos incorretos, interpretação inadequada da
+        prescrição ou utilização de concentrações erradas.</p>
+      <p>Para reduzir estes riscos, os profissionais seguem protocolos rigorosos, utilizam sistemas eletrónicos de
+        prescrição, consultam referências farmacológicas atualizadas e realizam dupla verificação sempre que necessário.
+      </p>
+
+      <p>Os pacientes também desempenham um papel importante ao informar corretamente o peso atual, comunicar alergias,
+        indicar todos os medicamentos que utilizam e esclarecer dúvidas antes de iniciar qualquer tratamento.</p>
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class=" avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
       <!-- SHAREING-->
       <hr>
       <section>
@@ -413,6 +468,41 @@
         </div>
         <hr>
       </section>
+      <h2 class="referencia">BIBLIOGRÁFICAS</h2>
+      <section class="panel">
+        <ul>
+          <li>
+            Organização Mundial da Saúde (OMS).
+            <a href="https://www.who.int/teams/health-product-policy-and-standards/standards-and-specifications"
+              target="_blank" rel="noopener">
+              Medication Safety
+            </a>
+          </li>
+
+          <li>
+            MedlinePlus.
+            <a href="https://medlineplus.gov/druginformation.html" target="_blank" rel="noopener">
+              Drug Information
+            </a>
+          </li>
+
+          <li>
+            Centers for Disease Control and Prevention (CDC).
+            <a href="https://www.cdc.gov/patient-safety/index.html" target="_blank" rel="noopener">
+              Patient Safety
+            </a>
+          </li>
+
+          <li>
+            Institute for Safe Medication Practices (ISMP).
+            <a href="https://www.ismp.org/" target="_blank" rel="noopener">
+              Medication Safety Resources
+            </a>
+          </li>
+        </ul>
+      </section>
+      <hr>
+
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -483,7 +573,7 @@
         </div>
       </a>
       <!-- CARD 3 -->
-      <a href="/calculadoras/como-calcular-a-diluicao." class="calculadora"
+      <a href="/calculadoras/como-calcular-a-diluicao/" class="calculadora"
         style="background-image:url('/img/reconstituicao.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de diluição ou reconstituição</h2>
@@ -611,7 +701,11 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
   <script src="/calculadoras/src/medicamentos.js" defer></script>
   <script src="/src/search-live.js" defer></script>
 </body>

@@ -1,0 +1,222 @@
+#gest-calculadora {
+    --gc-primary: #0d7377;
+    --gc-primary-dark: #0a5a5d;
+    --gc-primary-light: #e6f5f3;
+    --gc-text: #1e293b;
+    --gc-text-muted: #64748b;
+    --gc-border: #dce7e5;
+    --gc-bg: #f4faf9;
+    --gc-white: #ffffff;
+    --gc-radius: 16px;
+    --gc-shadow: 0 4px 20px rgba(13, 115, 119, 0.08), 0 1px 3px rgba(13, 115, 119, 0.06);
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    color: var(--gc-text);
+    max-width: 100%;
+    margin: 2.5rem auto;
+    padding: 2.25rem 2rem 2rem;
+    background: var(--gc-white);
+    border: 1px solid var(--gc-border);
+    border-radius: var(--gc-radius);
+    box-shadow: var(--gc-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+#gest-calculadora::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gc-primary) 0%, #4fb3ac 50%, var(--gc-primary) 100%);
+}
+
+/* ---------- Cabeçalho ---------- */
+#gest-calculadora h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+}
+
+/* ---------- Campos do formulário ---------- */
+#gest-calculadora>div {
+    margin-bottom: 1.25rem;
+}
+
+#gest-calculadora label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.45rem;
+}
+
+#gest-calculadora input[type="date"],
+#gest-calculadora input[type="number"] {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gc-text);
+    border: 1.5px solid var(--gc-border) !important;
+    border-radius: 10px !important;
+    padding: 0.65rem 0.9rem !important;
+    background-color: var(--gc-white);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#gest-calculadora input[type="date"]:hover,
+#gest-calculadora input[type="number"]:hover {
+    border-color: var(--gc-primary) !important;
+}
+
+#gest-calculadora input[type="date"]:focus,
+#gest-calculadora input[type="number"]:focus {
+    outline: none;
+    border-color: var(--gc-primary) !important;
+    box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.15);
+}
+
+/* estiliza o ícone nativo do calendário para acompanhar a paleta */
+#gest-calculadora input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(31%) sepia(52%) saturate(597%) hue-rotate(133deg) brightness(93%) contrast(92%);
+    cursor: pointer;
+}
+
+/* ---------- Botão CALCULAR ---------- */
+#gest-calculadora #calcBtn {
+    box-shadow: 0 4px 14px rgba(1, 93, 129, 0.28);
+}
+
+#gest-calculadora #calcBtn:hover {
+    background: #013f58 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(1, 93, 129, 0.35);
+}
+
+#gest-calculadora #calcBtn:active {
+    transform: translateY(0);
+}
+
+#gest-calculadora #calcBtn:focus-visible {
+    outline: 2px solid var(--gc-primary-dark);
+    outline-offset: 3px;
+}
+
+/* botão limpar, caso exista um #clearBtn correspondente no HTML */
+#gest-calculadora #clearBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.75rem;
+    padding: 0 1.25rem;
+    height: 50px;
+    border: 1.5px solid var(--gc-border);
+    border-radius: 10px;
+    background: var(--gc-white);
+    color: var(--gc-text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#gest-calculadora #clearBtn:hover {
+    border-color: var(--gc-primary);
+    color: var(--gc-primary-dark);
+}
+
+/* ---------- Alerta ---------- */
+#gest-calculadora #alert {
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-left: 4px solid currentColor;
+    line-height: 1.5;
+}
+
+/* ---------- Cartão de resultados ---------- */
+#gest-calculadora #resultCard {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--gc-primary-light);
+}
+
+#gest-calculadora #resultCard h3 {
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    color: var(--gc-primary-dark);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#gest-calculadora #resultCard>div.grid>div {
+    background: var(--gc-bg);
+    border: 1px solid var(--gc-border);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+}
+
+#gest-calculadora #resultCard .block {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gc-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.35rem;
+}
+
+#gest-calculadora #resultCard #gestAge,
+#gest-calculadora #resultCard #totalDays,
+#gest-calculadora #resultCard #dpp,
+#gest-calculadora #resultCard #trimester {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    color: var(--gc-primary-dark) !important;
+}
+
+/* destaque especial para a DPP, o dado mais procurado na consulta */
+#gest-calculadora #resultCard>div.grid>div:has(#dpp) {
+    background: linear-gradient(135deg, var(--gc-primary) 0%, var(--gc-primary-dark) 100%);
+    border: none;
+}
+
+#gest-calculadora #resultCard>div.grid>div:has(#dpp) .block {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#gest-calculadora #resultCard>div.grid>div:has(#dpp) #dpp {
+    color: var(--gc-white) !important;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 480px) {
+    #gest-calculadora {
+        margin: 1.25rem 0.75rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 12px;
+    }
+
+    #gest-calculadora h2 {
+        font-size: 1.25rem;
+    }
+
+    #gest-calculadora #calcBtn {
+        width: 100% !important;
+    }
+
+    #gest-calculadora #clearBtn {
+        margin-left: 0;
+        margin-top: 0.75rem;
+        width: 100%;
+    }
+}
+
+/* ---------- Movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+    #gest-calculadora * {
+        transition: none !important;
+    }
+}

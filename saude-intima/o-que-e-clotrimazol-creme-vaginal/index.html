@@ -349,7 +349,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- #CONTEUDO -->
             <p>É um creme antifúngico para o tratamento de infecções fúngicas da pele, nas axilas, virilhas, nos dedos
                 dos pés, candidíase na vulva ou no pénis, ou seja dermatite fúngicas.</p>
 
@@ -394,6 +394,42 @@
             <p><b>Não use:</b>
                 se você é alérgico a algum dos ingredientes,
                 Se estiver grávida ou amamentar, a menos que o seu médico lhe diga para puder usar este medicamento.
+            </p>
+
+            <h2>Para que é utilizado?</h2>
+            <p>O Clotrimazol 2% creme vaginal é indicado principalmente para o tratamento da <b>candidíase vaginal</b>,
+                também conhecida como <a href="https://www.who.int/health-topics/sexually-transmitted-infections"
+                    target="_blank" rel="noopener">
+                    infecção vaginal</a> por fungos. Esta condição ocorre quando há uma multiplicação
+                excessiva da Candida, um fungo que normalmente faz parte da flora vaginal, mas que pode crescer de forma
+                descontrolada quando existe um desequilíbrio da microbiota.</p>
+
+            <p>Os sintomas que habitualmente motivam a utilização deste medicamento incluem comichão intensa na vagina e
+                na vulva, sensação de ardor, vermelhidão, irritação, dor durante as relações sexuais e corrimento branco
+                espesso, geralmente sem odor intenso.</p>
+            <p>Em determinadas situações, o médico poderá recomendar o Clotrimazol para outras infeções causadas por
+                fungos sensíveis ao medicamento, sempre de acordo com a avaliação clínica.</p>
+
+            <h2>Como o Clotrimazol atua?</h2>
+            <p>Após a aplicação, o Clotrimazol entra em contacto com os fungos presentes na mucosa vaginal. O
+                medicamento interfere na produção do ergosterol, uma substância essencial para a formação da membrana
+                celular dos fungos.</p>
+
+            <p>Sem uma membrana íntegra, as células fúngicas tornam-se incapazes de sobreviver e multiplicar-se,
+                permitindo que a infeção seja progressivamente eliminada. À medida que o número de fungos diminui, os
+                sintomas como a comichão, o ardor e a irritação começam normalmente a melhorar nos primeiros dias de
+                tratamento.</p>
+
+            <h2>Quem não deve utilizar este medicamento?</h2>
+            <p>O Clotrimazol não deve ser utilizado por pessoas com alergia conhecida ao princípio ativo ou a qualquer
+                componente da formulação.</p>
+            <p>Durante a gravidez, especialmente no primeiro trimestre, o medicamento só deve ser utilizado mediante
+                orientação médica. Em mulheres grávidas, a aplicação poderá ser feita sem o aplicador, conforme
+                indicação do profissional de saúde.</p>
+
+            <p>Também é aconselhável procurar avaliação médica antes de iniciar o tratamento quando os sintomas surgem
+                pela primeira vez, quando existem episódios frequentes de candidíase ou quando aparecem febre, dor
+                abdominal intensa, corrimento com odor desagradável ou sangramento vaginal fora do período menstrual.
             </p>
 
             <h2>Como usar o creme Clotrimazol</h2>
@@ -456,50 +492,94 @@
                 tiver sintomas de reação alérgica grave (como falta de ar e inchaço no rosto), suspenda o uso
                 imediatamente, lave a região com água em abundância e procure atendimento médico. </p>
             <!-- SHAREING-->
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
             <hr>
-            <section>
-                <div class="shareing">
-                    <span>COMPARTILHE</span>
-                    <div class="iconsa">
-                        <div class="icona facebook" onclick="shareFacebook()">
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                        <div class="icona whatsapp" onclick="shareWhatsApp()">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="icona pinterest" onclick="sharePinterest()">
-                            <i class="fab fa-pinterest-p"></i>
-                        </div>
-                        <div class="icona share-icona" onclick="shareNative()">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
+            <section class="avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
                     </div>
                 </div>
-                </div>
-                <hr>
             </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
+
+            <hr>
+            <div class="shareing">
+                <span>COMPARTILHE</span>
+                <div class="iconsa">
+                    <div class="icona facebook" onclick="shareFacebook()">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="icona whatsapp" onclick="shareWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="icona pinterest" onclick="sharePinterest()">
+                        <i class="fab fa-pinterest-p"></i>
+                    </div>
+                    <div class="icona share-icona" onclick="shareNative()">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <hr>
             <!-- #BIBLIOGRÁFICAS -->
             <h2 class="referencia">BIBLIOGRÁFICAS</h2>
             <div class="panel">
                 <ul>
                     <li>
-                        SNS - Ministério da Saúde.
-                        <a href="https://www.sns24.gov.pt/tema/vacinas/vacinacao-gripe-e-covid-19/" target="_blank">
-                            Vacinação gripe e COVID-19
+                        Organização Mundial da Saúde (OMS).
+                        <a href="https://www.who.int/health-topics/sexually-transmitted-infections" target="_blank">
+                            infeções e saúde sexual
                         </a>
                     </li>
 
                     <li>
-                        Ministério da Saúde.
-                        <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2025/fevereiro/vacina-da-gripe-para-criancas-entra-no-calendario-nacional-de-vacinacao"
-                            target="_blank">
-                            Vacina da gripe para crianças
+                        INFARMED - Autoridade Nacional do Medicamento e Produtos de Saúde.
+                        <a href="https://www.infarmed.pt/" target="_blank">
+                            medicamentos e uso seguro
                         </a>
                     </li>
+
                     <li>
-                        Ministério da Saúde.
-                        <a href="https://www.gov.br/saude/pt-br/vacinacao/calendario" target="_blank">
-                            Calendário de Vacinação
+                        Serviço Nacional de Saúde (SNS 24).
+                        <a href="https://www.sns24.gov.pt/tema/saude-da-mulher/" target="_blank">
+                            Saúde da mulher
+                        </a>
+                    </li>
+
+                    <li>
+                        European Medicines Agency (EMA).
+                        <a href="https://www.ema.europa.eu/" target="_blank">
+                            Informações científicas
+                        </a>
+                    </li>
+
+                    <li>
+                        National Institute for Health and Care Excellence (NICE).
+                        <a href="https://www.nice.org.uk/" target="_blank">
+                            Recomendações clínicas
                         </a>
                     </li>
                 </ul>
@@ -714,6 +794,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/src/search-live.js" defer></script>

@@ -291,6 +291,30 @@
       <p>Se não for tratada adequadamente, a diabetes pode causar sérios problemas de saúde,
         como doenças cardíacas, problemas nos rins, danos nos nervos e perda de visão.
       </p>
+
+      <p>Esta doença caracteriza-se por níveis elevados de glicose no sangue, uma situação conhecida como hiperglicemia.
+        Isso acontece quando o organismo não produz insulina suficiente ou quando as células deixam de responder
+        corretamente à ação desta hormona.</p>
+
+      <p>A insulina é produzida pelo pâncreas e desempenha um papel essencial ao
+        permitir que a glicose entre nas células, onde será utilizada como fonte de energia.</p>
+
+      <h2>Como surge a diabetes?</h2>
+      <p>A diabetes pode desenvolver-se por diferentes razões, dependendo do tipo da doença. A diabetes tipo 1 é uma
+        doença autoimune em que o sistema imunitário destrói as células do pâncreas responsáveis pela produção de
+        insulina.</p>
+      <p>É mais frequente em crianças, adolescentes e jovens adultos, embora possa surgir em qualquer idade.
+        Neste caso, o tratamento com insulina é indispensável desde o momento do diagnóstico.</p>
+
+      <p>Já a diabetes tipo 2 é a forma mais comum e representa a grande maioria dos casos. Está frequentemente
+        relacionada com fatores como excesso de peso, obesidade, alimentação pouco equilibrada, sedentarismo,
+        envelhecimento e predisposição genética. Inicialmente, o organismo ainda produz insulina, mas esta deixa de
+        atuar de forma eficiente, fenómeno conhecido como resistência à insulina.</p>
+
+      <p>Existe ainda a diabetes gestacional, que surge durante a gravidez devido às alterações hormonais próprias deste
+        período. Na maioria das mulheres desaparece após o parto, mas aumenta o risco de desenvolver diabetes tipo 2 nos
+        anos seguintes.</p>
+
       <h2>Tipos de diabetes mellitus</h2>
       <p><b>O diabetes tipo 1:</b> é doença autoimune, isso significa que o próprio sistema de defesa do
         corpo, por engano, ataca e destrói as células do pâncreas que produzem insulina o hormônio
@@ -323,10 +347,22 @@
         Assim, o corpo da mulher não consegue usar a insulina de forma eficiente, e os níveis de açúcar no sangue
         aumentam.</p>
 
-      <blockquote>Na maioria das vezes, diabetes gestacional desaparece após o parto, mas a mulher deve continuar com
-        acompanhamento médico, pois existe maior risco de evoluir para diabetes tipo 2 no futuro.<cite>Fonte: <a
-            href="https://www.diabetes.org/diabetes" target="_blank">American diabetes association</a></cite>
-      </blockquote>
+      <p>De acordo com <a href="https://www.diabetes.org/diabetes" target="_blank">American diabetes association</a>: na
+        maioria das vezes, diabetes gestacional desaparece após o parto, mas a mulher deve continuar com
+        acompanhamento médico, pois existe maior risco de evoluir para diabetes tipo 2 no futuro.
+      </p>
+
+      <h2>Principais causas e factores de risco</h2>
+      <p>Embora algumas pessoas possuam uma <b>predisposição genética</b> para desenvolver diabetes, o estilo de vida
+        desempenha um papel determinante, sobretudo na diabetes tipo 2. Uma alimentação rica em alimentos
+        ultraprocessados, bebidas açucaradas e gorduras saturadas favorece o aumento de peso e contribui para a
+        resistência à insulina.</p>
+
+      <p>A falta de <b>actividade física</b> reduz a capacidade do organismo para utilizar a glicose de forma eficiente.
+        O excesso de gordura abdominal também está fortemente associado ao desenvolvimento da doença. Além disso,
+        factores como <a href="/saude-az/hipertensao-arterial-mas-porque/" target="_blank" rel="noopener">hipertensão
+          arterial</a>, colesterol elevado, idade superior a 45 anos, histórico familiar de diabetes e síndrome dos
+        ovários poliquísticos aumentam significativamente o risco.</p>
 
       <h2>Principais medidas de prevenção</h2>
       <ul>
@@ -445,9 +481,50 @@
       <p>Após o parto, o nível de açúcar no sangue geralmente volta ao normal, mas é importante continuar com o
         acompanhamento, pois existe o risco de desenvolver diabetes tipo 2 no futuro.</p>
 
+      <h2>A importância do diagnóstico precoce</h2>
+      <p>Identificar a diabetes numa fase inicial permite iniciar rapidamente o tratamento e reduzir significativamente
+        o risco de complicações. </p>
+
+      <p> O diagnóstico é realizado através de análises ao sangue que medem os níveis de glicose
+        em jejum, a hemoglobina glicada (HbA1c) ou a glicemia após prova de tolerância à glicose.</p>
+      <p>Quanto mais cedo a doença for diagnosticada, maiores são as probabilidades de controlar eficazmente os níveis
+        de açúcar no sangue através da alimentação, atividade física, medicamentos ou insulina, quando necessário.</p>
+
+
       <h2>Recomendações</h2>
       <p>O controle da diabetes depende de hábitos saudáveis, acompanhamento médico e monitoramento constante da
         glicose. Seguir essas recomendações ajuda a prevenir complicações crônicas e melhora a qualidade de vida.</p>
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <hr>
       <!-- SHAREING-->
       <div class="compartilhamento">
@@ -686,6 +763,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

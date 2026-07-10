@@ -392,6 +392,34 @@
         </div>
       </section>
 
+      <h2>Como interpretar o resultado</h2>
+      <p>Depois de calcular o IMC, é necessário interpretar o valor obtido.
+
+        De acordo com os critérios utilizados pela Organização Mundial da Saúde, um IMC inferior a 18,5 indica baixo
+        peso. Pessoas nesta condição podem apresentar maior risco de desnutrição, diminuição da imunidade, perda de
+        massa muscular e outras complicações de saúde.</p>
+
+      <p>Quando o resultado se encontra entre 18,5 e 24,9 considera-se que existe um peso adequado para a altura. Esta
+        faixa está geralmente associada a um menor risco de doenças relacionadas com o peso.</p>
+
+      <p>Valores entre 25 e 29,9 correspondem ao excesso de peso. Nesta situação aumenta progressivamente o risco de
+        desenvolver hipertensão arterial, diabetes tipo 2, colesterol elevado e doenças cardiovasculares.</p>
+
+      <p>Quando o IMC é igual ou superior a 30, considera-se obesidade. Quanto maior o valor, maior tende a ser o risco
+        de complicações para a saúde, incluindo doenças cardíacas, problemas respiratórios, apneia do sono, alguns tipos
+        de cancro e limitações articulares.</p>
+
+      <h2>Porque é importante manter um peso saudável?</h2>
+      <p>Manter um peso adequado contribui significativamente para a melhoria da qualidade de vida e para a prevenção de
+        inúmeras doenças.</p>
+      <p>Quando o peso corporal está equilibrado, o organismo funciona de forma mais eficiente. O coração trabalha com
+        menor esforço, a pressão arterial tende a permanecer controlada, os níveis de glicose são mais estáveis e as
+        articulações suportam menos carga ao longo dos anos.</p>
+      <p>Além disso, pessoas com peso saudável costumam apresentar melhor capacidade física, maior disposição para as
+        atividades diárias, melhor qualidade do sono e menor probabilidade de desenvolver doenças metabólicas.</p>
+
+
+
       <h2>Principais causas das alterações do IMC</h2>
       <p>Um IMC elevado normalmente resulta de um desequilíbrio entre a quantidade de energia consumida e a energia
         gasta pelo organismo. Alimentação rica em alimentos ultraprocessados, consumo excessivo de bebidas açucaradas
@@ -434,6 +462,39 @@
         identificar possíveis alterações que merecem atenção. O IMC ajuda a classificar se o peso está abaixo, dentro
         ou acima da faixa considerada adequada para adultos.
       </p>
+
+
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class=" avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <hr>
       <!-- SHAREING-->
       <div class="compartilhamento">
@@ -455,7 +516,6 @@
           </div>
         </div>
         <hr>
-
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -571,6 +631,86 @@
     </div>
   </section>
 
+  <!-- Mensagen relacionadas -->
+  <section class="max-w-6xl w-full mx-auto px-4 mt-10">
+    <!-- MENSAGEM RELACIONADAS -->
+    <h2>Mensagens em destaque</h2>
+    <hr>
+    <section class="agora">
+      <section class="cartao">
+        <a href="/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" aria-label="7 sintomas de meningite">
+          <img src="/img/meningite.webp" aria-label="7 sintomas de meningite" loading="lazy"
+            alt="7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca.">
+          <section class="cartao-content">
+            <span class="tag">MENINGITE</span>
+            <h3>7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez, mais. </h3>
+        </a>
+      </section>
+    </section>
+
+    <section class="cartao">
+      <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
+        <img src="/img/carie-dentaria.webp" loading="lazy" alt="Importância da prevenção de cáries para a saúde bucal">
+        <section class="cartao-content">
+          <span class="tag">CÁRIE DENTÁRIAS</span>
+          <h3>
+            Importância da prevenção de cáries para a saúde bucal, saiba mais.
+          </h3>
+      </a>
+    </section>
+  </section>
+
+  <!-- cartao 3 -->
+  <section class="cartao">
+    <a href="/saude-mental/ansiedade-sintomas/">
+      <img src="/img/ansiedade.webp" loading="lazy"
+        alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
+      <section class="cartao-content">
+        <span class="tag">ANSIEDADE</span>
+        <h3>A ansiedade é resposta natural do organismo diante de situações.</h3>
+    </a>
+  </section>
+  </section>
+
+  <!-- cartao 4 -->
+  <section class="cartao">
+    <a href="/nutricao/introducao-de-alimentos/">
+      <img src="/img/bebe-comendo-introducao-alimentar.webp" loading="lazy"
+        alt="Introdução de alimento complementar aos seus 6 meses anos de idades">
+      <section class="cartao-content">
+        <span class="tag">INTRODUÇÃO ALIMENTAR</span>
+        <h3>
+          Introdução de alimentos complementares aos seus 6 meses anos de idades...
+        </h3>
+    </a>
+  </section>
+  </section>
+  <!-- cartao 5 -->
+  <section class="cartao">
+    <a href="/nutricao/o-que-e-diabetes/">
+      <img src="/img/diabetes.webp" loading="lazy"
+        alt=" Diabetes é doença crônica causada pela dificuldade da insulina, saiba mais.">
+      <section class="cartao-content">
+        <span class="tag">DIABETES</span>
+        <h3>Diabetes é doença crônica causada pela dificuldade da insulina controlar.</h3>
+    </a>
+  </section>
+  </section>
+
+  <!-- cartao 6 -->
+  <section class="cartao">
+    <a href="/saude-az/hipertensao-arterial-mas-porque/">
+      <img src="/img/hipertensao.webp" loading="lazy"
+        alt="   Hipertensão é uma elevação persistente da pressão arterial acima dos valores normais">
+      <section class="cartao-content">
+        <span class="tag">HIPERTENSÃO</span>
+        <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores.</h3>
+    </a>
+  </section>
+  </section>
+  </section>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
@@ -637,7 +777,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="/src/bibliografica.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/calculadoras/src/imc.js" defer></script>
   <script src="/src/search-live.js" defer></script>

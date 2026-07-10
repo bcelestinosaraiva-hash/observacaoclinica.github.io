@@ -342,6 +342,29 @@
                 associa ao consumo excessivo de açúcar e à falta de higiene bucal adequada.
             </p>
 
+            <p>Apesar de ser muito comum, a cárie pode ser amplamente evitada através de hábitos de higiene adequados,
+                de uma alimentação equilibrada e de consultas regulares ao médico dentista. A prevenção continua a ser a
+                estratégia mais eficaz para proteger os dentes e evitar tratamentos mais complexos e dispendiosos no
+                futuro.</p>
+
+            <p>Inicialmente, a cárie pode não provocar qualquer sintoma, razão pela qual muitas pessoas desconhecem a
+                sua presença. À medida que evolui, pode atingir camadas mais profundas do dente, causando sensibilidade,
+                dor intensa, infeções e, em casos mais graves, a necessidade de tratamento de canal ou extração do dente
+                afectado.</p>
+
+            <h2>Porque é tão importante prevenir as cáries</h2>
+            <p>A prevenção das cáries vai muito além da preservação do sorriso. Manter os dentes saudáveis permite
+                mastigar corretamente os alimentos, favorecendo uma digestão mais eficiente e contribuindo para uma
+                alimentação equilibrada. Além disso, evita dores persistentes que podem interferir no sono, no
+                rendimento escolar, na produtividade profissional e nas actividades do dia a dia.</p>
+            <p>As infeções provocadas por cáries não tratadas também podem afectar os tecidos circundantes e, em
+                situações raras, espalhar-se para outras partes do organismo. Por este motivo, cuidar da saúde oral
+                representa igualmente um investimento na saúde geral.</p>
+
+            <p>Outro benefício importante da prevenção é a redução dos custos associados aos tratamentos dentários.
+                Procedimentos como restaurações extensas, tratamentos endodônticos, coroas ou implantes são geralmente
+                mais caros do que medidas preventivas simples, como consultas periódicas e limpezas profissionais.</p>
+
             <h2>O que causa as cáries dentárias?</h2>
             <p>As cáries surgem principalmente devido a quatro fatores principais: presença de bactérias, consumo
                 frequente de açúcar, higiene bucal inadequada e tempo de exposição dos dentes à placa bacteriana.</p>
@@ -365,12 +388,10 @@
                 dor, mau hálito, dificuldades para mastigar e até perda dos dentes. A <b>higiene bucal correta</b> é uma
                 das principais formas de prevenir cáries.</p>
 
-            <blockquote>Quando a escovação não é feita correctamente, restos de alimentos permanecem na boca, criando um
-                ambiente ideal
-                para a proliferação de bactérias.
-                <cite>Fonte: <a href="https://www.who.int" target="_blank">Organização Mundial da Saúde</a>
-                </cite>
-            </blockquote>
+            <p>De acordo com a <a href="https://www.who.int" target="_blank">Organização Mundial da Saúde</a>, quando a
+                escovação não é feita correctamente, restos de alimentos permanecem na boca, criando um
+                ambiente ideal para a proliferação de bactérias.
+            </p>
 
             <h2>As principais formas de prevenção de cáries dentárias </h2>
             <ol>
@@ -458,6 +479,41 @@
             <h3> Quais são os primeiros sinais de uma cáries </h3>
             <p>Os primeiros sinais podem incluir sensibilidade dentária, manchas brancas ou escuras nos dentes, dor leve
                 ao consumir alimentos doces, frios ou quentes, e pequenas cavidades visíveis na superfície do dente.</p>
+            <p>A prevenção das cáries constitui um dos pilares fundamentais da saúde bucal. A adoção de hábitos de
+                higiene oral consistentes, associada a uma alimentação equilibrada e ao acompanhamento regular por um
+                profissional de saúde oral, permite reduzir significativamente o risco desta doença tão frequente.</p>
+
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
+            <hr>
+            <section class="avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
             <hr>
             <section>
                 <div class="shareing">
@@ -529,7 +585,7 @@
     </main>
     <!-- MENSAGEM RELACIONADAS -->
     <section class="max-w-6xl w-full mx-auto px-4">
-        <h2>Mensagens relacionadas</h2>
+        <h2>Mensagens em destaque</h2>
         <hr>
         <div class="agora">
             <div class="cartao">
@@ -544,12 +600,12 @@
         </div>
 
         <div class="cartao">
-            <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
-                <img src="/img/carie-dentaria.webp" loading="lazy"
-                    alt="Importância da prevenção de cáries para a saúde bucal">
+            <a href="/saude-bucal/o-que-e-carie-dentaria/">
+                <img src="/img/o-que-e-carie.webp" loading="lazy"
+                    alt="Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz">
                 <div class="cartao-content">
                     <span class="tag">CÁRIE DENTÁRIAS</span>
-                    <h3>Importância da prevenção de cáries para a saúde bucal, saiba mais.</h3>
+                    <h3>Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz</h3>
             </a>
         </div>
         </div>
@@ -689,6 +745,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/src/search-live.js" defer></script>
