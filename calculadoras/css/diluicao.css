@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Calculadora de Diluição — estilos
+   Identidade: saúde/clínica moderna, tom azul-petróleo + verde-menta,
+   cartão flutuante com sombra suave, tipografia limpa, foco em legibilidade
+   ========================================================================== */
+:root {
+    --primaria: #0891b2;
+    --primaria-escura: #0e7490;
+    --primaria-clara: #ecfeff;
+    --acento: #10b981;
+    --acento-claro: #ecfdf5;
+    --texto-principal: #0f2733;
+    --texto-secundario: #64798a;
+    --borda: #dde5ea;
+    --fundo-card: #ffffff;
+    --fundo-secao: #f6fafb;
+    --sombra-card: 0 20px 45px -20px rgba(160, 160, 160, 0.25);
+    --sombra-suave: 0 4px 14px -6px rgba(8, 66, 84, 0.12);
+    --raio-sm: 10px;
+    --raio-md: 16px;
+    --raio-lg: 24px;
+}
+
+/* ---------- cartão principal ---------- */
+.calculadora-diluicao {
+    position: relative;
+    max-width: 100%;
+    margin: 32px auto;
+    padding: 40px 32px 32px;
+    background: var(--fundo-card);
+    border-radius: var(--raio-lg);
+    box-shadow: var(--sombra-card);
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+    color: var(--texto-principal);
+    overflow: hidden;
+}
+
+/* faixa decorativa superior */
+.calculadora-diluicao::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primaria), var(--acento));
+}
+
+/* ícone/selo médico opcional no topo */
+.calculadora-diluicao::after {
+    content: "OC";
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primaria);
+    background: var(--primaria-clara);
+    border-radius: 50%;
+}
+
+.calculadora-diluicao h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--texto-principal);
+    margin-bottom: 28px;
+    padding-right: 50px;
+}
+
+.calculadora-diluicao h2::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: var(--acento);
+}
+
+/* ---------- labels e inputs ---------- */
+.calculadora-diluicao label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    margin-bottom: 18px;
+}
+
+.calculadora-diluicao label>span,
+.calculadora-diluicao label {
+    line-height: 1.4;
+}
+
+.calculadora-diluicao input[type="number"] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 13px 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+    background: var(--fundo-secao);
+    border: 1.5px solid var(--borda);
+    border-radius: var(--raio-sm);
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    font-variant-numeric: tabular-nums;
+}
+
+.calculadora-diluicao input[type="number"]::placeholder {
+    color: #a7b8c2;
+    font-weight: 400;
+}
+
+.calculadora-diluicao input[type="number"]:hover {
+    border-color: #b7cdd6;
+}
+
+.calculadora-diluicao input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primaria);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.14);
+}
+
+/* remove as setinhas do input number (opcional, visual mais limpo) */
+.calculadora-diluicao input[type="number"]::-webkit-inner-spin-button,
+.calculadora-diluicao input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0.5;
+}
+
+/* ---------- botão calcular ---------- */
+.calculadora-diluicao .flex.justify-center {
+    justify-content: center;
+    margin-top: 8px;
+}
+
+#calcular-nurse {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    border-radius: var(--raio-sm);
+    background: linear-gradient(135deg, var(--primaria), var(--primaria-escura));
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+#calcular-nurse:active {
+    transform: translateY(0);
+    filter: brightness(0.95);
+}
+
+/* ---------- bloco de resultado ---------- */
+.calculadora-diluicao>span,
+.resultado-diluicao-label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(61, 61, 61);
+    text-align: center;
+}
+
+#nurse-ml {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--primaria-escura);
+    margin-top: 0px;
+    padding: 18px 0 6px;
+}
+
+#nurse-detail {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(61, 61, 61);
+    background: white;
+    border-radius: var(--raio-sm);
+    padding: 10px 14px;
+    margin-top: 4px;
+    min-height: 20px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* estado de aviso/erro dentro do detalhe */
+#nurse-detail:has(:is(.aviso)) {
+    background: #ffffff;
+    color: rgb(61, 61, 61);
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width: 520px) {
+    .calculadora-diluicao {
+        margin: 0;
+        border-radius: 10px;
+        padding: 32px 22px 26px;
+        max-width: 100%;
+    }
+
+    #nurse-ml {
+        font-size: 2rem;
+    }
+}
+
+/* ---------- acessibilidade ---------- */
+.calculadora-diluicao button:focus-visible,
+.calculadora-diluicao input:focus-visible {
+    outline: 3px solid var(--primaria);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #calcular-nurse {
+        transition: none !important;
+    }
+}

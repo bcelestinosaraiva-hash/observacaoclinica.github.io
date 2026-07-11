@@ -180,6 +180,7 @@
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/calculadoras/css/dextrose.css">
 </head>
 
 <body>
@@ -400,14 +401,27 @@
       <p>O cálculo correto é fundamental para garantir a administração segura e eficaz da
         solução.</p>
 
+      <p>A administração de soluções de glicose faz parte da prática clínica em diversos contextos, especialmente quando
+        existe necessidade de corrigir episódios de hipoglicemia ou manter um aporte adequado de glicose em doentes
+        selecionados.</p>
 
-      <section class="warning">
-        <p><b>Atenção:</b> informações e ferramentas deste site têm carácter educativo e informativo nunca deve
-          substituir a orientação médicas, consulte sempre um profissional de saúde.</p>
-      </section>
+      <p>Entre as soluções disponíveis encontra-se a <b>dextrose a 10% (D10)</b>, utilizada em diferentes serviços de
+        saúde conforme a avaliação clínica e os protocolos de cada instituição.</p>
+
+      <p>Quando um profissional pesquisa por <b>"como calcular o bolo de dextrose a 10%"</b>, normalmente pretende
+        compreender de que forma se determina o volume necessário para uma determinada situação clínica.</p>
+
+      <p>Uma calculadora de bolo de dextrose pode facilitar os cálculos matemáticos e reduzir o risco de erros, mas
+        nunca substitui a decisão clínica nem as recomendações estabelecidas pelos protocolos institucionais.</p>
+
+      <h2>O que é a dextrose a 10%</h2>
+
+      <p>A dextrose é uma forma de glicose utilizada em soluções intravenosas para fornecer energia ao organismo. A
+        designação 10% indica a concentração da solução, significando que existe uma determinada quantidade de glicose
+        dissolvida num volume específico de líquido.</p>
 
       <!-- #CALCULADORA -->
-      <section class="bg-white  rounded-lg w-full p-2">
+      <section class="bg-white rounded-lg w-full p-2 calculadora-bolo">
         <h2 class="text-center">Calculadora de bolo dextrose 10% </h2>
         <p>Calcula a prescrição baseada em peso e os valores de dextrose 5% e 50% utilizando constantes fixas.</p>
         <div style=" margin-top:12px">
@@ -425,11 +439,11 @@
               </button>
             </div>
           </div>
-          <div class="results text-black w-full" id="results" hidden="">
+          <div class="results w-full" id="results" hidden="">
             <div class="row">
               <div style="flex:1">
                 <label class="small text-black" aria-label="prescricao">Prescrição total (ml)</label>
-                <div id="prescricao" style="font-weight:700;margin-top:6px">—</div>
+                <div id="prescricao" style="font-weight:600;margin-top:6px">—</div>
                 <div class="text-black">(peso × 5 mg)</div>
               </div>
             </div>
@@ -439,13 +453,13 @@
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
                 <div>
                   <label class="small">Dextrose 5%</label>
-                  <div id="qD5" style="font-weight:700">—</div>
+                  <div id="qD5" style="font-weight:600">—</div>
                   <div class="muted small text-gray-800">Quantidade em ml</div>
                 </div>
                 <div class="text-black">
                   <label class="small">Dextrose 50%</label>
-                  <div id="qD50" style="font-weight:700">—</div>
-                  <div class="muted small text-gray-800">Quantidade em ml</div>
+                  <div id="qD50" style="font-weight:600">—</div>
+                  <div class="muted small text-gray-600">Quantidade em ml</div>
                 </div>
               </div>
             </div>
@@ -453,7 +467,8 @@
         </div>
       </section>
 
-      <p><b>Exemplo</b>: um paciente com hipoglicemia e o peso dele é de: 30kg. Temos as constantes <b>(K) </b> para
+      <p><b>Exemplo</b>: um paciente com hipoglicemia e o peso dele é de: 30kg. Temos as constantes <b>(K)
+        </b> para
         calcular a prescrição sendo a constante 5 mg, calcular dextrose a 5%
         porcento e dextrose a 50% porcento as seguintes: D5 sua constante é: 0.9 mg e D50 é 0.1 mg.</p>
       <ol>
@@ -465,9 +480,11 @@
           corrija a hipoglicemia do seu paciente.</li>
       </ol>
 
-
       <p><b>Importância:</b> calculadora de bolo de dextrose tem grande importância clínica, especialmente em contextos
-        hospitalares e de emergência, porque garante precisão, segurança e rapidez no tratamento da hipoglicemia.</p>
+        hospitalares e de emergência, <a href="https://www.who.int/teams/integrated-health-services/patient-safety"
+          target="_blank" rel="noopener noreferrer">porque garante precisão, segurança e rapidez</a>
+        no tratamento da hipoglicemia.</p>
+
       <p>A calculadora de bolo de dextrose é uma ferramenta fundamental para o manejo seguro, rápido e preciso da
         hipoglicemia, protegendo o paciente e otimizando a conduta clínica.</p>
       <p> <b>Hipoglicemia</b> é uma condição em que a glicose no sangue cai abaixo dos níveis normais, geralmente &lt;
@@ -478,6 +495,16 @@
         Por isso, quando o açúcar no sangue cai demais, o organismo reage de forma imediata e potencialmente
         perigosa.</p>
 
+      <h2>Cuidados antes da administração</h2>
+      <p>Antes de administrar uma solução de dextrose, o profissional deve confirmar a identidade do doente, verificar a
+        prescrição médica, observar a concentração da solução disponível, inspecionar a integridade da embalagem e
+        garantir que a via intravenosa está adequada para a administração.</p>
+
+      <p>Durante a administração, é igualmente importante vigiar o estado clínico do doente e observar qualquer
+        alteração que possa justificar uma reavaliação imediata. Estes cuidados fazem parte das boas práticas de
+        segurança do doente e estão presentes nos protocolos das instituições de saúde.</p>
+
+
       <h2>Sintomas e sinais da hipoglicemia</h2>
       <p>Os sintomas aparecem conforme a glicemia cai e podem ser divididos em autonômicos (de alerta) e
         neuroglicopênicos (por falta de glicose no cérebro).</p>
@@ -487,6 +514,9 @@
         <li>Palpitações, fraqueza, sonolência,</li>
         <li>Perda de consciência (coma hipoglicêmico).</li>
       </ul>
+
+
+
       <h2 class="text-center">Classificação da glicemia: mg/dl
         <div class="max-w-full mx-auto overflow-x-auto rounded-lg border border-gray-200">
           <table class="w-full text-left text-xs">
@@ -541,6 +571,43 @@
           corrigir rapidamente a hipoglicemia.</p>
         <p> Devido aos riscos associados, a administração deve ser feita apenas por
           profissionais de saúde capacitados e de acordo com protocolos clínicos estabelecidos.</p>
+
+        <h2>Formação e responsabilidade profissional</h2>
+        <p>Apesar dos avanços tecnológicos, a responsabilidade pela administração segura dos medicamentos continua a
+          pertencer ao profissional de saúde. O conhecimento científico, a interpretação correta da prescrição e o
+          cumprimento dos protocolos institucionais permanecem fundamentais para garantir cuidados de qualidade.</p>
+        <p>A actualização contínua em cálculo de medicamentos, terapêutica intravenosa e segurança do doente contribui
+          para reduzir erros e melhorar os resultados clínicos.</p>
+        <!-- AVALIAÇÃO DE CONTEÚDO -->
+        <hr>
+        <section class=" avaliacao-secao">
+          <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+          <div class="buttonsa">
+            <button class="btna btn-yes" onclick="avaliar('Sim')">
+              <i class="fa-solid fa-thumbs-up"></i> SIM
+            </button>
+            <button class="btna btn-no" onclick="avaliar('Não')">
+              <i class="fa-solid fa-thumbs-down"></i> NÃO
+            </button>
+          </div>
+          <div id="feedback" style="display:none;">
+            <p class="success" id="msg-sucesso" style="display:none;">
+              ✔ Obrigado pela avaliação, volte sempre!
+            </p>
+            <div id="form-feedback">
+              <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+              <label for="nome" class="campo-label">Nome</label>
+              <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+              <label for="email" class="campo-label">Email</label>
+              <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+              <label for="mensagem" class="campo-label">Mensagem</label>
+              <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+              <p id="erro-form" class="erro-msg" style="display:none;"></p>
+              <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+            </div>
+          </div>
+        </section>
+        <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
         <hr>
         <!-- SHAREING-->
         <div class="compartilhamento">
@@ -562,7 +629,29 @@
             </div>
           </div>
           <hr>
+
+          <h2 class="referencia mt-5">BIBLIOGRÁFICAS</h2>
+          <section class="panel">
+            <ul>
+              <li> Organização Mundial da Saúde (WHO). <a
+                  href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank"
+                  rel="noopener noreferrer"> Patient Safety </a> </li>
+              <li> Infarmed. <a href="https://www.infarmed.pt" target="_blank" rel="noopener noreferrer"> Medicamentos
+                  de Uso Humano </a> </li>
+              <li> Direção-Geral da Saúde (DGS). <a href="https://www.dgs.pt" target="_blank" rel="noopener noreferrer">
+                  Normas e Orientações Clínicas </a> </li>
+              <li> Institute for Safe Medication Practices (ISMP). <a href="https://www.ismp.org" target="_blank"
+                  rel="noopener noreferrer"> Medication Safety Resources </a> </li>
+            </ul>
+          </section>
+          <hr class="mt-5">
+
     </section>
+
+
+
+
+
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -761,9 +850,10 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
   <script src="/src/avaliacao.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
   <script src="/calculadoras/src/dextrose.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>

@@ -257,6 +257,11 @@ h4 {
     }
 }
 
+nav a {
+    color: rgb(61, 61, 61);
+}
+
+
 /*MEU HEADER*/
 header nav a,
 header nav button {

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Saiba como diluir medicamentos injetáveis de forma segura e eficaz.">
-  <link rel="canonical" href="https://www.observacaoclinica.com/calculadoras/como-calcular-a-diluicao">
+  <link rel="canonical" href="https://www.observacaoclinica.com/calculadoras/como-calcular-a-diluicao/">
   <!-- INDEXAÇÃO -->
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
@@ -90,6 +90,8 @@
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/calculadoras/css/diluicao.css">
+
 </head>
 
 <body>
@@ -300,13 +302,37 @@
         </div>
       </div>
 
+      <p>A administração de medicamentos é uma das actividades mais importantes desempenhadas pelos profissionais de
+        enfermagem. Para que um tratamento seja eficaz e seguro, é essencial que cada medicamento seja preparado e
+        administrado na dose correta.</p>
+
+      <p>Um pequeno erro no <b> cálculo da diluição</b> ou do volume a administrar pode comprometer
+        o tratamento, reduzir a eficácia do medicamento ou provocar efeitos indesejáveis no utente.</p>
+
+      <h2>O que é uma calculadora de diluição para enfermagem?</h2>
+      <p>Uma calculadora de <b>diluição para enfermagem</b> é uma ferramenta desenvolvida para facilitar o cálculo da
+        quantidade de solução que deverá ser administrada ao utente.</p>
+
+      <p> A sua principal função consiste em relacionar a
+        dose prescrita pelo médico com a concentração disponível do medicamento, apresentando como resultado o volume
+        que deverá ser preparado ou administrado.</p>
+
+      <p>Esta ferramenta é utilizada em hospitais, centros de saúde, clínicas e instituições de ensino, sendo
+        particularmente útil em situações onde os medicamentos necessitam de ser reconstituídos ou diluídos antes da
+        administração.</p>
+
+      <p>
+        Em vez de realizar cálculos manuais repetidamente, o profissional introduz os valores necessários
+        e obtém rapidamente o resultado.</p>
+
       <p>Para conseguir encontrar os ml a ser administrado no paciente ou utente, temos esta ferramenta, onde temos ter
         em consideração: a prescrição médica, a diluição e a concentração do frasco. </p>
-      <p>Para diluir os fármacos injectáveis temos uma fórmula que é: Dose = prescrição × diluição ÷ concentração do
-        frasco, e dai teremos os ml para administrar no paciente. Calcule da seguinte forma automatica abaixo:</p>
+      <p>Para diluir os fármacos injectáveis temos uma fórmula que é: <b>Dose = prescrição × diluição ÷ concentração do
+          frasco</b> , e dai teremos os ml para administrar no paciente. Calcule da seguinte forma automatica abaixo:
+      </p>
 
-      <!-- CALCULADORA-->
-      <section class="px-2">
+      <!-- CALCULADORA -->
+      <section class="px-2 calculadora-diluicao">
         <h2 class="text-center">Calculadora de diluição</h2>
         <label class="block mb-3">Prescrição médica em (mg)
           <input id="nurse-presc" type="number" value="50" step="0.1"
@@ -321,14 +347,15 @@
             class="w-full border border-gray-300 px-2 py-1 rounded">
         </label>
         <div class="flex justify-center mt-4">
+          <button id="calcular-nurse">CALCULAR</button>
         </div>
         <span>RESULTADOS</span>
-        <div class="mt-3" id="nurse-ml">ml</div>
-        <div class="text-sm mt-2" id="nurse-detail">
-        </div>
+        <div class="mt-3" id="nurse-ml">mL</div>
+        <div class="text-sm mt-2" id="nurse-detail"></div>
       </section>
 
-      <p><b>Exemplo</b>: um paciente foi prescrito paracetamol injetável de 1000 mg, onde a prescrição médica é de 50
+      <p class="mt-5"><b>Exemplo</b>: um paciente foi prescrito paracetamol injetável de 1000 mg, onde a prescrição
+        médica é de 50
         mg,
         e a diluição é de 100 mililitros, qual será a quantidade a ser administrado no paciente?</p>
       <p><b>Fórmula/resolução</b>: Dose= prescrição x diluição /concentração do frasco.</p>
@@ -344,6 +371,31 @@
         <p><b>Atenção</b>: verifique sempre o esquema posológico local, e nunca se automedique, procuresempre um
           profissional de saúde. </p>
       </section>
+
+      <h2>Porque é importante calcular correctamente os mililitros</h2>
+      <p>Cada medicamento possui uma concentração específica e uma forma própria de preparação. <a
+          href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank">
+          Administrar um volume inferior ao necessário pode fazer com que o tratamento não produza o efeito
+          esperado</a>. Por outro lado, administrar um volume superior ao indicado aumenta o risco de sobredosagem e de
+        reações adversas.</p>
+
+      <p>É precisamente por esta razão que o cálculo dos mililitros representa uma etapa fundamental da administração
+        medicamentosa.</p>
+
+      <h2>Cuidados durante a preparação dos medicamentos</h2>
+      <p>Independentemente da utilização de uma calculadora, existem princípios fundamentais que nunca devem ser
+        ignorados.
+      <p>
+
+      <p>O profissional deve confirmar a identidade do utente, verificar cuidadosamente a prescrição médica,
+        observar a validade do medicamento, analisar a integridade da embalagem e assegurar que a solução apresenta um
+        aspeto adequado antes da administração.</p>
+
+      <p>Também é essencial respeitar a via de administração indicada, seja ela intravenosa, intramuscular, subcutânea
+        ou outra. Alguns medicamentos necessitam de velocidades específicas de perfusão, enquanto outros devem ser
+        administrados lentamente para evitar complicações.</p>
+
+
 
       <p><b>Dosagem</b> é a relação da dose com o peso, idade ou superfície corporal do paciente, geralmente expressa em
         mg/kg ou mg/m², usada para calcular a dose individual.</p>
@@ -378,6 +430,39 @@
         eficácia, rapidez de ação e biodisponibilidade. Cada via tem características específicas, vantagens e
         limitações que devem ser consideradas na escolha do tratamento.
       </p>
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class=" avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
+
       <!-- SHAREING-->
       <hr>
       <section>
@@ -400,6 +485,22 @@
         </div>
         </div>
         <hr>
+        <h2 class="referencia mt-5">BIBLIOGRÁFICAS</h2>
+        <section class="panel">
+          <ul>
+            <li> Organização Mundial da Saúde (WHO). <a
+                href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank"
+                rel="noopener noreferrer"> Patient Safety </a> </li>
+            <li> Direção-Geral da Saúde (DGS). <a href="https://www.dgs.pt" target="_blank" rel="noopener noreferrer">
+                Normas e Orientações Clínicas </a> </li>
+            <li> ISMP – Institute for Safe Medication Practices. <a href="https://www.ismp.org" target="_blank"
+                rel="noopener noreferrer"> Medication Safety Resources </a> </li>
+            <li> Infarmed. <a href="https://www.infarmed.pt" target="_blank" rel="noopener noreferrer"> Medicamentos de
+                Uso Humano </a> </li>
+          </ul>
+        </section>
+        <hr class="mt-5">
+
       </section>
     </section>
     <!-- LADO DIREITO: BARRA LATERAL -->
@@ -493,10 +594,10 @@
         </div>
       </a>
       <!-- CARD 5 -->
-      <a href="/calculadoras/como-calcular-a-prescricao/" class="calculadora"
-        style="background-image:url('/img/prescricao.webp')">
+      <a href="/calculadoras/como-calcular-meu-periodo-fertil/" class="calculadora"
+        style="background-image:url('/img/periodo-fertil.webp')">
         <div class="calculadora-content">
-          <h2>Calculadora de prescrição médica</h2>
+          <h2>Calculadora de período fértil</h2>
           <span class="botao">
             CALCULAR AGORA
           </span>
@@ -601,6 +702,10 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
   <script src="/calculadoras/src/diluicao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>

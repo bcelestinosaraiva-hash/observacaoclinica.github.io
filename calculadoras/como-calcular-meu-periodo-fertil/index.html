@@ -277,17 +277,19 @@
                     </div>
                 </div>
             </div>
-            <p>O período fértil é o intervalo do ciclo menstrual em que a mulher tem maior probabilidade de engravidar.
-                Ele ocorre próximo à ovulação, que é quando um dos ovários libera um óvulo maduro, pronto para ser
-                fertilizado pelo espermatozoide.</p>
+            <p>O período fértil é o intervalo do <b>ciclo menstrual</b> em que a mulher tem maior probabilidade de
+                engravidar. Ele ocorre próximo à ovulação, que é quando um dos ovários libera um óvulo maduro, pronto
+                para ser fertilizado pelo espermatozoide.</p>
+
             <p>O período fértil dura, em média, 6 dias: cinco dias antes da ovulação e o dia da ovulação. Isso acontece
                 porque os espermatozoides podem sobreviver até 5 dias no corpo da mulher, e o óvulo permanece viável por
                 cerca de 24 horas após ser liberado.</p>
 
             <h2>Como identificar o período fértil</h2>
-            <p>Conhecer a duração do ciclo menstrual, o ciclo menstrual começa no primeiro dia da menstruação e termina
-                no dia anterior ao início da próxima menstruação. Um ciclo típico dura entre 28 e 32 dias, mas varia de
-                mulher para mulher.</p>
+            <p>Conhecer a duração do ciclo menstrual, o<a href="https://www.who.int/health-topics/infertility"
+                    target="_blank" rel="noopener noreferrer"> ciclo menstrual</a> começa no primeiro dia da
+                menstruação e termina no dia anterior ao início da próxima menstruação. Um ciclo típico dura entre 28 e
+                32 dias, mas varia de mulher para mulher.</p>
 
             <p>Encontre o dia provável da ovulação: geralmente ocorre 14 dias antes da próxima menstruação.
                 Defina a janela fértil conte 3 dias antes e 3 dias depois da ovulação.
@@ -297,7 +299,7 @@
                 mulher para mulher.</p>
 
             <!-- #CALCULADORA -->
-            <section>
+            <section class="calculadora-fertil">
                 <h2 class="text-center">Caculadora do período fértil</h2>
                 <div>
                     <label style="display: block; font-size: 16px; font-weight: 500; color: #333;
@@ -352,7 +354,7 @@
                         <div class="check">✓</div>
                         <div>
                             <span>RESULTADO:</span>
-                            <h1 id="tituloResultado"></h1>
+                            <h2 id="tituloResultado"></h2>
                         </div>
                     </div>
                     <div class="texto" id="textoResultado"></div>
@@ -360,8 +362,7 @@
                         <div class="mes" id="mesAno"></div>
                         <table id="calendario"></table>
                         <div class="legendaspan">
-                            <span>💧Período fértil</span>
-                            <span>❤️ Ovulação</span>
+                            <span>💧Período fértil ❤️Ovulação</span>
                         </div>
                     </div>
                 </div>
@@ -369,7 +370,8 @@
             <!-- #FIM DA CALCULADORA -->
 
             <p>Calcular o período fértil usando a regra dos 14 dias, para um ciclo de 28 dias, a ovulação geralmente
-                ocorre 14 dias antes do início da próxima menstruação.
+                ocorre 14 dias antes do <a href="/calculadoras/como-calcular-o-ciclo-menstrual/" target="_blank"
+                    rel="noopener">início da próxima menstruação</a>.
                 Assim, os dias mais férteis são os 5 dias antes da ovulação e o dia da ovulação.
             </p>
             <ul>
@@ -442,6 +444,36 @@
                 por um complexo sistema hormonal e apresentando sinais que podem ser observados por mulheres que desejam
             </p>
 
+            <!-- AVALIAÇÃO DE CONTEÚDO -->
+            <hr>
+            <section class=" avaliacao-secao">
+                <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+                <div class="buttonsa">
+                    <button class="btna btn-yes" onclick="avaliar('Sim')">
+                        <i class="fa-solid fa-thumbs-up"></i> SIM
+                    </button>
+                    <button class="btna btn-no" onclick="avaliar('Não')">
+                        <i class="fa-solid fa-thumbs-down"></i> NÃO
+                    </button>
+                </div>
+                <div id="feedback" style="display:none;">
+                    <p class="success" id="msg-sucesso" style="display:none;">
+                        ✔ Obrigado pela avaliação, volte sempre!
+                    </p>
+                    <div id="form-feedback">
+                        <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+                        <label for="nome" class="campo-label">Nome</label>
+                        <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+                        <label for="email" class="campo-label">Email</label>
+                        <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+                        <label for="mensagem" class="campo-label">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+                        <p id="erro-form" class="erro-msg" style="display:none;"></p>
+                        <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+                    </div>
+                </div>
+            </section>
+            <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
             <hr>
             <!-- SHAREING-->
             <div class="compartilhamento">
@@ -463,34 +495,33 @@
                     </div>
                 </div>
                 <hr>
-            </div>
 
-            <!-- #REFERENVICIA -->
-            <h2 class="referencia">REFERÊNCIAS BIBLIOGRÁFICAS</h2>
-            <section class="panel">
-                <ul>
-                    <li> ACOG — Fertilidade e ovulação:
-                        <a href="https://www.acog.org/womens-health" target="_blank" rel="noopener noreferrer">
-                            ACOG — Fertilidade e ovulação
-                        </a>
-                    </li>
+                <!-- #REFERENVICIA -->
+                <h2 class="referencia mt-5">BIBLIOGRÁFICAS</h2>
+                <section class="panel">
+                    <ul>
+                        <li> ACOG — Fertilidade e ovulação:
+                            <a href="https://www.acog.org/womens-health" target="_blank" rel="noopener noreferrer">
+                                ACOG — Fertilidade e ovulação
+                            </a>
+                        </li>
 
-                    <li>Organização mundial de saúde:
-                        <a href="https://www.who.int/health-topics/infertility" target="_blank"
-                            rel="noopener noreferrer">
-                            OMS — Saúde reprodutiva
-                        </a>
-                    </li>
+                        <li>Organização mundial de saúde:
+                            <a href="https://www.who.int/health-topics/infertility" target="_blank"
+                                rel="noopener noreferrer">
+                                OMS — Saúde reprodutiva
+                            </a>
+                        </li>
 
-                    <li>Mayo Clinic:
-                        <a href="https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant" target="_blank"
-                            rel="noopener noreferrer">
-                            Mayo Clinic — Gravidez e fertilidade
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <hr>
+                        <li>Mayo Clinic:
+                            <a href="https://www.mayoclinic.org/healthy-lifestyle/getting-pregnant" target="_blank"
+                                rel="noopener noreferrer">
+                                Mayo Clinic — Gravidez e fertilidade
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <hr class="mt-5">
         </section>
 
         <!-- LADO DIREITO: BARRA LATERAL -->
@@ -681,6 +712,9 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+    <script src="/src/avaliacao.js" defer></script>
     <script src="/src/geral.js" defer></script>
     <script src="/src/bibliografica.js" defer></script>
     <script src="/calculadoras/src/periodo-fertil.js" defer></script>

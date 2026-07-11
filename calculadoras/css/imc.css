@@ -28,7 +28,72 @@
     --raio-sm: 10px;
     --raio-md: 16px;
     --raio-lg: 22px;
+    --primaria: #0891b2;
+    --primaria-escura: #0e7490;
+    --primaria-clara: #ecfeff;
+    --acento: #10b981;
+    --acento-claro: #ecfdf5;
+    --texto-principal: #0f2733;
+    --texto-secundario: #64798a;
+    --borda: #dde5ea;
+    --fundo-card: #ffffff;
+    --fundo-secao: #f6fafb;
+    --sombra-card: 0 20px 45px -20px rgba(160, 160, 160, 0.25);
+    --sombra-suave: 0 4px 14px -6px rgba(8, 66, 84, 0.12);
+    --raio-sm: 10px;
+    --raio-md: 16px;
+    --raio-lg: 24px;
 }
+
+
+/* faixa decorativa superior */
+.seccao-imc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primaria), var(--acento));
+}
+
+/* ícone/selo médico opcional no topo */
+.seccao-imc::after {
+    content: "OC";
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primaria);
+    background: var(--primaria-clara);
+    border-radius: 50%;
+}
+
+.seccao-imc h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--texto-principal);
+    margin-bottom: 28px;
+    padding-right: 50px;
+}
+
+.calculadora-diluicao h2::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 999px;
+    background: var(--acento);
+}
+
 
 /* ---------- estrutura geral da secção ---------- */
 .seccao-imc {
@@ -72,7 +137,6 @@
 
 /* ---------- seletor de sexo (segmented control) ---------- */
 
-
 .space-x-2>*+* {
     margin-left: 8px;
 }
@@ -115,14 +179,7 @@
 #calcular {
     background: linear-gradient(135deg, var(--petroleo), var(--petroleo-escuro)) !important;
     letter-spacing: 0.04em;
-    box-shadow: 0 10px 24px -8px rgba(1, 93, 129, 0.55);
 }
-
-#calcular:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px -8px rgba(1, 93, 129, 0.6);
-}
-
 
 /* ==========================================================================
    Cartão de resultado
@@ -182,13 +239,36 @@
     flex-shrink: 0;
 }
 
-/* checagem = fundo verde, X = fundo da própria cor da classificação */
+/* checagem = fundo verde sempre */
 .check {
     background: var(--verde-normal);
 }
 
+/* X = fundo definido por classificação (ver secção abaixo).
+   Fallback caso nenhuma classe classe-* esteja presente no ancestral. */
 .xis {
-    background: currentColor;
+    background: var(--texto-secundario);
+}
+
+/* fundo do ícone X consoante a classificação ativa */
+.classificacao.classe-baixo .xis {
+    background: var(--azul-abaixo);
+}
+
+.classificacao.classe-sobre .xis {
+    background: var(--laranja-sobre);
+}
+
+.classificacao.classe-ob1 .xis {
+    background: var(--vermelho-ob1);
+}
+
+.classificacao.classe-ob2 .xis {
+    background: var(--vermelho-ob2);
+}
+
+.classificacao.classe-ob3 .xis {
+    background: var(--vermelho-ob3);
 }
 
 .recomendacao {
@@ -231,6 +311,7 @@
     background: #ffffff;
     border: 1px solid transparent;
     transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: var(--sombra-card);
 }
 
 .tabela-imc span:first-child {
@@ -357,10 +438,11 @@
 
 /* ---------- responsivo ---------- */
 
+
 @media (max-width: 520px) {
     .seccao-imc {
         margin: 0;
-        border-radius: 0;
+        border-radius: 10px;
         padding: 28px 20px 24px;
         max-width: 100%;
     }

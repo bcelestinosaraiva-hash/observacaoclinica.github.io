@@ -1,92 +1,296 @@
-  /* ======= CALENDÁRIO AJUSTADO ======= */
+/* ==========================================================================
+   Calculadora do Ciclo Menstrual — estilos
+   Identidade: saúde/clínica moderna, azul-petróleo + rosa (ciclo/menstrual),
+   cartão flutuante com sombra suave, calendário com destaque do período
+   ========================================================================== */
+:root {
+  --primaria: #015d81;
+  --primaria-escura: #01415c;
+  --primaria-clara: #e6f3f8;
+  --rosa: #e0507a;
+  --rosa-escuro: #c23a63;
+  --rosa-claro: #ffe3ea;
+  --texto-principal: #0f2733;
+  --texto-secundario: #5b7480;
+  --borda: #dde5ea;
+  --fundo-secao: #f6fafb;
+  --fundo-card: #ffffff;
+  --sombra-card: 0 20px 45px -22px rgba(225, 238, 244, 0.28);
+  --sombra-suave: 0 4px 14px -6px rgba(1, 65, 92, 0.14);
+  --raio-sm: 10px;
+  --raio-md: 16px;
+  --raio-lg: 22px;
+}
+
+/* ======= CARTÃO PRINCIPAL ======= */
+.carda {
+  position: relative;
+  width: 100%;
+  margin: 32px auto 20px;
+  padding: 40px 32px 32px;
+  background: var(--fundo-card);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-card);
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  color: var(--texto-principal);
+  overflow: hidden;
+}
+
+/* faixa decorativa superior */
+.carda::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--primaria), var(--rosa));
+}
+
+/* selo decorativo */
+.carda::after {
+  content: "🩸";
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--rosa);
+  background: var(--rosa-claro);
+  border-radius: 50%;
+}
+
+.carda h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--texto-principal);
+  margin-bottom: 22px;
+  padding-right: 54px;
+  text-align: left !important;
+}
+
+.carda h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: var(--rosa);
+}
+
+/* ======= INPUTS ======= */
+.carda label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  margin-top: 18px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.carda label:first-of-type {
+  margin-top: 0;
+}
+
+.carda input,
+.carda select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: var(--raio-sm);
+  border: 1.5px solid var(--borda);
+  background: var(--fundo-secao);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-principal);
+  font-family: inherit;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.carda select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'><path d='M1 1L7 7L13 1' stroke='%235b7480' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.carda input:hover,
+.carda select:hover {
+  border-color: #b7cdd6;
+}
+
+.carda input:focus,
+.carda select:focus {
+  outline: none;
+  border-color: var(--primaria);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(1, 93, 129, 0.14);
+}
+
+/* ======= BOTÃO CALCULAR ======= */
+.carda .flex.justify-center {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.carda button {
+  background: linear-gradient(135deg, var(--primaria), var(--primaria-escura)) !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: var(--sombra-suave);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, opacity .18s ease !important;
+}
+
+.carda button:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+/* ======= RESULTADO ======= */
+.result {
+  background: var(--fundo-secao);
+  width: 100%;
+  border-radius: var(--raio-md);
+  padding: 20px 18px;
+  display: none;
+  margin-top: 20px;
+  border: 1px solid var(--borda);
+  animation: entrar .4s ease both;
+}
+
+@keyframes entrar {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result h3 {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  padding: 0;
+  color: var(--rosa-escuro);
+  text-align: center;
+}
+
+.result {
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--primaria-escura);
+  margin-top: 10px;
+}
+
+.result p {
+  font-weight: 400;
+}
+
+/* ======= CALENDÁRIO ======= */
+.calendar {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--borda);
+}
+
+.calendar-header {
+  font-family: 'Rubik', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  align-items: center;
+  color: var(--primaria-escura);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--borda);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--texto-secundario);
+  font-variant-numeric: tabular-nums;
+  transition: transform .15s ease;
+}
+
+/* ======= DIA MENSTRUAL ======= */
+.menstrual {
+  background: var(--rosa-claro);
+  border-color: #f6b9cd;
+  color: var(--rosa-escuro);
+  position: relative;
+  font-weight: 800;
+}
+
+.menstrual::after {
+  content: "🩸";
+  position: absolute;
+  bottom: 1px;
+  right: 3px;
+  font-size: 9px;
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 520px) {
   .carda {
-    background: #ffffff;
-    padding: 12px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-  }
-
-  /* INPUTS */
-  label {
-    font-weight: 500;
-    margin-top: 5%;
-    display: block;
-  }
-
-  input,
-  select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
+    margin: 0;
     border-radius: 10px;
-    border: 1px solid #d0d7de;
-    font-size: 15px;
-  }
-
-  button:hover {
-    opacity: 0.9;
-  }
-
-  /* RESULTADO */
-  .result {
-    background: #eef2f4;
-    width: 100%;
-    border-radius: 10px;
-    padding: 15px;
-    display: none;
-  }
-
-  .result h3 {
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    margin: 10;
-    padding: 10;
-    color: rgb(61, 61, 61);
-  }
-
-  /* CALENDÁRIO */
-  .calendar {
-    margin-top: 10px;
-  }
-
-  .calendar-header {
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    align-items: center;
-    color: #415d66;
-    text-align: center;
-    margin-bottom: 10px;
+    padding: 30px 20px 24px;
+    max-width: 100%;
   }
 
   .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
+    gap: 4px;
   }
 
   .day {
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    background: #fff;
-    font-size: 14px;
+    font-size: 0.72rem;
+    padding: 8px 0;
+  }
+}
+
+/* ======= ACESSIBILIDADE ======= */
+.carda button:focus-visible,
+.carda input:focus-visible,
+.carda select:focus-visible {
+  outline: 3px solid var(--primaria);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .result {
+    animation: none !important;
+    transition: none !important;
   }
 
-  /* DIA MENSTRUAL */
-  .menstrual {
-    background: #ffd6d6;
-    position: relative;
+  .carda button {
+    transition: none !important;
   }
-
-  .menstrual::after {
-    content: "🩸";
-    position: absolute;
-    bottom: 2px;
-    right: 4px;
-    font-size: 12px;
-  }
+}
