@@ -394,7 +394,41 @@
       </ul>
       <p>Efeitos adversos quando há uso repetido/prolongado de corticoide oral (quando necessário em alguns casos).
         Por isso, o foco é manter controle contínuo e não tratar apenas a crise.</p>
-      <!-- SHAREING-->
+      <p>A asma é uma <a href="/saude-az/doencas-respiratorias/"> doença respiratória </a>comum, mas que pode ser
+        controlada quando existe
+        acompanhamento adequado e
+        cuidados preventivos. Reconhecer os sinais e sintomas, compreender os fatores de risco e evitar os principais
+        desencadeantes são passos importantes para reduzir crises e melhorar a qualidade de vida.</p>
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <hr>
       <section>
         <div class="shareing">
@@ -652,6 +686,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer=""></script>
   <script src="/src/search-live.js" defer=""></script>
   <script src="/src/bibliografica.js" defer=""></script>

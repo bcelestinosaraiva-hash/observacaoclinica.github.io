@@ -293,28 +293,37 @@
         </div>
       </div>
       <!-- CONTEUDO -->
+      <img src="/img/hipertensao.webp" fetchpriority="high" loading="lazy" alt="O que é uma hipertensão, mas porque?"
+        class="w-full max-h-85 object-cover rounded">
+
       <p>Hipertensão é uma elevação persistente da pressão arterial acima dos valores normais, isto é pressão arterial
         superior a <b>140/90 mmHg</b> em duas ou mais medições realizadas em condições
         adequadas.</p>
       <p>
 
-        É uma doença crônica em que o coração precisa exercer mais força para bombear o sangue através das
+      <p>A <b>hipertensão arterial</b>, conhecida popularmente como <b>pressão alta</b>, é uma doença caracterizada pelo
+        aumento persistente da pressão que o sangue exerce contra as paredes dos vasos sanguíneos durante a circulação
+        pelo organismo.</p>
+
+      <p>O <b>coração</b> tem a função de bombear o sangue para todo o corpo através das artérias. Quando a força
+        exercida pelo sangue sobre estas artérias permanece elevada durante muito tempo, ocorre uma sobrecarga no
+        sistema cardiovascular, aumentando o risco de problemas graves como enfarte do miocárdio, acidente vascular
+        cerebral (AVC), insuficiência cardíaca e doença renal.</p>
+
+      <p>É uma doença crônica em que o coração precisa exercer mais força para bombear o sangue através das
         artérias, o
         que pode, ao longo do tempo, causar danos ao coração, rins, cérebro e vasos sanguíneos, esse tipo de condição
         <a href="/nutricao/dieta-para-pessoa-hipertensa/"> é necessário saber gerir os alimentos, ter
           uma boa dieta e não consumir muito sal</a>.
       </p>
-
-      <img src="/img/hipertensao.webp" fetchpriority="high" loading="lazy" alt="O que é uma hipertensão, mas porque?"
-        class="w-full max-h-85 object-cover rounded-xl">
+      <p>A pressão arterial é considerada elevada quando os valores permanecem acima do recomendado em diferentes
+        medições realizadas correctamente por um profissional de saúde ou através de dispositivos adequados.</p>
 
       <p>Na avaliação de pressão arterial, na medida em que chega o paciente na sua US, deve manter ele em repouso pelo
         menos 10 minutos e depois pode avaliar a pressão arterial.</p>
 
-      <blockquote>A hipertensão arterial é a principal causa
-        de mortalidade materna em todo o mundo, portanto deve ser controlada sempre que forn possível.
-        <cite>Fonte: <a href="www.who.int" target="_blank">Organização mundial de saúde</a></cite>
-      </blockquote>
+      <p>A hipertensão arterial é a principal causa <a href="www.who.int" target="_blank" rel="noopener">mortalidade
+          materna</a> de em todo o mundo, portanto deve ser controlada sempre que forn possível. </p>
 
       <h2>Causas de e factores de riscos</h2>
       <p>As causas da hipertensão podem ser divididas em primárias (essenciais) e secundárias, dependendo da origem do
@@ -395,14 +404,10 @@
         médico pode prescrever:</p>
       <p>Diuréticos reduzem excesso de líquidos e sal, como: Hidralazina 20 mg , furosemida 20 mg injetável, e em
         comprimido 40 mg.
-        Hidralazina 20 mg é usado para casos grave como emergências e urgências hipertensiva. </p>
-
-      <section class="warning">
-        <p>
-          <b>Atenção:</b> nunca faça automedicação, consulte sempre um profissional de
-          saúde.
-        </p>
-      </section>
+        Hidralazina 20 mg é usado para casos grave como emergências e urgências hipertensiva.
+        <b>Atenção:</b> nunca faça automedicação, consulte sempre um profissional de
+        saúde.
+      </p>
 
       <p>Se aplicamos um diuréticos num paciente devemos administrar um poupador de potássio exemplo:
         <b>Amilorido</b>
@@ -457,6 +462,36 @@
       <p>A actividade física regular também é essencial, com pelo menos 30 minutos de exercícios moderados na
         maioria
         dos dias, ajudando a fortalecer o coração, melhorar a circulação e controlar o peso corporal.</p>
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <!-- SHAREING-->
       <hr>
       <section>
@@ -483,8 +518,28 @@
       <h2 class="referencia">BIBLIOGRÁFICAS</h2>
       <section class="panel">
         <ul>
-          <li></li>
-          <li>jjdjd</li>
+          <li>
+            Organização Mundial da Saúde (OMS).
+            <a href="https://www.who.int/news-room/fact-sheets/detail/hypertension" target="_blank"
+              rel="noopener noreferrer">
+              Hipertensão: causas, riscos, prevenção
+            </a>.
+          </li>
+
+          <li>
+            Serviço Nacional de Saúde (SNS24).
+            <a href="https://www.sns24.gov.pt/tema/doencas-do-coracao/hipertensao-arterial/" target="_blank"
+              rel="noopener noreferrer">
+              Hipertensão arterial: sintomas, diagnóstico
+            </a>.
+          </li>
+
+          <li>
+            Centers for Disease Control and Prevention (CDC).
+            <a href="https://www.cdc.gov/high-blood-pressure/" target="_blank" rel="noopener noreferrer">
+              pressão arterial elevada e prevenção
+            </a>.
+          </li>
         </ul>
       </section>
       <hr>
@@ -547,7 +602,7 @@
   </main>
   <!-- MENSAGEM RELACIONADAS -->
   <section class="max-w-6xl w-full mx-auto px-4">
-    <h2>Mensagens relacionadas</h2>
+    <h2>Mensagens em destaque</h2>
     <hr>
     <div class="agora">
       <div class="cartao">
@@ -708,6 +763,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>
