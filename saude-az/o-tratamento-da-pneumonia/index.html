@@ -284,6 +284,13 @@
         </div>
       </div>
 
+      <p>A <b>pneumonia</b> é uma infecção respiratória que afecta os pulmões e pode causar inflamação dos alvéolos
+        pulmonares, dificultando a passagem de oxigénio para o sangue. O tratamento da pneumonia depende principalmente
+        da causa da doença, da idade do paciente, da gravidade dos sintomas e da presença de outros problemas de saúde.
+      </p>
+      <p>É importante destacar que não existe um único tratamento para todos os casos de pneumonia. O medicamento
+        adequado deve ser escolhido por um profissional de saúde após avaliação clínica.</p>
+
       <p>O tratamento da <b>pneumonia</b> depende do tipo de agente causador da infecção, que pode ser
         bacteriano, viral
         ou fúngico, além da gravidade do quadro clínico e das condições gerais de saúde da pessoa. Em casos leves, o
@@ -318,16 +325,23 @@
         ajuda a evitar a desidratação e facilita a eliminação das secreções respiratórias, contribuindo para a melhora
         da respiração. Em pacientes hospitalizados ou que apresentam dificuldade para ingerir líquidos, pode ser
         indicado o uso de hidratação intravenosa.</p>
+
       <h2>4. Repouso e recuperação</h2>
       <p>O repouso é essencial para que o organismo consiga combater a infecção de forma eficiente. Durante a fase aguda
         da pneumonia, o descanso permite que o corpo concentre energia na recuperação. Após a melhora dos sintomas, as
         atividades físicas devem ser retomadas de maneira gradual, respeitando os limites do corpo, principalmente após
         quadros mais graves.</p>
+
       <h2>5. Alimentação equilibrada</h2>
-      <p>Uma alimentação adequada contribui para o fortalecimento do sistema imunológico e para a recuperação do
-        organismo. Alimentos ricos em nutrientes com ação anti-inflamatória, como peixes ricos em ômega 3, frutas,
+      <p>Uma alimentação adequada contribui para <a
+          href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-pulmonares/pneumonia" target="_blank"
+          rel="noopener noreferrer">
+          o fortalecimento do sistema imunológico e para a recuperação do
+          organismo </a>. Alimentos ricos em nutrientes com ação anti-inflamatória, como peixes ricos em ômega 3,
+        frutas,
         legumes e fontes de vitamina E, podem ajudar a reduzir a inflamação e favorecer a recuperação pulmonar.
       </p>
+
       <h2>6. Oxigenoterapia</h2>
       <p>A oxigenoterapia é indicada quando a pneumonia provoca queda nos níveis de oxigênio no sangue ou dificuldade
         respiratória significativa. Esse tratamento consiste no fornecimento de oxigênio suplementar por meio de cânulas
@@ -338,7 +352,35 @@
         complicações, como o acúmulo de líquido ao redor do pulmão ou a presença de pus. Procedimentos como a drenagem
         torácica ajudam a controlar essas complicações e evitar o agravamento do quadro clínico.
       </p>
-
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
       <!-- SHAREING-->
       <hr>
       <section>
@@ -365,14 +407,58 @@
       <!-- #REFERENCIAS -->
       <h2 class="referencia">BIBLIOGRÁFICAS</h2>
       <div class="panel">
-        <ul>
-          <li>FAKE REFERER BELDO</li>
-          <li>Manson’s, Doenças Tropicais (Tropical Disease), 21ª edição, W.B. Saunders, 2003</li>
+        <h2>Referências</h2>
 
-          <li>Organização Mundial de Saúde, Relatório de Controlo Mundial da Tuberculose (Global
-            Tuberculosis Control Report), 2010.</li>
-          <li>Organização Mundial de Saúde, Tuberculose de Toman (Toman’s Tuberculosis), 2ª edição,
-            2004</li>
+        <ul class="references-list">
+          <li>
+            Organização Mundial da Saúde (OMS).
+            <a href="https://www.who.int/health-topics/pneumonia" target="_blank" rel="noopener noreferrer">
+              Pneumonia
+            </a>
+          </li>
+
+          <li>
+            Serviço Nacional de Saúde (SNS 24).
+            <a href="https://www.sns24.gov.pt/tema/doencas-respiratorias/pneumonia/" target="_blank"
+              rel="noopener noreferrer">
+              sintomas, causas, tratamento e prevenção
+            </a>
+          </li>
+          <li>
+            Centers for Disease Control and Prevention (CDC).
+            <a href="https://www.cdc.gov/pneumonia/" target="_blank" rel="noopener noreferrer">
+              Pneumonia: Causes, Symptoms
+            </a>
+          </li>
+
+          <li>
+            National Institute for Health and Care Excellence (NICE).
+            <a href="https://www.nice.org.uk/guidance/ng138" target="_blank" rel="noopener noreferrer">
+              Pneumonia: diagnosis and management
+            </a>
+          </li>
+
+          <li>
+            American Thoracic Society (ATS).
+            <a href="https://www.thoracic.org" target="_blank" rel="noopener noreferrer">
+              Clinical Guidelines for Respiratory Diseases
+            </a>
+          </li>
+
+          <li>
+            European Respiratory Society (ERS).
+            <a href="https://www.ersnet.org" target="_blank" rel="noopener noreferrer">
+              Respiratory Health Guidelines
+            </a>
+          </li>
+
+          <li>
+            MSD Manuals.
+            <a href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-pulmonares/pneumonia" target="_blank"
+              rel="noopener noreferrer">
+              Pneumonia: para profissionais e população
+            </a>
+          </li>
         </ul>
       </div>
       <hr>
@@ -425,7 +511,7 @@
   </main>
   <!-- MENSAGEM RELACIONADAS -->
   <section class="max-w-6xl w-full mx-auto px-4">
-    <h2>Mensagens relacionadas</h2>
+    <h2>Mensagens em destaque</h2>
     <hr>
     <div class="agora">
       <div class="cartao">
@@ -585,6 +671,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/src/search-live.js" defer></script>

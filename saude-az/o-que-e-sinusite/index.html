@@ -38,35 +38,136 @@
   <link rel="icon" type="image/webp" sizes="16x16" href="/img/icon.webp">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/icon.webp">
   <!-- Schema.org JSON-LD: Article -->
+  <!-- Schema.org JSON-LD: Medical Article -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/"
-  },
-  "headline": "O que é sinusite: os sinais e sintomas e sua prevenção",
-  "description": "Sinusite é uma inflamação da mucosa que reveste os seios paranasais: cavidades ósseas cheias de ar localizadas ao redor do nariz, olhos e testa.",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://www.observacaoclinica.com/img/sinusite.webp"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Beldo Celestino Saraiva",
-    "jobTitle": "Técnico de Enfermagem Geral"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Observação Clínica",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.observacaoclinica.com/img/sinusite.webp"
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/#webpage",
+      "url": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/",
+      "name": "O que é sinusite: os sinais e sintomas e a sua prevenção",
+      "headline": "O que é sinusite: os sinais e sintomas e a sua prevenção",
+      "description": "Conheça o que é a sinusite, os principais sinais e sintomas, causas, tipos, factores de risco, diagnóstico, tratamento e medidas de prevenção.",
+      "inLanguage": "pt-PT",
+      "isPartOf": {
+        "@id": "https://www.observacaoclinica.com/#website"
+      },
+      "about": {
+        "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/#condition"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.observacaoclinica.com/img/sinusite.webp"
+      },
+      "datePublished": "2026-07-12",
+      "dateModified": "2026-07-12"
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/#condition",
+      "name": "Sinusite",
+      "alternateName": [
+        "Rinossinusite",
+        "Inflamação dos seios perinasais"
+      ],
+      "description": "A sinusite é uma inflamação dos seios perinasais que pode ser causada por vírus, bactérias, fungos ou alergias, provocando congestão nasal, dor facial e secreção nasal.",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Seios perinasais"
+      },
+      "possibleTreatment": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Lavagem nasal com solução salina"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Analgésicos e antipiréticos"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Antibióticos quando indicados"
+        }
+      ],
+      "possibleComplication": [
+        "Sinusite crónica",
+        "Celulite orbitária",
+        "Meningite",
+        "Abcesso cerebral"
+      ],
+      "riskFactor": [
+        "Rinite alérgica",
+        "Tabagismo",
+        "Poluição atmosférica",
+        "Pólipos nasais",
+        "Desvio do septo nasal",
+        "Sistema imunitário enfraquecido"
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/#article",
+      "mainEntityOfPage": {
+        "@id": "https://www.observacaoclinica.com/saude-az/o-que-e-sinusite/#webpage"
+      },
+      "headline": "O que é sinusite: os sinais e sintomas e a sua prevenção",
+      "description": "Aprenda o que é a sinusite, os seus sintomas, causas, tipos, factores de risco, diagnóstico, tratamento e como prevenir esta doença respiratória.",
+      "keywords": [
+        "sinusite",
+        "o que é sinusite",
+        "sintomas da sinusite",
+        "causas da sinusite",
+        "tipos de sinusite",
+        "tratamento da sinusite",
+        "prevenção da sinusite",
+        "rinossinusite",
+        "doenças respiratórias"
+      ],
+      "articleSection": "Saúde Respiratória",
+      "articleBody": "Artigo educativo sobre sinusite, incluindo definição, sinais e sintomas, causas, factores de risco, diagnóstico, tratamento, prevenção e complicações.",
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.observacaoclinica.com/img/sinusite.webp",
+        "url": "https://www.observacaoclinica.com/img/sinusite.webp",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Beldo Celestino Saraiva",
+        "jobTitle": "Técnico de Enfermagem Geral",
+        "url": "https://www.observacaoclinica.com/sobre/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Observação Clínica",
+        "url": "https://www.observacaoclinica.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.observacaoclinica.com/img/logo.webp",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "datePublished": "2026-06-6",
+      "dateModified": "2026-07-12",
+      "inLanguage": "pt-PT",
+      "wordCount": 760
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.observacaoclinica.com/#website",
+      "url": "https://www.observacaoclinica.com/",
+      "name": "Observação Clínica",
+      "description": "Portal de educação em saúde com conteúdos baseados em evidências científicas.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Observação Clínica"
+      },
+      "inLanguage": "pt-PT"
     }
-  },
-  "datePublished": "2026-04-04",
-  "dateModified": "2026-04-04"
+  ]
 }
 </script>
   <title>O que é sinusite: os sinais e sintomas e sua prevenção | Observação Clínica</title>
@@ -282,7 +383,7 @@
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
         <i class="fa-regular fa-clock"></i>
-        Atualizado em abril de 2026
+        Atualizado em julho de 2026
       </div>
       <div class="autora">
         <img src="/img/Beldo.webp" fetchpriority="high" class="w-10 h-10 mr-2 object-cover rounded-full" alt="Autor">
@@ -297,6 +398,11 @@
       </div>
 
       <!-- #CONTEUDO -->
+      <p>A sinusite, também conhecida como <b>rinossinusite</b>, é uma inflamação dos seios perinasais, cavidades cheias
+        de ar localizadas nos ossos da face, em redor do nariz, testa, maçãs do rosto e olhos. Estas cavidades
+        desempenham um papel importante na humidificação do ar inspirado, na produção de muco e na protecção das vias
+        respiratórias contra agentes infecciosos.</p>
+
       <p>Sinusite é uma inflamação da mucosa que reveste os seios paranasais: cavidades óssea cheias de ar
         localizadas ao redor do nariz, olhos e testa,
         responsáveis pela drenagem de muco que protege o sistema respiratório.</p>
@@ -331,6 +437,19 @@
         <li>Seios etmoidais: ficam entre os olhos e são formados por várias pequenas cavidades,</li>
         <li>Seios esfenoidais: localizados profundamente, atrás do nariz.</li>
       </ol>
+      <h2>As principais causas da sinusite</h2>
+      <p>A maioria dos episódios de sinusite é causada por <b>vírus</b> responsáveis pelas infecções respiratórias
+        comuns. Em
+        menor número de casos, bactérias podem provocar uma infecção secundária, principalmente quando existe obstrução
+        prolongada dos seios perinasais.</p>
+
+      <p>As <b>alergias respiratórias</b> também representam uma causa importante, pois mantêm a mucosa nasal
+        constantemente
+        inflamada. Alterações anatómicas, como desvio do septo nasal ou pólipos, dificultam a drenagem do muco e
+        aumentam o risco de sinusite recorrente.</p>
+
+      <p>Em pessoas com imunidade comprometida ou doenças específicas, <b>fungos</b> podem estar envolvidos, embora esta
+        situação seja menos frequente.</p>
 
       <h2>Medidas naturais para aliviar</h2>
       <p>Para aliviar os sintomas da sinusite, é recomendado combinar medidas naturais, cuidados com a saúde geral e,
@@ -375,74 +494,78 @@
         <li> Massagem facial suave: massagear levemente ao redor do nariz e olhos promove drenagem do muco e alívio da
           pressão. </li>
 
-        <li> Descanso adequado: Dormir 8 a 9 horas por noite e evitar esforços físicos intensos ajuda o corpo a combater
+        <li> Descanso adequado: dormir 8 a 9 horas por noite e evitar esforços físicos intensos ajuda o corpo a combater
           a inflamação. </li>
 
-        <li> Evitar irritantes: Fumaça de cigarro, poluição e odores fortes podem agravar a sinusite, então mantenha o
+        <li> Evitar irritantes: fumaça de cigarro, poluição e odores fortes podem agravar a sinusite, então mantenha o
           ambiente limpo e ventilado.
         </li>
       </ol>
 
-      <h2>Tipos de sinusite</h2>
+      <h2>Classificação quanto a evolução</h2>
       <p>A sinusite é classificada principalmente de acordo com a duração dos sintomas e a causa da inflamação. Ela
-        pode ser aguda, subaguda e crônica.</p>
-      <p><b>1. Sinusite aguda</b> é a forma mais comum e passageira da doença.
-        Geralmente, aparece após <a href="/saude-az/asma-sintomas-tratamento/"> um
-          resfriado, até este resfriado
-          pode vir causar asma</a>, ou uma infecção viral das vias respiratórias, os sinais e sintomas
-        surgem em 4 semanas.</p>
-
-      <p>
-        Causas: vírus como os da gripe (influenza) ou resfriado (rinovírus). Em alguns casos,
-        pode se tornar bacteriana, quando há acúmulo de muco e infecção secundária.</p>
-
-      <h2>Sinais e sintomas de sinusite aguda</h2>
+        pode ser aguda, subaguda, crônica e recorrente.</p>
       <ul>
-        <li>Nariz entupido e corrimento nasal espesso (amarelo ou verde),</li>
-        <li>Dor e pressão na face (testa, bochechas, ao redor dos olhos),</li>
-        <li>Dor de cabeça, temperatura baixa, tosse principalmente à noite.</li>
+        <li><b>Sinusite aguda</b> é a forma mais comum e passageira da doença.
+          Geralmente, aparece após <a href="/saude-az/asma-sintomas-tratamento/"> um
+            resfriado, até este resfriado
+            pode vir causar asma</a>, ou uma infecção viral das vias respiratórias, os sinais e sintomas
+          surgem em 4 semanas.</li>
+
+        <li><b>Sinusite subaguda:</b> ocorre quando os sintomas persistem entre quatro e doze semanas. Pode
+          representar
+          uma
+          recuperação mais lenta de uma sinusite aguda ou estar relacionada com alergias e irritação persistente da
+          mucosa nasal.</li>
+
+        <li><b>A sinusite crónica:</b> caracteriza-se por sintomas que permanecem durante mais de doze semanas, mesmo
+          com tratamento. Frequentemente está associada a alergias, pólipos nasais, desvio do septo nasal ou doenças
+          que
+          afectam o sistema imunitário. A congestão nasal e a diminuição do olfacto costumam ser os sintomas
+          predominantes.</li>
+
+        <li><b>Sinusite recorrente:</b> é diagnosticada quando a pessoa apresenta quatro ou mais episódios de sinusite
+          aguda durante um ano, com recuperação completa entre os episódios. Este tipo exige uma investigação médica
+          para identificar factores predisponentes.</li>
       </ul>
 
-      <p><b>Tratamento da sinusite aguda:</b> geralmente melhora sozinha em 7 a 10 dias.
-        Indicado: repouso, hidratação, lavagem nasal com soro fisiológico e uso de analgésicos ou descongestionantes
-        (com orientação médica).
-        Antibióticos só são usados se houver suspeita de infecção bacteriana, tem usado o Fenoxmetilpenisilina ou
-        amoxicilina</b></p>
-      <p><b>2. Sinusite subaguda:</b> é uma forma intermediária, menos comum, em que os sintomas persistem por
-        mais
-        tempo que na aguda, mas ainda não se tornam crônicos.
-        Os sinais e sintomas surgem ente 4 a 12 semanas.</p>
-      <p>Causas da sinusite, pode surgir após uma sinusite aguda mal
-        curada.
-        Infecções bacterianas persistentes.
-        Fatores alérgicos que dificultam a recuperação total.</p>
+      <h2>Classificação quanto a causa</h2>
 
-      <p><b>3. Sinusite crônica:</b> é a forma persistente e recorrente da doença.
-        A inflamação dura mais de 12 semanas, mesmo com tratamento adequado, ou retorna várias vezes ao ano. Causas
-        pode
-        serem alergias respiratórias (como rinite alérgica).</p>
-      <p>
-        Desvio de septo nasal, pólipos nasais ou outras alterações anatômicas.
-        Infecções fúngicas ou exposição constante a poluentes.
-        Problemas dentários (infecção em dentes superiores pode afetar o seio maxilar).</p>
-
-      <p><b>4.Sinusite bacteriana:</b> infecção persistente, secreções purulenta e febre. <b>Transmissão
-          de
-          bactérias:</b> as sinusites bacterianas geralmente aparecem como complicação de uma sinusite viral.
-      </p>
-      <p>Essas bactérias (como Streptococcus pneumoniae, Haemophilus influenzae, entre outras) não costumam ser
-        transmitidas diretamente, pois elas já vivem naturalmente nas vias respiratórias de muitas pessoas.</p>
-
-      <p><b>5. Sinusite viral:</b> mais comum, sintomas leves a moderados. autolimitada.</p>
-      <p><b>6. Sinusite fungica:</b> rara, grave, acomode imunossuprimidos.</p>
-      <p><b>7. Sinusite alergicas:</b> causada por alergenos respiratório, geralmente associado a rinite.
-        Sinusite alérgica, fúngica ou crônica, esses tipos não são contagiosos.
-        São causados por fatores internos ou ambientais, como:</p>
       <ul>
-        <li>Alergias respiratórias (pó, mofo, ácaros),</li>
-        <li>Fungos presentes no ar (imunidade baixa),</li>
-        <li>Problemas anatômicos (como desvio de septo).</li>
+        <li><b>Sinusite viral:</b> é responsável pela maioria dos casos e normalmente aparece após uma infecção
+          respiratória viral. Costuma
+          melhorar espontaneamente em sete a dez dias, sem necessidade de antibióticos.</li>
+
+        <li><b> Sinusite bacteriana:</b> ocorre quando bactérias infectam os seios perinasais, geralmente após uma
+          infecção viral. Os sintomas tendem a
+          durar mais de dez dias, podem piorar após uma melhoria inicial e frequentemente incluem febre elevada e
+          secreção nasal purulenta.</li>
+
+        <li><b>Sinusite fúngica:</b> é uma forma menos frequente, observada principalmente em pessoas com o sistema
+          imunitário comprometido ou
+          diabetes mal controlada. Alguns casos necessitam de tratamento antifúngico e até cirurgia.</li>
+        <li><b>Sinusite alérgica:</b> está relacionada com rinite alérgica e outros processos inflamatórios causados
+          por
+          alergénios como pólen, ácaros, poeiras e pelos de animais. O controlo da alergia é essencial para prevenir
+          novos episódios.</li>
       </ul>
+
+      <h2>Classificação quanto a evolução a localização</h2>
+      <p>Dependendo do seio perinasal afectado, a sinusite pode receber diferentes denominações:</p>
+      <ul>
+        <li>Sinusite maxilar: afecta os seios localizados nas maçãs do rosto, sendo a forma mais frequente.</li>
+        <li>Sinusite frontal: envolve os seios da testa e provoca dor intensa na região frontal.</li>
+        <li> Sinusite etmoidal: afecta os seios entre os olhos, podendo causar dor ao redor das órbitas. </li>
+        <li> Sinusite esfenoidal: envolve os seios localizados na parte posterior do nariz e pode provocar dor
+          profunda
+          na cabeça ou atrás dos olhos.</li>
+      </ul>
+      <p>A sinusite viral aguda, especialmente a sinusite maxilar, é a forma mais frequente. Felizmente, a maioria dos
+        casos melhora com <a href="https://www.sns24.gov.pt/tema/doencas-do-ouvido-nariz-e-garganta/sinusite/"
+          target="_blank" rel="noopener noreferrer">
+          hidratação, lavagem nasal com solução salina, repouso </a> e tratamento sintomático. Quando os
+        sintomas persistem, pioram ou surgem sinais de gravidade, é importante procurar assistência médica para
+        confirmar o diagnóstico e iniciar o tratamento adequado.</p>
 
       <h2>Os snais e sintomas mais comuns</h2>
       <ul>
@@ -486,6 +609,56 @@
       <p>Combinar medidas naturais, hidratação, cuidados com o ambiente e repouso costuma proporcionar alívio rápido e
         auxiliar na recuperação da sinusite. Lembre-se de que antibióticos só são indicados sob orientação médica,
         geralmente em casos de sinusite bacteriana confirmada.</p>
+
+      <h2>Possíveis complicações</h2>
+      <p>Embora a maioria dos casos evolua favoravelmente, a sinusite não tratada pode originar complicações. A
+        infecção
+        pode espalhar-se para estruturas próximas, provocando infecções nos olhos, meningite, abcessos ou infecções
+        ósseas, situações raras, mas potencialmente graves.</p>
+
+      <p>A sinusite crónica pode afectar significativamente a qualidade de vida, causando congestão nasal persistente,
+        alterações do olfacto e episódios repetidos de infecção.</p>
+
+      <h2>Quando procurar assistência médica</h2>
+      <p>É recomendável procurar assistência médica quando os sintomas persistem por mais de dez dias, existe febre
+        elevada, dor facial intensa, inchaço à volta dos olhos, alterações da visão ou agravamento progressivo do
+        estado
+        geral.</p>
+
+      <p>O diagnóstico precoce permite iniciar o tratamento adequado e reduzir o risco de complicações.</p>
+
+
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+
       <!-- SHAREING-->
       <hr>
       <section>
@@ -760,6 +933,9 @@
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
+  <script src="/src/avaliacao.js" defer></script>
   <script src="/src/geral.js" defer></script>
   <script src="/src/search-live.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
