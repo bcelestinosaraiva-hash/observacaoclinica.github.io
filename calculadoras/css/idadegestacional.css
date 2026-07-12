@@ -91,16 +91,6 @@
     box-shadow: 0 4px 14px rgba(1, 93, 129, 0.28);
 }
 
-#gest-calculadora #calcBtn:hover {
-    background: #013f58 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(1, 93, 129, 0.35);
-}
-
-#gest-calculadora #calcBtn:active {
-    transform: translateY(0);
-}
-
 #gest-calculadora #calcBtn:focus-visible {
     outline: 2px solid var(--gc-primary-dark);
     outline-offset: 3px;
