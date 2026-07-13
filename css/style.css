@@ -1456,20 +1456,6 @@ cite a {
 
 /* FIM DE CITACAO */
 
-/* AVISO DO SITE AO CONTEUDO */
-.warning p {
-    margin: 10px 0;
-    padding: 15px 15px;
-    background: #f6ffff;
-    border-left: 5px solid #005670;
-    border-radius: 20px;
-    font-style: normal;
-    color: rgb(61, 61, 61);
-    position: relative;
-    box-shadow: #000;
-}
-
-/* FIM DE AVISO DO SITE AO CONTEUDO  */
 
 /* CSS DE ASSUNTO DO MOMENTO  */
 .lermais p {

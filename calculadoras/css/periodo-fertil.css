@@ -7,7 +7,7 @@
     --primaria: #015d81;
     --primaria-escura: #01415c;
     --primaria-clara: #e6f3f8;
-    --verde-check: #16a34a;
+    --verde-check: #05ab42;
     --fertil: #6366f1;
     --fertil-bg: #eef0fd;
     --ovulacao: #e46ab7;
@@ -86,7 +86,7 @@
 
 /* ======= INPUTS (sobrepõe os estilos inline do HTML) ======= */
 .calculadora-fertil label {
-    color: var(--texto-secundario) !important;
+    color: rgb(61, 61, 61);
     font-weight: 600 !important;
     font-size: 0.85rem !important;
 }

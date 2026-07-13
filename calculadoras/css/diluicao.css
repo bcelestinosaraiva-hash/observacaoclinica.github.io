@@ -29,7 +29,6 @@
     padding: 40px 32px 32px;
     background: var(--fundo-card);
     border-radius: var(--raio-lg);
-    box-shadow: var(--sombra-card);
     font-family: 'Rubik', Helvetica, Arial, sans-serif;
     color: var(--texto-principal);
     overflow: hidden;
@@ -88,7 +87,7 @@
     display: block;
     font-size: 0.88rem;
     font-weight: 600;
-    color: var(--texto-secundario);
+    color: rgb(61, 61, 61);
     margin-bottom: 18px;
 }
 
@@ -141,7 +140,7 @@
 }
 
 #calcular-nurse {
-    width: 100%;
+    width: 40%;
     padding: 14px 0;
     border: none;
     border-radius: var(--raio-sm);
