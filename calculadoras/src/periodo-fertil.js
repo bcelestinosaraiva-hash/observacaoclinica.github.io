@@ -1,10 +1,10 @@
 const meses = [
-    "Janeiro de", "Fevereiro de", "Março de", "Abril de",
-    "Maio de", "Junho de", "Julho de", "Agosto de",
-    "Setembro de", "Outubro de", "Novembro de", "Dezembro de"
+    "Janeiro", "Fevereiro", "Março", "Abril",
+    "Maio", "Junho", "Julho", "Agosto",
+    "Setembro", "Outubro", "Novembro", "Dezembro"
 ];
 function formatar(data) {
-    return data.toLocaleDateString('pt-BR');
+    return data.toLocaleDateString('pt-PT');
 }
 function calcular() {
     let dataValor =
@@ -44,7 +44,7 @@ function calcular() {
     );
     document.getElementById("resultado").style.display = "block";
     document.getElementById("tituloResultado").innerHTML =
-        `O SEU PERÍODO FÉRTIL SERÁ DE ${inicioFertil.getDate()} A ${fimFertil.getDate()} DE ${meses[fimFertil.getMonth()].toUpperCase()}.`;
+        `O SEU PERÍODO FÉRTIL SERÁ DE ${inicioFertil.getDate()} A ${fimFertil.getDate()}  DE ${meses[fimFertil.getMonth()].toUpperCase()}.`;
     document.getElementById("textoResultado").innerHTML =
         `
 A sua próxima menstruação está prevista para o dia

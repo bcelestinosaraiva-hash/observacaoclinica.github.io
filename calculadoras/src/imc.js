@@ -1,5 +1,5 @@
 // ==========================================================================
-// Calculadora de IMC — lógica
+// Calculadora de IMC — lógica: OC
 // ==========================================================================
 
 let sexoSelecionado = 'Mulher';
@@ -45,7 +45,7 @@ const CLASSIFICACOES = [
     nome: 'Peso normal',
     classe: 'classe-normal',
     icone: 'check',
-    recomendacao: 'Parabéns! O teu IMC está dentro da faixa considerada saudável. Mantém uma alimentação equilibrada, pratica atividade física regular e continua com check-ups de saúde periódicos.'
+    recomendacao: 'Parabéns! O teu IMC está dentro da faixa considerada saudável. Mantém uma alimentação equilibrada, pratica actividade física regular e continua com check-ups de saúde periódicos.'
   },
   {
     id: 'sobre',
@@ -53,7 +53,7 @@ const CLASSIFICACOES = [
     nome: 'Sobrepeso',
     classe: 'classe-sobre',
     icone: 'xis',
-    recomendacao: 'O teu IMC indica sobrepeso. Pequenos ajustes na alimentação e o aumento da atividade física (150 min/semana) já ajudam bastante. Considera falar com um profissional de saúde para um plano personalizado.'
+    recomendacao: 'O teu IMC indica sobrepeso. Pequenos ajustes na alimentação e o aumento da actividade física (150 min/semana) já ajudam bastante. Considera falar com um profissional de saúde para um plano personalizado.'
   },
   {
     id: 'ob1',

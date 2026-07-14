@@ -44,7 +44,7 @@ function enviar() {
     const dados = {
         name: nome,
         email: email,
-        avaliacao: ultimaAvaliacao || 'Não informado',
+        avaliacao: ultimaAvaliacao || 'CONTACTO',
         message: mensagem,
         time: new Date().toLocaleString('pt-PT')
     };
