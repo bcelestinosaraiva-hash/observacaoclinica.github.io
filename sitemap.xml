@@ -13,19 +13,15 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/calculadoras/como-calcular-a-prescricao</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://www.observacaoclinica.com/img/prescricao.webp</image:loc>
-      <image:title>Como calcular a prescrição médica dos pacientes com base no peso e a medicação?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/calculadoras/como-calcular-dextrose</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://www.observacaoclinica.com/img/dextrose.webp</image:loc>
+      <image:loc>https://www.observacaoclinica.com/img/hipoglicemia.webp</image:loc>
       <image:title>Como calcular o bolo de dextrose 10% de forma segura</image:title>
     </image:image>
   </url>
@@ -58,7 +54,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/calculadoras/idade-gestacional</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/ig.webp</image:loc>
@@ -81,30 +77,26 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/correcao-de-conteudos</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.observacaoclinica.com/img/observacao_1.webp</image:loc>
-      <image:title>Política de correções e actualizações.</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/equipa/beldo-celestino-saraiva</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://www.observacaoclinica.com/img/observacao_1.webp</image:loc>
+      <image:loc>https://www.observacaoclinica.com/beldo-celestino-saraiva.webp</image:loc>
       <image:title>Beldo Celestino Saraiva - Observação clínica</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/equipa</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/fitness</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/exercicios-para-o-bem-estar.webp</image:loc>
@@ -185,7 +177,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/nutricao/as-necessidades-nutricionais-das-criancas</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/pneumonia.webp</image:loc>
@@ -221,7 +213,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/nutricao/o-que-e-diabetes</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/diabetes.webp</image:loc>
@@ -240,7 +232,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/7-sintomas-de-meningite-que-parecem-gripe</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/meningite.webp</image:loc>
@@ -249,7 +241,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/asma-sintomas-tratamento</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/asma.webp</image:loc>
@@ -258,7 +250,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/como-se-prevenir-da-malaria</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/malaria.webp</image:loc>
@@ -267,7 +259,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/doencas-respiratorias</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/dr.webp</image:loc>
@@ -285,7 +277,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/icon.webp</image:loc>
@@ -294,7 +286,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/insuficiencia-renal</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/insuficiencia-renal.webp</image:loc>
@@ -330,7 +322,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/o-que-e-ebola-e-sua-prevencao</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/ebola-como.webp</image:loc>
@@ -348,7 +340,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-az/o-que-e-sinusite</loc>
-    <lastmod>2026-07-14</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/sinusite.webp</image:loc>
@@ -429,7 +421,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/colicas-menstruais.webp</image:loc>
@@ -447,7 +439,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/saude-mental</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.observacaoclinica.com/img/saudemental.webp</image:loc>
@@ -475,11 +467,7 @@
   </url>
   <url>
     <loc>https://www.observacaoclinica.com/uso-de-ia</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-15</lastmod>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.observacaoclinica.com/img/observacao_1.webp</image:loc>
-      <image:title>Política de Uso de Inteligência Artificial — Observação Clínica</image:title>
-    </image:image>
   </url>
 </urlset>
