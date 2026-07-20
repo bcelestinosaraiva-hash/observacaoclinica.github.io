@@ -1,0 +1,14 @@
+# Observação Clínica
+
+> OBSERVAÇÃO CLÍNICA - INFORMAÇÃO CONFIÁVEL SOBRE SAÚDE, SINTOMAS, NUTRIÇÃO E BEM-ESTAR
+
+## Sobre
+- [Página inicial](https://observacaoclinica.com/): apresentação geral do site e dos conteúdos disponíveis
+- [Sobre](https://observacaoclinica.com/sobre/): apresentação do site, missão e objetivos
+- [Equipa](https://observacaoclinica.com/equipa/): apresentação da equipa responsável pelo site e conteúdos
+
+## Políticas e Transparência
+- [Termos e Usos](https://observacaoclinica.com/termos-e-usos/): termos e condições de utilização do site
+- [Políticas e Privacidade](https://observacaoclinica.com/politicas-e-privacidades/): política de privacidade e proteção de dados
+- [Correção de Conteúdos](https://observacaoclinica.com/correcao-de-conteudos/): política de correção e retificação de conteúdos publicados
+- [Uso de IA](https://observacaoclinica.com/uso-de-ia/): política sobre o uso de inteligência artificial na produção de conteúdos
