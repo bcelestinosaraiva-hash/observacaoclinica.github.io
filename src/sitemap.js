@@ -40,11 +40,10 @@ function getUrls(dir, route = "") {
       // Corrigir barras duplicadas
       url = url.replace(/\/+/g, "/");
 
-      // Remover barra final, exceto na raiz
-      if (url.length > 1 && url.endsWith("/")) {
-        url = url.slice(0, -1);
+      // Garantir barra final, exceto na raiz
+      if (url !== "/" && !url.endsWith("/")) {
+        url += "/";
       }
-
       // Prioridades
       let priority = "0.7";
 

@@ -46,7 +46,7 @@ const pages = [
   { title: "Sinais de trabalho de parto", url: "/gravidez/sinais-de-trabalho-de-parto/" },
   { title: "Insuficiência renal crónica: o que é, sintomas, causas e prevenção", url: "/saude-az/insuficiencia-renal/" },
   { title: "Cólicas menstruais: sinais e sintomas e como aliviar de forma natural", url: "/saude-intima/o-que-sao-colicas-menstruais/" },
-  { title: "", url: "" },
+  { title: "Atraso menstrual: 12 causas além da gravidez que você precisa conhecer", url: "/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
