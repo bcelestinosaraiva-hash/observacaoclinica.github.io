@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const baseUrl = "https://www.observacaoclinica.com";
+const baseUrl = "https://observacaoclinica.com";
 const contentDir = path.join(__dirname, "../");
 
 function getUrls(dir, route = "") {
@@ -171,8 +171,8 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls.map(page => `
   <url>
-    <loc>${baseUrl}${page.url === "/" ? "" : page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
+<loc>${baseUrl}${page.url}</loc>
+  <lastmod>${page.lastmod}</lastmod>
     <priority>${page.priority}</priority>${page.images.map(img => `
     <image:image>
       <image:loc>${img.loc}</image:loc>${img.title ? `
