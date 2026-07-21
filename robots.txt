@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.observacaoclinica.com/sitemap.xml
+Sitemap: https://observacaoclinica.com/sitemap.xml
