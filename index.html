@@ -228,12 +228,13 @@
       </nav>
     </div>
   </header>
-  <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
-    <div class="p-6 rounded-xl">
-      <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
-       focus:outline-none focus:ring-0 focus:border-gray-300">
-      <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
+  <!-- 🔎 SEARCH DESKTOP - CENTRALIZADO E CONTIDO -->
+  <div id="search-input-bar-desktop"
+    class="hidden md:block fixed top-16 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-50">
+    <div class="bg-white rounded-xl shadow-xl p-6">
+      <input id="search-input-desktop" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
+             focus:outline-none focus:ring-0 focus:border-gray-300">
+      <div id="search-results-desktop" role="listbox" aria-label="Resultados da pesquisa desktop"
         class="mt-2 text-gray-800 hidden">
       </div>
     </div>
