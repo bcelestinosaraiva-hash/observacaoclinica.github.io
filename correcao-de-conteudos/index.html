@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-PT">
 
 <head>
@@ -65,195 +65,204 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-            <!-- BOTÃO MENU MOBILE -->
-            <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
-                aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
-                <i class="fas fa-bars" aria-hidden="false"></i>
-            </button>
-            <!-- LOGO -->
-            <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
-                <img src="/img/observacao_1.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
-                    loading="eager" decoding="async" style="height:40px; width:auto;">
+      <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <!-- BOTÃO MENU MOBILE -->
+      <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
+        aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
+        <i class="fas fa-bars" aria-hidden="false"></i>
+      </button>
+      <!-- LOGO -->
+      <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
+        <img src="/img/observacao.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
+          loading="eager" decoding="async" style="height:40px; width:auto;">
+      </a>
+      <!-- 🔍 BOTÃO SEARCH MOBILE -->
+      <button id="mobile-search-button" aria-label="lupa de pesquisa"
+        class="md:hidden flex items-center justify-center p-4">
+        <i class="fas fa-search"></i>
+      </button>
+      <!-- MENU DESKTOP -->
+      <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
+        <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
+          NUTRIÇÃO
+        </a>
+        <a href="/gravidez/" class="hover:text-blue-400 transition-colors">
+          GRAVIDEZ
+        </a>
+        <!-- SAUDE-AZ -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
+            SAÚDE-AZ
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
+              aria-hidden="true"></i>
+          </button>
+          <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              SAÚDE MENTAL
             </a>
-            <!-- 🔍 BOTÃO SEARCH MOBILE -->
-            <button id="mobile-search-button" aria-label="lupa de pesquisa"
-                class="md:hidden flex items-center justify-center p-4">
-                <i class="fas fa-search"></i>
-            </button>
-            <!-- MENU DESKTOP -->
-            <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
-                <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
-                    NUTRIÇÃO
-                </a>
-                <a href="/gravidez/" class="hover:text-blue-400 transition-colors">
-                    GRAVIDEZ
-                </a>
-                <!-- SAUDE-AZ -->
-                <div class="group relative">
-                    <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-saude"
-                        class="hover:text-blue-400 flex items-center gap-1 transition-colors">
-                        SAÚDE-AZ
-                        <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
-                            aria-hidden="true"></i>
-                    </button>
-                    <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-                        <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            SAÚDE MENTAL
-                        </a>
-                        <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            SAÚDE ÍNTIMA
-                        </a>
-                        <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            DOENÇAS GERAIS
-                        </a>
-                    </div>
-                </div>
-                <!-- BEM-ESTAR -->
-                <div class="group relative">
-                    <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-bemestar"
-                        class="hover:text-blue-500 flex items-center gap-1 transition-colors">
-                        BEM-ESTAR
-                        <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-                            aria-hidden="true"></i>
-                    </button>
-                    <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-                        <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            FITNESS
-                        </a>
-                        <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            SAÚDE BUCAL
-                        </a>
-                    </div>
-                </div>
+            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+        <!-- BEM-ESTAR -->
+        <div class="group relative">
+          <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
+            aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
+            BEM-ESTAR
+            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
+              aria-hidden="true"></i>
+          </button>
+          <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+            <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              SAÚDE BUCAL
+            </a>
+          </div>
+        </div>
 
-                <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
-                    CALCULADORAS
-                </a>
-                <!-- PESQUISA NO PC-->
-                <div class="relative">
-                    <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="Pesquise aqui..."
-                        class="hidden w-44 bg-white border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-0 focus:border-gray-300">
-                    <button id="search-btn" aria-label="Abrir pesquisa">
-                        <i class="fas fa-search" aria-hidden="false"></i>
-                    </button>
-                    <div id="search-results" role="listbox" aria-label="Resultados da pesquisa"
-                        class="absolute top-full right-0 mt-4 hidden w-60 bg-white rounded-lg z-50">
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
-    <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
-        <div class="p-6 rounded-xl">
-            <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
-       focus:outline-none focus:ring-0 focus:border-gray-300">
-            <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
-                class="mt-2 text-gray-800 hidden">
+        <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
+          CALCULADORAS
+        </a>
+
+        <!-- PESQUISA NO PC -->
+        <div class="relative">
+          <button id="search-btn" aria-label="Abrir pesquisa">
+            <i class="fas fa-search" aria-hidden="false"></i>
+          </button>
+
+          <!-- LUPA DE PESQUISA -->
+          <div
+            style="position:fixed; top:70px; left:50%; transform:translateX(-50%); width:90%; max-width:720px; z-index:9999;">
+            <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="🔍 Pesquise aqui..."
+              class="hidden" style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
+               border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
+
+            <div id="search-results" role="listbox" aria-label="Resultados da pesquisa" class="hidden" style="width:100%; background:#ffffff; border-radius:10px; margin-top:8px;
+              box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
             </div>
+          </div>
         </div>
+      </nav>
     </div>
-    <!-- OVERLAY -->
-    <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
+  </header>
+
+  <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
+  <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
+    <div class="p-6 rounded-xl">
+      <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
+   focus:outline-none focus:ring-0 focus:border-gray-300">
+      <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
+        class="mt-2 text-gray-800 hidden">
+      </div>
     </div>
-    <!-- MENU MOBILE -->
-    <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
-  transform -translate-x-full transition-transform duration-300 z-50
-  flex flex-col h-[100dvh] overflow-hidden">
-        <!-- TOPO FIXO -->
-        <div class="flex-shrink-0 border border-gray-200">
-            <div class="menumobile flex items-center justify-between p-4">
-                <a href="/" aria-label="Página inicial Observação Clínica">
-                    <img src="/img/observacao_1.webp" fetchpriority="high" alt="Observação clinica" width="140"
-                        height="40" loading="eager" decoding="async">
-                </a>
-                <button id="close-menu" class="text-2xl focus:outline-none">
-                    ×
-                </button>
-            </div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
+  </div>
+
+  <!-- MENU MOBILE -->
+  <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
+transform -translate-x-full transition-transform duration-300 z-50
+flex flex-col h-[100dvh] overflow-hidden">
+    <!-- TOPO FIXO -->
+    <div class="flex-shrink-0 border border-gray-200">
+      <div class="menumobile flex items-center justify-between p-4">
+        <a href="/" aria-label="Página inicial Observação Clínica">
+          <img src="/img/observacao.webp" fetchpriority="high" alt="Observação clinica" width="140" height="40"
+            loading="eager" decoding="async">
+        </a>
+        <button id="close-menu" class="text-2xl focus:outline-none">
+          ×
+        </button>
+      </div>
+    </div>
+
+    <!-- CATEGORIAS -->
+    <div class="flex-1 overflow-y-auto overscroll-contain">
+      <nav class="flex flex-col">
+        <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
+        <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+        <!-- SAÚDE-AZ -->
+        <div>
+          <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
+            class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
+            <span>SAÚDE-AZ</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
+              aria-hidden="true"></i>
+          </button>
+          <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+      opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE MENTAL
+            </a>
+            <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE ÍNTIMA
+            </a>
+            <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
+              DOENÇAS GERAIS
+            </a>
+          </div>
+        </div>
+        <!-- Submenu BEM-ESTAR -->
+        <div>
+          <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
+            class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
+            <span>BEM-ESTAR</span>
+            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
+              aria-hidden="true"></i>
+          </button>
+          <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+      opacity-0 transform -translate-y-1 transition-all duration-300">
+            <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
+              FITNESS
+            </a>
+            <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE-BUCAL
+            </a>
+          </div>
         </div>
 
-        <!-- CATEGORIAS -->
-        <div class="flex-1 overflow-y-auto overscroll-contain">
-            <nav class="flex flex-col">
-                <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
-                <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
-                <!-- SAÚDE-AZ -->
-                <div>
-                    <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
-                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
-                        <span>SAÚDE-AZ</span>
-                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"
-                            id="saude-az-icon-mobile" aria-hidden="true"></i>
-                    </button>
-                    <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-          opacity-0 transform -translate-y-1 transition-all duration-300">
-                        <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
-                            SAÚDE MENTAL
-                        </a>
-                        <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
-                            SAÚDE ÍNTIMA
-                        </a>
-                        <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
-                            DOENÇAS GERAIS
-                        </a>
-                    </div>
-                </div>
-                <!-- Submenu BEM-ESTAR -->
-                <div>
-                    <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
-                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
-                        <span>BEM-ESTAR</span>
-                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"
-                            id="fitness-icon-mobile" aria-hidden="true"></i>
-                    </button>
-                    <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-          opacity-0 transform -translate-y-1 transition-all duration-300">
-                        <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
-                            FITNESS
-                        </a>
-                        <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
-                            SAÚDE-BUCAL
-                        </a>
-                    </div>
-                </div>
+        <!-- CALCULADORAS -->
+        <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+          CALCULADORAS
+        </a>
+      </nav>
+    </div>
 
-                <!-- CALCULADORAS -->
-                <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
-                    CALCULADORAS
-                </a>
-            </nav>
-        </div>
-
-        <!-- REDES SOCIAIS -->
-        <div class="navrede">
-            <h3 class="navrede">
-                SIGA-NÓS NAS REDES SOCIAIS
-            </h3>
-            <div class="flex justify-center gap-8">
-                <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh"
-                    aria-label="nosso youtube rede social" target="_blank" rel="noopener">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-    </aside>
-    <!-- FIM DO HEADER -->
+    <!-- REDES SOCIAIS -->
+    <div class="navrede">
+      <h3 class="navrede">
+        SIGA-NÓS NAS REDES SOCIAIS
+      </h3>
+      <div class="flex justify-center gap-8">
+        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social" target="_blank"
+          rel="noopener">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="nosso youtube rede social"
+          target="_blank" rel="noopener">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
+          target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <!-- FIM DO HEADER -->
     <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 space-y-6 mt-20">
         <!--CONTEUDO -->
         <h1>Política de correções e actualizações</h1>
