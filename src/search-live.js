@@ -48,10 +48,22 @@ const pages = [
   { title: "Cólicas menstruais: sinais e sintomas e como aliviar de forma natural", url: "/saude-intima/o-que-sao-colicas-menstruais/" },
   { title: "Atraso menstrual: 12 causas além da gravidez que você precisa conhecer", url: "/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/" },
   { title: "Alimentação na gravidez: o que comer para uma gestação saudável", url: "/gravidez/alimentacao-na-gravidez/" },
+  { title: "Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê", url: "/saude-bucal/com-que-frequencia-ir-ao-dentista/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+
 ];
 // ELEMENTOS
 const searchBtn = document.getElementById('search-btn');

@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-23</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao.webp</image:loc>
@@ -259,7 +259,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-23</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/malaria.webp</image:loc>
@@ -372,6 +372,15 @@
     <image:image>
       <image:loc>https://observacaoclinica.com/img/pneumonia.webp</image:loc>
       <image:title>Tratamentos da pneumonia: medicamentos usados, cuidados e recuperação</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
+  <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/ir-ao-dentista.webp</image:loc>
+      <image:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê</image:title>
     </image:image>
   </url>
   <url>
