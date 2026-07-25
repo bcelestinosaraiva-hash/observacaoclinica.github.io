@@ -21,7 +21,7 @@
 const https = require('https');
 
 const HOST = 'observacaoclinica.com';
-const KEY = '1efbeea56dcc4dafb34937693d7b3fe6';
+const KEY = '2fac45ee0fd64138adf49a2002bd45c2';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 /**
