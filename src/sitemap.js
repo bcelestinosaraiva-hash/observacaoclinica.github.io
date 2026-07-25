@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const { notifyIndexNow } = require("./indexnow"); // <-- novo: importa o módulo IndexNow
 
 const baseUrl = "https://observacaoclinica.com";
 const contentDir = path.join(__dirname, "../");
+const sitemapPath = path.join(contentDir, "sitemap.xml");
 
 function getUrls(dir, route = "") {
   let urls = [];
@@ -159,6 +161,31 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
+// ---- NOVO: lê o sitemap.xml anterior (se existir) para depois comparar ----
+// Extrai pares <loc, lastmod> do sitemap antigo, num Map "url -> lastmod"
+function getPreviousUrlMap() {
+  const map = new Map();
+
+  if (!fs.existsSync(sitemapPath)) {
+    return map; // primeira vez a correr, não há sitemap anterior
+  }
+
+  const oldXml = fs.readFileSync(sitemapPath, "utf8");
+  const blocks = oldXml.match(/<url>[\s\S]*?<\/url>/g) || [];
+
+  blocks.forEach(block => {
+    const locMatch = block.match(/<loc>([^<]+)<\/loc>/);
+    const lastmodMatch = block.match(/<lastmod>([^<]+)<\/lastmod>/);
+    if (locMatch) {
+      map.set(locMatch[1], lastmodMatch ? lastmodMatch[1] : null);
+    }
+  });
+
+  return map;
+}
+
+const previousUrls = getPreviousUrlMap(); // <-- novo: captura estado ANTES de reescrever
+
 let urls = getUrls(contentDir);
 
 // Remover duplicados (mantendo o último encontrado)
@@ -181,14 +208,27 @@ ${urls.map(page => `
   </url>`).join("")}
 </urlset>`;
 
-fs.writeFileSync(
-  path.join(contentDir, "sitemap.xml"),
-  sitemap,
-  "utf8"
-);
+fs.writeFileSync(sitemapPath, sitemap, "utf8");
 
 const totalImages = urls.reduce((sum, p) => sum + p.images.length, 0);
 
 console.log(`✔ Sitemap atualizado com ${urls.length} URLs e ${totalImages} imagens.`);
+
+// ---- NOVO: detecta URLs novas ou com lastmod alterado, e notifica o IndexNow ----
+const changedUrls = urls
+  .filter(page => {
+    const fullUrl = baseUrl + page.url;
+    const previousLastmod = previousUrls.get(fullUrl);
+    // novo (não existia antes) OU lastmod mudou desde a última vez
+    return previousLastmod === undefined || previousLastmod !== page.lastmod;
+  })
+  .map(page => baseUrl + page.url);
+
+if (changedUrls.length > 0) {
+  console.log(`→ ${changedUrls.length} URL(s) nova(s)/atualizada(s), notificando o IndexNow...`);
+  notifyIndexNow(changedUrls);
+} else {
+  console.log("→ Nenhuma URL nova ou alterada, IndexNow não foi notificado.");
+}
 
 // CODE PRA RODAR----: node src/sitemap.js

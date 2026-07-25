@@ -466,7 +466,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-mental/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-23</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saudemental.webp</image:loc>
@@ -480,6 +480,15 @@
     <image:image>
       <image:loc>https://observacaoclinica.com/img/mioclonia.webp</image:loc>
       <image:title>O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/saude-mental/redes-sociais-nosl-adolescentes/</loc>
+  <lastmod>2026-07-23</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/redes-sociais-nos-adolescentes.webp</image:loc>
+      <image:title>Como as redes sociais afectam a saúde mental dos adolescentes?</image:title>
     </image:image>
   </url>
   <url>
