@@ -20,6 +20,7 @@ function getUrls(dir, route = "") {
       file === "node_modules" ||
       file === ".git" ||
       file === "src" ||
+      file === "yandex_b5d9e3c953a4c1e6.html" ||
       file === "img" ||
       file === "sitemap.xml" ||
       file.startsWith(".")
