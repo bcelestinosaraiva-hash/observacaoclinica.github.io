@@ -54,7 +54,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/calculadoras/idade-gestacional/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-27</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/ig.webp</image:loc>
@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-07-23</lastmod>
+  <lastmod>2026-07-27</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao.webp</image:loc>
@@ -465,8 +465,17 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</loc>
+  <lastmod>2026-07-27</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/habitos-de-dormir.webp</image:loc>
+      <image:title>Hábitos para dormir melhor: ter um sono mais profundo e reparador</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/saude-mental/</loc>
-  <lastmod>2026-07-25</lastmod>
+  <lastmod>2026-07-27</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saudemental.webp</image:loc>
