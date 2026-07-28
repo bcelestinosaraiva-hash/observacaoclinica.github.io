@@ -32,61 +32,101 @@
     <meta name="twitter:image" content="https://observacaoclinica.com/img/mioclonia.webp">
     <!-- Canonical -->
     <link rel="canonical" href="https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/">
-    <!-- Schema.org JSON-LD: Medical Article -->
+    <!-- ===== Schema.org JSON-LD unificado: MedicalWebPage + FAQPage ===== -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": "https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/#faq",
-  "inLanguage": "pt-PT",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "O que é mioclonia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A mioclonia é uma condição caracterizada por contrações musculares involuntárias, rápidas e repentinas, que podem afectar diferentes partes do corpo, como braços, pernas ou músculos da face."
+      "@type": "MedicalWebPage",
+      "@id": "https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/#medicalwebpage",
+      "url": "https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/",
+      "name": "O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos",
+      "description": "Entenda o que é mioclonia, seus sinais e  sintomas, causas, tipos e tratamentos disponíveis para controlar os espasmos musculares.",
+      "inLanguage": "pt-PT",
+      "lastReviewed": "2026-07-28",
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Mioclonia",
+        "alternateName": "Mioclonias",
+        "description": "Contrações musculares involuntárias, rápidas e repentinas que podem ocorrer em diferentes partes do corpo, afectando principalmente braços, pernas e músculos da face.",
+        "signOrSymptom": [
+          { "@type": "MedicalSignOrSymptom", "name": "Contrações musculares súbitas e involuntárias" },
+          { "@type": "MedicalSignOrSymptom", "name": "Movimentos involuntários durante o sono" },
+          { "@type": "MedicalSignOrSymptom", "name": "Tremores rápidos nos braços ou pernas" },
+          { "@type": "MedicalSignOrSymptom", "name": "Contrações dos músculos faciais" }
+        ],
+        "possibleCause": [
+          { "@type": "MedicalCause", "name": "Estresse, ansiedade ou privação de sono" },
+          { "@type": "MedicalCause", "name": "Epilepsia" },
+          { "@type": "MedicalCause", "name": "Distúrbios metabólicos" },
+          { "@type": "MedicalCause", "name": "Doenças neurológicas degenerativas" },
+          { "@type": "MedicalCause", "name": "AVC ou lesões cerebrais" }
+        ],
+        "possibleTreatment": [
+          { "@type": "MedicalTherapy", "name": "Tranquilizantes (ex. clonazepam)" },
+          { "@type": "MedicalTherapy", "name": "Anticonvulsivantes" },
+          { "@type": "MedicalTherapy", "name": "Toxina botulínica" },
+          { "@type": "MedicalTherapy", "name": "Imunoterapia" },
+          { "@type": "MedicalTherapy", "name": "Cirurgia" }
+        ]
+      },
+      "mainEntityOfPage": { "@id": "https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/#medicalwebpage" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Observação Clínica",
+        "url": "https://observacaoclinica.com/"
       }
     },
     {
-      "@type": "Question",
-      "name": "A mioclonia é uma doença grave?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nem todos os casos de mioclonia são graves. Alguns episódios, como os espasmos que acontecem durante o adormecer, podem ser benignos. No entanto, quando está associada a doenças neurológicas, epilepsia ou outras alterações médicas, necessita de avaliação especializada."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quais são os principais sintomas da mioclonia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Os principais sintomas incluem espasmos musculares súbitos, movimentos involuntários rápidos, tremores nos membros, contrações musculares durante o sono e dificuldade para realizar algumas actividades quando os episódios são frequentes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quais são as causas da mioclonia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A mioclonia pode ter várias causas, incluindo alterações neurológicas, epilepsia, factores genéticos, distúrbios metabólicos, lesões cerebrais, doenças autoimunes, efeitos de medicamentos e alterações relacionadas ao sono."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "A mioclonia tem tratamento?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim. O tratamento depende da causa identificada e pode incluir medicamentos para controlar os espasmos, tratamento da doença associada, terapias específicas ou outras abordagens indicadas por um médico neurologista."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quando devo procurar um neurologista por causa da mioclonia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "É recomendado procurar um neurologista quando os espasmos musculares são frequentes, pioram com o tempo, interferem nas actividades diárias, surgem com convulsões, alterações da fala, perda de equilíbrio ou outros sintomas neurológicos."
-      }
+      "@type": "FAQPage",
+      "@id": "https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mioclonia é grave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na maioria dos casos, não. A mioclonia fisiológica e a mioclonia do sono, por exemplo, são benignas e não exigem tratamento. No entanto, quando os espasmos são frequentes, afectam a fala, a marcha ou estão associados a convulsões, podem indicar uma causa neurológica mais séria e devem ser avaliados por um neurologista."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mioclonia tem cura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende da causa. Quando é fisiológica ou relacionada ao sono, geralmente desaparece sozinha e não precisa de tratamento. Já a mioclonia secundária, causada por outra doença, tende a melhorar quando essa condição de base é tratada. Em casos crónicos, o objetivo do tratamento costuma ser controlar os sintomas, não necessariamente curar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre mioclonia e tique nervoso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mioclonia é uma contração muscular súbita e involuntária que a pessoa não consegue controlar nem prever. Já o tique nervoso costuma ser um movimento repetitivo que a pessoa consegue suprimir temporariamente com esforço consciente, seguindo um padrão mais previsível."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mioclonia ao adormecer é normal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, na grande maioria dos casos. Esse fenómeno, conhecido como mioclonia do sono ou 'abalo hípnico', ocorre na transição entre a vigília e o sono e é considerado benigno, sendo mais frequente em situações de estresse, ansiedade ou privação de sono."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mioclonia pode ser sinal de epilepsia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, em alguns casos. A chamada mioclonia epilética está associada a certos tipos de epilepsia, como a epilepsia mioclônica juvenil. Nem toda mioclonia indica epilepsia, mas se os espasmos vierem acompanhados de convulsões, é essencial procurar um neurologista."
+          }
+        }
+      ]
     }
   ]
 }
@@ -213,7 +253,6 @@
             </nav>
         </div>
     </header>
-
     <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
     <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
         <div class="p-6 rounded-xl">
@@ -224,11 +263,9 @@
             </div>
         </div>
     </div>
-
     <!-- OVERLAY -->
     <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
     </div>
-
     <!-- MENU MOBILE -->
     <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
 transform -translate-x-full transition-transform duration-300 z-50
@@ -320,13 +357,14 @@ flex flex-col h-[100dvh] overflow-hidden">
         </div>
     </aside>
     <!-- FIM DO HEADER -->
+
     <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <section class="space-y-6">
             <h1>O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos</h1>
             <!-- DATA DE ATUALIZACAO -->
             <div class="meta">
                 <i class="fa-regular fa-clock"></i>
-                Atualizado em julho de 2026
+                Atualizado 28 de julho de 2026
             </div>
             <div class="autora">
                 <img src="/img/Beldo.webp" fetchpriority="high" class="object-cover rounded-full"
@@ -347,19 +385,30 @@ flex flex-col h-[100dvh] overflow-hidden">
                 alt="O que é Mioclonia: sintomas, causas e tratamentos para os espasmos musculares involuntários"
                 class="w-full h-auto rounded">
             <!-- CONTEUDO-->
+
+            <h2>O que é mioclonia?</h2>
+            <p>Mioclonia é uma contração muscular súbita e involuntária, que pode ser benigna (como
+                os espasmos ao adormecer) ou estar associada a doenças neurológicas. Afecta principalmente braços,
+                pernas e, por vezes, o rosto.
+            </p>
+
             <p>A <b>mioclonia</b> é uma condição caracterizada por contrações musculares involuntárias, rápidas e
                 repentinas que podem ocorrer em diferentes partes do corpo. Esses movimentos surgem de forma
                 inesperada e podem acontecer ocasionalmente ou de maneira frequente, afectando principalmente braços,
-                pernas e, em alguns casos, músculos da face.</p>
+                pernas e, em alguns casos, músculos da face.
+            </p>
 
-            <p>Embora muitas situações de mioclonia sejam consideradas benignas, como os espasmos que ocorrem ao
+            <p>
+                Embora muitas situações de mioclonia sejam consideradas benignas, como os espasmos que ocorrem ao
                 adormecer, a condição também pode estar relacionada a doenças neurológicas, distúrbios metabólicos ou
-                lesões do sistema nervoso. Por isso, a avaliação médica é fundamental para identificar a causa e definir
-                o tratamento mais adequado.</p>
+                lesões do sistema nervoso. Por isso, a avaliação médica é fundamental para identificar <b>as causa da
+                    mioclonia</b> e definir o tratamento mais adequado.
+            </p>
 
             <h2> Os sinais e sintomas da mioclonia</h2>
             <p>Os sintomas podem variar de acordo com a origem e a gravidade da condição. Entre os sinais mais comuns
-                estão:</p>
+                estão:
+            </p>
             <ul>
                 <li>Contrações musculares súbitas e involuntárias; espasmos isolados ou recorrentes; </li>
                 <li>Movimentos involuntários durante o sono; tremores rápidos nos braços ou pernas; </li>
@@ -382,6 +431,80 @@ flex flex-col h-[100dvh] overflow-hidden">
             </ul>
             <p>Esses exames ajudam a identificar alterações neurológicas, metabólicas, infecciosas ou hereditárias que
                 possam estar relacionadas ao surgimento da mioclonia.</p>
+
+            <h2>É possível prevenir a mioclonia?</h2>
+            <p>A possibilidade de prevenir a mioclonia depende, em grande medida, da sua <b>causa</b>. A mioclonia
+                fisiológica, como os pequenos sobressaltos que podem ocorrer durante o adormecimento, faz parte do
+                funcionamento normal do organismo e, por isso, não necessita de medidas preventivas nem de tratamento.
+            </p>
+
+            <p>No entanto, quando os espasmos musculares involuntários estão associados a doenças neurológicas,
+                alterações metabólicas, traumatismos, efeitos secundários de medicamentos ou outros problemas de saúde,
+                a adopção de hábitos saudáveis pode reduzir o risco de aparecimento ou impedir que os episódios se
+                tornem mais frequentes e intensos.
+            </p>
+
+
+            <p><b>1. Dormir adequadamente e manter uma boa higiene do sono:</b>é uma das principais formas de reduzir o
+                risco de mioclonia. A falta de sono pode aumentar a actividade do sistema nervoso e favorecer
+                espasmos musculares involuntários. <a href="/saude-mental/habitos-para-dormir-melhor/" target="_blank"
+                    rel="noopener">Procure dormir entre 7 e 9 horas por noite</a>, manter horários
+                regulares e evitar cafeína e ecrãs antes de dormir para melhorar a qualidade do sono.
+            </p>
+
+            <p>
+                <b>2. Controlar o stress e a ansiedade:</b> o stress e a ansiedade podem aumentar a excitabilidade do
+                cérebro
+                e desencadear episódios de mioclonia em algumas pessoas. Praticar técnicas de relaxamento, fazer
+                actividade física e reservar momentos de descanso ajuda a proteger o sistema nervoso e a reduzir o
+                risco de espasmos.
+            </p>
+
+            <p>
+                <b>3. Evitar o consumo excessivo de álcool:</b> o consumo excessivo de álcool pode alterar o
+                funcionamento do cérebro e favorecer movimentos musculares involuntários. Limitar ou evitar bebidas
+                alcoólicas é uma medida importante, sobretudo para pessoas com doenças neurológicas ou maior risco de
+                desenvolver
+                mioclonia.
+            </p>
+
+            <p>
+                <b>4. Não utilizar drogas recreativas:</b> as drogas recreativas podem afetar diretamente o sistema
+                nervoso e aumentar o risco de convulsões e mioclonia. Evitar estas substâncias ajuda a proteger o
+                cérebro e a manter o funcionamento normal dos nervos e dos músculos.
+            </p>
+
+            <p><b>Utilizar medicamentos apenas com orientação médica:</b> alguns medicamentos podem causar mioclonia
+                como efeito secundário. Nunca altere ou interrompa um
+                tratamento por iniciativa própria. Se notar espasmos após iniciar um medicamento, procure orientação
+                médica para avaliar a situação.
+            </p>
+
+            <p><b>6. Manter as doenças crónicas sob controlo:</b> doenças como <a href="/nutricao/o-que-e-diabetes/"
+                    target="_blank" rel="noopener">diabetes</a> , insuficiência renal,
+                doenças hepáticas e alterações da tiroide podem aumentar o risco de mioclonia quando não são bem
+                controladas. Seguir corretamente o tratamento e realizar consultas de acompanhamento ajuda a
+                prevenir complicações.</p>
+
+            <p><b>7. Adotar uma alimentação equilibrada:</b> uma alimentação saudável fornece os nutrientes necessários
+                para o bom funcionamento do cérebro e do sistema nervoso. Consumir frutas, legumes, cereais integrais,
+                peixe e beber água regularmente contribui para a saúde neurológica e ajuda a prevenir alterações que
+                podem favorecer a mioclonia.
+            </p>
+
+            <p><b>8. Praticar actividade física regularmente:</b> o exercício físico melhora a circulação, reduz o
+                stress, favorece um sono de qualidade e contribui para a saúde do sistema nervoso. Recomenda-se praticar
+                pelo menos 150 minutos de actividade física moderada por semana, de acordo com as condições de cada
+                pessoa.
+            </p>
+
+            <p><b>9. Proteger a cabeça contra traumatismos:</b> lesões na cabeça podem causar alterações no cérebro e
+                aumentar o risco de mioclonia. Utilizar capacete, usar o cinto de segurança e adotar medidas para
+                prevenir quedas são formas simples e eficazes de proteger a saúde neurológica.
+            </p>
+
+            <h2>Causas da mioclonia</h2>
+            <p>Hoje as causas estão espalhadas por cada tipo (sono, fisiológica, idiopática, epilética, secundária).</p>
 
             <h2>Tipos de mioclonias, as causas e factores de riscos</h2>
             <p>A mioclonia pode ser dividida em diferentes categorias de acordo com sua origem.</p>
@@ -469,6 +592,52 @@ flex flex-col h-[100dvh] overflow-hidden">
                 adequado, garantindo melhor qualidade de vida e controle dos sintomas.
             </p>
 
+            <!-- ===== FAQ - Mioclonia ===== -->
+            <h2>Perguntas frequentes sobre mioclonia</h2>
+            <h3>Mioclonia é grave?</h3>
+            <p>
+                Na maioria dos casos, não. A mioclonia fisiológica e a <b>mioclonia do sono</b>, por exemplo,
+                são benignas e não exigem tratamento. No entanto, quando os espasmos são frequentes,
+                afectam a fala, a marcha ou estão associados a convulsões, podem indicar uma causa
+                neurológica mais séria e devem ser avaliados por um neurologista.
+            </p>
+
+            <h3>Mioclonia tem cura?</h3>
+            <p>
+                Depende da causa. Quando é fisiológica ou relacionada ao sono, geralmente desaparece
+                sozinha e não precisa de tratamento. Já a mioclonia secundária, causada por outra doença
+                (como AVC, <a href="/saude-az/insuficiencia-renal/" target="_blank" rel="noopener">insuficiência
+                    renal</a> ou reações medicamentosas), tende a melhorar quando essa
+                condição de base é tratada. Em casos crónicos, o objetivo do tratamento costuma ser
+                controlar os sintomas, não necessariamente curar.
+            </p>
+
+            <h3>Qual a diferença entre mioclonia e tique nervoso?</h3>
+            <p>
+                A mioclonia é uma contração muscular súbita e involuntária que a pessoa não consegue
+                controlar nem prever. Já o tique nervoso costuma ser um movimento repetitivo e, em muitos
+                casos, a pessoa consegue suprimi-lo temporariamente com esforço consciente. Os tiques
+                também tendem a seguir um padrão mais previsível, enquanto a mioclonia é mais abrupta e
+                irregular.
+            </p>
+
+            <h3>Mioclonia ao adormecer é normal?</h3>
+            <p>
+                Sim, na grande maioria dos casos. Esse fenómeno, conhecido como mioclonia do sono ou
+                "abalo hípnico", ocorre na transição entre a vigília e o sono e é considerado benigno.
+                Pode ser mais frequente em situações de estresse, ansiedade, consumo excessivo de
+                cafeína ou privação de sono, mas geralmente não exige tratamento.
+            </p>
+
+            <h3>Mioclonia pode ser sinal de epilepsia?</h3>
+            <p>
+                Sim, em alguns casos. A chamada mioclonia epilética está associada a certos tipos de
+                epilepsia, como a epilepsia mioclônica juvenil, e provoca contrações rápidas e
+                involuntárias, especialmente nos braços e pernas. Nem toda mioclonia indica epilepsia,
+                mas se os espasmos vierem acompanhados de convulsões, é essencial procurar um
+                neurologista para avaliação.
+            </p>
+
             <!-- AVALIAÇÃO DE CONTEÚDO -->
             <hr>
             <section class="avaliacao-secao">
@@ -499,7 +668,6 @@ flex flex-col h-[100dvh] overflow-hidden">
                 </div>
             </section>
             <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
-
             <hr>
             <section>
                 <div class="shareing">

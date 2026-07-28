@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-07-27</lastmod>
+  <lastmod>2026-07-28</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao.webp</image:loc>
@@ -420,8 +420,17 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
+  <lastmod>2026-07-28</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/corrimento-transparente.webp</image:loc>
+      <image:title>Corrimento transparente sem cheiro: é normal?</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/saude-intima/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-28</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-intima.webp</image:loc>
@@ -430,7 +439,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
-  <lastmod>2026-07-22</lastmod>
+  <lastmod>2026-07-28</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/candidiasevaginal.webp</image:loc>
@@ -484,7 +493,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
-  <lastmod>2026-07-25</lastmod>
+  <lastmod>2026-07-28</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/mioclonia.webp</image:loc>

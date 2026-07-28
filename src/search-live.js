@@ -51,7 +51,7 @@ const pages = [
   { title: "Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê", url: "/saude-bucal/com-que-frequencia-ir-ao-dentista/" },
   { title: "Como as redes sociais afectam a saúde mental dos adolescentes?", url: "/saude-mental/redes-sociais-nos-adolescentes/" },
   { title: "Hábitos para dormir melhor: ter um sono mais profundo e reparador", url: "/saude-mental/habitos-para-dormir-melhor/" },
-  { title: "", url: "" },
+  { title: "Corrimento transparente sem cheiro: é normal?", url: "/saude-intima/corrimento-transparente-sem-cheiro/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
