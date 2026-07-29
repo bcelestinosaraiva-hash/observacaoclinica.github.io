@@ -52,7 +52,7 @@ const pages = [
   { title: "Como as redes sociais afectam a saúde mental dos adolescentes?", url: "/saude-mental/redes-sociais-nos-adolescentes/" },
   { title: "Hábitos para dormir melhor: ter um sono mais profundo e reparador", url: "/saude-mental/habitos-para-dormir-melhor/" },
   { title: "Corrimento transparente sem cheiro: é normal?", url: "/saude-intima/corrimento-transparente-sem-cheiro/" },
-  { title: "", url: "" },
+  { title: "Cheiro forte na região íntima: causas e como tratar", url: "/saude-intima/cheiro-forte-regiao-intima/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },

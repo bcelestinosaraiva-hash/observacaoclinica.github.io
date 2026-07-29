@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-07-28</lastmod>
+  <lastmod>2026-07-29</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao.webp</image:loc>
@@ -420,6 +420,15 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
+  <lastmod>2026-07-29</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/cheiro-forte-regiao-intima.webp</image:loc>
+      <image:title>Cheiro forte na região íntima: causas e como tratar</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
   <lastmod>2026-07-28</lastmod>
     <priority>0.7</priority>
@@ -430,7 +439,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/</loc>
-  <lastmod>2026-07-28</lastmod>
+  <lastmod>2026-07-29</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-intima.webp</image:loc>
