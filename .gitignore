@@ -2,4 +2,5 @@
 .wrangler/
 dist/
 src/analitico.js
-src/mudanca.js
+src/pinterest.js
+src/pandeira.js
