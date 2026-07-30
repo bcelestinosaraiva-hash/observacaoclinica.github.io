@@ -982,17 +982,29 @@ header img {
 
 /* AUTORES */
 .meta {
-    color: #424242;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
+    color: #424242;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
     margin-bottom: 5px;
+    min-height: 16px;
+    white-space: nowrap;
 }
 
 .meta i {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #999;
+    font-size: 14px;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
 .autora {
