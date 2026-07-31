@@ -1,3 +1,6 @@
+// sw.js — Service Worker de push notifications
+// Se já tiveres um sw.js no site, junta só estes dois listeners ao ficheiro existente.
+
 self.addEventListener("push", (event) => {
   let data = {};
   try {
@@ -9,9 +12,17 @@ self.addEventListener("push", (event) => {
   const title = data.title || "Observação Clínica";
   const options = {
     body: data.body || "Novo artigo publicado.",
-    icon: data.icon || "/icons/icon-192.png",
-    badge: data.badge || "/icons/badge-72.png",
+    icon: data.icon || "/favicon/logo.png",        // logo a cores, aparece dentro da notificação
+    badge: data.badge || "/favicon/logo.png", // silhueta branca, aparece na barra de estado (Android) — tem de ser um ficheiro à parte
+    image: data.image || undefined,             // imagem do artigo, aparece em destaque
+    tag: data.url || "observacao-clinica-artigo", // evita empilhar notificações repetidas do mesmo artigo
+    renotify: true,
+    requireInteraction: false,
+    vibrate: [100, 50, 100],
+    dir: "ltr",
+    lang: "pt",
     data: { url: data.url || "/" },
+    actions: [{ action: "open", title: "Ler artigo" }],
   };
 
   event.waitUntil(self.registration.showNotification(title, options));

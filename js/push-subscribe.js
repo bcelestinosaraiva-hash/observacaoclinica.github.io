@@ -1,4 +1,5 @@
 // push-subscribe.js — inclui este script em todas as páginas do site (antes de </body>)
+
 const VAPID_PUBLIC_KEY = "BB7shUEIi0oN1eM6uBR2hERuLjPokSqJuvZyktBAYnVdMxVEwdquEGWy5xO5Gayw0yBq1HzvAMQ2OdnpdzQT2bc";
 const PUSH_ENDPOINT = ""; // vazio = mesmo domínio do site (Pages Functions)
 
@@ -13,11 +14,19 @@ function showSubscribePrompt(onAccept) {
   const bar = document.createElement("div");
   bar.id = "push-prompt";
   bar.innerHTML = `
-    <span>Queres receber uma notificação quando publicarmos um novo artigo?</span>
-    <button id="push-accept" type="button">Ativar</button>
-    <button id="push-dismiss" type="button">Agora não</button>
+    <div class="push-icon">
+      <img src="/favicon/logo.png" alt="Observação Clínica" />
+    </div>
+    <div class="push-content">
+      <p>Gostaria de receber notificação sempre que publicarmos conteúdos novos e actualizações?</p>
+      <div class="push-actions">
+        <button id="push-dismiss" type="button">Não obrigado</button>
+        <button id="push-accept" type="button">Activar</button>
+      </div>
+    </div>
   `;
-  document.body.appendChild(bar);
+
+  document.body.prepend(bar);
 
   document.getElementById("push-accept").addEventListener("click", () => {
     onAccept();
@@ -38,22 +47,24 @@ async function initPush() {
   const existing = await registration.pushManager.getSubscription();
   if (existing) return;
 
-  showSubscribePrompt(async () => {
-    try {
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
-      });
+  setTimeout(() => {
+    showSubscribePrompt(async () => {
+      try {
+        const subscription = await registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+        });
 
-      await fetch(`${PUSH_ENDPOINT}/subscribe`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(subscription),
-      });
-    } catch (err) {
-      console.error("Falha ao subscrever notificações push:", err);
-    }
-  });
+        await fetch(`${PUSH_ENDPOINT}/subscribe`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(subscription),
+        });
+      } catch (err) {
+        console.error("Falha ao subscrever notificações push:", err);
+      }
+    });
+  }, 60000); // espera 1 minuto segundos antes de mostrar a barra
 }
 
 initPush();

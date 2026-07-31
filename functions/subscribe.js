@@ -1,21 +1,67 @@
-import { keyFor, json } from "./_utils.js";
+// push-subscribe.js — inclui este script em todas as páginas do site (antes de </body>)
 
-export async function onRequestPost(context) {
-    const { request, env } = context;
+const VAPID_PUBLIC_KEY = "BB7shUEIi0oN1eM6uBR2hERuLjPokSqJuvZyktBAYnVdMxVEwdquEGWy5xO5Gayw0yBq1HzvAMQ2OdnpdzQT2bc";
+const PUSH_ENDPOINT = ""; // vazio = mesmo domínio do site (Pages Functions)
 
-    let sub;
-    try {
-        sub = await request.json();
-    } catch {
-        return json({ error: "JSON inválido" }, 400);
-    }
-
-    if (!sub || !sub.endpoint || !sub.keys) {
-        return json({ error: "subscrição inválida" }, 400);
-    }
-
-    const key = await keyFor(sub.endpoint);
-    await env.SUBSCRIBERS.put(key, JSON.stringify({ ...sub, subscribedAt: Date.now() }));
-
-    return json({ ok: true });
+function urlBase64ToUint8Array(base64String) {
+    const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
+    const rawData = atob(base64);
+    return Uint8Array.from([...rawData].map((c) => c.charCodeAt(0)));
 }
+
+function showSubscribePrompt(onAccept) {
+    const bar = document.createElement("div");
+    bar.id = "push-prompt";
+    bar.innerHTML = `
+    <span>Queres receber uma notificação quando publicarmos?</span>
+    <button id="push-accept" type="button">Activar</button>
+    <button id="push-dismiss" type="button">Agora não</button>
+  `;
+
+    // Insere logo a seguir ao <header>, para ficar por baixo do logo, centrada
+    const header = document.querySelector("header");
+    if (header) {
+        header.insertAdjacentElement("afterend", bar);
+    } else {
+        document.body.prepend(bar);
+    }
+
+    document.getElementById("push-accept").addEventListener("click", () => {
+        onAccept();
+        bar.remove();
+    });
+    document.getElementById("push-dismiss").addEventListener("click", () => {
+        localStorage.setItem("push-dismissed", "1");
+        bar.remove();
+    });
+}
+
+async function initPush() {
+    if (!("serviceWorker" in navigator) || !("PushManager" in window)) return;
+    if (localStorage.getItem("push-dismissed") === "1") return;
+    if (Notification.permission === "denied") return;
+
+    const registration = await navigator.serviceWorker.register("/sw.js");
+    const existing = await registration.pushManager.getSubscription();
+    if (existing) return;
+
+    showSubscribePrompt(async () => {
+        try {
+            const subscription = await registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+            });
+
+            await fetch(`${PUSH_ENDPOINT}/subscribe`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(subscription),
+            });
+        } catch (err) {
+            console.error("Falha ao subscrever notificações push:", err);
+        }
+    });
+}
+
+initPush();
