@@ -1811,8 +1811,12 @@ small {
     #push-prompt {
         width: 90%;
         padding: 12px;
-        font-size: 11px;
+        font-size: 12px;
     }
 
-
+    #push-prompt .push-icon img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
 }
