@@ -1,0 +1,7 @@
+name = "observacaoclinica-push"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+kv_namespaces = [
+  { binding = "SUBSCRIBERS", id = "11d9c90044ba4613a71b7193d7e8011b" }
+]
