@@ -18,7 +18,7 @@ function showSubscribePrompt(onAccept) {
       <img src="/favicon/logo.png" alt="Observação Clínica" />
     </div>
     <div class="push-content">
-      <p>Queremos mostrar-te notificações sobre os últimos artigos e novidades.</p>
+      <p>Queremos mostrar-te notificações sobre os últimos conteúdos e novidades.</p>
       <div class="push-actions">
         <button id="push-dismiss" type="button">Não obrigado</button>
         <button id="push-accept" type="button">Activar</button>
@@ -64,7 +64,7 @@ async function initPush() {
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 6000); // espera 1 minuto segundos antes de mostrar a barra
+  }, 60000); // espera 1 minuto segundos antes de mostrar a barra
 }
 
 initPush();
