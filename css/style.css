@@ -1814,13 +1814,5 @@ small {
         font-size: 11px;
     }
 
-    #push-prompt .push-icon {
-        width: 60px;
-        height: 60px;
-    }
 
-    #push-prompt .push-icon img {
-        width: 50px;
-        height: 50px;
-    }
 }
