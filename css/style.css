@@ -1811,16 +1811,16 @@ small {
     #push-prompt {
         width: 90%;
         padding: 12px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     #push-prompt .push-icon {
-        width: 34px;
-        height: 34px;
+        width: 60px;
+        height: 60px;
     }
 
     #push-prompt .push-icon img {
-        width: 22px;
-        height: 22px;
+        width: 50px;
+        height: 50px;
     }
 }
