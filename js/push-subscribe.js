@@ -18,10 +18,10 @@ function showSubscribePrompt(onAccept) {
       <img src="/favicon/logo.png" alt="Observação Clínica" />
     </div>
     <div class="push-content">
-      <p>Queremos mostrar-te notificações sobre os últimos conteúdos e novidades.</p>
+      <p>Queremos mostrar-te notificações sobre os últimos artigos e novidades.</p>
       <div class="push-actions">
-        <button id="push-dismiss" type="button">Não obrigado</button>
-        <button id="push-accept" type="button">Activar</button>
+        <button id="push-dismiss" type="button">Agora não</button>
+        <button id="push-accept" type="button">Ativar</button>
       </div>
     </div>
   `;
@@ -55,16 +55,22 @@ async function initPush() {
           applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
         });
 
-        await fetch(`${PUSH_ENDPOINT}/subscribe`, {
+        alert("Subscrição criada no browser:\n" + subscription.endpoint);
+
+        const res = await fetch(`${PUSH_ENDPOINT}/subscribe`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(subscription),
         });
+        const text = await res.text();
+
+        alert("Resposta do servidor:\nStatus " + res.status + "\n" + text);
       } catch (err) {
+        alert("ERRO ao subscrever: " + err.name + " — " + err.message);
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 60000); // espera 1 minuto segundos antes de mostrar a barra
+  }, 30000); // espera 30 segundos antes de mostrar a barra
 }
 
 initPush();
