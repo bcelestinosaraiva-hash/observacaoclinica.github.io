@@ -18,10 +18,10 @@ function showSubscribePrompt(onAccept) {
       <img src="/favicon/logo.png" alt="Observação Clínica" />
     </div>
     <div class="push-content">
-      <p>Queremos mostrar-te notificações sobre os últimos artigos e novidades.</p>
+      <p>Gostaria de receber notificações sobre os últimos artigos e novidades</p>
       <div class="push-actions">
-        <button id="push-dismiss" type="button">Agora não</button>
-        <button id="push-accept" type="button">Ativar</button>
+        <button id="push-dismiss" type="button">Não obrigado</button>
+        <button id="push-accept" type="button">Activar</button>
       </div>
     </div>
   `;
@@ -49,13 +49,18 @@ async function initPush() {
 
   setTimeout(() => {
     showSubscribePrompt(async () => {
+      const debugBox = document.createElement("div");
+      debugBox.style.cssText = "position:fixed;top:60px;left:50%;transform:translateX(-50%);z-index:99999;background:#111;color:#0f0;font-family:monospace;font-size:12px;padding:12px;border-radius:6px;max-width:90%;white-space:pre-wrap;word-break:break-all;";
+      debugBox.textContent = "A subscrever...";
+      document.body.appendChild(debugBox);
+
       try {
         const subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
         });
 
-        alert("Subscrição criada no browser:\n" + subscription.endpoint);
+        debugBox.textContent = "1) Subscrição criada:\n" + subscription.endpoint + "\n\nA enviar para o servidor...";
 
         const res = await fetch(`${PUSH_ENDPOINT}/subscribe`, {
           method: "POST",
@@ -64,9 +69,9 @@ async function initPush() {
         });
         const text = await res.text();
 
-        alert("Resposta do servidor:\nStatus " + res.status + "\n" + text);
+        debugBox.textContent = "1) Subscrição criada: OK\n\n2) Resposta do servidor:\nStatus " + res.status + "\n" + text;
       } catch (err) {
-        alert("ERRO ao subscrever: " + err.name + " — " + err.message);
+        debugBox.textContent = "ERRO: " + err.name + " — " + err.message;
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
