@@ -18,10 +18,10 @@ function showSubscribePrompt(onAccept) {
       <img src="/favicon/logo.png" alt="Observação Clínica" />
     </div>
     <div class="push-content">
-      <p>Queremos mostrar-te notificações sobre os últimos artigos e novidades.</p>
+      <p>Gostaria de receber notificações sobre os últimos conteúdos e actualizações</p>
       <div class="push-actions">
-        <button id="push-dismiss" type="button">Agora não</button>
-        <button id="push-accept" type="button">Ativar</button>
+        <button id="push-dismiss" type="button">Não obrigado</button>
+        <button id="push-accept" type="button">Activar</button>
       </div>
     </div>
   `;

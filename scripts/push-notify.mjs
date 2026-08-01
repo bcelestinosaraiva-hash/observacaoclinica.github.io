@@ -53,7 +53,7 @@ export async function notifyNewArticles(articles) {
 
     for (const article of articles) {
         const payload = JSON.stringify({
-            title: "Novo artigo na Observação Clínica",
+            title: "Novo conteúdo na Observação Clínica",
             body: article.title,
             url: article.url,
             icon: "/img/logo.webp",
