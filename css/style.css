@@ -173,6 +173,8 @@ h2 {
     font-size: 18px;
     line-height: 24px;
     color: rgb(61, 61, 61);
+    margin: none;
+    padding: none;
 }
 
 /* telas maiores */
@@ -419,9 +421,8 @@ ol li {
 ol li::before {
     content: counter(item) ".";
     color: #1e90ff;
-    font-weight: bold;
+    font-weight: 500;
     margin-right: 5px;
-    /* mesma dimensão do texto (herda automaticamente) */
 }
 
 /* telas maiores */
@@ -666,8 +667,6 @@ ul li::before {
     font-size: 15px;
     line-height: 24px;
     color: rgb(61, 61, 61);
-    margin: 4px;
-    padding: 2px;
 }
 
 .descricao {
@@ -995,14 +994,15 @@ header img {
 }
 
 .meta i {
-    width: 16px;
-    min-width: 16px;
-    height: 16px;
+    font-weight: 400;
+    width: 12px;
+    min-width: 12px;
+    height: 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: #999;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1;
     flex-shrink: 0;
 }
@@ -1215,10 +1215,10 @@ header img {
     display: inline-block;
     background: #e6f6fb;
     color: #005670;
-    padding: 6px 6px;
-    border-radius: 6px;
+    padding: 5px;
+    border-radius: 12px;
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /* FIM DO CSS*/

@@ -105,7 +105,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/fitness/treino-para-ganhar-massa-muscular/</loc>
-  <lastmod>2026-07-30</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/exercicios-para-ganhar-massa.webp</image:loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/alimentacao-na-gravidez/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/alimentacao-na-gravidez.webp</image:loc>
@@ -123,7 +123,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/como-promover-uma-gravidez-saudavel/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/gravidez-promover.webp</image:loc>
@@ -141,7 +141,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sinais-de-trabalho-de-parto/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/sinais-de-parto.webp</image:loc>
@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-08-02</lastmod>
+  <lastmod>2026-08-04</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/favicon/observacao.webp</image:loc>
@@ -204,7 +204,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-04</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/nutricao.webp</image:loc>
@@ -227,6 +227,15 @@
     <image:image>
       <image:loc>https://observacaoclinica.com/img/diabetes.webp</image:loc>
       <image:title>O que é diabetes: as causas, sinais e sintomas que você não deve ignorar</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</loc>
+  <lastmod>2026-08-04</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/ovos-cozidos.webp</image:loc>
+      <image:title>Posso comer ovo todos os dias? Benefícios e cuidados</image:title>
     </image:image>
   </url>
   <url>
@@ -376,16 +385,16 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/ir-ao-dentista.webp</image:loc>
-      <image:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê</image:title>
+      <image:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</image:title>
     </image:image>
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/carie-dentaria.webp</image:loc>
@@ -403,7 +412,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
-  <lastmod>2026-07-31</lastmod>
+  <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/o-que-e-carie.webp</image:loc>

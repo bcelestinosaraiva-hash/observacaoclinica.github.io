@@ -22,7 +22,7 @@ self.addEventListener("push", (event) => {
     dir: "ltr",
     lang: "pt",
     data: { url: data.url || "/" },
-    actions: [{ action: "open", title: "Ler artigo" }],
+    actions: [{ action: "open", title: "Ler agora" }],
   };
 
   event.waitUntil(self.registration.showNotification(title, options));

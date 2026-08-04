@@ -1,6 +1,6 @@
 import { notifyNewArticles } from "./scripts/push-notify.mjs";
 await notifyNewArticles([{
-    title: "Coceira íntima antes da menstruação: causas, prevenção e alívio",
-    url: "https://observacaoclinica.com/saude-intima/coceira-intima/",
-    image: "https://observacaoclinica.com/img/coceira-intima.webp"
+    title: "Posso comer ovo todos os dias? Benefícios e cuidados",
+    url: "https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/",
+    image: "https://observacaoclinica.com/img/ovos-cozidos.webp"
 }]);
