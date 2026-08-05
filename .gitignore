@@ -7,3 +7,4 @@ src/pandeira.js
 .env
 src/mudanca.js
 /webpush.mjs
+src/pinterest.js
