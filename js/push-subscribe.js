@@ -64,7 +64,7 @@ async function initPush() {
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 30000); // espera 30 segundos antes de mostrar a barra
+  }, 60000); // espera 60 segundos antes de mostrar a barra
 }
 
 initPush();

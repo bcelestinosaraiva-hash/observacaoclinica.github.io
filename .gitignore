@@ -6,3 +6,4 @@ src/pinterest.js
 src/pandeira.js
 .env
 src/mudanca.js
+/webpush.mjs

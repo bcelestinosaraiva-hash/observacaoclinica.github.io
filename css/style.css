@@ -667,6 +667,7 @@ ul li::before {
     font-size: 15px;
     line-height: 24px;
     color: rgb(61, 61, 61);
+    margin-top: 5px;
 }
 
 .descricao {
@@ -1214,9 +1215,9 @@ header img {
     font-weight: 400;
     display: inline-block;
     background: #e6f6fb;
-    color: #005670;
-    padding: 5px;
-    border-radius: 12px;
+    color: #004a60;
+    padding: 4px;
+    border-radius: 15px;
     font-size: 12px;
     margin-top: 10px;
 }
