@@ -55,7 +55,7 @@ const pages = [
   { title: "Cheiro forte na região íntima: causas e como tratar", url: "/saude-intima/cheiro-forte-regiao-intima/" },
   { title: "Coceira íntima antes da menstruação: causas, prevenção e alívio", url: "/saude-intima/coceira-intima/" },
   { title: "Posso comer ovo todos os dias? Benefícios e cuidados", url: "/nutricao/posso-comer-ovo-todos-os-dias" },
-  { title: "", url: "" },
+  { title: "Na gravidez pode tomar paracetamol? quando é seguro", url: "/gravidez/na-gravidez-pode-tomar-paracetamol/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
