@@ -30,7 +30,7 @@ const pages = [
   { title: "Como calcular o Bolo de dextrose 10%?", url: "/calculadoras/como-calcular-dextrose/" },
   { title: "Como calcular o meu ciclo menstrual e identificar a sua próxima menstruação?", url: "/calculadoras/como-calcular-o-ciclo-menstrual/" },
   { title: "As necessidades nutricionais das crianças de acordo faixa etária", url: "/nutricao/as-necessidades-nutricionais-das-criancas/" },
-  { title: "Introdução de alimentos complementares nas crianças aos seus 6 meses de idades", url: "/nutricao/introducao-de-alimentos/" },
+  { title: "Introdução dos alimentos complementares nas crianças aos seus 6 meses de idades", url: "/nutricao/introducao-de-alimentos/" },
   { title: "Doenças respiratórias", url: "/saude-az/doencas-respiratorias/" },
   { title: "O que é pneumonia?", url: "/saude-az/o-que-e-pneumonia/" },
   { title: "Calculadora de diluição para enfermagem, os mililitros administrados nos utentes", url: "/calculadoras/como-calcular-a-diluicao/" },

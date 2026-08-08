@@ -108,6 +108,17 @@
   ]
 }
 </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Observação clínica", "item": "https://observacaoclinica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Saude bucal", "item": "https://observacaoclinica.com/saude-bucal/" },
+    { "@type": "ListItem", "position": 3, "name": "Ir ao dentista", "item": "https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/" }
+  ]
+}
+</script>
     <!-- FEED RSS -->
     <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
     <!-- FAVICON -->
@@ -338,6 +349,14 @@ flex flex-col h-[100dvh] overflow-hidden">
 
     <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <section class="space-y-6">
+            <nav aria-label="breadcrumb" class="breadcrumbs">
+                <ol>
+                    <li><a href="https://observacaoclinica.com/">Observação clínica</a></li>
+                    <li><a href="https://observacaoclinica.com/saude-bucal/">Saúde bucal</a></li>
+                    <li aria-current="page">Ir ao dentista</li>
+                </ol>
+            </nav>
+
             <h1>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</h1>
             <!-- DATA DE ATUALIZACAO -->
             <div class="meta">
