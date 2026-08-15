@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <meta name="description"
-    content="Saiba como calcular a sua idade da gravidez e identificar o dia que irá nascer o seu bebé.">
+    content="Calcule a idade da gravidez e descubra a data provável do nascimento do seu bebé de forma simples e rápida.">
   <link rel="canonical" href="https://observacaoclinica.com/calculadoras/idade-gestacional/">
   <!-- Hreflang -->
   <link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/calculadoras/idade-gestacional/">
@@ -19,14 +19,14 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="Como calcular minha idade gestacional e identificar o dia do meu parto">
   <meta property="og:description"
-    content="Saiba como calcular a sua idade da gravidez e identificar o dia que irá nascer o seu bebé.">
+    content="Calcule a idade da gravidez e descubra a data provável do nascimento do seu bebé de forma simples e rápida.">
   <meta property="og:url" content="https://observacaoclinica.com/calculadoras/idade-gestacional/">
   <meta property="og:image" content="https://observacaoclinica.com/img/ig.webp">
   <!-- Twitter Card (recomendado) -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Como calcular minha idade gestacional e identificar o dia do meu parto">
   <meta name="twitter:description"
-    content="Saiba como calcular a sua idade da gravidez e identificar o dia que irá nascer o seu bebé.">
+    content="Calcule a idade da gravidez e descubra a data provável do nascimento do seu bebé de forma simples e rápida.">
   <meta name="twitter:image" content="https://observacaoclinica.com/img/ig.webp">
   <!-- Schema.org JSON-LD: Article -->
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
     "@id": "https://observacaoclinica.com/calculadoras/idade-gestacional/"
   },
   "headline": "Como calcular minha idade gestacional e identificar o dia do meu parto",
-  "description": "Saiba como calcular a sua idade da gravidez e identificar o dia que irá nascer o seu bebé.",
+  "description": "Calcule a idade da gravidez e descubra a data provável do nascimento do seu bebé de forma simples e rápida.",
   "image": {
     "@type": "ImageObject",
     "url": "https://observacaoclinica.com/img/ig.webp"
@@ -69,16 +69,13 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
-  <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- CSS -->
-  <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/calculadoras/css/idadegestacional.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/output.css.min.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
   <script>
@@ -105,19 +102,20 @@
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <!-- BOTÃO MENU MOBILE -->
-      <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
-        aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
-        <i class="fas fa-bars" aria-hidden="false"></i>
+      <button id="mobile-menu-button" aria-label="Abrir menu"
+        class="md:hidden flex items-center justify-center w-8 h-8">
+        <img src="/favicon/menu.svg" class="w-8 h-8" style="width:16px !important; height:16px !important;"
+          alt="abri o meu menu" aria-hidden="true">
       </button>
       <!-- LOGO -->
       <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
-          loading="eager" decoding="async" style="height:40px; width:auto;">
+        <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+          alt="Observação clínica" fetchpriority="high">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
-      <button id="mobile-search-button" aria-label="lupa de pesquisa"
-        class="md:hidden flex items-center justify-center p-4">
-        <i class="fas fa-search"></i>
+      <button id="mobile-search-button" aria-label="Abrir pesquisa"
+        class="md:hidden flex items-center justify-center w-8 h-8">
+        <img src="/favicon/search.svg" class="icon" alt="lupa de pesquisa" aria-hidden="true">
       </button>
       <!-- MENU DESKTOP -->
       <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
@@ -129,23 +127,20 @@
         </a>
         <!-- SAUDE-AZ -->
         <div class="group relative">
-          <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
+          <button id="saude-az-toggle" aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              alt="saudeaz" aria-hidden="true">
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              SAÚDE MENTAL
-            </a>
-            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              SAÚDE ÍNTIMA
-            </a>
-            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              DOENÇAS GERAIS
-            </a>
+                          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
+              MENTAL</a>
+            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
+              ÍNTIMA</a>
+            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">DOENÇAS
+              GERAIS</a>
           </div>
         </div>
         <!-- BEM-ESTAR -->
@@ -153,11 +148,11 @@
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
-            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              alt="bem-estar" aria-hidden="true">
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                       group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               FITNESS
             </a>
@@ -166,61 +161,56 @@
             </a>
           </div>
         </div>
-
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
-
         <!-- PESQUISA NO PC -->
         <div class="relative">
           <button id="search-btn" aria-label="Abrir pesquisa">
-            <i class="fas fa-search" aria-hidden="false"></i>
+            <img src="/favicon/search.svg" class="icon" width="20" height="20" alt="lupa de pesquisa"
+              aria-hidden="true">
           </button>
-
           <!-- LUPA DE PESQUISA -->
           <div
             style="position:fixed; top:70px; left:50%; transform:translateX(-50%); width:90%; max-width:720px; z-index:9999;">
             <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="🔍 Pesquise aqui..."
-              class="hidden" style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
-               border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
-
+              class="hidden"
+              style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
+                         border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
             <div id="search-results" role="listbox" aria-label="Resultados da pesquisa" class="hidden" style="width:100%; background:#ffffff; border-radius:10px; margin-top:8px;
-              box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
+                             box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
             </div>
           </div>
         </div>
       </nav>
     </div>
   </header>
-
   <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
   <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
-   focus:outline-none focus:ring-0 focus:border-gray-300">
+              focus:outline-none focus:ring-0 focus:border-gray-300">
       <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
         class="mt-2 text-gray-800 hidden">
       </div>
     </div>
   </div>
-
   <!-- OVERLAY -->
   <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
   </div>
-
   <!-- MENU MOBILE -->
   <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
-transform -translate-x-full transition-transform duration-300 z-50
-flex flex-col h-[100dvh] overflow-hidden">
+           transform -translate-x-full transition-transform duration-300 z-50
+           flex flex-col h-[100dvh] overflow-hidden">
     <!-- TOPO FIXO -->
     <div class="flex-shrink-0 border border-gray-200">
       <div class="menumobile flex items-center justify-between p-4">
         <a href="/" aria-label="Página inicial Observação Clínica">
-          <img src="/img/observacao.webp" fetchpriority="high" alt="Observação clinica" width="140" height="40"
-            loading="eager" decoding="async">
+          <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+            alt="Observação clínica" fetchpriority="high">
         </a>
-        <button id="close-menu" class="text-2xl focus:outline-none">
-          ×
+        <button id="close-menu" class="text-2xl focus:outline-none" aria-label="Fechar menu">
+          <img src="/favicon/x.svg" width="12" height="12" class="w-3 h-3" alt="" aria-hidden="true">
         </button>
       </div>
     </div>
@@ -230,16 +220,17 @@ flex flex-col h-[100dvh] overflow-hidden">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
         <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+
         <!-- SAÚDE-AZ -->
         <div>
           <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
-            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              id="saude-az-icon-mobile" alt="saude-az" aria-hidden="true">
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                          opacity-0 transform -translate-y-1 transition-all duration-300">
             <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -251,16 +242,17 @@ flex flex-col h-[100dvh] overflow-hidden">
             </a>
           </div>
         </div>
+
         <!-- Submenu BEM-ESTAR -->
         <div>
           <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
-            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              id="fitness-icon-mobile" alt="bem-estar" aria-hidden="true">
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                         opacity-0 transform -translate-y-1 transition-all duration-300">
             <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
               FITNESS
             </a>
@@ -276,24 +268,22 @@ flex flex-col h-[100dvh] overflow-hidden">
         </a>
       </nav>
     </div>
-
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
         SIGA-NÓS NAS REDES SOCIAIS
       </h3>
       <div class="flex justify-center gap-8">
-        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social" target="_blank"
+        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank" rel="noopener">
+          <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+        </a>
+        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube" target="_blank"
           rel="noopener">
-          <i class="fab fa-facebook"></i>
+          <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
         </a>
-        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="nosso youtube rede social"
-          target="_blank" rel="noopener">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
-          target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i>
+        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
+          rel="noopener">
+          <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
         </a>
       </div>
     </div>
@@ -313,7 +303,7 @@ flex flex-col h-[100dvh] overflow-hidden">
       <h1>Como calcular minha idade gestacional e identificar o dia do meu parto</h1>
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
-        <i class="fa-regular fa-clock"></i>
+        <img src="/favicon/clock.svg" alt="relogio" width="12" height="12">
         Atualizado 28 de julho de 2026
       </div>
       <div class="autora">
@@ -432,14 +422,14 @@ flex flex-col h-[100dvh] overflow-hidden">
         segura.</p>
       <!-- AVALIAÇÃO DE CONTEÚDO -->
       <hr>
-      <section class=" avaliacao-secao">
+      <section class="avaliacao-secao">
         <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
         <div class="buttonsa">
           <button class="btna btn-yes" onclick="avaliar('Sim')">
-            <i class="fa-solid fa-thumbs-up"></i> SIM
+            <img src="/favicon/thumbs-up.svg" alt="sim" width="20" height="20"> SIM
           </button>
           <button class="btna btn-no" onclick="avaliar('Não')">
-            <i class="fa-solid fa-thumbs-down"></i> NÃO
+            <img src="/favicon/thumbs-down.svg" alt="não" width="20" height="20"> NÃO
           </button>
         </div>
         <div id="feedback" style="display:none;">
@@ -460,24 +450,22 @@ flex flex-col h-[100dvh] overflow-hidden">
         </div>
       </section>
       <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
-
-      <!-- SHAREING-->
       <hr>
       <section>
         <div class="shareing">
           <span>COMPARTILHE</span>
           <div class="iconsa">
             <div class="icona facebook" onclick="shareFacebook()">
-              <i class="fab fa-facebook-f"></i>
+              <img src="/favicon/facebook-25.svg" alt="facebook" width="28" height="28">
             </div>
             <div class="icona whatsapp" onclick="shareWhatsApp()">
-              <i class="fab fa-whatsapp"></i>
+              <img src="/favicon/whatsapp-25.svg" alt="whatsapp" width="28" height="28">
             </div>
             <div class="icona pinterest" onclick="sharePinterest()">
-              <i class="fab fa-pinterest-p"></i>
+              <img src="/favicon/pinterest-25.svg" alt="pinterest" width="28" height="28">
             </div>
             <div class="icona share-icona" onclick="shareNative()">
-              <i class="fas fa-share-alt"></i>
+              <img src="/favicon/share.svg" alt="compartilhar" width="28" height="28">
             </div>
           </div>
         </div>
@@ -499,15 +487,32 @@ flex flex-col h-[100dvh] overflow-hidden">
         </ul>
       </section>
       <hr>
-
     </section>
 
     <!-- LADO DIREITO: BARRA LATERAL -->
     <aside class="space-y-6 mt-10">
       <article>
+        <a href="/gravidez/sintomas-de-gravidez/">
+          <img src="/img/sintomasdegravidez-1200.webp" srcset="
+                     /img/sintomasdegravidez-280.webp 280w,
+                     /img/sintomasdegravidez-372.webp 372w,
+                     /img/sintomasdegravidez-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
+            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança">
+          <span class="tag">SINTOMAS DE GRAVIDEZ</span>
+          <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
+          </h3>
+        </a>
+      </article>
+
+      <article>
         <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
-          <img src="/img/ebola-como.webp" alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção"
-            fetchpriority="high" class="w-full h-40 object-cover">
+          <img src="/img/ebola-como-1200.webp" srcset="
+                     /img/ebola-como-280.webp 280w,
+                     /img/ebola-como-372.webp 372w,
+                     /img/ebola-como-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
+            alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
           </h3>
@@ -516,80 +521,69 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/saude-az/hipertensao-arterial-mas-porque/" aria-label="hipertensão e elavacao persistente">
-          <img src="/img/hipertensao.webp" alt="Hipertensão é elevação persistente da pressão arterial"
-            fetchpriority="high" class="w-full h-40 object-cover">
+          <img src="/img/hipertensao-1200.webp" srcset="
+                     /img/hipertensao-280.webp 280w,
+                     /img/hipertensao-372.webp 372w,
+                     /img/hipertensao-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
+            alt="Hipertensão é elevação persistente da pressão arterial">
           <span class="tag">HIPERTENSÃO</span>
           <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba mais.
           </h3>
         </a>
       </article>
+      <section id="posts-recentes"></section>
     </aside>
   </main>
-  <!-- SECCAO DE CALCULADORAS -->
-  <section class="max-w-6xl w-full mx-auto p-4 space-y-6 mt-5">
-    <h2>Ferramentas interativas</h2>
-    <div class="calculadoras-container">
-      <!-- CARD 1 -->
-      <a href="/calculadoras/como-calcular-indice-de-massa-corporal/" class="calculadora"
-        style="background-image:url('/img/imc.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de Índice de massa corporal</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-      <!-- CARD 2 -->
-      <a href="/calculadoras/como-calcular-o-ciclo-menstrual/" class="calculadora"
-        style="background-image:url('/img/ciclo.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de ciclo menstrual</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-      <!-- CARD 3 -->
-      <a href="/calculadoras/como-calcular-a-diluicao/" class="calculadora"
-        style="background-image:url('/img/reconstituicao.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de diluição ou reconstituição</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-      <!-- CARD 4 -->
-      <a href="/calculadoras/como-calcular-dextrose/" class="calculadora"
-        style="background-image:url('/img/hipoglicemia.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de bolo dextrose a 10%</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-      <!-- CARD 5 -->
-      <a href="/calculadoras/como-calcular-a-prescricao/" class="calculadora"
-        style="background-image:url('/img/prescricao.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de prescrição médica</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-      <!-- CARD 6 -->
-      <a href="/calculadoras/idade-gestacional/" class="calculadora" style="background-image:url('/img/ig.webp')">
-        <div class="calculadora-content">
-          <h2>Calculadora de idade gestacional</h2>
-          <span class="botao">
-            CALCULAR AGORA
-          </span>
-        </div>
-      </a>
-    </div>
-  </section>
+  <div class="calculadoras-container">
+    <!-- CARD 1 -->
+    <a href="/calculadoras/como-calcular-indice-de-massa-corporal/" class="calculadora"
+      style="background-image:url('/img/imc-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de Índice de massa corporal</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+    <!-- CARD 2 -->
+    <a href="/calculadoras/como-calcular-o-ciclo-menstrual/" class="calculadora"
+      style="background-image:url('/img/ciclo-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de ciclo menstrual</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+    <!-- CARD 3 -->
+    <a href="/calculadoras/como-calcular-a-diluicao/" class="calculadora"
+      style="background-image:url('/img/reconstituicao-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de diluição ou reconstituição</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+    <!-- CARD 4 -->
+    <a href="/calculadoras/como-calcular-dextrose/" class="calculadora"
+      style="background-image:url('/img/hipoglicemia-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de bolo dextrose a 10%</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+    <!-- CARD 5 -->
+    <a href="/calculadoras/como-calcular-meu-periodo-fertil/" class="calculadora"
+      style="background-image:url('/img/periodo-fertil-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de período fértil</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+    <!-- CARD 6 -->
+    <a href="/calculadoras/idade-gestacional/" class="calculadora" style="background-image:url('/img/ig-744.webp')">
+      <div class="calculadora-content">
+        <h2>Calculadora de idade gestacional</h2>
+        <span class="botao">CALCULAR AGORA</span>
+      </div>
+    </a>
+  </div>
   <!-- Cookie Banner - HTML + CSS + JavaScript -->
   <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-content">
@@ -611,15 +605,13 @@ flex flex-col h-[100dvh] overflow-hidden">
       </div>
     </div>
   </div>
-  <!-- FIM DE COOKIES -->
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
         <!-- LOGO -->
         <div class="logo">
           <a href="/">
-            <img src="/img/logo.webp" alt="Observação clinica">
+            <img src="/img/observacao.svg" alt="Observação clinica" width="153" height="40"> </a>
           </a>
         </div>
       </div>
@@ -634,13 +626,16 @@ flex flex-col h-[100dvh] overflow-hidden">
         <div class="rede">
           <div class="flex gap-10 text-2xl">
             <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank" rel="noopener">
-              <i class="fab fa-facebook"></i> </a>
+              <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+            </a>
             <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube"
               target="_blank" rel="noopener">
-              <i class="fab fa-youtube"></i> </a>
+              <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
+            </a>
             <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
               rel="noopener">
-              <i class="fab fa-whatsapp"></i> </a>
+              <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
+            </a>
           </div>
         </div>
       </div>
@@ -680,8 +675,6 @@ flex flex-col h-[100dvh] overflow-hidden">
       © 2026 Observação clínica - Todos os direitos reservados
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
   <script src="/src/avaliacao.js" defer></script>
   <script src="/src/bibliografica.js" defer></script>
   <script src="/calculadoras/src/idadegesta.js" defer></script>

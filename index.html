@@ -17,13 +17,13 @@
   <meta property="og:description"
     content="Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.">
   <meta property="og:url" content="https://observacaoclinica.com/">
-  <meta property="og:image" content="https://observacaoclinica.com/favicon/observacao.webp">
+  <meta property="og:image" content="https://observacaoclinica.com/favicon/observacao.svg">
   <!-- Twitter Card (recomendado) -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Observação clínica - Informação médica, doenças, nutrição e os cuidados.">
   <meta name="twitter:description"
     content="Observação Clínica oferece informação médica confiável sobre doenças, nutrição, prevenção e cuidados de saúde. Conteúdo educativo baseado em boas práticas clínicas.">
-  <meta name="twitter:image" content="https://observacaoclinica.com/favicon/observacao.webp">
+  <meta name="twitter:image" content="https://observacaoclinica.com/favicon/observacao.svg">
   <!-- SEO básico -->
   <link rel="canonical" href="https://observacaoclinica.com/">
   <!-- Hreflang -->
@@ -130,14 +130,12 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Observação clínica" />
-  <link rel="manifest" href="/favicon/site.webmanifest" />
   <!-- CSS -->
-  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/output.css.min.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
   <script>
@@ -153,19 +151,20 @@
   <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <!-- BOTÃO MENU MOBILE -->
-      <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
-        aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
-        <i class="fas fa-bars" aria-hidden="false"></i>
+      <button id="mobile-menu-button" aria-label="Abrir menu"
+        class="md:hidden flex items-center justify-center w-8 h-8">
+        <img src="/favicon/menu.svg" class="w-8 h-8" style="width:16px !important; height:16px !important;"
+          alt="abri o meu menu" aria-hidden="true">
       </button>
       <!-- LOGO -->
       <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
-        <img src="/img/observacao.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
-          loading="eager" decoding="async" style="height:40px; width:auto;">
+        <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+          alt="Observação clínica" fetchpriority="high">
       </a>
       <!-- 🔍 BOTÃO SEARCH MOBILE -->
-      <button id="mobile-search-button" aria-label="lupa de pesquisa"
-        class="md:hidden flex items-center justify-center p-4">
-        <i class="fas fa-search"></i>
+      <button id="mobile-search-button" aria-label="Abrir pesquisa"
+        class="md:hidden flex items-center justify-center w-8 h-8">
+        <img src="/favicon/search.svg" class="icon" alt="lupa de pesquisa" aria-hidden="true">
       </button>
       <!-- MENU DESKTOP -->
       <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
@@ -177,23 +176,20 @@
         </a>
         <!-- SAUDE-AZ -->
         <div class="group relative">
-          <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
+          <button id="saude-az-toggle" aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-saude" class="hover:text-blue-400 flex items-center gap-1 transition-colors">
             SAÚDE-AZ
-            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              alt="saudeaz" aria-hidden="true">
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              SAÚDE MENTAL
-            </a>
-            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              SAÚDE ÍNTIMA
-            </a>
-            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              DOENÇAS GERAIS
-            </a>
+                          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
+              MENTAL</a>
+            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
+              ÍNTIMA</a>
+            <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">DOENÇAS
+              GERAIS</a>
           </div>
         </div>
         <!-- BEM-ESTAR -->
@@ -201,11 +197,11 @@
           <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
             aria-controls="submenu-bemestar" class="hover:text-blue-500 flex items-center gap-1 transition-colors">
             BEM-ESTAR
-            <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              alt="bem-estar" aria-hidden="true">
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                       group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
             <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               FITNESS
             </a>
@@ -214,26 +210,24 @@
             </a>
           </div>
         </div>
-
         <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
           CALCULADORAS
         </a>
-
         <!-- PESQUISA NO PC -->
         <div class="relative">
           <button id="search-btn" aria-label="Abrir pesquisa">
-            <i class="fas fa-search" aria-hidden="false"></i>
+            <img src="/favicon/search.svg" class="icon" width="20" height="20" alt="lupa de pesquisa"
+              aria-hidden="true">
           </button>
-
           <!-- LUPA DE PESQUISA -->
           <div
             style="position:fixed; top:70px; left:50%; transform:translateX(-50%); width:90%; max-width:720px; z-index:9999;">
             <input id="search-input" aria-label="Pesquisar no site" type="text" placeholder="🔍 Pesquise aqui..."
-              class="hidden" style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
-               border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
-
+              class="hidden"
+              style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
+                         border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
             <div id="search-results" role="listbox" aria-label="Resultados da pesquisa" class="hidden" style="width:100%; background:#ffffff; border-radius:10px; margin-top:8px;
-              box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
+                             box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
             </div>
           </div>
         </div>
@@ -244,7 +238,7 @@
   <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
     <div class="p-6 rounded-xl">
       <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
-   focus:outline-none focus:ring-0 focus:border-gray-300">
+              focus:outline-none focus:ring-0 focus:border-gray-300">
       <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
         class="mt-2 text-gray-800 hidden">
       </div>
@@ -255,17 +249,17 @@
   </div>
   <!-- MENU MOBILE -->
   <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
-transform -translate-x-full transition-transform duration-300 z-50
-flex flex-col h-[100dvh] overflow-hidden">
+           transform -translate-x-full transition-transform duration-300 z-50
+           flex flex-col h-[100dvh] overflow-hidden">
     <!-- TOPO FIXO -->
     <div class="flex-shrink-0 border border-gray-200">
       <div class="menumobile flex items-center justify-between p-4">
         <a href="/" aria-label="Página inicial Observação Clínica">
-          <img src="/img/observacao.webp" fetchpriority="high" alt="Observação clinica" width="140" height="40"
-            loading="eager" decoding="async">
+          <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+            alt="Observação clínica" fetchpriority="high">
         </a>
-        <button id="close-menu" class="text-2xl focus:outline-none">
-          ×
+        <button id="close-menu" class="text-2xl focus:outline-none" aria-label="Fechar menu">
+          <img src="/favicon/x.svg" width="12" height="12" class="w-3 h-3" alt="" aria-hidden="true">
         </button>
       </div>
     </div>
@@ -275,16 +269,17 @@ flex flex-col h-[100dvh] overflow-hidden">
       <nav class="flex flex-col">
         <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
         <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+
         <!-- SAÚDE-AZ -->
         <div>
           <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>SAÚDE-AZ</span>
-            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="saude-az-icon-mobile"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              id="saude-az-icon-mobile" alt="saude-az" aria-hidden="true">
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                          opacity-0 transform -translate-y-1 transition-all duration-300">
             <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
               SAÚDE MENTAL
             </a>
@@ -296,16 +291,17 @@ flex flex-col h-[100dvh] overflow-hidden">
             </a>
           </div>
         </div>
+
         <!-- Submenu BEM-ESTAR -->
         <div>
           <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
-            <i class="fas fa-chevron-down text-sm transition-transform duration-300" id="fitness-icon-mobile"
-              aria-hidden="true"></i>
+            <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
+              id="fitness-icon-mobile" alt="bem-estar" aria-hidden="true">
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                         opacity-0 transform -translate-y-1 transition-all duration-300">
             <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
               FITNESS
             </a>
@@ -321,24 +317,22 @@ flex flex-col h-[100dvh] overflow-hidden">
         </a>
       </nav>
     </div>
-
     <!-- REDES SOCIAIS -->
     <div class="navrede">
       <h3 class="navrede">
         SIGA-NÓS NAS REDES SOCIAIS
       </h3>
       <div class="flex justify-center gap-8">
-        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social" target="_blank"
+        <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank" rel="noopener">
+          <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+        </a>
+        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube" target="_blank"
           rel="noopener">
-          <i class="fab fa-facebook"></i>
+          <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
         </a>
-        <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="nosso youtube rede social"
-          target="_blank" rel="noopener">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
-          target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i>
+        <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
+          rel="noopener">
+          <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
         </a>
       </div>
     </div>
@@ -352,7 +346,13 @@ flex flex-col h-[100dvh] overflow-hidden">
       <!-- ATUALIZAR 1 -->
       <div class="cardao">
         <a href="/saude-mental/habitos-para-dormir-melhor/">
-          <img src="/img/habitos-de-dormir.webp" fetchpriority="high"
+          <img src="/img/habitos-de-dormir-744.webp" srcset="
+            /img/habitos-de-dormir-372.webp 372w,
+           /img/habitos-de-dormir-400.webp 400w,
+           /img/habitos-de-dormir-744.webp 744w,
+           /img/habitos-de-dormir-1488.webp 1488w
+           " sizes="(max-width: 768px) 100vw, 50vw" width="744" height="418" fetchpriority="high" decoding="async"
+            class="block w-full aspect-video object-cover"
             alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção">
           <span class="tag">SONO SAUDÁVEL</span>
           <h2>Hábitos para dormir melhor: ter um sono mais profundo e reparador</h2>
@@ -366,7 +366,12 @@ flex flex-col h-[100dvh] overflow-hidden">
       <!-- ATUALIZAR 2 -->
       <div class="cardao">
         <a href="/saude-az/insuficiencia-renal/">
-          <img src="/img/insuficiencia-renal.webp" fetchpriority="high"
+          <img src="/img/insuficiencia-renal-744.webp" srcset="
+           /img/insuficiencia-renal-400.webp 400w,
+           /img/insuficiencia-renal-744.webp 744w,
+           /img/insuficiencia-renal-1488.webp 1488w
+           " sizes="(max-width: 768px) 100vw, 50vw" width="744" height="418" fetchpriority="high"
+            class="block w-full aspect-video object-cover"
             alt="Insuficiência renal crónica: o que é, os sintomas, as causas e prevenção">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h2>Insuficiência renal crónica: o que é, os sintomas, as causas e prevenção</h2>
@@ -382,8 +387,12 @@ flex flex-col h-[100dvh] overflow-hidden">
     <section class="now">
       <article>
         <a href="/gravidez/na-gravidez-pode-tomar-paracetamol/">
-          <img src="/img/paracetamol-na-gravidez.webp" fetchpriority="high"
-            alt="Na gravidez pode tomar paracetamol? quando é seguro" class="w-full h-40 object-cover">
+          <img src="/img/paracetamol-na-gravidez-372.webp" srcset="
+           /img/paracetamol-na-gravidez-280.webp 280w,
+           /img/paracetamol-na-gravidez-372.webp 372w,
+           /img/paracetamol-na-gravidez-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy" decoding="async"
+            alt="Na gravidez pode tomar paracetamol? quando é seguro" class="object-cover">
           <span class="tag">PARACETAMOL NA GRAVIDEZ</span>
           <h3>Na gravidez pode tomar paracetamol? quando é seguro, saiba mais</h3>
         </a>
@@ -391,8 +400,12 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/nutricao/posso-comer-ovo-todos-os-dias/">
-          <img src="/img/ovos-cozidos.webp" fetchpriority="high" class="w-full h-40 object-cover"
-            alt="Posso comer ovo todos os dias? Benefícios e cuidados">
+          <img src="/img/ovos-cozidos-372.webp" srcset="
+           /img/ovos-cozidos-280.webp 280w,
+           /img/ovos-cozidos-372.webp 372w,
+           /img/ovos-cozidos-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy" decoding="async"
+            class="object-cover" alt="Posso comer ovo todos os dias? Benefícios e cuidados">
           <span class="tag">ALIMENTAÇÃO SAUDÁVEL</span>
           <h3>Posso comer ovo todos os dias? Benefícios e os cuidados, saiba mais.</h3>
         </a>
@@ -400,9 +413,13 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/saude-bucal/com-que-frequencia-ir-ao-dentista/">
-          <img src="/img/ir-ao-dentista.webp" fetchpriority="high"
+          <img src="/img/ir-ao-dentista-372.webp" srcset="
+           /img/ir-ao-dentista-280.webp 280w,
+           /img/ir-ao-dentista-372.webp 372w,
+           /img/ir-ao-dentista-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy" decoding="async"
             alt="Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê"
-            class="w-full h-40 object-cover">
+            class="object-cover">
           <span class="tag">DENTISTAS</span>
           <h3>Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê</h3>
         </a>
@@ -410,8 +427,12 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/saude-intima/o-que-sao-colicas-menstruais/">
-          <img src="/img/colicas-menstruais.webp" class="w-full h-40 object-cover" fetchpriority="high"
-            alt="Cólicas menstruais: sinais e sintomas e como aliviar de forma natural">
+          <img src="/img/colicas-menstruais-372.webp" srcset="
+           /img/colicas-menstruais-280.webp 280w,
+           /img/colicas-menstruais-372.webp 372w,
+           /img/colicas-menstruais-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" class="object-cover" loading="lazy"
+            decoding="async" alt="Cólicas menstruais: sinais e sintomas e como aliviar de forma natural">
           <span class="tag">CÓLICAS MENSTRUAIS</span>
           <h3>Cólicas menstruais: sinais e sintomas e como aliviar de forma natural e o que fazer, leia mais</h3>
         </a>
@@ -419,9 +440,12 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/gravidez/sintomas-de-gravidez/">
-          <img src="/img/sintomasdegravidez.webp" fetchpriority="high"
-            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança"
-            class="w-full h-40 object-cover">
+          <img src="/img/sintomasdegravidez-372.webp" srcset="
+           /img/sintomasdegravidez-280.webp 280w,
+           /img/sintomasdegravidez-372.webp 372w,
+           /img/sintomasdegravidez-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy" decoding="async"
+            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança" class="object-cover">
           <span class="tag">SINTOMAS DE GRAVIDEZ</span>
           <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.</h3>
         </a>
@@ -429,8 +453,12 @@ flex flex-col h-[100dvh] overflow-hidden">
 
       <article>
         <a href="/saude-mental/o-que-e-mioclonia/">
-          <img src="/img/mioclonia.webp" fetchpriority="high"
-            alt="O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos" class="w-full h-40 object-cover">
+          <img src="/img/mioclonia-372.webp" srcset="
+           /img/mioclonia-280.webp 280w,
+           /img/mioclonia-372.webp 372w,
+           /img/mioclonia-744.webp 744w
+           " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy" decoding="async"
+            alt="O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos" class="object-cover">
           <span class="tag">DOENÇAS E CONDIÇÕES</span>
           <h3>O que é Mioclonia: sinais e sintomas, factores de riscos, causas e tratamentos, saiba mais.</h3>
         </a>
@@ -444,7 +472,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- CARD 1 -->
         <div class="cartao">
           <a href="/saude-intima/coceira-intima/">
-            <img src="/img/coceira-intima.webp" loading="lazy"
+            <img src="/img/coceira-intima-280.webp" srcset="
+             /img/coceira-intima-140.webp 140w,
+             /img/coceira-intima-280.webp 280w,
+             /img/coceira-intima-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Coceira íntima antes da menstruação: causas, prevenção e alívio">
             <div class="cartao-content">
               <div class="tag">COCEIRA ÍNTIMA</div>
@@ -455,7 +487,11 @@ flex flex-col h-[100dvh] overflow-hidden">
 
         <div class="cartao">
           <a href="/saude-intima/cheiro-forte-regiao-intima/">
-            <img src="/img/cheiro-forte-regiao-intima.webp" loading="lazy"
+            <img src="/img/cheiro-forte-regiao-intima-280.webp" srcset="
+             /img/cheiro-forte-regiao-intima-140.webp 140w,
+             /img/cheiro-forte-regiao-intima-280.webp 280w,
+             /img/cheiro-forte-regiao-intima-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Cheiro forte na região íntima: causas e como tratar">
             <div class="cartao-content">
               <div class="tag">CHEIRO ÍNTIMO</div>
@@ -467,7 +503,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- CARD 1 -->
         <div class="cartao">
           <a href="/saude-intima/corrimento-transparente-sem-cheiro/">
-            <img src="/img/corrimento-transparente.webp" loading="lazy"
+            <img src="/img/corrimento-transparente-280.webp" srcset="
+             /img/corrimento-transparente-140.webp 140w,
+             /img/corrimento-transparente-280.webp 280w,
+             /img/corrimento-transparente-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Corrimento transparente sem cheiro: é normal?">
             <div class="cartao-content">
               <div class="tag">CORRIMENTO VAGINAL</div>
@@ -479,7 +519,12 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- CARD 1 -->
         <div class="cartao">
           <a href="/saude-bucal/o-que-e-carie-dentaria/">
-            <img src="/img/o-que-e-carie.webp" loading="lazy" alt="Cárie dentária: o que é, causas, sintomas">
+            <img src="/img/o-que-e-carie-280.webp" srcset="
+             /img/o-que-e-carie-140.webp 140w,
+             /img/o-que-e-carie-280.webp 280w,
+             /img/o-que-e-carie-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+              alt="Cárie dentária: o que é, causas, sintomas">
             <div class="cartao-content">
               <div class="tag">CÁRIES DENTÁRIAS</div>
               <h3>Cárie dentária: o que é, causas, sinais e sintomas e como evitar</h3>
@@ -490,7 +535,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- CARD 3 -->
         <div class="cartao">
           <a href="/gravidez/como-promover-uma-gravidez-saudavel/">
-            <img src="/img/gravidez-promover.webp" loading="lazy"
+            <img src="/img/gravidez-promover-280.webp" srcset="
+             /img/gravidez-promover-140.webp 140w,
+             /img/gravidez-promover-280.webp 280w,
+             /img/gravidez-promover-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Como promover uma gravidez saudável: cuidados essenciais para a saúde da mãe e do bebé">
             <div class="cartao-content">
               <div class="tag">GRAVIDEZ SAUDÁVEL</div>
@@ -502,7 +551,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- CARD 6 -->
         <div class="cartao">
           <a href="/gravidez/sinais-de-trabalho-de-parto/">
-            <img src="/img/sinais-de-parto.webp" loading="lazy"
+            <img src="/img/sinais-de-parto-280.webp" srcset="
+             /img/sinais-de-parto-140.webp 140w,
+             /img/sinais-de-parto-280.webp 280w,
+             /img/sinais-de-parto-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Sinais de trabalho de parto: quais são e quando ir ao hospital">
             <div class="cartao-content">
               <div class="tag">SINAIS DE PARTO</div>
@@ -519,7 +572,7 @@ flex flex-col h-[100dvh] overflow-hidden">
     <div class="calculadoras-container">
       <!-- CARD 1 -->
       <a href="/calculadoras/como-calcular-indice-de-massa-corporal/" class="calculadora"
-        style="background-image:url('/img/imc.webp')">
+        style="background-image:url('/img/imc-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de Índice de massa corporal</h2>
           <span class="botao">CALCULAR AGORA</span>
@@ -527,7 +580,7 @@ flex flex-col h-[100dvh] overflow-hidden">
       </a>
       <!-- CARD 2 -->
       <a href="/calculadoras/como-calcular-o-ciclo-menstrual/" class="calculadora"
-        style="background-image:url('/img/ciclo.webp')">
+        style="background-image:url('/img/ciclo-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de ciclo menstrual</h2>
           <span class="botao">CALCULAR AGORA</span>
@@ -535,7 +588,7 @@ flex flex-col h-[100dvh] overflow-hidden">
       </a>
       <!-- CARD 3 -->
       <a href="/calculadoras/como-calcular-a-diluicao/" class="calculadora"
-        style="background-image:url('/img/reconstituicao.webp')">
+        style="background-image:url('/img/reconstituicao-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de diluição ou reconstituição</h2>
           <span class="botao">CALCULAR AGORA</span>
@@ -543,7 +596,7 @@ flex flex-col h-[100dvh] overflow-hidden">
       </a>
       <!-- CARD 4 -->
       <a href="/calculadoras/como-calcular-dextrose/" class="calculadora"
-        style="background-image:url('/img/hipoglicemia.webp')">
+        style="background-image:url('/img/hipoglicemia-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de bolo dextrose a 10%</h2>
           <span class="botao">CALCULAR AGORA</span>
@@ -551,14 +604,14 @@ flex flex-col h-[100dvh] overflow-hidden">
       </a>
       <!-- CARD 5 -->
       <a href="/calculadoras/como-calcular-meu-periodo-fertil/" class="calculadora"
-        style="background-image:url('/img/periodo-fertil.webp')">
+        style="background-image:url('/img/periodo-fertil-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de período fértil</h2>
           <span class="botao">CALCULAR AGORA</span>
         </div>
       </a>
       <!-- CARD 6 -->
-      <a href="/calculadoras/idade-gestacional/" class="calculadora" style="background-image:url('/img/ig.webp')">
+      <a href="/calculadoras/idade-gestacional/" class="calculadora" style="background-image:url('/img/ig-744.webp')">
         <div class="calculadora-content">
           <h2>Calculadora de idade gestacional</h2>
           <span class="botao">CALCULAR AGORA</span>
@@ -569,7 +622,11 @@ flex flex-col h-[100dvh] overflow-hidden">
 
     <!-- #SECCAO DE LEIAMAIS -->
     <section class="lermais">
-      <img src="/img/sinusite.webp" class="rounded" loading="lazy"
+      <img src="/img/sinusite-1200.webp" srcset="
+       /img/sinusite-744.webp 744w,
+       /img/sinusite-1200.webp 1200w,
+       /img/sinusite-1488.webp 1488w
+       " sizes="(max-width: 768px) 100vw, 1200px" width="1200" height="675" class="rounded" loading="lazy"
         alt="Como aliviar sinais e sintomas da sinusite de forma natural">
       <h2 class="mt-2">Como aliviar sinais e sintomas da sinusite de forma natural e eficaz</h2>
       <p>
@@ -589,7 +646,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <div class="cartao">
           <a href="/gravidez/alimentacao-na-gravidez/"
             aria-label="Alimentação na gravidez: o que comer para uma gestação saudável">
-            <img src="/img/alimentacao-na-gravidez.webp"
+            <img src="/img/alimentacao-na-gravidez-280.webp" srcset="
+             /img/alimentacao-na-gravidez-140.webp 140w,
+             /img/alimentacao-na-gravidez-280.webp 280w,
+             /img/alimentacao-na-gravidez-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157"
               aria-label="Alimentação na gravidez: o que comer para uma gestação saudável" loading="lazy"
               alt="Alimentação na gravidez: o que comer para uma gestação saudável">
             <div class="cartao-content">
@@ -601,7 +662,11 @@ flex flex-col h-[100dvh] overflow-hidden">
 
         <div class="cartao">
           <a href="/saude-mental/redes-sociais-nos-adolescentes/">
-            <img src="/img/redes-sociais-nos-adolescentes.webp" loading="lazy"
+            <img src="/img/redes-sociais-nos-adolescentes-280.webp" srcset="
+             /img/redes-sociais-nos-adolescentes-140.webp 140w,
+             /img/redes-sociais-nos-adolescentes-280.webp 280w,
+             /img/redes-sociais-nos-adolescentes-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Como as redes sociais afectam a saúde mental dos adolescentes?">
             <div class="cartao-content">
               <span class="tag">REDES SOCIAIS</span>
@@ -613,7 +678,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- cartao 3 -->
         <div class="cartao">
           <a href="/saude-mental/ansiedade-sintomas/">
-            <img src="/img/ansiedade.webp" loading="lazy"
+            <img src="/img/ansiedade-280.webp" srcset="
+             /img/ansiedade-140.webp 140w,
+             /img/ansiedade-280.webp 280w,
+             /img/ansiedade-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
             <div class="cartao-content">
               <span class="tag">ANSIEDADE</span>
@@ -625,7 +694,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- cartao 4 -->
         <div class="cartao">
           <a href="/saude-intima/o-que-e-clotrimazol-creme-vaginal/">
-            <img src="/img/clotrimazol.webp" loading="lazy"
+            <img src="/img/clotrimazol-280.webp" srcset="
+             /img/clotrimazol-140.webp 140w,
+             /img/clotrimazol-280.webp 280w,
+             /img/clotrimazol-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado">
             <div class="cartao-content">
               <span class="tag">ANTIFÚNGICOS</span>
@@ -636,7 +709,12 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- cartao 4 -->
         <div class="cartao">
           <a href="/saude-intima/o-que-e-candidiase-vaginal/">
-            <img src="/img/candidiasevaginal.webp" loading="lazy" alt="O que é candidíase vaginal">
+            <img src="/img/candidiasevaginal-280.webp" srcset="
+             /img/candidiasevaginal-140.webp 140w,
+             /img/candidiasevaginal-280.webp 280w,
+             /img/candidiasevaginal-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+              alt="O que é candidíase vaginal">
             <div class="cartao-content">
               <span class="tag">CANDIDÍASE VAGINAL</span>
               <h3>O que é candidíase vaginal: sintomas, causas, prevenção</h3>
@@ -648,7 +726,11 @@ flex flex-col h-[100dvh] overflow-hidden">
         <div class="cartao">
           <a href="/fitness/treino-para-ganhar-massa-muscular/"
             aria-label="Treino de força e hipertrofia funcional: para ganhar massa e melhorar o corpo">
-            <img src="/img/exercicios-para-ganhar-massa.webp" loading="lazy"
+            <img src="/img/exercicios-para-ganhar-massa-280.webp" srcset="
+             /img/exercicios-para-ganhar-massa-140.webp 140w,
+             /img/exercicios-para-ganhar-massa-280.webp 280w,
+             /img/exercicios-para-ganhar-massa-372.webp 372w
+             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
               alt="Treino de força e hipertrofia funcional: para ganhar massa e melhorar o corpo">
             <div class="cartao-content">
               <span class="tag">MASSA MUSCULAR</span>
@@ -732,14 +814,13 @@ flex flex-col h-[100dvh] overflow-hidden">
       </div>
     </div>
   </section>
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-top">
         <!-- LOGO -->
         <div class="logo">
           <a href="/">
-            <img src="/img/logo.webp" alt="Observação clinica">
+            <img src="/img/observacao.svg" alt="Observação clinica" width="153" height="40"> </a>
           </a>
         </div>
       </div>
@@ -754,13 +835,16 @@ flex flex-col h-[100dvh] overflow-hidden">
         <div class="rede">
           <div class="flex gap-10 text-2xl">
             <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank" rel="noopener">
-              <i class="fab fa-facebook"></i> </a>
+              <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+            </a>
             <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube"
               target="_blank" rel="noopener">
-              <i class="fab fa-youtube"></i> </a>
+              <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
+            </a>
             <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
               rel="noopener">
-              <i class="fab fa-whatsapp"></i> </a>
+              <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
+            </a>
           </div>
         </div>
       </div>

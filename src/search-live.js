@@ -64,6 +64,7 @@ const pages = [
   { title: "", url: "" },
 
 ];
+
 // ELEMENTOS
 const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
@@ -72,13 +73,18 @@ const mobileBtn = document.getElementById('mobile-search-button');
 const mobileBar = document.getElementById('search-input-bar');
 const mobileInput = document.getElementById('search-input-mobile-top');
 const mobileResults = document.getElementById('search-results-mobile-top');
+
 // =====================
 // DESKTOP
 // =====================
 searchBtn.addEventListener('click', (e) => {
   e.stopPropagation();
+  // Alterna a visibilidade (escrita no DOM)
   searchInput.classList.toggle('hidden');
-  searchInput.focus();
+  // Adia o focus() para o próximo frame, evitando o ajuste forçado
+  // (ler/agir sobre foco logo após mudar "display" força um recálculo
+  // síncrono de layout)
+  requestAnimationFrame(() => searchInput.focus());
 });
 
 searchInput.addEventListener('input', (e) => {
@@ -91,7 +97,9 @@ searchInput.addEventListener('input', (e) => {
 mobileBtn.addEventListener('click', (e) => {
   e.stopPropagation();
   mobileBar.classList.toggle('hidden');
-  setTimeout(() => mobileInput.focus(), 100);
+  // Mesmo motivo do desktop: adia o focus() para depois do layout
+  // já ter sido aplicado, em vez de forçar o cálculo no clique
+  requestAnimationFrame(() => mobileInput.focus());
 });
 
 mobileInput.addEventListener('input', (e) => {
@@ -131,6 +139,7 @@ document.addEventListener('click', (e) => {
     mobileBar.classList.add('hidden');
   }
 });
+
 // =====================
 // ESC FECHA TUDO
 // =====================

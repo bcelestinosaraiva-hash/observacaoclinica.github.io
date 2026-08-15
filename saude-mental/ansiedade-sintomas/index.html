@@ -16,7 +16,7 @@
     <meta property="og:title" content="Ansiedade: sintomas, causas e como controlar de forma e eficaz">
     <meta property="og:description"
         content="O aleitamento materno é essencial para a saúde da mãe e do bebê. Saiba benefícios, recomendações e como promover uma amamentação saudável e segura.">
-    <meta property="og:image" content="https://observacaoclinica.com/img/ansiedade.webp">
+    <meta property="og:image" content="https://observacaoclinica.com/img/ansiedade-1200.webp">
     <meta property="og:url" content="https://observacaoclinica.com/saude-mental/ansiedade-sintomas/">
     <meta property="og:site_name" content="Observação clínica">
     <meta property="og:locale" content="pt_PT">
@@ -30,7 +30,7 @@
     <meta name="twitter:title" content="Ansiedade: sintomas, causas e como controlar de forma e eficaz">
     <meta name="twitter:description"
         content="O aleitamento materno é essencial para a saúde da mãe e do bebê. Saiba benefícios, recomendações e como promover uma amamentação saudável e segura.">
-    <meta name="twitter:image" content="https://observacaoclinica.com/img/ansiedade.webp">
+    <meta name="twitter:image" content="https://observacaoclinica.com/img/ansiedade-1200.webp">
     <!-- Canonical -->
     <link rel="canonical" href="https://observacaoclinica.com/saude-mental/ansiedade-sintomas/">
     <!-- Hreflang -->
@@ -119,16 +119,12 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Observação clínica" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
     <!-- CSS -->
-    <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
     <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/output.css.min.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
     <script>
@@ -155,19 +151,20 @@
     <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
             <!-- BOTÃO MENU MOBILE -->
-            <button id="mobile-menu-button" aria-label="Abrir menu principal" aria-expanded="false"
-                aria-controls="mobile-menu" class="md:hidden w-8 h-8 flex items-center justify-center mr-3">
-                <i class="fas fa-bars" aria-hidden="false"></i>
+            <button id="mobile-menu-button" aria-label="Abrir menu"
+                class="md:hidden flex items-center justify-center w-8 h-8">
+                <img src="/favicon/menu.svg" class="w-8 h-8" style="width:16px !important; height:16px !important;"
+                    alt="abri o meu menu" aria-hidden="true">
             </button>
             <!-- LOGO -->
             <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
-                <img src="/img/observacao.webp" width="160" height="40" fetchpriority="high" alt="Observação clínica"
-                    loading="eager" decoding="async" style="height:40px; width:auto;">
+                <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+                    alt="Observação clínica" fetchpriority="high">
             </a>
             <!-- 🔍 BOTÃO SEARCH MOBILE -->
-            <button id="mobile-search-button" aria-label="lupa de pesquisa"
-                class="md:hidden flex items-center justify-center p-4">
-                <i class="fas fa-search"></i>
+            <button id="mobile-search-button" aria-label="Abrir pesquisa"
+                class="md:hidden flex items-center justify-center w-8 h-8">
+                <img src="/favicon/search.svg" class="icon" alt="lupa de pesquisa" aria-hidden="true">
             </button>
             <!-- MENU DESKTOP -->
             <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
@@ -179,24 +176,22 @@
                 </a>
                 <!-- SAUDE-AZ -->
                 <div class="group relative">
-                    <button aria-label="Abrir submenu Saúde AZ" aria-haspopup="true" aria-expanded="false"
-                        aria-controls="submenu-saude"
+                    <button id="saude-az-toggle" aria-label="Abrir submenu Saúde AZ" aria-haspopup="true"
+                        aria-expanded="false" aria-controls="submenu-saude"
                         class="hover:text-blue-400 flex items-center gap-1 transition-colors">
                         SAÚDE-AZ
-                        <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-300 group-hover:rotate-180"
-                            aria-hidden="true"></i>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" alt="saudeaz"
+                            aria-hidden="true">
                     </button>
                     <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-                        <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            SAÚDE MENTAL
-                        </a>
-                        <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            SAÚDE ÍNTIMA
-                        </a>
-                        <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-                            DOENÇAS GERAIS
-                        </a>
+                          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                        <a href="/saude-mental/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE MENTAL</a>
+                        <a href="/saude-intima/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE ÍNTIMA</a>
+                        <a href="/saude-az/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">DOENÇAS GERAIS</a>
                     </div>
                 </div>
                 <!-- BEM-ESTAR -->
@@ -205,11 +200,12 @@
                         aria-controls="submenu-bemestar"
                         class="hover:text-blue-500 flex items-center gap-1 transition-colors">
                         BEM-ESTAR
-                        <i class="fas fa-chevron-down text-xs mt-[2px] transition-transform duration-500 group-hover:rotate-180"
-                            aria-hidden="true"></i>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" alt="bem-estar"
+                            aria-hidden="true">
                     </button>
                     <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                       group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
                         <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
                             FITNESS
                         </a>
@@ -218,62 +214,57 @@
                         </a>
                     </div>
                 </div>
-
                 <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
                     CALCULADORAS
                 </a>
-
                 <!-- PESQUISA NO PC -->
                 <div class="relative">
                     <button id="search-btn" aria-label="Abrir pesquisa">
-                        <i class="fas fa-search" aria-hidden="false"></i>
+                        <img src="/favicon/search.svg" class="icon" width="20" height="20" alt="lupa de pesquisa"
+                            aria-hidden="true">
                     </button>
-
                     <!-- LUPA DE PESQUISA -->
                     <div
                         style="position:fixed; top:70px; left:50%; transform:translateX(-50%); width:90%; max-width:720px; z-index:9999;">
                         <input id="search-input" aria-label="Pesquisar no site" type="text"
-                            placeholder="🔍 Pesquise aqui..." class="hidden" style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
-               border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
-
+                            placeholder="🔍 Pesquise aqui..." class="hidden"
+                            style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
+                         border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
                         <div id="search-results" role="listbox" aria-label="Resultados da pesquisa" class="hidden"
                             style="width:100%; background:#ffffff; border-radius:10px; margin-top:8px;
-              box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
+                             box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
                         </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-
     <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
     <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
         <div class="p-6 rounded-xl">
             <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
-   focus:outline-none focus:ring-0 focus:border-gray-300">
+              focus:outline-none focus:ring-0 focus:border-gray-300">
             <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
                 class="mt-2 text-gray-800 hidden">
             </div>
         </div>
     </div>
-
     <!-- OVERLAY -->
     <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
     </div>
-
     <!-- MENU MOBILE -->
     <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
-transform -translate-x-full transition-transform duration-300 z-50
-flex flex-col h-[100dvh] overflow-hidden">
+           transform -translate-x-full transition-transform duration-300 z-50
+           flex flex-col h-[100dvh] overflow-hidden">
         <!-- TOPO FIXO -->
         <div class="flex-shrink-0 border border-gray-200">
             <div class="menumobile flex items-center justify-between p-4">
                 <a href="/" aria-label="Página inicial Observação Clínica">
-                    <img src="/img/observacao.webp" fetchpriority="high" alt="Observação clinica" width="140"
-                        height="40" loading="eager" decoding="async">
+                    <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+                        alt="Observação clínica" fetchpriority="high">
                 </a>
-                <button id="close-menu" class="text-2xl focus:outline-none">
-                    ×
+                <button id="close-menu" class="text-2xl focus:outline-none" aria-label="Fechar menu">
+                    <img src="/favicon/x.svg" width="12" height="12" class="w-3 h-3" alt="" aria-hidden="true">
                 </button>
             </div>
         </div>
@@ -283,16 +274,18 @@ flex flex-col h-[100dvh] overflow-hidden">
             <nav class="flex flex-col">
                 <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
                 <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+
                 <!-- SAÚDE-AZ -->
                 <div>
                     <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
                         class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
                         <span>SAÚDE-AZ</span>
-                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"
-                            id="saude-az-icon-mobile" aria-hidden="true"></i>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" id="saude-az-icon-mobile"
+                            alt="saude-az" aria-hidden="true">
                     </button>
                     <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                          opacity-0 transform -translate-y-1 transition-all duration-300">
                         <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
                             SAÚDE MENTAL
                         </a>
@@ -304,16 +297,18 @@ flex flex-col h-[100dvh] overflow-hidden">
                         </a>
                     </div>
                 </div>
+
                 <!-- Submenu BEM-ESTAR -->
                 <div>
                     <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
                         class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
                         <span>BEM-ESTAR</span>
-                        <i class="fas fa-chevron-down text-sm transition-transform duration-300"
-                            id="fitness-icon-mobile" aria-hidden="true"></i>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" id="fitness-icon-mobile"
+                            alt="bem-estar" aria-hidden="true">
                     </button>
                     <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
-      opacity-0 transform -translate-y-1 transition-all duration-300">
+                         opacity-0 transform -translate-y-1 transition-all duration-300">
                         <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
                             FITNESS
                         </a>
@@ -329,24 +324,23 @@ flex flex-col h-[100dvh] overflow-hidden">
                 </a>
             </nav>
         </div>
-
         <!-- REDES SOCIAIS -->
         <div class="navrede">
             <h3 class="navrede">
                 SIGA-NÓS NAS REDES SOCIAIS
             </h3>
             <div class="flex justify-center gap-8">
-                <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="nosso facebook rede social"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-facebook"></i>
+                <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank"
+                    rel="noopener">
+                    <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
                 </a>
-                <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh"
-                    aria-label="nosso youtube rede social" target="_blank" rel="noopener">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="nosso whatssap rede social"
+                <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube"
                     target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
+                    <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
+                    rel="noopener">
+                    <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
                 </a>
             </div>
         </div>
@@ -365,7 +359,7 @@ flex flex-col h-[100dvh] overflow-hidden">
 
             <h1>Ansiedade: sintomas, causas e como controlar de forma eficaz</h1>
             <div class="meta">
-                <i class="fa-regular fa-clock"></i>
+                <img src="/favicon/clock.svg" alt="relogio" width="12" height="12">
                 Atualizado em abril de 2026
             </div>
             <div class="autora">
@@ -379,6 +373,16 @@ flex flex-col h-[100dvh] overflow-hidden">
                         Criado pela: <a href="/equipa/">equipa da observação clínica</a> </div>
                 </div>
             </div>
+
+            <!-- IMAGEM -->
+            <img src="/img/ansiedade-1200.webp" srcset="
+               /img/ansiedade-372.webp 372w,
+               /img/ansiedade-400.webp 400w,
+               /img/ansiedade-744.webp 744w,
+               /img/ansiedade-1488.webp 1488w
+               " sizes="(max-width: 768px) 100vw, 50vw" width="744" height="418" fetchpriority="high"
+                class="block w-full h-auto aspect-video object-cover rounded"
+                alt="Ansiedade: sintomas, causas e como controlar de forma eficaz">
 
             <p>A ansiedade é uma resposta natural do organismo diante de situações de perigo, pressão ou incerteza. Em
                 níveis moderados, ela pode ser útil, ajudando na adaptação e na tomada de decisões.</p>
@@ -547,17 +551,16 @@ flex flex-col h-[100dvh] overflow-hidden">
                     </li>
                 </ul>
 
-
                 <!-- AVALIAÇÃO DE CONTEÚDO -->
                 <hr>
                 <section class="avaliacao-secao">
                     <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
                     <div class="buttonsa">
                         <button class="btna btn-yes" onclick="avaliar('Sim')">
-                            <i class="fa-solid fa-thumbs-up"></i> SIM
+                            <img src="/favicon/thumbs-up.svg" alt="sim" width="20" height="20"> SIM
                         </button>
                         <button class="btna btn-no" onclick="avaliar('Não')">
-                            <i class="fa-solid fa-thumbs-down"></i> NÃO
+                            <img src="/favicon/thumbs-down.svg" alt="não" width="20" height="20"> NÃO
                         </button>
                     </div>
                     <div id="feedback" style="display:none;">
@@ -578,29 +581,28 @@ flex flex-col h-[100dvh] overflow-hidden">
                     </div>
                 </section>
                 <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
-
                 <hr>
-                <!-- SHAREING-->
-                <div class="compartilhamento">
+                <section>
                     <div class="shareing">
                         <span>COMPARTILHE</span>
                         <div class="iconsa">
                             <div class="icona facebook" onclick="shareFacebook()">
-                                <i class="fab fa-facebook-f"></i>
+                                <img src="/favicon/facebook-25.svg" alt="facebook" width="28" height="28">
                             </div>
                             <div class="icona whatsapp" onclick="shareWhatsApp()">
-                                <i class="fab fa-whatsapp"></i>
+                                <img src="/favicon/whatsapp-25.svg" alt="whatsapp" width="28" height="28">
                             </div>
                             <div class="icona pinterest" onclick="sharePinterest()">
-                                <i class="fab fa-pinterest-p"></i>
+                                <img src="/favicon/pinterest-25.svg" alt="pinterest" width="28" height="28">
                             </div>
                             <div class="icona share-icona" onclick="shareNative()">
-                                <i class="fas fa-share-alt"></i>
+                                <img src="/favicon/share.svg" alt="compartilhar" width="28" height="28">
                             </div>
                         </div>
                     </div>
+                    </div>
                     <hr>
-                </div>
+                </section>
                 <h2 class="referencia">BIBLIOGRÁFICAS</h2>
                 <section class="panel">
                     <ul>
@@ -638,20 +640,14 @@ flex flex-col h-[100dvh] overflow-hidden">
         <!-- LADO DIREITO: BARRA LATERAL -->
         <aside class="space-y-6 mt-10">
             <article>
-                <a href="/saude-intima/o-que-e-candidiase-vaginal/">
-                    <img src="/img/candidiasevaginal.webp" fetchpriority="high" alt="O que é candidíase vaginal"
-                        loading="lazy" class="w-full h-40 object-cover">
-                    <span class="tag">DOENÇAS E CONDIÇÕES</span>
-                    <h3>O que é candidíase vaginal: sinais e sintomas, causas, prevenção e tratamento, saiba mais.
-                    </h3>
-                </a>
-            </article>
-
-            <article>
                 <a href="/saude-intima/o-que-e-clotrimazol-creme-vaginal/">
-                    <img src="/img/clotrimazol.webp" fetchpriority="high"
-                        alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado" loading="lazy"
-                        class="w-full h-40 object-cover">
+                    <img src="/img/clotrimazol-1200.webp" srcset="
+                     /img/clotrimazol-280.webp 280w,
+                     /img/clotrimazol-372.webp 372w,
+                     /img/clotrimazol-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
+                        alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado"
+                        class="w-full h-auto object-cover">
                     <span class="tag">ANTIFÚNGICOS</span>
                     <h3>O que é Clotrimazol 2% creme vaginal, para que é utilizado este medicamentos, saiba mais.
                     </h3>
@@ -660,9 +656,13 @@ flex flex-col h-[100dvh] overflow-hidden">
 
             <article>
                 <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
-                    <img src="/img/carie-dentaria.webp" fetchpriority="high"
+                    <img src="/img/carie-dentaria-1200.webp" srcset="
+                     /img/carie-dentaria-280.webp 280w,
+                     /img/carie-dentaria-372.webp 372w,
+                     /img/carie-dentaria-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209"
                         alt="A prevenção de cáries é fundamental para manter a saúde bucal e garantir uma boa qualidade de vida"
-                        loading="lazy" class="w-full h-40 object-cover">
+                        loading="lazy" class="w-full h-auto object-cover">
                     <span class="tag">CÁRIES DENTÁRIAS</span>
                     <h3>A prevenção de cáries é fundamental para manter a saúde bucal e garantir uma boa, leia.
                     </h3>
@@ -671,26 +671,19 @@ flex flex-col h-[100dvh] overflow-hidden">
 
             <article>
                 <a href="/saude-az/hipertensao-arterial-mas-porque/">
-                    <img src="/img/hipertensao.webp" fetchpriority="high"
-                        alt="Hipertensão é elevação persistente da pressão arterial" loading="lazy"
-                        class="w-full h-40 object-cover">
+                    <img src="/img/hipertensao-1200.webp" srcset="
+                     /img/hipertensao-280.webp 280w,
+                     /img/hipertensao-372.webp 372w,
+                     /img/hipertensao-744.webp 744w
+                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
+                        alt="Hipertensão é elevação persistente da pressão arterial" class="w-full h-auto object-cover">
                     <span class="tag">HIPERTENSÃO</span>
                     <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores normais, saiba
                         mais.
                     </h3>
                 </a>
             </article>
-
-            <article>
-                <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
-                    <img src="/img/ebola-como.webp" fetchpriority="high"
-                        alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção" loading="lazy"
-                        class="w-full h-40 object-cover">
-                    <span class="tag">DOENÇAS E CONDIÇÕES</span>
-                    <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e as suas prevenções, saiba mais.
-                    </h3>
-                </a>
-            </article>
+            <section id="posts-recentes"></section>
         </aside>
 
     </main>
@@ -700,54 +693,75 @@ flex flex-col h-[100dvh] overflow-hidden">
         <hr>
         <div class="agora">
             <div class="cartao">
-                <a href="/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" aria-label="7 sintomas de meningite">
-                    <img src="/img/meningite.webp" aria-label="7 sintomas de meningite" loading="lazy"
-                        alt="7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca.">
+                <a href="/saude-intima/o-que-sao-colicas-menstruais/" aria-label="7 sintomas de meningite">
+                    <img src="/img/colicas-menstruais-280.webp" srcset="
+                     /img/colicas-menstruais-140.webp 140w,
+                     /img/colicas-menstruais-280.webp 280w,
+                     /img/colicas-menstruais-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+                        alt="Cólicas menstruais: sinais e sintomas e como aliviar de forma natural">
                     <div class="cartao-content">
-                        <span class="tag">MENINGITE</span>
-                        <h3>7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez, mais. </h3>
+                        <span class="tag">CÓLICAS MENSTRUAIS</span>
+                        <h3>Cólicas menstruais: sinais e sintomas e como aliviar de forma natural</h3>
                     </div>
                 </a>
             </div>
 
             <div class="cartao">
-                <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
-                    <img src="/img/carie-dentaria.webp" loading="lazy"
-                        alt="Importância da prevenção de cáries para a saúde bucal">
+                <a href="/saude-bucal/o-que-e-carie-dentaria/">
+                    <img src="/img/o-que-e-carie-280.webp" srcset="
+                     /img/o-que-e-carie-140.webp 140w,
+                     /img/o-que-e-carie-280.webp 280w,
+                     /img/o-que-e-carie-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+                        alt="Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz">
                     <div class="cartao-content">
                         <span class="tag">CÁRIE DENTÁRIAS</span>
-                        <h3>Importância da prevenção de cáries para a saúde bucal, saiba mais.</h3>
+                        <h3>Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz</h3>
                     </div>
                 </a>
             </div>
 
             <!-- cartao 3 -->
             <div class="cartao">
-                <a href="/saude-intima/o-que-sao-colicas-menstruais/">
-                    <img src="/img/colicas-menstruais.webp" loading="lazy"
+                <a href="/saude-mental/ansiedade-sintomas/">
+                    <img src="/img/ansiedade-280.webp" srcset="
+                     /img/ansiedade-140.webp 140w,
+                     /img/ansiedade-280.webp 280w,
+                     /img/ansiedade-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
                         alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
                     <div class="cartao-content">
-                        <span class="tag">COLICAS MENSTRUAIS</span>
-                        <h3>Cólicas menstruais: sinais e sintomas e como aliviar de forma natural</h3>
+                        <span class="tag">ANSIEDADE</span>
+                        <h3>A ansiedade é resposta natural do organismo diante de situações.</h3>
                     </div>
                 </a>
             </div>
 
             <!-- cartao 4 -->
             <div class="cartao">
-                <a href="/nutricao/introducao-de-alimentos/">
-                    <img src="/img/bebe-comendo-introducao-alimentar.webp" loading="lazy"
-                        alt="Introdução de alimento complementar aos seus 6 meses anos de idades">
+                <a href="/saude-az/insuficiencia-renal/">
+                    <img src="/img/ansiedade-280.webp" srcset="
+                     /img/insuficiencia-renal-140.webp 140w,
+                     /img/insuficiencia-renal-280.webp 280w,
+                     /img/insuficiencia-renal-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+                        alt="Insuficiência renal crónica: o que é, sintomas, causas e prevenção">
                     <div class="cartao-content">
-                        <span class="tag">INTRODUÇÃO ALIMENTAR</span>
-                        <h3>Introdução de alimentos complementares aos seus 6 meses anos de idades...</h3>
+                        <span class="tag">DOENÇAS E CONDIÇÕES</span>
+                        <h3>Insuficiência renal crónica: o que é, sintomas, causas e prevenção, saiba mais</h3>
                     </div>
                 </a>
             </div>
             <!-- cartao 4 -->
             <div class="cartao">
                 <a href="/saude-intima/o-que-e-candidiase-vaginal/">
-                    <img src="/img/candidiasevaginal.webp" loading="lazy" alt="O que é candidíase vaginal">
+                    <img src="/img/candidiasevaginal-280.webp" srcset="
+                     /img/candidiasevaginal-140.webp 140w,
+                     /img/candidiasevaginal-280.webp 280w,
+                     /img/candidiasevaginal-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+                        alt="O que é candidíase vaginal">
                     <div class="cartao-content">
                         <span class="tag">CANDIDÍASE VAGINAL</span>
                         <h3>O que é candidíase vaginal: sinais e sintomas, causas, prevenção e tratamento</h3>
@@ -757,12 +771,16 @@ flex flex-col h-[100dvh] overflow-hidden">
 
             <!-- cartao 6 -->
             <div class="cartao">
-                <a href="/saude-az/hipertensao-arterial-mas-porque/">
-                    <img src="/img/hipertensao.webp" loading="lazy"
-                        alt="   Hipertensão é uma elevação persistente da pressão arterial acima dos valores normais">
+                <a href="/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/">
+                    <img src="/img/atraso-da-menstruacao-280.webp" srcset="
+                     /img/atraso-da-menstruacao-140.webp 140w,
+                     /img/atraso-da-menstruacao-280.webp 280w,
+                     /img/atraso-da-menstruacao-372.webp 372w
+                    " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+                        alt="Atraso menstrual: 12 causas além da gravidez que você precisa conhecer">
                     <div class="cartao-content">
-                        <span class="tag">HIPERTENSÃO</span>
-                        <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores.</h3>
+                        <span class="tag">ATRASO MENSTRUAL</span>
+                        <h3>Atraso menstrual: 12 causas além da gravidez que você precisa saber</h3>
                     </div>
                 </a>
             </div>
@@ -791,15 +809,13 @@ flex flex-col h-[100dvh] overflow-hidden">
         </div>
     </div>
     <!-- FIM DE COOKIES -->
-
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-top">
                 <!-- LOGO -->
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/logo.webp" alt="Observação clinica">
+                        <img src="/img/observacao.svg" alt="Observação clinica">
                     </a>
                 </div>
             </div>
@@ -815,13 +831,16 @@ flex flex-col h-[100dvh] overflow-hidden">
                     <div class="flex gap-10 text-2xl">
                         <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank"
                             rel="noopener">
-                            <i class="fab fa-facebook"></i> </a>
+                            <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+                        </a>
                         <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube"
                             target="_blank" rel="noopener">
-                            <i class="fab fa-youtube"></i> </a>
+                            <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
+                        </a>
                         <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp"
                             target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> </a>
+                            <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -861,8 +880,6 @@ flex flex-col h-[100dvh] overflow-hidden">
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script> emailjs.init("QMRZTfkjBwZgN13Iu"); </script>
     <script src="/src/avaliacao.js" defer></script>
     <script src="/js/push-subscribe.js" defer></script>
     <script src="/src/geral.js" defer></script>

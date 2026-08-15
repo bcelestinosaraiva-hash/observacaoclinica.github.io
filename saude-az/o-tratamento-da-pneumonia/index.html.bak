@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta name="p:domain_verify" content="4a116f9b30f9aff57aab5dacfdbd3893" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description"
+    content="Saiba como se prevenir, tratatr e as causas da pneumonia sendo uma doença respiratória">
+  <!-- SEO básico -->
+  <link rel="canonical" href="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/">
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/">
+  <link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/">
+  <!-- INDEXAÇÃO -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tratamentos da pneumonia: medicamentos usados, cuidados e recuperação">
+  <meta property="og:description"
+    content="Os 7 sinais e sintomas de meningite essenciais para identificar cedo e agir rápido, protegendo sua saúde de forma eficaz.">
+  <meta property="og:url" content="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/">
+  <meta property="og:image" content="https://observacaoclinica.com/img/pneumonia.webp">
+  <!-- Twitter Card (recomendado) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tratamentos da pneumonia: medicamentos usados, cuidados e recuperação">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://observacaoclinica.com/img/pneumonia.webp">
+  <!-- Schema.org JSON-LD: Article -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/"
+  },
+  "headline": "Tratamentos da pneumonia: medicamentos usados, cuidados e recuperação",
+  "description": "Entenda o que é pneumonia, suas causas, sintomas, formas de prevenção, complicações e tratamento dessa doença respiratória.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://observacaoclinica.com/img/pneumonia.webp"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Beldo Celestino Saraiva",
+    "jobTitle": "Técnico de Enfermagem Geral"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Observação Clínica",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://observacaoclinica.com/img/logo.webp"
+    }
+  },
+  "datePublished": "2026-04-04",
+  "dateModified": "2026-08-08"
+}
+</script>
+  <title>8 tratamentos de pneumonia: medicamento, cuidados e recuperação | Observação clínica</title>
+  <!--FEED RSS-->
+  <link rel="alternate" type="application/rss+xml" title="Observação Clínica RSS" href="/feed.xml">
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Observação clínica" />
+<!-- CSS -->
+  <link rel="preload" href="/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Rubik-mini.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.min.css">
+  <link rel="stylesheet" href="/css/output.css.min.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-64EH1WD16Y');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Observação clínica", "item": "https://observacaoclinica.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Saúde-AZ", "item": "https://observacaoclinica.com/saude-az/" },
+    { "@type": "ListItem", "position": 3, "name": "Terapia de pneumonia", "item": "https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/" }
+  ]
+}
+</script>
+</head>
+
+<body>
+  <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+            <!-- BOTÃO MENU MOBILE -->
+            <button id="mobile-menu-button" aria-label="Abrir menu"
+                class="md:hidden flex items-center justify-center w-8 h-8">
+                <img src="/favicon/menu.svg" class="w-8 h-8" style="width:16px !important; height:16px !important;"
+                    alt="abri o meu menu" aria-hidden="true">
+            </button>
+            <!-- LOGO -->
+            <a href="/" aria-label="Página inicial Observação Clínica" class="flex-1">
+                <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+                    alt="Observação clínica" fetchpriority="high">
+            </a>
+            <!-- 🔍 BOTÃO SEARCH MOBILE -->
+            <button id="mobile-search-button" aria-label="Abrir pesquisa"
+                class="md:hidden flex items-center justify-center w-8 h-8">
+                <img src="/favicon/search.svg" class="icon" alt="lupa de pesquisa" aria-hidden="true">
+            </button>
+            <!-- MENU DESKTOP -->
+            <nav aria-label="Menu principal" class="hidden md:flex items-center space-x-6 relative">
+                <a href="/nutricao/" class="hover:text-blue-500 transition-colors">
+                    NUTRIÇÃO
+                </a>
+                <a href="/gravidez/" class="hover:text-blue-400 transition-colors">
+                    GRAVIDEZ
+                </a>
+                <!-- SAUDE-AZ -->
+                <div class="group relative">
+                    <button id="saude-az-toggle" aria-label="Abrir submenu Saúde AZ" aria-haspopup="true"
+                        aria-expanded="false" aria-controls="submenu-saude"
+                        class="hover:text-blue-400 flex items-center gap-1 transition-colors">
+                        SAÚDE-AZ
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" alt="saudeaz"
+                            aria-hidden="true">
+                    </button>
+                    <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+                          group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                        <a href="/saude-mental/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE MENTAL</a>
+                        <a href="/saude-intima/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE ÍNTIMA</a>
+                        <a href="/saude-az/" role="menuitem"
+                            class="block px-4 py-2 rounded-lg hover:text-blue-400">DOENÇAS GERAIS</a>
+                    </div>
+                </div>
+                <!-- BEM-ESTAR -->
+                <div class="group relative">
+                    <button aria-label="Abrir submenu Bem-estar" aria-haspopup="true" aria-expanded="false"
+                        aria-controls="submenu-bemestar"
+                        class="hover:text-blue-500 flex items-center gap-1 transition-colors">
+                        BEM-ESTAR
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" alt="bem-estar"
+                            aria-hidden="true">
+                    </button>
+                    <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
+                       group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
+                        <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+                            FITNESS
+                        </a>
+                        <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+                            SAÚDE BUCAL
+                        </a>
+                    </div>
+                </div>
+                <a href="/calculadoras/" class="hover:text-blue-400 transition-colors">
+                    CALCULADORAS
+                </a>
+                <!-- PESQUISA NO PC -->
+                <div class="relative">
+                    <button id="search-btn" aria-label="Abrir pesquisa">
+                        <img src="/favicon/search.svg" class="icon" width="20" height="20" alt="lupa de pesquisa"
+                            aria-hidden="true">
+                    </button>
+                    <!-- LUPA DE PESQUISA -->
+                    <div
+                        style="position:fixed; top:70px; left:50%; transform:translateX(-50%); width:90%; max-width:720px; z-index:9999;">
+                        <input id="search-input" aria-label="Pesquisar no site" type="text"
+                            placeholder="🔍 Pesquise aqui..." class="hidden"
+                            style="width:100%; background:#fff; border:1px solid #e5e7eb; padding:12px 16px;
+                         border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,.15); outline:none; box-sizing:border-box;">
+                        <div id="search-results" role="listbox" aria-label="Resultados da pesquisa" class="hidden"
+                            style="width:100%; background:#ffffff; border-radius:10px; margin-top:8px;
+                             box-shadow:0 10px 30px rgba(0,0,0,.15); padding:8px; box-sizing:border-box;">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- 🔎 SEARCH MOBILE RESULTADOS  -->
+    <div id="search-input-bar" class="md:hidden fixed top-16 left-0 w-full bg-white rounded-xl z-50 hidden">
+        <div class="p-6 rounded-xl">
+            <input id="search-input-mobile-top" type="text" placeholder="🔍 pesquise aqui..." class="w-full bg-white border border-gray-200 p-6 py-2 rounded-lg
+              focus:outline-none focus:ring-0 focus:border-gray-300">
+            <div id="search-results-mobile-top" role="listbox" aria-label="Resultados da pesquisa mobile"
+                class="mt-2 text-gray-800 hidden">
+            </div>
+        </div>
+    </div>
+    <!-- OVERLAY -->
+    <div id="overlay-main" aria-hidden="true" class="fixed inset-0 bg-opacity-60 hidden z-40">
+    </div>
+    <!-- MENU MOBILE -->
+    <aside id="mobile-menu" aria-hidden="false" aria-label="Menu mobile" class="fixed inset-0 sm:w-72 w-full bg-white
+           transform -translate-x-full transition-transform duration-300 z-50
+           flex flex-col h-[100dvh] overflow-hidden">
+        <!-- TOPO FIXO -->
+        <div class="flex-shrink-0 border border-gray-200">
+            <div class="menumobile flex items-center justify-between p-4">
+                <a href="/" aria-label="Página inicial Observação Clínica">
+                    <img src="/img/observacao.svg" width="153" height="40" class="w-[153px] h-[40px] max-w-none"
+                        alt="Observação clínica" fetchpriority="high">
+                </a>
+                <button id="close-menu" class="text-2xl focus:outline-none" aria-label="Fechar menu">
+                    <img src="/favicon/x.svg" class="w-3 h-3" alt="" aria-hidden="true">
+                </button>
+            </div>
+        </div>
+
+        <!-- CATEGORIAS -->
+        <div class="flex-1 overflow-y-auto overscroll-contain">
+            <nav class="flex flex-col">
+                <a href="/nutricao/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">NUTRIÇÃO</a>
+                <a href="/gravidez/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">GRAVIDEZ</a>
+
+                <!-- SAÚDE-AZ -->
+                <div>
+                    <button id="saude-az-toggle-mobile" aria-expanded="false" aria-controls="saude-az-submenu-mobile"
+                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
+                        <span>SAÚDE-AZ</span>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" id="saude-az-icon-mobile"
+                            alt="saude-az" aria-hidden="true">
+                    </button>
+                    <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+                          opacity-0 transform -translate-y-1 transition-all duration-300">
+                        <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
+                            SAÚDE MENTAL
+                        </a>
+                        <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
+                            SAÚDE ÍNTIMA
+                        </a>
+                        <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
+                            DOENÇAS GERAIS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Submenu BEM-ESTAR -->
+                <div>
+                    <button id="bemestar-toggle-mobile" aria-expanded="false" aria-controls="bemestar-submenu-mobile"
+                        class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
+                        <span>BEM-ESTAR</span>
+                        <img src="/favicon/chevron-down.svg"
+                            class="w-3 h-3 chevron-icon transition-transform duration-300" id="fitness-icon-mobile"
+                            alt="bem-estar" aria-hidden="true">
+                    </button>
+                    <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
+                         opacity-0 transform -translate-y-1 transition-all duration-300">
+                        <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
+                            FITNESS
+                        </a>
+                        <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
+                            SAÚDE-BUCAL
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CALCULADORAS -->
+                <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
+                    CALCULADORAS
+                </a>
+            </nav>
+        </div>
+        <!-- REDES SOCIAIS -->
+        <div class="navrede">
+            <h3 class="navrede">
+                SIGA-NÓS NAS REDES SOCIAIS
+            </h3>
+            <div class="flex justify-center gap-8">
+                <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook" target="_blank"
+                    rel="noopener">
+                    <img src="/favicon/facebook.svg" alt="facebook rede nossa" width="25" height="25">
+                </a>
+                <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube"
+                    target="_blank" rel="noopener">
+                    <img src="/favicon/youtube.svg" alt="youtube" width="25" height="25">
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp" target="_blank"
+                    rel="noopener">
+                    <img src="/favicon/whatsapp.svg" alt="whatsapp" width="25" height="25">
+                </a>
+            </div>
+        </div>
+    </aside>
+    <!-- FIM DO HEADER -->
+
+  <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <section class="space-y-6">
+      <nav aria-label="breadcrumb" class="breadcrumbs">
+        <ol>
+          <li><a href="https://observacaoclinica.com/">Observação clínica</a></li>
+          <li><a href="https://observacaoclinica.com/saude-az/">Saúde-AZ</a></li>
+          <li aria-current="page">Terapia de pneumonia</li>
+        </ol>
+      </nav>
+
+      <h1>8 tratamentos de pneumonia: medicamento, cuidados e recuperação</h1>
+      <!-- DATA DE ATUALIZACAO -->
+      <div class="meta">
+        <img src="/favicon/clock.svg" alt="relogio" width="12" height="12">
+        Atualizado em Abril de 2026
+      </div>
+      <div class="autora">
+        <img src="/img/Beldo.webp" fetchpriority="high" loading="eager" class="w-10 h-10 mr-2 object-cover rounded-full"
+          alt="Beldo Celestino Saraiva">
+        <div class="autora-info">
+          Revisão:
+          <a href="/equipa/beldo-celestino-saraiva/">Beldo Celestino Saraiva</a><br>
+          Formado no curso: Técnico de enfermagem geral<br>
+          <div class="subinfo">
+            Criado pela: <a href="/equipa/">equipa da observação clínica</a>
+          </div>
+        </div>
+      </div>
+
+      <p>A <b>pneumonia</b> é uma infecção respiratória que afecta os pulmões e pode causar inflamação dos alvéolos
+        pulmonares, dificultando a passagem de oxigénio para o sangue. O tratamento da pneumonia depende principalmente
+        da causa da doença, da idade do paciente, da gravidade dos sintomas e da presença de outros problemas de saúde.
+      </p>
+      <p>É importante destacar que não existe um único tratamento para todos os casos de pneumonia. O medicamento
+        adequado deve ser escolhido por um profissional de saúde após avaliação clínica.</p>
+
+      <p>O tratamento da <b>pneumonia</b> depende do tipo de agente causador da infecção, que pode ser
+        bacteriano, viral
+        ou fúngico, além da gravidade do quadro clínico e das condições gerais de saúde da pessoa. Em casos leves, o
+        tratamento pode ser feito em casa, enquanto situações mais graves exigem acompanhamento hospitalar e cuidados
+        médicos contínuos.</p>
+      <p>A conduta terapêutica deve sempre ser orientada por um profissional de saúde, como o clínico geral ou o
+        pneumologista. Cada <a href="/saude-az/o-que-e-pneumonia/">tipo de pneumonia
+          apresenta características</a> próprias e requer um plano de tratamento específico. Quando a doença não é
+        tratada adequadamente, há risco de agravamento e surgimento de complicações que podem comprometer a função
+        pulmonar.</p>
+
+      <h2>1. Uso de medicamentos</h2>
+      <p>Antibióticos são indicados principalmente nos casos de pneumonia bacteriana, como: Amoxicilina, enquanto
+        antivirais podem ser prescritos quando a infecção tem origem viral, como nas pneumonias associadas ao vírus da
+        gripe. O tratamento desta doença depende de agente causador.
+      </p>
+      <p>Além disso, medicamentos antitérmicos, como paracetamol ou dipirona, são utilizados para controlar a febre e
+        aliviar o mal-estar. Em situações específicas, broncodilatadores podem ser recomendados para melhorar a
+        respiração, especialmente quando há broncospasmo ou sensação de aperto no peito.</p>
+
+      <p>Lembrando que, é necessário uma avaliação dum profissional de saúde para puder tratar esta doença, não faça
+        automedicação.</p>
+
+      <h2>2. Duração do tratamento medicamentoso</h2>
+      <p>Nos quadros mais leves de pneumonia bacteriana, o tratamento com antibióticos geralmente dura entre cinco e
+        sete dias. Já nos casos mais graves, pode ser necessária a internação hospitalar, com administração de
+        medicamentos diretamente na veia. Nessas situações, o tratamento pode se estender por até três semanas, conforme
+        a evolução clínica do paciente.</p>
+      <h2>3. Hidratação adequada</h2>
+      <p>A hidratação é um aspecto fundamental durante o tratamento da pneumonia. <b>Beber líquidos
+          regularmente</b>
+        ajuda a evitar a desidratação e facilita a eliminação das secreções respiratórias, contribuindo para a melhora
+        da respiração. Em pacientes hospitalizados ou que apresentam dificuldade para ingerir líquidos, pode ser
+        indicado o uso de hidratação intravenosa.</p>
+
+      <h2>4. Repouso e recuperação</h2>
+      <p>O repouso é essencial para que o organismo consiga combater a infecção de forma eficiente. Durante a fase aguda
+        da pneumonia, o descanso permite que o corpo concentre energia na recuperação. Após a melhora dos sintomas, as
+        atividades físicas devem ser retomadas de maneira gradual, respeitando os limites do corpo, principalmente após
+        quadros mais graves.</p>
+
+      <h2>5. Alimentação equilibrada</h2>
+      <p>Uma alimentação adequada contribui para <a
+          href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-pulmonares/pneumonia" target="_blank"
+          rel="noopener noreferrer">
+          o fortalecimento do sistema imunológico e para a recuperação do
+          organismo </a>. Alimentos ricos em nutrientes com ação anti-inflamatória, como peixes ricos em ômega 3,
+        frutas,
+        legumes e fontes de vitamina E, podem ajudar a reduzir a inflamação e favorecer a recuperação pulmonar.
+      </p>
+
+      <h2>6. Oxigenoterapia</h2>
+      <p>A oxigenoterapia é indicada quando a pneumonia provoca queda nos níveis de oxigênio no sangue ou dificuldade
+        respiratória significativa. Esse tratamento consiste no fornecimento de oxigênio suplementar por meio de cânulas
+        nasais ou máscaras, ajudando a melhorar a oxigenação e reduzir o esforço respiratório.
+      </p>
+      <h2>8. Procedimentos cirúrgicos</h2>
+      <p>A cirurgia é raramente necessária no tratamento da pneumonia, mas pode ser indicada em situações de
+        complicações, como o acúmulo de líquido ao redor do pulmão ou a presença de pus. Procedimentos como a drenagem
+        torácica ajudam a controlar essas complicações e evitar o agravamento do quadro clínico.
+      </p>
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <i class="fa-solid fa-thumbs-up"></i> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <i class="fa-solid fa-thumbs-down"></i> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+      <!-- SHAREING-->
+      <hr>
+      <section>
+        <div class="shareing">
+          <span>COMPARTILHE</span>
+          <div class="iconsa">
+            <div class="icona facebook" onclick="shareFacebook()">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="icona whatsapp" onclick="shareWhatsApp()">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="icona pinterest" onclick="sharePinterest()">
+              <i class="fab fa-pinterest-p"></i>
+            </div>
+            <div class="icona share-icona" onclick="shareNative()">
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+        <hr>
+      </section>
+      <!-- #REFERENCIAS -->
+      <h2 class="referencia">BIBLIOGRÁFICAS</h2>
+      <div class="panel">
+        <h2>Referências</h2>
+
+        <ul class="references-list">
+          <li>
+            Organização Mundial da Saúde (OMS).
+            <a href="https://www.who.int/health-topics/pneumonia" target="_blank" rel="noopener noreferrer">
+              Pneumonia
+            </a>
+          </li>
+
+          <li>
+            Serviço Nacional de Saúde (SNS 24).
+            <a href="https://www.sns24.gov.pt/tema/doencas-respiratorias/pneumonia/" target="_blank"
+              rel="noopener noreferrer">
+              sintomas, causas, tratamento e prevenção
+            </a>
+          </li>
+          <li>
+            Centers for Disease Control and Prevention (CDC).
+            <a href="https://www.cdc.gov/pneumonia/" target="_blank" rel="noopener noreferrer">
+              Pneumonia: Causes, Symptoms
+            </a>
+          </li>
+
+          <li>
+            National Institute for Health and Care Excellence (NICE).
+            <a href="https://www.nice.org.uk/guidance/ng138" target="_blank" rel="noopener noreferrer">
+              Pneumonia: diagnosis and management
+            </a>
+          </li>
+
+          <li>
+            American Thoracic Society (ATS).
+            <a href="https://www.thoracic.org" target="_blank" rel="noopener noreferrer">
+              Clinical Guidelines for Respiratory Diseases
+            </a>
+          </li>
+
+          <li>
+            European Respiratory Society (ERS).
+            <a href="https://www.ersnet.org" target="_blank" rel="noopener noreferrer">
+              Respiratory Health Guidelines
+            </a>
+          </li>
+
+          <li>
+            MSD Manuals.
+            <a href="https://www.msdmanuals.com/pt/casa/dist%C3%BArbios-pulmonares/pneumonia" target="_blank"
+              rel="noopener noreferrer">
+              Pneumonia: para profissionais e população
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </section>
+
+    <!-- LADO DIREITO: BARRA LATERAL -->
+    <aside class="space-y-6 mt-10">
+      <article>
+        <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
+          <img src="/img/carie-dentaria.webp" fetchpriority="high"
+            alt="A prevenção de cáries é fundamental para manter a saúde bucal e garantir uma boa qualidade de vida"
+            class="w-full h-40 object-cover">
+          <span class="tag">CÁRIES DENTÁRIAS</span>
+          <h3>A prevenção de cáries é fundamental para manter a saúde bucal e garantir uma boa, leia.
+          </h3>
+        </a>
+      </article>
+
+      <article>
+        <a href="/gravidez/sintomas-de-gravidez/">
+          <img src="/img/sintomasdegravidez.webp" fetchpriority="high"
+            alt="Sintomas de gravidez: como identificar os primeiros sinais com segurança"
+            class="w-full h-40 object-cover">
+          <span class="tag">SINTOMAS DE GRAVIDEZ</span>
+          <h3>Sintomas de gravidez: como identificar os primeiros sinais com segurança, saiba mais.
+          </h3>
+        </a>
+      </article>
+
+      <article>
+        <a href="/saude-az/o-que-e-ebola-e-sua-prevencao/">
+          <img src="/img/ebola-como.webp" fetchpriority="high"
+            alt="Ebola: o que é, sintomas, transmissão, tratamento e prevenção" class="w-full h-40 object-cover">
+          <span class="tag">DOENÇAS E CONDIÇÕES</span>
+          <h3>Ebola: o que é, sinais e sintomas, transmissão, tratamento e sua prevenção, saiba mais.
+          </h3>
+        </a>
+      </article>
+
+      <article>
+        <a href="/nutricao/introducao-de-alimentos/">
+          <img src="/img/bebe-comendo-introducao-alimentar.webp" fetchpriority="high"
+            aria-label="bebe-comendo-introducao-alimentar"
+            alt="Introdução de alimentos complementar aos seus 6 meses de idades" class="w-full h-40 object-cover">
+          <span class="tag">INTRODUÇÃO ALIMENTAR</span>
+          <h3>Introdução de alimentares complementares aos seus 6 meses anos de idades, saiba mais.</h3>
+        </a>
+      </article>
+    </aside>
+  </main>
+  <!-- MENSAGEM RELACIONADAS -->
+  <section class="max-w-6xl w-full mx-auto px-4">
+    <h2>Mensagens em destaque</h2>
+    <hr>
+    <div class="agora">
+      <div class="cartao">
+        <a href="/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" aria-label="7 sintomas de meningite">
+          <img src="/img/meningite.webp" aria-label="7 sintomas de meningite" loading="lazy"
+            alt="7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca.">
+          <div class="cartao-content">
+            <span class="tag">MENINGITE</span>
+            <h3>7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez, mais. </h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="cartao">
+        <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
+          <img src="/img/carie-dentaria.webp" loading="lazy"
+            alt="Importância da prevenção de cáries para a saúde bucal">
+          <div class="cartao-content">
+            <span class="tag">CÁRIE DENTÁRIAS</span>
+            <h3>Importância da prevenção de cáries para a saúde bucal, saiba mais.</h3>
+          </div>
+        </a>
+      </div>
+
+      <!-- cartao 3 -->
+      <div class="cartao">
+        <a href="/saude-mental/ansiedade-sintomas/">
+          <img src="/img/ansiedade.webp" loading="lazy"
+            alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
+          <div class="cartao-content">
+            <span class="tag">ANSIEDADE</span>
+            <h3>A ansiedade é resposta natural do organismo diante de situações.</h3>
+          </div>
+        </a>
+      </div>
+
+      <!-- cartao 4 -->
+      <div class="cartao">
+        <a href="/nutricao/introducao-de-alimentos/">
+          <img src="/img/bebe-comendo-introducao-alimentar.webp" loading="lazy"
+            alt="Introdução de alimento complementar aos seus 6 meses anos de idades">
+          <div class="cartao-content">
+            <span class="tag">INTRODUÇÃO ALIMENTAR</span>
+            <h3>Introdução de alimentos complementares aos seus 6 meses anos de idades...</h3>
+          </div>
+        </a>
+      </div>
+      <!-- cartao 4 -->
+      <div class="cartao">
+        <a href="/saude-intima/o-que-e-candidiase-vaginal/">
+          <img src="/img/candidiasevaginal.webp" loading="lazy" alt="O que é candidíase vaginal">
+          <div class="cartao-content">
+            <span class="tag">CANDIDÍASE VAGINAL</span>
+            <h3>O que é candidíase vaginal: sinais e sintomas, causas, prevenção e tratamento</h3>
+          </div>
+        </a>
+      </div>
+
+      <!-- cartao 6 -->
+      <div class="cartao">
+        <a href="/saude-az/hipertensao-arterial-mas-porque/">
+          <img src="/img/hipertensao.webp" loading="lazy"
+            alt="Hipertensão é uma elevação persistente da pressão arterial acima dos valores normais">
+          <div class="cartao-content">
+            <span class="tag">HIPERTENSÃO</span>
+            <h3>Hipertensão é elevação persistente da pressão arterial acima dos valores.</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Cookie Banner - HTML + CSS + JavaScript -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <h3>🍪 Utilizamos Cookies</h3>
+      <p>
+        Utilizamos cookies para melhorar sua experiência de navegação,
+        analisar o tráfego do site e exibir anúncios personalizados.
+        Você pode aceitar ou recusar os cookies não essenciais.
+        Ao clicar em <b>"Aceitar"</b>, você concorda com nossa
+        <a href="/politica-de-cookies/">política de cookies</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies" class="btn-primary">
+          Aceitar
+        </button>
+        <button id="rejectCookies" class="btn-secondary">
+          Recusar
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- FIM DE COOKIES -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- LOGO -->
+        <div class="logo">
+          <a href="/">
+            <img src="/img/logo.webp" alt="Observação clinica">
+          </a>
+        </div>
+      </div>
+      <div class="footer-topa">
+        <!-- aviso -->
+        <p class="aviso">
+          É um espaço informativo, de divulgação e educação sobre temas relacionados com saúde, nutrição e
+          bem-estar. As
+          informações publicadas não devem ser utilizadas como substituto ao diagnóstico ou tratamento
+          especializado, e consulte sempre um profissional de saúde. </p>
+        <!-- REDES -->
+        <div class="rede">
+          <div class="flex gap-10 text-2xl">
+            <a href="https://www.facebook.com/share/1Dut1QANZu/" aria-label="facebook">
+              <i class="fab fa-facebook"></i> </a>
+            <a href="https://youtube.com/@observacaoclinica-x8p?si=-9hZa-Ygb_62V5dh" aria-label="youtube">
+              <i class="fab fa-youtube"></i> </a>
+            <a href="https://whatsapp.com/channel/0029VbCch6A9Bb5skwfQeO1g" aria-label="whatsapp">
+              <i class="fab fa-whatsapp"></i> </a>
+          </div>
+        </div>
+      </div>
+      <!-- FIM REDE -->
+      <div class="divider"></div>
+      <div class="footer-links">
+        <div class="column">
+          <b>INSTITUCIONAL</b>
+          <a href="/sobre/">Quem somos</a>
+          <a href="/equipa/">Equipa técnica</a>
+          <a href="/contacto/">Contacto</a>
+        </div>
+        <div class="column">
+          <b>EDITORIAL</b>
+          <a href="/correcao-de-conteudos/">Correções</a>
+          <a href="/uso-de-ia/">Uso da IA</a>
+        </div>
+        <div class="column">
+          <b>TRANSPARÊNCIAS</b>
+          <a href="/termos-e-usos/">Termos e usos</a>
+          <a href="/politicas-e-privacidades/">Políticas e privacidades</a>
+        </div>
+        <div class="column">
+          <b>SAÚDE-AZ</b>
+          <a href="/saude-mental/">Saúde mental</a>
+          <a href="/saude-az/">Doenças</a>
+        </div>
+        <div class="column">
+          <b>BEM-ESTAR</b>
+          <a href="/saude-bucal/">Saúde bucal</a>
+          <a href="/fitness/">Fitness</a>
+          <a href="/calculadoras/">Calculadoras</a>
+        </div>
+      </div>
+    </div>
+    <div class="direitos">
+      © 2026 Observação clínica - Todos os direitos reservados
+    </div>
+  </footer>
+<script src="/src/avaliacao.js" defer></script>
+  <script src="/js/push-subscribe.js" defer></script>
+  <script src="/src/geral.js" defer></script>
+  <script src="/src/bibliografica.js" defer></script>
+  <script src="/src/search-live.js" defer></script>
+</body>
+
+</html>

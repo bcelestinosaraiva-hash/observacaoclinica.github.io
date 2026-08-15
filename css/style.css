@@ -876,14 +876,14 @@ ul a {
 }
 
 /* LOGO HEADER NO MOBILE ESQUERDO */
-header img {
-    width: 140px;
-    height: auto;
+header svg {
+    width: 153px;
+    height: 40px;
 }
 
 /* LOGO HEADER NO PC */
 @media (min-width: 1200px) {
-    header img {
+    header svg {
         width: 180px;
         height: auto;
     }
@@ -1663,19 +1663,18 @@ small {
 
 /*CSS DE COOKIES */
 .cookie-banner {
+    z-index: 999999;
     position: fixed;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    background: #fff;
+    border-radius: 16px;
     max-width: 800px;
     margin: auto;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, .18);
     padding: 22px;
-    z-index: 999999;
-    animation: fadeUp .4s ease;
-    display: none;
+    animation: .4s fadeUp;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    box-shadow: 0 10px 35px #0000002e
 }
 
 .cookie-content h3 {
