@@ -1097,11 +1097,16 @@ textarea {
     margin: auto;
     padding: 22px;
     animation: .4s fadeUp;
-    display: none;
+    display: flex;
+    /* ou block, conforme o layout interno */
     bottom: 20px;
     left: 20px;
     right: 20px;
     box-shadow: 0 10px 35px #0000002e
+}
+
+.cookie-banner.hidden {
+    display: none;
 }
 
 .btn-primary,
