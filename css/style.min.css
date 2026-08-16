@@ -732,7 +732,7 @@ header img {
 
 .subinfo,
 .subinfo a {
-    color: #313131
+    color: rgb(61, 61, 61),
 }
 
 .subinfo {
@@ -1550,7 +1550,7 @@ textarea {
     }
 
     .subinfo a {
-        color: #313131;
+        color: rgb(61, 61, 61);
         font-weight: 300
     }
 
@@ -1628,16 +1628,6 @@ svg.icon {
     border: 2px solid #0000;
     border-radius: 8px;
     flex: 1
-}
-
-.fa-thumbs-up {
-    color: #2da4c8;
-    margin-right: 8px
-}
-
-.fa-thumbs-down {
-    color: #7c0d01;
-    margin-right: 8px
 }
 
 .btn-yes {
