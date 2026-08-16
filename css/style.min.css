@@ -701,6 +701,10 @@ header img {
     display: flex
 }
 
+.iconsa img {
+    cursor: pointer;
+}
+
 .autora {
     align-items: center;
     gap: 10px
@@ -1098,7 +1102,6 @@ textarea {
     padding: 22px;
     animation: .4s fadeUp;
     display: flex;
-    /* ou block, conforme o layout interno */
     bottom: 20px;
     left: 20px;
     right: 20px;

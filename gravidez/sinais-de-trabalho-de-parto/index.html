@@ -124,12 +124,22 @@
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="stylesheet" href="/css/output.css.min.css">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-64EH1WD16Y');
+        function loadGTM() {
+            var script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y';
+            script.async = true;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-64EH1WD16Y');
+        }
+        ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
+            window.addEventListener(evt, loadGTM, { once: true, passive: true });
+        });
+        setTimeout(loadGTM, 5000);
     </script>
     <script type="application/ld+json">
 {
