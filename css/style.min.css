@@ -1094,22 +1094,24 @@ textarea {
     margin-top: 10px
 }
 
+
 .cookie-banner {
     z-index: 999999;
+    position: fixed;
+    display: none;
     border-radius: 16px;
     max-width: 800px;
     margin: auto;
     padding: 22px;
-    animation: .4s fadeUp;
-    display: flex;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    box-shadow: 0 10px 35px #0000002e
+    box-shadow: 0 10px 35px #0000002e;
 }
 
-.cookie-banner.hidden {
-    display: none;
+.cookie-banner.show {
+    display: flex;
+    animation: .4s fadeUp;
 }
 
 .btn-primary,

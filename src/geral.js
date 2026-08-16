@@ -115,18 +115,21 @@ document.addEventListener("DOMContentLoaded", () => {
     b && (b.href = `https://wa.me/?text=${v}%20${g}`);
     L && (L.href = `mailto:?subject=${v}&body=${v}%0A${g}`);
 
+
+
     let k = e("cookie-banner"), E = e("acceptCookies"), C = e("rejectCookies");
     if (k) {
-        k.classList.add("hidden");
-        getConsent() || setTimeout(() => { k.classList.remove("hidden") }, 4e3);
+        if (!getConsent()) {
+            setTimeout(() => { k.classList.add("show") }, 4e3);
+        }
         E && E.addEventListener("click", () => {
             setConsent("accepted");
-            k.classList.add("hidden"), carregarGTM()
+            k.classList.remove("show"), carregarGTM()
         });
         C && C.addEventListener("click", () => {
             setConsent("rejected");
-            k.classList.add("hidden")
-        })
+            k.classList.remove("show")
+        });
     }
 
     // Toggle "Saúde de A-Z" — versão desktop
