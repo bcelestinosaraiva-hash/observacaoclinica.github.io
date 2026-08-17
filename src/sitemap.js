@@ -22,12 +22,16 @@ function getUrls(dir, route = "") {
       file === "src" ||
       file === "yandex_b5d9e3c953a4c1e6.html" ||
       file === "recentes" ||
-      file === "img" ||
+      file === "/yandex_b5d9e3c953a4c1e6/" ||
       file === "sitemap.xml" ||
+      file === "src" ||
+
       file.startsWith(".")
     ) {
       return;
     }
+
+    https://observacaoclinica.com/yandex_b5d9e3c953a4c1e6/
 
     if (stat.isDirectory()) {
       urls = urls.concat(getUrls(fullPath, route + "/" + file));
