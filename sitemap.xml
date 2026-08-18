@@ -132,7 +132,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/</loc>
-  <lastmod>2026-08-16</lastmod>
+  <lastmod>2026-08-17</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/gravidez-1200.webp</image:loc>
@@ -159,7 +159,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sintomas-de-gravidez/</loc>
-  <lastmod>2026-08-15</lastmod>
+  <lastmod>2026-08-17</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/sintomasdegravidez-1200.webp</image:loc>
@@ -168,7 +168,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-08-16</lastmod>
+  <lastmod>2026-08-18</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/favicon/observacao.svg</image:loc>
@@ -276,6 +276,15 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/</loc>
+  <lastmod>2026-08-18</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/colesterol-hdl-1200.webp</image:loc>
+      <image:title>Colesterol HDL: É bom ou ruim? Entenda os valores ideais</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/</loc>
   <lastmod>2026-08-17</lastmod>
     <priority>0.7</priority>
@@ -304,7 +313,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/</loc>
-  <lastmod>2026-08-16</lastmod>
+  <lastmod>2026-08-18</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/icon.webp</image:loc>
@@ -457,7 +466,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
-  <lastmod>2026-08-16</lastmod>
+  <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/corrimento-transparente-1200.webp</image:loc>

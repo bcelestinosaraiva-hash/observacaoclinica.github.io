@@ -57,7 +57,7 @@ const pages = [
   { title: "Posso comer ovo todos os dias? Benefícios e cuidados", url: "/nutricao/posso-comer-ovo-todos-os-dias" },
   { title: "Na gravidez pode tomar paracetamol? quando é seguro", url: "/gravidez/na-gravidez-pode-tomar-paracetamol/" },
   { title: "Convulsão e mioclonia: Qual a diferença?", url: "/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/" },
-  { title: "", url: "" },
+  { title: "Colesterol HDL: É bom ou ruim? Entenda os valores ideais", url: "/saude-az/colesterol-hdl-bom-ou-ruim/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
