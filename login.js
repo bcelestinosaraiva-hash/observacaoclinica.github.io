@@ -9,6 +9,10 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 
+// ==========================================
+// CONFIGURAÇÃO FIREBASE
+// ==========================================
+
 const firebaseConfig = {
     apiKey: "AIzaSyCiuqN0Ms5TiEmM1mdIApbUmlveei4WFvo",
     authDomain: "login-observacaoclinica.firebaseapp.com",
@@ -20,20 +24,19 @@ const firebaseConfig = {
 };
 
 
-// Inicializar Firebase
+// ==========================================
+// INICIALIZAR FIREBASE
+// ==========================================
+
 const app = initializeApp(firebaseConfig);
-
-
-// Inicializar Authentication
 const auth = getAuth(app);
-
-
-// Provedor Google
 const provider = new GoogleAuthProvider();
 
 
-// Elementos do HTML
-const loginArea = document.getElementById("login-area");
+// ==========================================
+// ELEMENTOS DO HTML
+// ==========================================
+
 const loginButton = document.getElementById("google-login");
 
 const userArea = document.getElementById("user-area");
@@ -46,73 +49,181 @@ const logoutButton = document.getElementById("logout");
 const commentsArea = document.getElementById("comments-area");
 
 
-// Login com Google
-loginButton.addEventListener("click", async () => {
+// ==========================================
+// VERIFICAR ELEMENTOS
+// ==========================================
 
-    try {
+if (!loginButton) {
+    console.error("Elemento #google-login não encontrado.");
+}
 
-        const result = await signInWithPopup(auth, provider);
+if (!userArea) {
+    console.error("Elemento #user-area não encontrado.");
+}
 
-        console.log("Login realizado:", result.user);
-
-    } catch (error) {
-
-        console.error("Erro no login:", error);
-
-        alert("Erro ao entrar com Google: " + error.message);
-
-    }
-
-});
+if (!commentsArea) {
+    console.error("Elemento #comments-area não encontrado.");
+}
 
 
-// Verificar se existe usuário conectado
+// ==========================================
+// LOGIN COM GOOGLE
+// ==========================================
+
+if (loginButton) {
+
+    loginButton.addEventListener("click", async () => {
+
+        try {
+
+            loginButton.disabled = true;
+            loginButton.textContent = "A entrar...";
+
+            const result = await signInWithPopup(auth, provider);
+
+            console.log(
+                "Login realizado com sucesso:",
+                result.user
+            );
+
+        } catch (error) {
+
+            console.error("Erro no login:", error);
+
+            if (error.code === "auth/popup-closed-by-user") {
+
+                console.log("A janela de login foi fechada.");
+
+            } else if (error.code === "auth/popup-blocked") {
+
+                alert(
+                    "O navegador bloqueou a janela de login. " +
+                    "Permita pop-ups para este site e tente novamente."
+                );
+
+            } else {
+
+                alert(
+                    "Não foi possível entrar com Google. " +
+                    "Tente novamente."
+                );
+            }
+
+        } finally {
+
+            loginButton.disabled = false;
+            loginButton.textContent = "Entrar com Google";
+
+        }
+
+    });
+
+}
+
+
+// ==========================================
+// ESTADO DA AUTENTICAÇÃO
+// ==========================================
+
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
 
         console.log("Usuário conectado:", user);
 
-        loginArea.hidden = true;
+        // Esconder botão de login
+        if (loginButton) {
+            loginButton.hidden = true;
+        }
 
-        userArea.hidden = false;
+        // Mostrar área do utilizador
+        if (userArea) {
+            userArea.hidden = false;
+        }
 
-        commentsArea.hidden = false;
+        // Mostrar comentários
+        if (commentsArea) {
+            commentsArea.hidden = false;
+        }
 
-        userName.textContent = user.displayName || "Usuário";
+        // Nome
+        if (userName) {
+            userName.textContent =
+                user.displayName || "Usuário";
+        }
 
-        userEmail.textContent = user.email || "";
+        // Email
+        if (userEmail) {
+            userEmail.textContent =
+                user.email || "";
+        }
 
-        if (user.photoURL) {
-            userPhoto.src = user.photoURL;
+        // Foto
+        if (userPhoto) {
+
+            if (user.photoURL) {
+
+                userPhoto.src = user.photoURL;
+                userPhoto.alt =
+                    `Foto de ${user.displayName || "usuário"}`;
+
+            } else {
+
+                userPhoto.removeAttribute("src");
+                userPhoto.alt = "Foto do usuário";
+
+            }
         }
 
     } else {
 
         console.log("Nenhum usuário conectado");
 
-        loginArea.hidden = false;
+        // Mostrar botão de login
+        if (loginButton) {
+            loginButton.hidden = false;
+        }
 
-        userArea.hidden = true;
+        // Esconder utilizador
+        if (userArea) {
+            userArea.hidden = true;
+        }
 
-        commentsArea.hidden = true;
-
-    }
-
-});
-
-
-// Logout
-logoutButton.addEventListener("click", async () => {
-
-    try {
-
-        await signOut(auth);
-
-    } catch (error) {
-
-        console.error("Erro ao sair:", error);
+        // Esconder comentários
+        if (commentsArea) {
+            commentsArea.hidden = true;
+        }
 
     }
 
 });
+
+
+// ==========================================
+// LOGOUT
+// ==========================================
+
+if (logoutButton) {
+
+    logoutButton.addEventListener("click", async () => {
+
+        try {
+
+            await signOut(auth);
+
+            console.log("Usuário saiu da conta.");
+
+        } catch (error) {
+
+            console.error("Erro ao sair:", error);
+
+            alert(
+                "Não foi possível sair da conta. " +
+                "Tente novamente."
+            );
+
+        }
+
+    });
+
+}
