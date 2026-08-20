@@ -10,7 +10,7 @@
     // ------------------------------------------------------------------
     // ID do cliente OAuth (público — pode ficar no frontend sem problema).
     const GOOGLE_CLIENT_ID =
-        "107435859530-jacvqe4iubpt3qq23pto7mrs0sb2sngs.apps.googleusercontent.com";
+        "284869675220-evqdeae5e7nfijdtfqmk4q6u8ldntrhp.apps.googleusercontent.com";
 
     // Endpoints do seu Worker (ajuste os caminhos conforme o que você criar).
     const API_BASE = "https://observacaoclinica-comentarios.bcelestinosaraiva.workers.dev/api"; // ex: https://observacaoclinica.com/api
