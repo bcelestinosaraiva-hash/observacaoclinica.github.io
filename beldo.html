@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="pt-BR">
 
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Page Title</title>
-    <link rel='stylesheet' href='main.css'>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comentários — Na gravidez pode tomar paracetamol?</title>
 
-<body>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/comments-section.css">
 
     <style>
         /* =============================================================
@@ -682,110 +681,72 @@
             }
         }
     </style>
-    </head>
+</head>
+
+<body>
+
     <section id="comentarios" class="comments-section" data-article-id="na-gravidez-pode-tomar-paracetamol"
         data-article-title="Na gravidez pode tomar paracetamol?">
 
         <div class="comments-header">
             <span class="comments-eyebrow">Discussão</span>
-
             <h2>Comentários</h2>
-
-            <p>
-                Compartilhe sua dúvida ou experiência sobre este artigo.
-            </p>
+            <p>Compartilhe sua dúvida ou experiência sobre este artigo.</p>
         </div>
 
-
         <!-- LOGIN -->
-
         <div id="login-area" class="login-card">
 
             <div class="login-info">
-
                 <strong>Quer deixar um comentário?</strong>
-
-                <span>
-                    Entre com sua conta Google para comentar.
-                </span>
-
+                <span>Entre com sua conta Google para comentar.</span>
             </div>
 
-
             <button id="google-login" type="button" class="google-login">
-
                 <svg class="google-logo" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill="#4285F4"
                         d="M21.35 12.27c0-.79-.07-1.55-.2-2.27H12v4.3h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.42z" />
-
                     <path fill="#34A853"
                         d="M12 21.5c2.63 0 4.84-.87 6.45-2.36l-3.14-2.45c-.87.58-1.98.93-3.31.93-2.55 0-4.71-1.72-5.49-4.04H3.27v2.53A9.74 9.74 0 0 0 12 21.5z" />
-
                     <path fill="#FBBC05"
                         d="M6.51 13.58A5.86 5.86 0 0 1 6.2 12c0-.55.11-1.09.31-1.58V7.89H3.27A9.74 9.74 0 0 0 2.25 12c0 1.57.38 3.05 1.02 4.11l3.24-2.53z" />
-
                     <path fill="#EA4335"
                         d="M12 6.38c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.48 14.63 2.5 12 2.5a9.74 9.74 0 0 0-8.73 5.39l3.24 2.53C7.29 8.1 9.45 6.38 12 6.38z" />
                 </svg>
-
                 <span>Entrar com Google</span>
-
             </button>
 
         </div>
 
-
         <!-- UTILIZADOR LOGADO -->
-
         <div id="user-area" class="user-card" hidden>
 
             <div class="user-info">
-
-                <img id="user-photo" class="user-photo" width="44" height="44" alt="Foto do utilizador">
+                <img id="user-photo" class="user-photo" width="44" height="44" src="" alt="">
 
                 <div>
-
-                    <strong id="user-name">
-                        Utilizador
-                    </strong>
-
+                    <strong id="user-name">Utilizador</strong>
                     <span id="user-email"></span>
-
                 </div>
-
             </div>
 
-
-            <button id="logout" type="button" class="logout-button">
-                Sair
-            </button>
+            <button id="logout" type="button" class="logout-button">Sair</button>
 
         </div>
 
-
         <!-- FORMULÁRIO -->
-
         <div id="comments-area" class="comment-form-card" hidden>
 
-            <form id="comment-form">
+            <form id="comment-form" novalidate>
 
-                <label for="comment-text">
-                    Seu comentário
-                </label>
+                <label for="comment-text">Seu comentário</label>
 
                 <textarea id="comment-text" name="comment" rows="5" maxlength="1000"
-                    placeholder="Escreva seu comentário..." required></textarea>
+                    placeholder="Escreva seu comentário..." aria-describedby="comment-hint" required></textarea>
 
                 <div class="comment-form-footer">
-
-                    <small>
-                        Seu comentário será analisado antes de ser publicado.
-                    </small>
-
-                    <button id="submit-comment" type="submit">
-                        Enviar comentário
-                    </button>
-
+                    <small id="comment-hint">Seu comentário será analisado antes de ser publicado.</small>
+                    <button id="submit-comment" type="submit">Enviar comentário</button>
                 </div>
 
             </form>
@@ -794,31 +755,22 @@
 
         </div>
 
-
         <!-- COMENTÁRIOS APROVADOS -->
-
         <div class="published-comments">
 
-            <h3>
-                Comentários dos leitores
-            </h3>
+            <h3>Comentários dos leitores</h3>
 
-            <div id="comments-list">
-
-                <p class="comments-loading">
-                    Carregando comentários...
-                </p>
-
+            <div id="comments-list" aria-live="polite">
+                <p class="comments-loading">Carregando comentários...</p>
             </div>
 
         </div>
 
     </section>
 
-
     <script type="module" src="/js/comments.js"></script>
-
     <script type="module" src="login.js" defer></script>
+
 </body>
 
 </html>
