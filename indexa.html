@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários do artigo</title>
+
+    <!-- Se este bloco for colado dentro de uma página existente, mova as duas
+     tags <link> abaixo para o <head> da página e remova esta tag <title>. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ============================================ */
+        /* comentarios.css — estilo do bloco de comentários */
+        /* ============================================ */
+
+        #comentarios-wrap {
+            max-width: 720px;
+            margin: 64px auto;
+            padding: 0 20px;
+            font-family: "IBM Plex Sans", system-ui, sans-serif;
+            color: #1c1c1e;
+        }
+
+        /* ---- cabeçalho da seção ---- */
+        #comentarios-wrap .section-head {
+            margin-bottom: 18px;
+        }
+
+        #comentarios-wrap .eyebrow {
+            display: inline-block;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #6b6f76;
+            margin-bottom: 6px;
+        }
+
+        #comentarios-wrap .section-title {
+            font-family: "Source Serif 4", Georgia, serif;
+            font-weight: 600;
+            font-size: 26px;
+            margin: 0 0 8px;
+            color: #17181a;
+        }
+
+        #comentarios-wrap .section-sub {
+            font-size: 14.5px;
+            line-height: 1.55;
+            color: #52555b;
+            margin: 0;
+            max-width: 56ch;
+        }
+
+        /* ---- divisor decorativo ---- */
+        .pulse-divider {
+            width: 100%;
+            height: 22px;
+            margin: 20px 0 24px;
+            display: block;
+        }
+
+        .pulse-divider path {
+            fill: none;
+            stroke: #d64545;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ---- aviso médico ---- */
+        #comentarios-wrap .disclaimer {
+            background: #fff7ec;
+            border: 1px solid #f0dcb8;
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #6b4f22;
+            margin-bottom: 22px;
+        }
+
+        #comentarios-wrap .disclaimer strong {
+            color: #4a3610;
+        }
+
+        /* ---- cartão de autenticação ---- */
+        .auth-card {
+            background: #f7f7f8;
+            border: 1px solid #e6e6e9;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-bottom: 22px;
+        }
+
+        .auth-card .auth-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .auth-card .auth-copy .title {
+            font-weight: 600;
+            font-size: 14.5px;
+            color: #17181a;
+        }
+
+        .auth-card .auth-copy .sub {
+            font-size: 12.5px;
+            color: #6b6f76;
+        }
+
+        .btn-google {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            border: 1px solid #d7d8dc;
+            border-radius: 8px;
+            padding: 9px 16px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: #1c1c1e;
+            cursor: pointer;
+            transition: background .15s ease, box-shadow .15s ease;
+            white-space: nowrap;
+        }
+
+        .btn-google:hover {
+            background: #f5f5f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+        }
+
+        .btn-google svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        #authLoggedIn {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .user-chip {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .user-chip .who {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+
+        .user-chip .name {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #17181a;
+        }
+
+        .user-chip .email {
+            font-size: 12px;
+            color: #6b6f76;
+        }
+
+        .btn-logout {
+            background: transparent;
+            border: 1px solid #d7d8dc;
+            border-radius: 8px;
+            padding: 7px 14px;
+            font-size: 12.5px;
+            color: #52555b;
+            cursor: pointer;
+            transition: background .15s ease;
+        }
+
+        .btn-logout:hover {
+            background: #ececee;
+        }
+
+        /* ---- formulário de comentário ---- */
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 26px;
+            position: relative;
+        }
+
+        .comment-form.is-locked {
+            opacity: 0.55;
+            pointer-events: none;
+        }
+
+        .comment-form .form-row.stack {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .comment-form label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #33353a;
+        }
+
+        .comment-form textarea {
+            min-height: 96px;
+            resize: vertical;
+            border: 1px solid #d7d8dc;
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #1c1c1e;
+            outline: none;
+            transition: border-color .15s ease;
+        }
+
+        .comment-form textarea:focus {
+            border-color: #9a9dff;
+        }
+
+        .comment-form .field-note {
+            font-size: 11.5px;
+            color: #8a8d94;
+        }
+
+        .turnstile-slot {
+            font-size: 12px;
+            color: #9a9da4;
+            font-family: "IBM Plex Mono", monospace;
+            border: 1px dashed #d7d8dc;
+            border-radius: 8px;
+            padding: 8px 10px;
+            text-align: center;
+        }
+
+        .comment-form .form-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .comment-form .footer-note {
+            font-size: 12px;
+            color: #8a8d94;
+        }
+
+        .comment-form .submit {
+            background: #17181a;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .15s ease;
+        }
+
+        .comment-form .submit:hover {
+            background: #33353a;
+        }
+
+        /* ---- lista de comentários ---- */
+        .comment-count {
+            font-size: 13px;
+            color: #6b6f76;
+            margin-bottom: 12px;
+        }
+
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .comment-list .note {
+            font-size: 13.5px;
+            color: #8a8d94;
+        }
+
+        .comment-item {
+            display: flex;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #ececee;
+        }
+
+        .comment-item .avatar-img {
+            width: 34px;
+            height: 34px;
+        }
+
+        .comment-item .body {
+            flex: 1;
+        }
+
+        .comment-item .meta {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .comment-item .meta .name {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #17181a;
+        }
+
+        .comment-item .meta .date {
+            font-size: 11.5px;
+            color: #a5a8ad;
+        }
+
+        .comment-item .text {
+            font-size: 14px;
+            line-height: 1.55;
+            color: #33353a;
+            white-space: pre-wrap;
+        }
+
+        /* ---- feedback de envio ---- */
+        .comment-feedback {
+            font-size: 12.5px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .comment-feedback.show {
+            display: block;
+        }
+
+        .comment-feedback.ok {
+            background: #eaf7ee;
+            color: #1e7a3c;
+        }
+
+        .comment-feedback.error {
+            background: #fdeceb;
+            color: #b3271e;
+        }
+
+        @media (max-width: 480px) {
+            #comentarios-wrap .section-title {
+                font-size: 22px;
+            }
+
+            .auth-card #authLoggedOut,
+            #authLoggedIn {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-google {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!-- BLOCO DE COMENTÁRIOS — cole antes de </body> -->
+    <!-- ============================================ -->
+    <div id="comentarios-wrap">
+
+        <div class="section-head">
+            <div class="eyebrow">Discussão do artigo</div>
+            <h2 class="section-title">Comentários dos leitores</h2>
+            <p class="section-sub">Compartilhe sua experiência ou dúvida. Comentários passam por revisão antes de
+                aparecer publicamente.</p>
+        </div>
+
+        <svg class="pulse-divider" viewBox="0 0 640 22" preserveAspectRatio="none">
+            <path
+                d="M0,11 H240 L255,11 L263,2 L272,20 L281,11 L296,11 H400 L415,11 L423,2 L432,20 L441,11 L456,11 H640" />
+        </svg>
+
+        <div class="disclaimer">
+            <strong>Aviso:</strong> os comentários refletem a opinião de quem os escreve e não substituem uma consulta
+            médica. Em caso de sintomas ou dúvidas sobre sua saúde, procure um profissional.
+        </div>
+
+        <div class="auth-card">
+            <div id="authLoggedOut"
+                style="display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; width:100%;">
+                <div class="auth-copy">
+                    <span class="title">Identifique-se para comentar</span>
+                    <span class="sub">Usamos sua conta Google só para evitar comentários anônimos e falsos.</span>
+                </div>
+                <button class="btn-google" id="btnGoogleLogin" type="button">
+                    <svg viewBox="0 0 18 18">
+                        <path fill="#4285F4"
+                            d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.9c1.7-1.57 2.7-3.88 2.7-6.62z" />
+                        <path fill="#34A853"
+                            d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.9-2.26c-.8.54-1.84.86-3.06.86-2.35 0-4.34-1.59-5.05-3.72H.98v2.33A9 9 0 0 0 9 18z" />
+                        <path fill="#FBBC05"
+                            d="M3.95 10.7A5.4 5.4 0 0 1 3.66 9c0-.59.1-1.17.29-1.7V4.97H.98A9 9 0 0 0 0 9c0 1.45.35 2.83.98 4.03l2.97-2.33z" />
+                        <path fill="#EA4335"
+                            d="M9 3.58c1.32 0 2.51.46 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0A9 9 0 0 0 .98 4.97l2.97 2.33C4.66 5.17 6.65 3.58 9 3.58z" />
+                    </svg>
+                    Entrar com Google
+                </button>
+            </div>
+            <div id="authLoggedIn">
+                <div class="user-chip">
+                    <img class="avatar-img" id="userPicture" src="" alt="">
+                    <div class="who">
+                        <span class="name" id="userName">—</span>
+                        <span class="email" id="userEmail">—</span>
+                    </div>
+                </div>
+                <button class="btn-logout" id="btnLogout" type="button">Sair</button>
+            </div>
+        </div>
+
+        <form class="comment-form is-locked" id="commentForm">
+            <div class="form-row stack">
+                <label for="c-texto">Comentário</label>
+                <textarea id="c-texto" placeholder="Escreva aqui..." required></textarea>
+                <span class="field-note">Publicado com o nome e a foto da sua conta Google.</span>
+            </div>
+            <div class="turnstile-slot" id="turnstile-container">⟡ Cloudflare Turnstile será validado antes do envio ⟡
+            </div>
+            <div class="form-footer">
+                <span class="footer-note">Seu comentário será exibido após aprovação.</span>
+                <button class="submit" type="submit">Enviar comentário</button>
+            </div>
+        </form>
+
+        <div class="comment-count" id="commentCount">Carregando comentários…</div>
+
+        <div class="comment-list" id="commentList">
+            <div class="note">
+                <p>Carregando comentários aprovados…</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- ============================================ -->
+    <!-- FIM DO BLOCO DE COMENTÁRIOS -->
+    <!-- ============================================ -->
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        /* ============================================ */
+        /* comentarios.js — login Google + comentários   */
+        /* ============================================ */
+
+        (function () {
+            "use strict";
+
+            // ------------------------------------------------------------------
+            // CONFIGURAÇÃO
+            // ------------------------------------------------------------------
+            // ID do cliente OAuth (público — pode ficar no frontend sem problema).
+            const GOOGLE_CLIENT_ID =
+                "107435859530-jacvqe4iubpt3qq23pto7mrs0sb2sngs.apps.googleusercontent.com";
+
+            // Endpoints do seu Worker (ajuste os caminhos conforme o que você criar).
+            const API_BASE = "/api"; // ex: https://observacaoclinica.com/api
+            const ENDPOINT_VERIFY_LOGIN = `${API_BASE}/auth/google`; // POST { id_token }
+            const ENDPOINT_LIST_COMMENTS = `${API_BASE}/comments`; // GET  ?slug=...
+            const ENDPOINT_POST_COMMENT = `${API_BASE}/comments`; // POST { texto, slug, turnstileToken }
+
+            // Identificador único do artigo atual (ajuste como preferir: slug, id, etc.)
+            const ARTICLE_SLUG =
+                document.querySelector('meta[name="article-slug"]')?.content ||
+                location.pathname;
+
+            const SESSION_KEY = "oc_comment_session"; // sessionStorage
+
+            // ------------------------------------------------------------------
+            // ELEMENTOS
+            // ------------------------------------------------------------------
+            const els = {
+                loggedOut: document.getElementById("authLoggedOut"),
+                loggedIn: document.getElementById("authLoggedIn"),
+                btnLogin: document.getElementById("btnGoogleLogin"),
+                btnLogout: document.getElementById("btnLogout"),
+                userPicture: document.getElementById("userPicture"),
+                userName: document.getElementById("userName"),
+                userEmail: document.getElementById("userEmail"),
+                form: document.getElementById("commentForm"),
+                textarea: document.getElementById("c-texto"),
+                commentCount: document.getElementById("commentCount"),
+                commentList: document.getElementById("commentList"),
+            };
+
+            let currentSession = null; // { idToken, name, email, picture }
+
+            // ------------------------------------------------------------------
+            // UTIL — decodifica o payload de um JWT (só para exibir nome/foto
+            // no cliente; a validação de verdade acontece no backend).
+            // ------------------------------------------------------------------
+            function decodeJwtPayload(token) {
+                try {
+                    const base64Url = token.split(".")[1];
+                    const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+                    const json = decodeURIComponent(
+                        atob(base64)
+                            .split("")
+                            .map((c) => "%" + c.charCodeAt(0).toString(16).padStart(2, "0"))
+                            .join("")
+                    );
+                    return JSON.parse(json);
+                } catch (e) {
+                    console.error("Falha ao decodificar token:", e);
+                    return null;
+                }
+            }
+
+            function escapeHtml(str) {
+                const d = document.createElement("div");
+                d.textContent = str;
+                return d.innerHTML;
+            }
+
+            function formatDate(iso) {
+                try {
+                    return new Date(iso).toLocaleDateString("pt-BR", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                    });
+                } catch {
+                    return "";
+                }
+            }
+
+            // ------------------------------------------------------------------
+            // SESSÃO
+            // ------------------------------------------------------------------
+            function saveSession(session) {
+                currentSession = session;
+                sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+                renderAuthState();
+            }
+
+            function clearSession() {
+                currentSession = null;
+                sessionStorage.removeItem(SESSION_KEY);
+                renderAuthState();
+            }
+
+            function loadSession() {
+                const raw = sessionStorage.getItem(SESSION_KEY);
+                if (!raw) return null;
+                try {
+                    return JSON.parse(raw);
+                } catch {
+                    return null;
+                }
+            }
+
+            function renderAuthState() {
+                const logged = !!currentSession;
+
+                els.loggedOut.style.display = logged ? "none" : "flex";
+                els.loggedIn.style.display = logged ? "flex" : "none";
+                els.form.classList.toggle("is-locked", !logged);
+                els.textarea.disabled = !logged;
+
+                if (logged) {
+                    els.userPicture.src = currentSession.picture || "";
+                    els.userName.textContent = currentSession.name || "—";
+                    els.userEmail.textContent = currentSession.email || "—";
+                }
+            }
+
+            // ------------------------------------------------------------------
+            // LOGIN COM GOOGLE (Google Identity Services)
+            // ------------------------------------------------------------------
+            function initGoogleSignIn() {
+                if (!window.google || !google.accounts || !google.accounts.id) {
+                    // O script do GSI ainda não carregou — tenta de novo em breve.
+                    setTimeout(initGoogleSignIn, 200);
+                    return;
+                }
+
+                google.accounts.id.initialize({
+                    client_id: GOOGLE_CLIENT_ID,
+                    callback: handleCredentialResponse,
+                    auto_select: false,
+                    ux_mode: "popup",
+                });
+            }
+
+            async function handleCredentialResponse(response) {
+                const idToken = response.credential;
+                const payload = decodeJwtPayload(idToken);
+
+                if (!payload) {
+                    showFeedback("Não foi possível ler os dados do login. Tente novamente.", "error");
+                    return;
+                }
+
+                // Exibe os dados imediatamente (UX otimista)...
+                saveSession({
+                    idToken,
+                    name: payload.name,
+                    email: payload.email,
+                    picture: payload.picture,
+                });
+
+                // ...e valida o token no backend, que é quem decide se a sessão
+                // realmente vale (o backend verifica a assinatura do token com a
+                // chave pública do Google — não precisa da chave secreta para isso).
+                try {
+                    const res = await fetch(ENDPOINT_VERIFY_LOGIN, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ id_token: idToken }),
+                    });
+                    if (!res.ok) throw new Error("Verificação falhou");
+                } catch (e) {
+                    console.error("Erro ao verificar login no servidor:", e);
+                    // Não desloga automaticamente aqui — cada envio de comentário vai
+                    // reenviar o id_token, então o backend recusa na hora de publicar
+                    // se o token for inválido.
+                }
+            }
+
+            function triggerGoogleLogin() {
+                if (!window.google || !google.accounts || !google.accounts.id) {
+                    showFeedback("O login do Google ainda está carregando, tente em instantes.", "error");
+                    return;
+                }
+                google.accounts.id.prompt((notification) => {
+                    // Fallback: se o One Tap não aparecer (bloqueado, já dispensado
+                    // antes, etc.), renderiza o botão oficial do Google como alternativa.
+                    if (
+                        notification.isNotDisplayed?.() ||
+                        notification.isSkippedMoment?.()
+                    ) {
+                        renderFallbackButton();
+                    }
+                });
+            }
+
+            function renderFallbackButton() {
+                let mount = document.getElementById("gsiFallbackMount");
+                if (!mount) {
+                    mount = document.createElement("div");
+                    mount.id = "gsiFallbackMount";
+                    mount.style.marginTop = "10px";
+                    els.loggedOut.appendChild(mount);
+                }
+                mount.innerHTML = "";
+                google.accounts.id.renderButton(mount, {
+                    type: "standard",
+                    theme: "outline",
+                    size: "large",
+                    text: "signin_with",
+                    locale: "pt-BR",
+                });
+            }
+
+            function logout() {
+                if (window.google?.accounts?.id) {
+                    google.accounts.id.disableAutoSelect();
+                }
+                clearSession();
+            }
+
+            // ------------------------------------------------------------------
+            // FEEDBACK visual no formulário
+            // ------------------------------------------------------------------
+            function showFeedback(msg, type) {
+                let box = document.getElementById("commentFeedback");
+                if (!box) {
+                    box = document.createElement("div");
+                    box.id = "commentFeedback";
+                    box.className = "comment-feedback";
+                    els.form.appendChild(box);
+                }
+                box.textContent = msg;
+                box.className = `comment-feedback show ${type}`;
+                setTimeout(() => box.classList.remove("show"), 5000);
+            }
+
+            // ------------------------------------------------------------------
+            // ENVIO DE COMENTÁRIO
+            // ------------------------------------------------------------------
+            async function handleSubmit(evt) {
+                evt.preventDefault();
+
+                if (!currentSession) {
+                    showFeedback("Entre com sua conta Google para comentar.", "error");
+                    return;
+                }
+
+                const texto = els.textarea.value.trim();
+                if (!texto) return;
+
+                const submitBtn = els.form.querySelector(".submit");
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Enviando…";
+
+                try {
+                    // O Turnstile real deve ser inicializado no elemento
+                    // #turnstile-container (script da Cloudflare) e o token
+                    // resultante lido aqui antes do envio.
+                    const turnstileToken =
+                        document.querySelector('[name="cf-turnstile-response"]')?.value || null;
+
+                    const res = await fetch(ENDPOINT_POST_COMMENT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            id_token: currentSession.idToken,
+                            slug: ARTICLE_SLUG,
+                            texto,
+                            turnstileToken,
+                        }),
+                    });
+
+                    if (!res.ok) throw new Error("Falha ao enviar comentário");
+
+                    els.textarea.value = "";
+                    showFeedback(
+                        "Comentário enviado! Ele aparecerá aqui após ser aprovado.",
+                        "ok"
+                    );
+                } catch (e) {
+                    console.error(e);
+                    showFeedback("Não deu para enviar seu comentário agora. Tente de novo.", "error");
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Enviar comentário";
+                }
+            }
+
+            // ------------------------------------------------------------------
+            // CARREGAR COMENTÁRIOS APROVADOS
+            // ------------------------------------------------------------------
+            async function loadComments() {
+                try {
+                    const res = await fetch(
+                        `${ENDPOINT_LIST_COMMENTS}?slug=${encodeURIComponent(ARTICLE_SLUG)}`
+                    );
+                    if (!res.ok) throw new Error("Falha ao buscar comentários");
+                    const data = await res.json();
+                    renderComments(data.comments || []);
+                } catch (e) {
+                    console.error(e);
+                    els.commentList.innerHTML =
+                        '<div class="note"><p>Não foi possível carregar os comentários agora.</p></div>';
+                    els.commentCount.textContent = "";
+                }
+            }
+
+            function renderComments(list) {
+                els.commentCount.textContent = list.length
+                    ? `${list.length} comentário${list.length > 1 ? "s" : ""}`
+                    : "Nenhum comentário ainda — seja o primeiro.";
+
+                if (!list.length) {
+                    els.commentList.innerHTML = "";
+                    return;
+                }
+
+                els.commentList.innerHTML = list
+                    .map(
+                        (c) => `
+        <div class="comment-item">
+          <img class="avatar-img" src="${escapeHtml(c.picture || "")}" alt="">
+          <div class="body">
+            <div class="meta">
+              <span class="name">${escapeHtml(c.name || "Anônimo")}</span>
+              <span class="date">${formatDate(c.createdAt)}</span>
+            </div>
+            <div class="text">${escapeHtml(c.texto || "")}</div>
+          </div>
+        </div>`
+                    )
+                    .join("");
+            }
+
+            // ------------------------------------------------------------------
+            // INIT
+            // ------------------------------------------------------------------
+            function init() {
+                currentSession = loadSession();
+                renderAuthState();
+
+                initGoogleSignIn();
+
+                els.btnLogin.addEventListener("click", triggerGoogleLogin);
+                els.btnLogout.addEventListener("click", logout);
+                els.form.addEventListener("submit", handleSubmit);
+
+                loadComments();
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

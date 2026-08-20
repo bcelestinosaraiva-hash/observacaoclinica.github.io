@@ -19,6 +19,7 @@ function getUrls(dir, route = "") {
     if (
       file === "node_modules" ||
       file === ".git" ||
+      file === ".workers/moderacao.html" ||
       file === "src" ||
       file === "yandex_b5d9e3c953a4c1e6.html" ||
       file === "recentes" ||
@@ -30,6 +31,7 @@ function getUrls(dir, route = "") {
     ) {
       return;
     }
+
 
     https://observacaoclinica.com/yandex_b5d9e3c953a4c1e6/
 
