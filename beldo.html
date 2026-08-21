@@ -30,18 +30,15 @@
    12. Estado "a carregar" / "sem comentários"
    13. Responsivo
    14. Acessibilidade
+   15. Estados hidden (FIX)
    ============================================================= */
 
 
         /* -------------------------------------------------------------
    1. TOKENS
-   Paleta pensada para saúde: azul-petróleo clínico (confiança,
-   calma), neutros quentes para o texto, verde reservado para
-   confirmações. Evita o azul genérico "corporate" puro.
    ------------------------------------------------------------- */
 
         .comments-section {
-            /* Cor */
             --color-primary: #0c6e8c;
             --color-primary-dark: #08526a;
             --color-primary-soft: #e6f2f6;
@@ -58,7 +55,6 @@
             --color-border: #e1e6ea;
             --color-border-strong: #c7ced4;
 
-            /* Tipografia */
             --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             --fs-eyebrow: 12.5px;
             --fs-sm: 13px;
@@ -67,7 +63,6 @@
             --fs-lg: 20px;
             --fs-xl: 28px;
 
-            /* Espaçamento (escala de 4px) */
             --space-1: 4px;
             --space-2: 8px;
             --space-3: 12px;
@@ -76,7 +71,6 @@
             --space-6: 24px;
             --space-7: 32px;
 
-            /* Raio e sombra */
             --radius-sm: 7px;
             --radius-md: 10px;
             --radius-lg: 12px;
@@ -483,11 +477,13 @@
             display: none;
         }
 
-        #comment-message.is-success {
+        #comment-message.is-success,
+        #comment-message.success-message {
             color: var(--color-success);
         }
 
-        #comment-message.is-error {
+        #comment-message.is-error,
+        #comment-message.error-message {
             color: #b3261e;
         }
 
@@ -515,7 +511,11 @@
             gap: var(--space-4);
         }
 
-        .comment-item {
+        .comment-item,
+        .comment {
+            display: flex;
+            gap: 11px;
+
             padding: var(--space-5);
 
             background: var(--color-surface);
@@ -531,22 +531,26 @@
             margin-bottom: var(--space-3);
         }
 
-        .comment-item-photo {
+        .comment-item-photo,
+        .comment-avatar {
             width: 40px;
             height: 40px;
             flex: 0 0 40px;
 
             object-fit: cover;
             border-radius: 50%;
+            background: var(--color-surface-alt);
         }
 
-        .comment-item-user {
+        .comment-item-user,
+        .comment-body {
             display: flex;
             flex-direction: column;
             gap: 2px;
         }
 
-        .comment-item-user strong {
+        .comment-item-user strong,
+        .comment-body strong {
             color: var(--color-ink);
             font-size: var(--fs-base);
         }
@@ -556,8 +560,9 @@
             font-size: 12px;
         }
 
-        .comment-item-text {
-            margin: 0;
+        .comment-item-text,
+        .comment-body p {
+            margin: 4px 0 0;
 
             color: var(--color-text);
             font-size: var(--fs-base);
@@ -679,6 +684,25 @@
             #submit-comment {
                 transition: none;
             }
+        }
+
+
+        /* -------------------------------------------------------------
+   15. ESTADOS HIDDEN — FIX
+   Este é o ponto que resolve o bug: as regras acima definem
+   `display: flex` / `display: inline-flex` diretamente nestes
+   seletores, o que tem a MESMA especificidade que o atributo
+   `[hidden]` do navegador. Como o CSS do autor vem depois na
+   cascata, ele ganha e o elemento hidden continua visível.
+   As regras abaixo, por virem no fim da folha de estilos e
+   usarem o mesmo nível de especificidade, corrigem isso.
+   ------------------------------------------------------------- */
+
+        .login-card[hidden],
+        .user-card[hidden],
+        .comment-form-card[hidden],
+        .google-login[hidden] {
+            display: none;
         }
     </style>
 </head>
