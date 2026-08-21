@@ -416,8 +416,7 @@
 
         .comment-item,
         .comment {
-            display: flex;
-            gap: 11px;
+            display: block;
             padding: var(--space-5);
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -501,7 +500,6 @@
         /* -------------------------------------------------------------
    13. RESPONSIVO
    ------------------------------------------------------------- */
-
         @media (max-width: 700px) {
             .comments-section {
                 margin: 36px auto;
@@ -546,27 +544,11 @@
             .comment-item {
                 padding: var(--space-4);
             }
-        }
 
-        @media (max-width: 400px) {
-            .comments-header h2 {
-                font-size: 22px;
-            }
-
-            .comments-header p {
-                font-size: var(--fs-base);
-            }
-
-            .login-card {
-                padding: var(--space-4);
-            }
-
-            .user-card {
-                padding: 14px;
-            }
-
-            #comment-text {
-                min-height: 115px;
+            /* NOVO: só empilha no mobile */
+            .comment-item,
+            .comment {
+                display: block;
             }
         }
 
