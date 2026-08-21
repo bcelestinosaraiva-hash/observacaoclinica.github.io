@@ -8,20 +8,14 @@ import {
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-import {
-    getFirestore,
-    collection,
-    addDoc,
-    query,
-    where,
-    orderBy,
-    onSnapshot,
-    serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
 
 // ==========================================
-// FIREBASE
+// FIREBASE (apenas App + Auth aqui)
+// O Firestore (116 KiB) só é importado mais
+// abaixo, de forma dinâmica, quando for
+// realmente necessário (enviar ou listar
+// comentários). Isto tira-o do caminho
+// crítico de carregamento da página.
 // ==========================================
 
 const firebaseConfig = {
@@ -36,8 +30,31 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
+
+// Cache do módulo do Firestore e da instância db,
+// para não importar/inicializar mais do que uma vez.
+let firestorePromise = null;
+
+function getFirestoreModule() {
+
+    if (!firestorePromise) {
+
+        firestorePromise = import(
+            "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js"
+        ).then((firestore) => {
+
+            const db = firestore.getFirestore(app);
+
+            return { ...firestore, db };
+
+        });
+
+    }
+
+    return firestorePromise;
+
+}
 
 
 // ==========================================
@@ -139,16 +156,14 @@ if (loginButton) {
 
 // ==========================================
 // ESTADO DA AUTENTICAÇÃO
-// (aqui é onde o botão "Entrar com Google" é
-//  escondido/mostrado — usa `hidden`, que agora
-//  é respeitado graças ao fix no CSS)
 // ==========================================
+
+let commentsLoaded = false;
 
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
 
-        // Login: esconde cartão de login, mostra utilizador e comentários
         if (loginArea) loginArea.hidden = true;
         if (userArea) userArea.hidden = false;
         if (commentsArea) commentsArea.hidden = false;
@@ -179,11 +194,18 @@ onAuthStateChanged(auth, (user) => {
 
     } else {
 
-        // Logout: mostra cartão de login, esconde utilizador e comentários
         if (loginArea) loginArea.hidden = false;
         if (userArea) userArea.hidden = true;
         if (commentsArea) commentsArea.hidden = true;
 
+    }
+
+    // Carrega a lista de comentários (e o Firestore) só
+    // na primeira vez que soubermos o estado de login,
+    // independentemente de estar autenticado ou não.
+    if (!commentsLoaded) {
+        commentsLoaded = true;
+        loadApprovedComments();
     }
 
 });
@@ -242,6 +264,9 @@ if (commentForm) {
             submitButton.disabled = true;
             submitButton.textContent = "Enviando...";
 
+            const { collection, addDoc, serverTimestamp, db } =
+                await getFirestoreModule();
+
             await addDoc(collection(db, "comments"), {
 
                 articleId: articleId,
@@ -291,9 +316,18 @@ if (commentForm) {
 
 // ==========================================
 // CARREGAR COMENTÁRIOS APROVADOS
+// (só corre depois do primeiro onAuthStateChanged,
+//  e só nesse momento é que o Firestore é importado)
 // ==========================================
 
-if (commentsList && articleId) {
+async function loadApprovedComments() {
+
+    if (!commentsList || !articleId) {
+        return;
+    }
+
+    const { collection, query, where, orderBy, onSnapshot, db } =
+        await getFirestoreModule();
 
     const commentsQuery = query(
 
