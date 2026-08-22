@@ -217,8 +217,7 @@ a {
 .comment-form-footer small,
 .user-info span {
     color: var(--color-muted);
-    font-size: var(--fs-sm);
-    margin: 50px;
+    font-size: var(--fs-sm)
 }
 
 .user-photo {
@@ -300,8 +299,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-4);
+    gap: var(--space-5);
     margin-top: var(--space-3)
+}
+
+#comment-hint {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: var(--space-2);
 }
 
 .comment-form-footer small {
@@ -459,10 +464,20 @@ a {
         padding: 0
     }
 
-    .comment-form-footer,
     .login-card {
         align-items: stretch;
         flex-direction: column
+    }
+
+    .comment-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+        gap: var(--space-3)
+    }
+
+    #comment-hint {
+        margin-right: 0;
+        margin-bottom: var(--space-1);
     }
 
     .google-login {
