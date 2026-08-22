@@ -8,16 +8,6 @@ import {
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-
-// ==========================================
-// FIREBASE (apenas App + Auth aqui)
-// O Firestore (116 KiB) só é importado mais
-// abaixo, de forma dinâmica, quando for
-// realmente necessário (enviar ou listar
-// comentários). Isto tira-o do caminho
-// crítico de carregamento da página.
-// ==========================================
-
 const firebaseConfig = {
     apiKey: "AIzaSyCiuqN0Ms5TiEmM1mdIApbUmlveei4WFvo",
     authDomain: "login-observacaoclinica.firebaseapp.com",
