@@ -1175,13 +1175,19 @@
     <script>
         const commentsSection = document.getElementById("comentarios");
 
+        function loadComentariosScript() {
+            import("/js/comentarios.js").catch((err) => {
+                console.error("Falha ao carregar comentarios.js:", err);
+            });
+        }
+
         if (commentsSection && "IntersectionObserver" in window) {
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         observer.disconnect();
-                        import("/js/comentarios.js");
+                        loadComentariosScript();
                     }
                 });
             }, { rootMargin: "400px" });
@@ -1189,7 +1195,7 @@
             observer.observe(commentsSection);
 
         } else if (commentsSection) {
-            import("/js/comentarios.js");
+            loadComentariosScript();
         }
     </script>
     <script src="/src/avaliacao.js" defer></script>
