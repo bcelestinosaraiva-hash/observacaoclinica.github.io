@@ -306,6 +306,8 @@ a {
 #comment-hint {
     flex: 1 1 auto;
     min-width: 0;
+    height: auto;
+    margin-top: 0;
     margin-right: var(--space-2);
 }
 
@@ -477,6 +479,7 @@ a {
 
     #comment-hint {
         margin-right: 0;
+        margin-top: 0;
         margin-bottom: var(--space-1);
     }
 

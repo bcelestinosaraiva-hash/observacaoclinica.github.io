@@ -966,7 +966,8 @@ header img {
 }
 
 .lermais p,
-.spana {
+.spana,
+small {
     font-size: 14px
 }
 
