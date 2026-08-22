@@ -218,7 +218,7 @@ a {
 .user-info span {
     color: var(--color-muted);
     font-size: var(--fs-sm);
-    padding: 5px
+    margin: 50px;
 }
 
 .user-photo {
