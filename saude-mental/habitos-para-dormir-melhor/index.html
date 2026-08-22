@@ -68,6 +68,7 @@
         ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
             window.addEventListener(evt, loadGTM, { once: true, passive: true });
         });
+        setTimeout(loadGTM, 5000);
     </script>
     <!-- Schema.org JSON-LD: FAQPage -->
     <script type="application/ld+json">
