@@ -217,7 +217,8 @@ a {
 .comment-form-footer small,
 .user-info span {
     color: var(--color-muted);
-    font-size: var(--fs-sm)
+    font-size: var(--fs-sm);
+    padding: 5px
 }
 
 .user-photo {
