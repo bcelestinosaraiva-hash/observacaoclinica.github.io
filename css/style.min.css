@@ -1047,7 +1047,7 @@ textarea {
 
 .success,
 small {
-    margin-top: 0px
+    margin: 5px;
 }
 
 .success {
