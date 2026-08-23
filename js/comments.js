@@ -3,7 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebas
 import {
     getAuth,
     GoogleAuthProvider,
-    signInWithPopup,
+    signInWithRedirect,
+    getRedirectResult,
     signOut,
     onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
@@ -89,8 +90,12 @@ if (!commentsArea) console.error("Elemento #comments-area não encontrado.");
 
 
 // ==========================================
-// LOGIN COM GOOGLE
+// LOGIN COM GOOGLE (via redirect)
 // ==========================================
+// Ao clicar, a página inteira é redirecionada para o domínio
+// de login do Firebase; depois do login, o Google manda o
+// utilizador de volta para esta mesma página, e o resultado
+// é capturado mais abaixo por getRedirectResult().
 
 if (loginButton) {
 
@@ -104,30 +109,23 @@ if (loginButton) {
                 loginButtonLabel.textContent = "A entrar...";
             }
 
-            await signInWithPopup(auth, provider);
+            // Guarda que uma tentativa de login foi iniciada,
+            // para sabermos, depois do redirect, se devemos
+            // mostrar mensagem de erro em caso de falha.
+            sessionStorage.setItem("loginRedirectPending", "1");
+
+            await signInWithRedirect(auth, provider);
+
+            // A partir daqui a página vai navegar para fora,
+            // então nada mais neste handler chega a executar.
 
         } catch (error) {
 
-            console.error("Erro no login:", error);
+            console.error("Erro ao iniciar login:", error);
 
-            if (error.code === "auth/popup-closed-by-user") {
+            sessionStorage.removeItem("loginRedirectPending");
 
-                // Utilizador fechou a janela, não precisa de alerta.
-
-            } else if (error.code === "auth/popup-blocked") {
-
-                alert(
-                    "O navegador bloqueou a janela de login. " +
-                    "Permita pop-ups para este site e tente novamente."
-                );
-
-            } else {
-
-                alert("Não foi possível entrar com Google. Tente novamente.");
-
-            }
-
-        } finally {
+            alert("Não foi possível iniciar o login com Google. Tente novamente.");
 
             loginButton.disabled = false;
 
@@ -140,6 +138,49 @@ if (loginButton) {
     });
 
 }
+
+
+// ==========================================
+// RESULTADO DO REDIRECT
+// ==========================================
+// Corre uma vez, assim que o script carrega. Se o utilizador
+// acabou de voltar do login do Google, isto resolve com o
+// resultado; se não houve redirect nenhum, resolve com null
+// e não faz nada.
+
+getRedirectResult(auth)
+    .then((result) => {
+
+        sessionStorage.removeItem("loginRedirectPending");
+
+        // Não é preciso fazer nada manualmente com result.user:
+        // onAuthStateChanged (abaixo) já vai disparar sozinho
+        // e atualizar a interface.
+
+    })
+    .catch((error) => {
+
+        console.error("Erro no login:", error);
+
+        sessionStorage.removeItem("loginRedirectPending");
+
+        if (error.code === "auth/account-exists-with-different-credential") {
+
+            alert("Já existe uma conta com este email usando outro método de login.");
+
+        } else {
+
+            alert("Não foi possível entrar com Google. Tente novamente.");
+
+        }
+
+        if (loginButton) loginButton.disabled = false;
+
+        if (loginButtonLabel) {
+            loginButtonLabel.textContent = "Entrar com Google";
+        }
+
+    });
 
 
 // ==========================================
@@ -185,6 +226,12 @@ onAuthStateChanged(auth, (user) => {
         if (loginArea) loginArea.hidden = false;
         if (userArea) userArea.hidden = true;
         if (commentsArea) commentsArea.hidden = true;
+
+        if (loginButton) loginButton.disabled = false;
+
+        if (loginButtonLabel) {
+            loginButtonLabel.textContent = "Entrar com Google";
+        }
 
     }
 
