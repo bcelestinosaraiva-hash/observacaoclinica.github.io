@@ -133,6 +133,7 @@
     <link rel="preload" href="/fonts/Rubik-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/style.min.css">
     <link rel="stylesheet" href="/css/output.css.min.css">
+    <link rel="stylesheet" href="/css/comentarios.css">
     <!-- Google tag (gtag.js) -->
     <script>
         function loadGTM() {
@@ -697,6 +698,65 @@
                 </ul>
             </section>
             <hr>
+            <!-- COMENTARIOS -->
+            <section id="comentarios" class="comments-section"
+                data-article-id="https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/"
+                data-article-title="Comentários">
+                <div class="comments-header">
+                    <h2>COMENTÁRIOS</h2>
+                    <hr class="p-2">
+                    <p>Compartilhe sua experiência ou dúvidas, os comentários são moderados, leia as nossas <a
+                            href="/politicas-e-privacidades/" target="_blank" rel="noopener">políticas de
+                            comentários</a>.
+                    </p>
+                </div>
+                <!-- LOGIN -->
+                <div id="login-area" class="login-card">
+                    <div class="login-info">
+                        <b>Quer deixar um comentário?</b>
+                        <p class="logar">Entre para participar da discussão.</p>
+                    </div>
+                    <button id="google-login" type="button" class="google-login">
+                        <img src="/favicon/google.svg" alt="Google" width="20" height="20">
+                        <span>Entrar com Google</span>
+                    </button>
+                </div>
+
+                <!-- UTILIZADOR LOGADO -->
+                <div id="user-area" class="user-card" hidden>
+                    <div class="user-info">
+                        <img id="user-photo" class="user-photo" width="44" height="44" src="" alt="">
+                        <div>
+                            <b id="user-name">Usuário</b>
+                            <span id="user-email"></span>
+                        </div>
+                    </div>
+                    <button id="logout" type="button" class="logout-button">Sair</button>
+                </div>
+                <!-- FORMULÁRIO -->
+                <div id="comments-area" class="comment-form-card" hidden>
+                    <form id="comment-form" novalidate>
+                        <label for="comment-text">Seu comentário</label>
+                        <textarea id="comment-text" name="comment" rows="3" maxlength="1000"
+                            placeholder="Escreva seu comentário..." aria-describedby="comment-hint" required></textarea>
+                        <div class="comment-form-footer">
+                            <small id="comment-hint" class="logar">Seu comentário será analisado pela nossa equipa
+                                antes
+                                de ser publicado.
+                            </small>
+                            <button id="submit-comment" type="submit" class="mt-3">Enviar comentário</button>
+                        </div>
+                    </form>
+                    <div id="comment-message" role="status" aria-live="polite"></div>
+                </div>
+                <!-- COMENTÁRIOS APROVADOS -->
+                <div class="published-comments">
+                    <div id="comments-list" aria-live="polite">
+                        <p class="comments-loading">Carregando comentários...</p>
+                    </div>
+                </div>
+            </section>
+            <!-- COMENTARIOS -->
         </section>
         <!-- LADO DIREITO: BARRA LATERAL -->
         <aside class="space-y-6 mt-10">
@@ -936,6 +996,32 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script>
+        const commentsSection = document.getElementById("comentarios");
+
+        function loadComentariosScript() {
+            import("/js/comments.js").catch((err) => {
+                console.error("Falha ao carregar comentarios.js:", err);
+            });
+        }
+
+        if (commentsSection && "IntersectionObserver" in window) {
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        observer.disconnect();
+                        loadComentariosScript();
+                    }
+                });
+            }, { rootMargin: "400px" });
+
+            observer.observe(commentsSection);
+
+        } else if (commentsSection) {
+            loadComentariosScript();
+        }
+    </script>
     <script src="/src/avaliacao.js" defer></script>
     <script src="/js/push-subscribe.js" defer></script>
     <script src="/src/geral.js" defer></script>

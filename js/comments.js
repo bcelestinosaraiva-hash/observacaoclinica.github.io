@@ -10,7 +10,7 @@ import {
 
 const firebaseConfig = {
     apiKey: "AIzaSyCiuqN0Ms5TiEmM1mdIApbUmlveei4WFvo",
-    authDomain: "login-observacaoclinica.firebaseapp.com",
+    authDomain: "observacaoclinica.com",
     projectId: "login-observacaoclinica",
     storageBucket: "login-observacaoclinica.firebasestorage.app",
     messagingSenderId: "1085876668661",

@@ -79,11 +79,7 @@ const mobileResults = document.getElementById('search-results-mobile-top');
 // =====================
 searchBtn.addEventListener('click', (e) => {
   e.stopPropagation();
-  // Alterna a visibilidade (escrita no DOM)
   searchInput.classList.toggle('hidden');
-  // Adia o focus() para o próximo frame, evitando o ajuste forçado
-  // (ler/agir sobre foco logo após mudar "display" força um recálculo
-  // síncrono de layout)
   requestAnimationFrame(() => searchInput.focus());
 });
 
@@ -97,8 +93,6 @@ searchInput.addEventListener('input', (e) => {
 mobileBtn.addEventListener('click', (e) => {
   e.stopPropagation();
   mobileBar.classList.toggle('hidden');
-  // Mesmo motivo do desktop: adia o focus() para depois do layout
-  // já ter sido aplicado, em vez de forçar o cálculo no clique
   requestAnimationFrame(() => mobileInput.focus());
 });
 
@@ -107,20 +101,194 @@ mobileInput.addEventListener('input', (e) => {
 });
 
 // =====================
+// NORMALIZAÇÃO (remove acentos, ignora maiúsc., colapsa espaços extra)
+// =====================
+function normalizeText(str) {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+// =====================
+// FRASES EM INGLÊS (traduzidas antes de dividir em palavras)
+// =====================
+const PHRASES_EN = {
+  "blood pressure": "hipertensao pressao alta",
+  "high blood pressure": "hipertensao pressao alta",
+  "social media": "redes sociais",
+  "menstrual cycle": "ciclo menstrual",
+  "fertile period": "periodo fertil",
+  "fertile window": "periodo fertil",
+  "gestational age": "idade gestacional",
+  "tooth decay": "carie dentaria",
+  "labor pain": "trabalho de parto",
+  "labour pain": "trabalho de parto",
+  "muscle mass": "massa muscular hipertrofia",
+  "kidney failure": "insuficiencia renal",
+  "missed period": "atraso menstrual",
+  "vaginal discharge": "corrimento",
+  "sleep habits": "habitos para dormir",
+  "mental health": "saude mental",
+};
+
+// =====================
+// PALAVRAS EM INGLÊS (traduzidas palavra a palavra)
+// =====================
+const SYNONYMS_EN = {
+  "pregnancy": "gravidez gestacao gestante",
+  "pregnant": "gravidez gestante",
+  "birth": "parto",
+  "labor": "parto trabalho",
+  "labour": "parto trabalho",
+  "asthma": "asma",
+  "yeast": "candidiase",
+  "candidiasis": "candidiase",
+  "cavity": "carie",
+  "cavities": "carie",
+  "tooth": "dentaria dentista bucal",
+  "teeth": "dentaria bucal",
+  "dentist": "dentista",
+  "muscle": "muscular hipertrofia",
+  "bodybuilding": "hipertrofia",
+  "sinusitis": "sinusite",
+  "bronchiolitis": "bronquiolite",
+  "bronchitis": "bronquite",
+  "tuberculosis": "tuberculose",
+  "diabetes": "diabetes",
+  "malaria": "malaria",
+  "hypertension": "hipertensao",
+  "stroke": "avc vascular cerebral",
+  "anxiety": "ansiedade",
+  "elderly": "idosos",
+  "breastfeeding": "aleitamento amamentacao materno",
+  "breastfeed": "aleitamento materno",
+  "meningitis": "meningite",
+  "pneumonia": "pneumonia",
+  "prescription": "prescricao",
+  "dextrose": "dextrose",
+  "period": "menstrual menstruacao periodo",
+  "fertile": "fertil",
+  "children": "criancas",
+  "child": "crianca",
+  "kidney": "renal",
+  "cramps": "colicas",
+  "discharge": "corrimento",
+  "odor": "cheiro",
+  "odour": "cheiro",
+  "smell": "cheiro",
+  "itching": "coceira",
+  "itch": "coceira",
+  "eggs": "ovo",
+  "egg": "ovo",
+  "paracetamol": "paracetamol",
+  "acetaminophen": "paracetamol",
+  "seizure": "convulsao",
+  "myoclonus": "mioclonia",
+  "cholesterol": "colesterol",
+  "sleep": "dormir sono",
+  "weight": "peso corporal",
+  "bmi": "imc massa corporal",
+  "respiratory": "respiratorias respiratorio",
+  "diet": "dieta alimentacao",
+  "nutrition": "nutricao",
+  "dilution": "diluicao",
+  "vaginal": "vaginal",
+  "ebola": "ebola",
+  "clinical": "clinica",
+  "observation": "observacao",
+};
+
+// aplica as frases (multi-palavra) antes de dividir a query
+function translatePhrases(nQuery) {
+  let result = nQuery;
+  for (const phrase in PHRASES_EN) {
+    if (result.includes(phrase)) {
+      result = result.split(phrase).join(phrase + ' ' + PHRASES_EN[phrase]);
+    }
+  }
+  return result;
+}
+
+// =====================
+// DISTÂNCIA DE EDIÇÃO (Levenshtein) - tolera erros de digitação
+// =====================
+function levenshtein(a, b) {
+  const matrix = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      matrix[i][j] = a[i - 1] === b[j - 1]
+        ? matrix[i - 1][j - 1]
+        : 1 + Math.min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1]);
+    }
+  }
+  return matrix[a.length][b.length];
+}
+
+// verifica se uma palavra da busca casa com o título (exato, aproximado ou via sinônimo em inglês)
+function wordMatchesTitle(qw, nTitle, titleWords) {
+  if (nTitle.includes(qw)) return 2; // match exato/substring
+
+  const maxDist = qw.length <= 4 ? 1 : 2;
+  for (const tw of titleWords) {
+    if (levenshtein(qw, tw) <= maxDist) return 1; // match aproximado (erro de digitação)
+  }
+
+  const syn = SYNONYMS_EN[qw];
+  if (syn) {
+    const synWords = syn.split(' ');
+    for (const sw of synWords) {
+      if (nTitle.includes(sw)) return 2; // match via tradução EN->PT
+    }
+  }
+
+  return 0;
+}
+
+// =====================
 // FUNÇÃO DE BUSCA
+// (aceita PT/EN, tolera erros de digitação e acentos, máx. 5 resultados)
 // =====================
 function doSearch(query, container) {
-  if (!query) {
+  let nQuery = normalizeText(query);
+
+  if (!nQuery) {
     container.classList.add('hidden');
     return;
   }
 
-  const results = pages.filter(p =>
-    p.title.toLowerCase().includes(query.toLowerCase())
-  );
+  nQuery = translatePhrases(nQuery);
+  const queryWords = [...new Set(nQuery.split(' ').filter(Boolean))];
 
-  container.innerHTML = results.length
-    ? results.map(r =>
+  const scored = pages
+    .filter(p => p.title)
+    .map(p => {
+      const nTitle = normalizeText(p.title);
+      const titleWords = nTitle.split(' ');
+
+      let score = 0;
+      let allMatch = true;
+
+      for (const qw of queryWords) {
+        const wordScore = wordMatchesTitle(qw, nTitle, titleWords);
+        if (wordScore === 0) {
+          allMatch = false;
+          break;
+        }
+        score += wordScore;
+      }
+
+      return allMatch ? { ...p, score } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 5);
+
+  container.innerHTML = scored.length
+    ? scored.map(r =>
       `<a href="${r.url}" class="block py-2 p-2 hover:text-blue-400">${r.title}</a>`
     ).join('')
     : `<div class="p-3 text-gray-500">Sem resultados, iremos atualizar</div>`;
