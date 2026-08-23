@@ -10,7 +10,7 @@ import {
 
 const firebaseConfig = {
     apiKey: "AIzaSyCiuqN0Ms5TiEmM1mdIApbUmlveei4WFvo",
-    authDomain: "observacaoclinica.com",
+    authDomain: "login-observacaoclinica.firebaseapp.com",
     projectId: "login-observacaoclinica",
     storageBucket: "login-observacaoclinica.firebasestorage.app",
     messagingSenderId: "1085876668661",
@@ -22,8 +22,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// Cache do módulo do Firestore e da instância db,
-// para não importar/inicializar mais do que uma vez.
 let firestorePromise = null;
 
 function getFirestoreModule() {
