@@ -476,6 +476,12 @@ ul a {
     line-height: 24px
 }
 
+
+ul li a {
+    font-size: 18px;
+    line-height: 26px
+}
+
 p a,
 ul a {
     color: #005670
@@ -727,7 +733,7 @@ header img {
 
 .autora-info a {
     color: #005670;
-    font-weight: 700
+    font-weight: 500
 }
 
 .subinfo,
@@ -1537,7 +1543,7 @@ textarea {
 
     .autora-info a {
         color: #005670;
-        font-weight: 700
+        font-weight: 500
     }
 
     .subinfo {
@@ -1547,13 +1553,13 @@ textarea {
 
     .subinfo,
     .subinfo a {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 16px
     }
 
     .subinfo a {
         color: rgb(61, 61, 61);
-        font-weight: 300
+        font-weight: 400
     }
 
     .breadcrumbs+h1 {

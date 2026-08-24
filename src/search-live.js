@@ -1,6 +1,6 @@
 // BANCO DE DADOS
 const pages = [
-  { title: "", url: "" },
+  { title: "Observação clínica: o que é, para que serve e como é feita", url: "/saude-az/observacao-clinica-o-que-e/" },
   { title: "O que é candidíase vaginal: sintomas, causas, prevenção e tratamento", url: "/saude-intima/o-que-e-candidiase-vaginal/" },
   { title: "O que é Clotrimazol 2% creme vaginal, para que é utilizado, é candidíase?", url: "/saude-intima/o-que-e-clotrimazol-creme-vaginal/" },
   { title: "Ebola: o que é, os sinais e sintomas, transmissão, tratamento e prevenção", url: "/saude-az/o-que-e-ebola-e-sua-prevencao/" },
@@ -21,7 +21,6 @@ const pages = [
   { title: "Quem e Beldo Celestino Saraiva", url: "/equipa/beldo-celestino-saraiva/" },
   { title: "Aleitamento materno: importância e benefícios para a mãe e o bebê", url: "/nutricao/aleitamento-materno/" },
   { title: "Sintomas de gravidez: como identificar os primeiros sinais com segurança", url: "/gravidez/sintomas-de-gravidez/" },
-  { title: "O que é observação clínica", url: "/sobre/" },
   { title: "7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca", url: "/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" },
   { title: "O que é Bronquiolite", url: "/saude-az/o-que-e-bronquiolite/" },
   { title: "8 tratamentos de pneumonia: medicamento usado, cuidados e recuperação", url: "/saude-az/o-tratamento-da-pneumonia/" },
@@ -198,7 +197,7 @@ const SYNONYMS_EN = {
   "vaginal": "vaginal",
   "ebola": "ebola",
   "clinical": "clinica",
-  "observation": "observacao",
+  "clinical observation": "observacao",
 };
 
 // aplica as frases (multi-palavra) antes de dividir a query

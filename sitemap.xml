@@ -163,7 +163,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sintomas-de-gravidez/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/sintomasdegravidez-1200.webp</image:loc>
@@ -172,7 +172,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/favicon/observacao.svg</image:loc>
@@ -281,7 +281,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/colesterol-hdl-1200.webp</image:loc>
@@ -317,7 +317,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-az-1200.webp</image:loc>
@@ -326,7 +326,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/insuficiencia-renal/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/insuficiencia-renal-1200.webp</image:loc>
@@ -406,6 +406,15 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
+  <lastmod>2026-08-24</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/observacao-clinica-o-que-e-1200.webp</image:loc>
+      <image:title>Observação clínica: o que é, para que serve e como é feita</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
   <lastmod>2026-08-23</lastmod>
     <priority>0.7</priority>
@@ -425,7 +434,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/</loc>
-  <lastmod>2026-08-23</lastmod>
+  <lastmod>2026-08-24</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-bucal-1200.webp</image:loc>

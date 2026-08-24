@@ -251,7 +251,7 @@
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T07:21:06+00:00</news:publication_date>
+      <news:publication_date>2026-08-24T07:21:06+00:00</news:publication_date>
       <news:title>Colesterol HDL: É bom ou ruim? Entenda os valores ideais</news:title>
     </news:news>
   </url>
@@ -284,7 +284,7 @@
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-08-23T07:21:06+00:00</news:publication_date>
+      <news:publication_date>2026-08-24T07:21:06+00:00</news:publication_date>
       <news:title>Insuficiência renal crónica: o que é, sintomas, causas e prevenção</news:title>
     </news:news>
   </url>
@@ -374,6 +374,17 @@
       </news:publication>
       <news:publication_date>2026-08-23T07:21:06+00:00</news:publication_date>
       <news:title>Tratamentos da pneumonia: medicamentos usados, cuidados e recuperação</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-08-24T07:21:06+00:00</news:publication_date>
+      <news:title>Observação clínica: o que é, para que serve e como é feita</news:title>
     </news:news>
   </url>
   <url>
