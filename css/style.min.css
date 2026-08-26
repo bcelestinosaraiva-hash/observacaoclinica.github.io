@@ -476,9 +476,8 @@ ul a {
     line-height: 24px
 }
 
-
 ul li a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px
 }
 
@@ -1388,6 +1387,11 @@ textarea {
     h3,
     h4 {
         line-height: 18px
+    }
+
+    ul li a {
+        font-size: 18px;
+        line-height: 26px
     }
 
     h1 {
