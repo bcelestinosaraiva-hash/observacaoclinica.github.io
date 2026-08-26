@@ -2,90 +2,54 @@
 <rss version="2.0">
   <channel>
     <title>Observação Clínica</title>
-    <link>https://www.observacaoclinica.com/</link>
+    <link>https://observacaoclinica.com/</link>
     <description>Informação médica confiável sobre saúde, doenças, nutrição e bem-estar.</description>
     <language>pt-PT</language>
+    <lastBuildDate>Wed, 26 Aug 2026 10:14:41 GMT</lastBuildDate>
 
-   <item>
+    <item>
+      <title>Observação clínica: o que é, para que serve e como é feita</title>
+      <link>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</link>
+      <description>Descubra o que é a observação clínica, para que serve, como é feita e qual o seu papel no diagnóstico e no cuidado ao paciente.</description>
+      <category>Saúde-AZ</category>
+      <pubDate>Mon, 24 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</guid>
+    </item>
+
+    <item>
       <title>Convulsão e mioclonia: Qual a diferença?</title>
-      <link>https://www.observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</link>
+      <link>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</link>
       <description>Convulsão e mioclonia parecem iguais, mas não são. Descubra as diferenças, as causas e os sinais de alerta que indicam quando procurar um neurologista.</description>
-      <pubDate>16 de agosto de 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</guid>
+      <category>Saúde Mental</category>
+      <pubDate>Sun, 16 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</guid>
     </item>
 
     <item>
       <title>Na gravidez pode tomar paracetamol? quando é seguro</title>
-      <link>https://www.observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</link>
+      <link>https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</link>
       <description>Saiba se o paracetamol é seguro na gravidez, quando pode ser utilizado, quais os cuidados, riscos e quando deve consultar um profissional de saúde.</description>
-      <pubDate>06 Agosto de 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</guid>
+      <category>Gravidez</category>
+      <pubDate>Thu, 06 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</guid>
     </item>
 
     <item>
       <title>Posso comer ovo todos os dias? Benefícios e cuidados</title>
-      <link>https://www.observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</link>
+      <link>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</link>
       <description>Descubra se comer ovo todos os dias faz bem, os benefícios, riscos, quantidade recomendada e quem deve ter mais cuidados.</description>
-      <pubDate>4 Agosto de 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</guid>
+      <category>Nutrição</category>
+      <pubDate>Tue, 04 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</guid>
     </item>
 
     <item>
       <title>Coceira íntima antes da menstruação: causas, prevenção e alívio</title>
-      <link>https://www.observacaoclinica.com/saude-intima/coceira-intima/</link>
+      <link>https://observacaoclinica.com/saude-intima/coceira-intima/</link>
       <description>Saiba como aliviar e prevenir a coceira íntima com segurança de forma natural antes do ciclo menstrual.</description>
-      <pubDate>02 Agosto de 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-intima/coceira-intima/</guid>
+      <category>Saúde Íntima</category>
+      <pubDate>Sun, 02 Aug 2026 08:00:00 GMT</pubDate>
+      <guid>https://observacaoclinica.com/saude-intima/coceira-intima/</guid>
     </item>
-
-    <item>
-      <title>Cheiro forte na região íntima: causas e como tratar</title>
-      <link>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</link>
-      <description>Saiba as causas do cheiro forte na região íntima, quando pode indicar um problema, como prevenir e quando procurar ajuda médica.</description>
-      <pubDate>29 Jul 2026 08:00:00 GMT</pubDate>
-      <guid>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</guid>
-    </item>
-
-    <item>
-      <title>Corrimento transparente sem cheiro: é normal?</title>
-      <link>https://www.observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</link>
-      <description>Corrimento transparente sem cheiro é normal? Descubra quando é saudável, possíveis alterações e quando procurar um ginecologista.</description>
-      <pubDate>28 Jul 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</guid>
-    </item>
-
-    <item>
-      <title>Hábitos para dormir melhor: ter um sono mais profundo e reparador</title>
-      <link>https://www.observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</link>
-      <description>Os hábitos para dormir melhor, melhorar a qualidade do sono e acordar com mais energia através de uma rotina saudável.</description>
-      <pubDate>27 Jul 2026</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</guid>
-    </item>
-
-
-    <item>
-      <title>Como as redes sociais afectam a saúde mental dos adolescentes?</title>
-      <link>https://www.observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/</link>
-      <description>Descubra como as redes sociais afectam a saúde mental dos adolescentes, os riscos, benefícios e formas de promover um uso equilibrado.</description>
-      <pubDate>Sat, 25 Jul 2026 08:00:00 GMT</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/</guid>
-    </item>
-
-    <item>
-      <title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê</title>
-      <link>https://www.observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</link>
-      <description>Saiba com que frequência deve ir ao dentista, quando antecipar a consulta e como prevenir problemas de saúde bucal.</description>
-      <pubDate>Thu, 23 Jul 2026 08:00:00 GMT</pubDate>
-      <guid>https://www.observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</guid>
-    </item>
-
-    <item>
-      <title>Alimentação na gravidez: o que comer para uma gestação saudável</title>
-      <link>https://www.observacaoclinica.com/gravidez/alimentacao-na-gravidez/</link>
-      <description>Descubra como deve ser a alimentação na gravidez, quais alimentos priorizar, nutrientes essenciais e cuidados para uma gestação saudável.</description>
-      <pubDate>Wed, 22 Jul 2026 08:00:00 GMT</pubDate>
-      <guid>https://www.observacaoclinica.com/gravidez/alimentacao-na-gravidez/</guid>
-    </item>
-
   </channel>
 </rss>

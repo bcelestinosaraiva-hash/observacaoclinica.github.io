@@ -90,12 +90,30 @@ document.addEventListener("DOMContentLoaded", () => {
         m = e("bemestar-submenu-mobile"),
         h = e("fitness-icon-mobile");
 
+    function fecharSubmenu(e, t, o) {
+        if (!e || !t || !o) return;
+        e.classList.add("hidden", "opacity-0", "-translate-y-1");
+        e.classList.remove("opacity-100", "translate-y-0");
+        t.classList.remove("rotate-180");
+        o.setAttribute("aria-expanded", "false");
+    }
+
     function u(e, t, o) {
         if (!e || !t || !o) return;
-        if (!e.classList.contains("hidden")) return e.classList.add("hidden", "opacity-0", "-translate-y-1"), e.classList.remove("opacity-100", "translate-y-0"), t.classList.remove("rotate-180"), void o.setAttribute("aria-expanded", "false");
-        e.classList.remove("hidden"),
-            requestAnimationFrame(() => { e.classList.remove("opacity-0", "-translate-y-1"), e.classList.add("opacity-100", "translate-y-0") }),
-            t.classList.add("rotate-180"), o.setAttribute("aria-expanded", "true")
+
+        let estavaAberto = !e.classList.contains("hidden");
+
+        // fecha os dois submenus antes de decidir o que fazer
+        fecharSubmenu(d, c, r);
+        fecharSubmenu(m, h, l);
+
+        // se este já estava aberto, só fecha (clique = toggle); senão, abre
+        if (!estavaAberto) {
+            e.classList.remove("hidden");
+            requestAnimationFrame(() => { e.classList.remove("opacity-0", "-translate-y-1"); e.classList.add("opacity-100", "translate-y-0") });
+            t.classList.add("rotate-180");
+            o.setAttribute("aria-expanded", "true");
+        }
     }
 
     r && r.addEventListener("click", () => { u(d, c, r) });
