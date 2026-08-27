@@ -83,7 +83,7 @@ a {
     position: sticky;
     top: 64px;
     z-index: 20;
-    background: rgba(239, 242, 239, .94);
+    background: #ffffff;
     backdrop-filter: blur(6px);
     padding: .9rem 1.5rem
 }
