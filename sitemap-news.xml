@@ -3,17 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-24T17:27:21+00:00</news:publication_date>
-      <news:title>Observação clínica - Informação médica, doenças, nutrição e os cuidados.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/</loc>
     <news:news>
       <news:publication>
@@ -36,36 +25,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/</loc>
+    <loc>https://observacaoclinica.com/saude-az/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-08-24T17:27:21+00:00</news:publication_date>
-      <news:title>Colesterol HDL: É bom ou ruim? Entenda os valores ideais</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/glossario-clinico/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T10:11:23+00:00</news:publication_date>
-      <news:title>Glossário com definições de termos usados em prontuário eletrônico | Observação Clínica</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/insuficiencia-renal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T05:06:46+00:00</news:publication_date>
-      <news:title>Insuficiência renal crónica: o que é, sintomas, causas e prevenção</news:title>
+      <news:publication_date>2026-08-26T17:27:21+00:00</news:publication_date>
+      <news:title>As informações sobre doenças ou enfermidades gerais | Observação Clínica</news:title>
     </news:news>
   </url>
   <url>
@@ -77,39 +44,6 @@
       </news:publication>
       <news:publication_date>2026-08-26T09:03:10+00:00</news:publication_date>
       <news:title>O que é tuberculose seus sinais e sintomas e suas medidas preventivas?</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-26T05:06:46+00:00</news:publication_date>
-      <news:title>Observação clínica: o que é, para que serve e como é feita</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T05:06:46+00:00</news:publication_date>
-      <news:title>Cheiro forte na região íntima: causas e como tratar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-25T05:06:46+00:00</news:publication_date>
-      <news:title>O que é candidíase vaginal: sintomas, causas, prevenção e tratamento</news:title>
     </news:news>
   </url>
 </urlset>

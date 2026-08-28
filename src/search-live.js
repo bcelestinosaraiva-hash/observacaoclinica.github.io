@@ -57,11 +57,20 @@ const pages = [
   { title: "Na gravidez pode tomar paracetamol? quando é seguro", url: "/gravidez/na-gravidez-pode-tomar-paracetamol/" },
   { title: "Convulsão e mioclonia: Qual a diferença?", url: "/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/" },
   { title: "Colesterol HDL: É bom ou ruim? Entenda os valores ideais", url: "/saude-az/colesterol-hdl-bom-ou-ruim/" },
+  { title: "Observação clínica: o que é, para que serve e como é feita", url: "/saude-az/observacao-clinica-o-que-e/" },
+  { title: "Glossário clínico", url: "/saude-az/glossario-clinico/" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
   { title: "", url: "" },
-
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
+  { title: "", url: "" },
 ];
 
 // ELEMENTOS
@@ -135,7 +144,7 @@ const PHRASES_EN = {
 
 // =====================
 // PALAVRAS EM INGLÊS (traduzidas palavra a palavra)
-// =====================
+
 const SYNONYMS_EN = {
   "pregnancy": "gravidez gestacao gestante",
   "pregnant": "gravidez gestante",
@@ -198,6 +207,7 @@ const SYNONYMS_EN = {
   "ebola": "ebola",
   "clinical": "clinica",
   "clinical observation": "observacao",
+  "Glossário clínico": "clinic glossary",
 };
 
 // aplica as frases (multi-palavra) antes de dividir a query
