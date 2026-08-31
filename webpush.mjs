@@ -1,6 +1,6 @@
 import { notifyNewArticles } from "./scripts/push-notify.mjs";
 await notifyNewArticles([{
-    title: "",
-    url: "https://observacaoclinica.com/saude-az/glossario-clinico/",
-    image: "https://observacaoclinica.com/img/glossario-1200.webp"
+    title: "Ferro na gravidez: quando suplementar e como escolher",
+    url: "https://observacaoclinica.com/gravidez/ferro-na-gravidez/",
+    image: "https://observacaoclinica.com/img/ferro-na-gravidez-1200.webp"
 }]);
