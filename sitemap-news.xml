@@ -3,47 +3,14 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/</loc>
+    <loc>https://observacaoclinica.com/gravidez/ferro-na-gravidez/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-08-26T09:03:10+00:00</news:publication_date>
-      <news:title>Alimentos para idosos: garantindo saúde e qualidade de vida dos idosos</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-26T09:03:10+00:00</news:publication_date>
-      <news:title>Posso comer ovo todos os dias? Benefícios e cuidados</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-26T17:27:21+00:00</news:publication_date>
-      <news:title>As informações sobre doenças ou enfermidades gerais | Observação Clínica</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/o-que-e-tuberculose/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-08-26T09:03:10+00:00</news:publication_date>
-      <news:title>O que é tuberculose seus sinais e sintomas e suas medidas preventivas?</news:title>
+      <news:publication_date>2026-08-31T10:29:08+00:00</news:publication_date>
+      <news:title>Ferro na gravidez: quando suplementar e como escolher</news:title>
     </news:news>
   </url>
 </urlset>

@@ -5,10 +5,12 @@ src/analitico.js
 src/pinterest.js
 src/pandeira.js
 .env
-src/mudanca.js
 /webpush.mjs
 src/pinterest.js
 /imagem.js
 /json.js
 /data.js
 /src/news.js
+traducoes-cache.json
+traduz.js
+traducoes-incompletas.json

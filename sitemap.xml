@@ -99,8 +99,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+<loc>https://observacaoclinica.com/fitness/exercicios-para-gluteos/</loc>
+  <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/pelvica-1200.webp</image:loc>
+      <image:title>10 Exercícios para glúteos em casa ou na academia</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/fitness/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/fitness-1200.webp</image:loc>
@@ -118,7 +127,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/alimentacao-na-gravidez/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/alimentacao-na-gravidez-1200.webp</image:loc>
@@ -135,8 +144,17 @@
     </image:image>
   </url>
   <url>
+<loc>https://observacaoclinica.com/gravidez/ferro-na-gravidez/</loc>
+  <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/ferro-na-gravidez-1200.webp</image:loc>
+      <image:title>Ferro na gravidez: quando suplementar e como escolher</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/gravidez/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/gravidez-1200.webp</image:loc>
@@ -163,7 +181,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sintomas-de-gravidez/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/sintomasdegravidez-1200.webp</image:loc>
@@ -322,7 +340,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-az-1200.webp</image:loc>
@@ -493,7 +511,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/</loc>
-  <lastmod>2026-08-26</lastmod>
+  <lastmod>2026-08-30</lastmod>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-intima-1200.webp</image:loc>
