@@ -3,14 +3,47 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/gravidez/ferro-na-gravidez/</loc>
+    <loc>https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-08-31T10:29:08+00:00</news:publication_date>
-      <news:title>Ferro na gravidez: quando suplementar e como escolher</news:title>
+      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
+      <news:title>Como calcular índice de massa corporal (IMC) para saber o seu peso ideal?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
+      <news:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
+      <news:title>A importância da prevenção de cáries para a saúde bucal</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
+      <news:title>Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz</news:title>
     </news:news>
   </url>
 </urlset>
