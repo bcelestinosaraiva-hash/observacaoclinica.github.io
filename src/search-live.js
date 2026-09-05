@@ -1,4 +1,3 @@
-// BANCO DE DADOS
 const pages = [
   { title: "Observação clínica: o que é, para que serve e como é feita", url: "/saude-az/observacao-clinica-o-que-e/" },
   { title: "O que é candidíase vaginal: sintomas, causas, prevenção e tratamento", url: "/saude-intima/o-que-e-candidiase-vaginal/" },
@@ -25,7 +24,6 @@ const pages = [
   { title: "O que é Bronquiolite", url: "/saude-az/o-que-e-bronquiolite/" },
   { title: "8 tratamentos de pneumonia: medicamento usado, cuidados e recuperação", url: "/saude-az/o-tratamento-da-pneumonia/" },
   { title: "O que é a tuberculose (TB)? e como tratar?", url: "/saude-az/o-que-e-tuberculose/" },
-  { title: "Como calcular a prescrição médica dos pacientes com base no peso e medicação?", url: "/calculadoras/como-calcular-a-prescricao/" },
   { title: "Como calcular o Bolo de dextrose 10%?", url: "/calculadoras/como-calcular-dextrose/" },
   { title: "Como calcular o meu ciclo menstrual e identificar a sua próxima menstruação?", url: "/calculadoras/como-calcular-o-ciclo-menstrual/" },
   { title: "As necessidades nutricionais das crianças de acordo faixa etária", url: "/nutricao/as-necessidades-nutricionais-das-criancas/" },
@@ -54,26 +52,25 @@ const pages = [
   { title: "Cheiro forte na região íntima: causas e como tratar", url: "/saude-intima/cheiro-forte-regiao-intima/" },
   { title: "Coceira íntima antes da menstruação: causas, prevenção e alívio", url: "/saude-intima/coceira-intima/" },
   { title: "Posso comer ovo todos os dias? Benefícios e cuidados", url: "/nutricao/posso-comer-ovo-todos-os-dias" },
-  { title: "Na gravidez pode tomar paracetamol? quando é seguro", url: "/gravidez/na-gravidez-pode-tomar-paracetamol/" },
+  { title: "Na gravidez pode tomar paracetamol? Entenda os cuidados", url: "/gravidez/na-gravidez-pode-tomar-paracetamol/" },
   { title: "Convulsão e mioclonia: Qual a diferença?", url: "/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/" },
   { title: "Colesterol HDL: É bom ou ruim? Entenda os valores ideais", url: "/saude-az/colesterol-hdl-bom-ou-ruim/" },
-  { title: "Observação clínica: o que é, para que serve e como é feita", url: "/saude-az/observacao-clinica-o-que-e/" },
   { title: "Glossário clínico", url: "/saude-az/glossario-clinico/" },
   { title: "Ferro na gravidez: quando suplementar e como escolher", url: "/gravidez/ferro-na-gravidez/" },
   { title: "10 Exercícios para glúteos em casa ou na academia", url: "/fitness/exercicios-para-gluteos/" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
-  { title: "", url: "" },
 ];
 
+// =====================================================
+function buildHref(url) {
+  if (window.SITE_LOCALE && typeof window.SITE_LOCALE.buildHref === 'function') {
+    return window.SITE_LOCALE.buildHref(url);
+  }
+  return url; // fallback caso locale.js não tenha carregado
+}
+
+// =====================================================
 // ELEMENTOS
+// =====================================================
 const searchBtn = document.getElementById('search-btn');
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
@@ -85,28 +82,32 @@ const mobileResults = document.getElementById('search-results-mobile-top');
 // =====================
 // DESKTOP
 // =====================
-searchBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  searchInput.classList.toggle('hidden');
-  requestAnimationFrame(() => searchInput.focus());
-});
+if (searchBtn && searchInput && searchResults) {
+  searchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    searchInput.classList.toggle('hidden');
+    requestAnimationFrame(() => searchInput.focus());
+  });
 
-searchInput.addEventListener('input', (e) => {
-  doSearch(e.target.value, searchResults);
-});
+  searchInput.addEventListener('input', (e) => {
+    doSearch(e.target.value, searchResults);
+  });
+}
 
 // =====================
 // MOBILE
 // =====================
-mobileBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
-  mobileBar.classList.toggle('hidden');
-  requestAnimationFrame(() => mobileInput.focus());
-});
+if (mobileBtn && mobileBar && mobileInput && mobileResults) {
+  mobileBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileBar.classList.toggle('hidden');
+    requestAnimationFrame(() => mobileInput.focus());
+  });
 
-mobileInput.addEventListener('input', (e) => {
-  doSearch(e.target.value, mobileResults);
-});
+  mobileInput.addEventListener('input', (e) => {
+    doSearch(e.target.value, mobileResults);
+  });
+}
 
 // =====================
 // NORMALIZAÇÃO (remove acentos, ignora maiúsc., colapsa espaços extra)
@@ -144,7 +145,7 @@ const PHRASES_EN = {
 
 // =====================
 // PALAVRAS EM INGLÊS (traduzidas palavra a palavra)
-
+// =====================
 const SYNONYMS_EN = {
   "pregnancy": "gravidez gestacao gestante",
   "pregnant": "gravidez gestante",
@@ -175,7 +176,6 @@ const SYNONYMS_EN = {
   "breastfeed": "aleitamento materno",
   "meningitis": "meningite",
   "pneumonia": "pneumonia",
-  "prescription": "prescricao",
   "dextrose": "dextrose",
   "period": "menstrual menstruacao periodo",
   "fertile": "fertil",
@@ -206,8 +206,6 @@ const SYNONYMS_EN = {
   "vaginal": "vaginal",
   "ebola": "ebola",
   "clinical": "clinica",
-  "clinical observation": "observacao",
-  "Glossário clínico": "clinic glossary",
 };
 
 // aplica as frases (multi-palavra) antes de dividir a query
@@ -257,9 +255,7 @@ function wordMatchesTitle(qw, nTitle, titleWords) {
   return 0;
 }
 
-// =====================
-// FUNÇÃO DE BUSCA
-// (aceita PT/EN, tolera erros de digitação e acentos, máx. 5 resultados)
+
 // =====================
 function doSearch(query, container) {
   let nQuery = normalizeText(query);
@@ -298,7 +294,7 @@ function doSearch(query, container) {
 
   container.innerHTML = scored.length
     ? scored.map(r =>
-      `<a href="${r.url}" class="block py-2 p-2 hover:text-blue-400">${r.title}</a>`
+      `<a href="${buildHref(r.url)}" class="block py-2 p-2 hover:text-blue-400">${r.title}</a>`
     ).join('')
     : `<div class="p-3 text-gray-500">Sem resultados, iremos atualizar</div>`;
   container.classList.remove('hidden');
@@ -308,11 +304,10 @@ function doSearch(query, container) {
 // FECHAR AO CLICAR FORA
 // =====================
 document.addEventListener('click', (e) => {
-
-  if (!searchResults.contains(e.target) && e.target !== searchInput && e.target !== searchBtn) {
+  if (searchResults && !searchResults.contains(e.target) && e.target !== searchInput && e.target !== searchBtn) {
     searchResults.classList.add('hidden');
   }
-  if (!mobileBar.contains(e.target) && e.target !== mobileBtn) {
+  if (mobileBar && !mobileBar.contains(e.target) && e.target !== mobileBtn) {
     mobileBar.classList.add('hidden');
   }
 });
@@ -322,9 +317,58 @@ document.addEventListener('click', (e) => {
 // =====================
 document.addEventListener('keydown', (e) => {
   if (e.key === "Escape") {
-    mobileBar.classList.add('hidden');
-    searchResults.classList.add('hidden');
-    searchInput.classList.add('hidden');
+    if (mobileBar) mobileBar.classList.add('hidden');
+    if (searchResults) searchResults.classList.add('hidden');
+    if (searchInput) searchInput.classList.add('hidden');
   }
 });
 // FIM JS
+
+(function () {
+  const LOCALE_PREFIXES = {
+    'pt-br': '/br',
+    'pt-pt': '',
+    'pt': '', // português genérico (pt-MZ, pt-AO, etc.) cai no pt-PT
+  };
+  const DEFAULT_LOCALE_PREFIX = '';
+
+  function detectFromPath() {
+    if (/^\/br(\/|$)/.test(window.location.pathname)) return '/br';
+    return null;
+  }
+
+  function detectFromBrowser() {
+    const langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages
+      : [navigator.language || 'pt'];
+
+    for (const lang of langs) {
+      const key = lang.toLowerCase();
+      if (LOCALE_PREFIXES[key] !== undefined) return LOCALE_PREFIXES[key];
+
+      const base = key.split('-')[0];
+      if (LOCALE_PREFIXES[base] !== undefined) return LOCALE_PREFIXES[base];
+    }
+    return DEFAULT_LOCALE_PREFIX;
+  }
+
+  function detectLocalePrefix() {
+    const fromPath = detectFromPath();
+    if (fromPath !== null) return fromPath;
+    return detectFromBrowser();
+  }
+
+  const LOCALE_PREFIX = detectLocalePrefix();
+
+  // Monta a URL final, evitando prefixo duplicado.
+  function buildLocaleHref(url) {
+    if (LOCALE_PREFIX && url.startsWith(LOCALE_PREFIX + '/')) return url;
+    return LOCALE_PREFIX + url;
+  }
+
+  // Expõe globalmente para os outros scripts usarem.
+  window.SITE_LOCALE = {
+    prefix: LOCALE_PREFIX,
+    buildHref: buildLocaleHref,
+  };
+})();

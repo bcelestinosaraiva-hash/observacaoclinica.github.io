@@ -1,23 +1,3 @@
-/**
- * indexnow.js
- * Notifica o Bing (e outros motores participantes: Yandex, Seznam, Naver)
- * sobre URLs novas ou atualizadas do observacaoclinica.com via protocolo IndexNow.
- *
- * DOCS: https://www.indexnow.org/
- *
- * COMO USAR:
- * 1. Gere uma chave (qualquer string hexadecimal de 32-128 caracteres). Pode ser feito com:
- *      node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
- * 2. Crie um ficheiro na raiz do site chamado "<SUA_CHAVE>.txt" contendo apenas a própria chave.
- *    Ex: se a chave for "abc123...", crie o ficheiro "abc123....txt" na raiz (mesmo nível do index.html)
- *    com o conteúdo "abc123...". Isso prova que controlas o domínio.
- * 3. Publique esse ficheiro junto com o site (deve ficar acessível em
- *    https://observacaoclinica.com/<SUA_CHAVE>.txt)
- * 4. Preencha HOST e KEY abaixo.
- * 5. Chame notifyIndexNow([...urls]) sempre que publicares ou atualizares um artigo.
- *    Podes chamar isto no final do teu sitemap.js, passando as URLs novas/alteradas.
- */
-
 const https = require('https');
 
 const HOST = 'observacaoclinica.com';

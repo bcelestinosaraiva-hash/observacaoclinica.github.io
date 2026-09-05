@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { notifyIndexNow } = require("./indexnow"); // <-- novo: importa o módulo IndexNow
-
+const { notifyIndexNow } = require("./indexnow"); // notifica o IndexNow sobre URLs novas/alteradas
 const baseUrl = "https://observacaoclinica.com";
 const contentDir = path.join(__dirname, "../");
 const sitemapPath = path.join(contentDir, "sitemap.xml");
@@ -19,21 +18,16 @@ function getUrls(dir, route = "") {
     if (
       file === "node_modules" ||
       file === ".git" ||
-      file === ".workers/moderacao.html" ||
+      file === "/br/recente/index.html" ||
       file === "src" ||
       file === "yandex_b5d9e3c953a4c1e6.html" ||
       file === "recentes" ||
       file === "/yandex_b5d9e3c953a4c1e6/" ||
       file === "sitemap.xml" ||
-      file === "src" ||
-
       file.startsWith(".")
     ) {
       return;
     }
-
-
-    https://observacaoclinica.com/yandex_b5d9e3c953a4c1e6/
 
     if (stat.isDirectory()) {
       urls = urls.concat(getUrls(fullPath, route + "/" + file));
@@ -54,6 +48,7 @@ function getUrls(dir, route = "") {
       if (url !== "/" && !url.endsWith("/")) {
         url += "/";
       }
+
       // Prioridades
       let priority = "0.7";
 
@@ -64,14 +59,20 @@ function getUrls(dir, route = "") {
         priority = "0.8";
       }
 
-      // Extrair imagens do HTML desta página
-      const images = getImagesFromHtml(fullPath, url);
+      const html = fs.readFileSync(fullPath, "utf8");
+
+      // Extrair imagem principal da página
+      const images = getImagesFromHtml(html);
+
+      // Extrair tags hreflang da página
+      const hreflangs = getHreflangFromHtml(html);
 
       urls.push({
         url,
         lastmod: stat.mtime.toISOString().split("T")[0],
         priority,
-        images
+        images,
+        hreflangs
       });
     }
   });
@@ -84,11 +85,7 @@ function getUrls(dir, route = "") {
 // 1) JSON-LD (schema.org) -> campo "image"
 // 2) <meta property="og:image">
 // 3) <meta name="twitter:image">
-// Isto evita capturar imagens da sidebar "relacionados", logo, foto de autor, etc.,
-// porque usa a imagem que o próprio site já define como "capa" da página.
-function getImagesFromHtml(filePath, pageUrl) {
-  const html = fs.readFileSync(filePath, "utf8");
-
+function getImagesFromHtml(html) {
   let src = null;
   let title = null;
 
@@ -113,7 +110,7 @@ function getImagesFromHtml(filePath, pageUrl) {
         title = data.headline;
       }
 
-      if (src) break; // já encontrámos, não precisamos de continuar
+      if (src) break;
     } catch (e) {
       // JSON-LD mal formado nesta página; ignora e tenta o próximo bloco/fallback
     }
@@ -160,6 +157,28 @@ function getImagesFromHtml(filePath, pageUrl) {
   ];
 }
 
+// Extrai as tags <link rel="alternate" hreflang="..." href="...">
+// (aceita qualquer ordem de atributos)
+function getHreflangFromHtml(html) {
+  const links = [];
+  const regex = /<link[^>]*rel=["']alternate["'][^>]*>/gi;
+  const tags = html.match(regex) || [];
+
+  tags.forEach(tag => {
+    const hreflangMatch = tag.match(/hreflang=["']([^"']+)["']/i);
+    const hrefMatch = tag.match(/href=["']([^"']+)["']/i);
+
+    if (hreflangMatch && hrefMatch) {
+      links.push({
+        hreflang: hreflangMatch[1],
+        href: hrefMatch[1]
+      });
+    }
+  });
+
+  return links;
+}
+
 function escapeXml(str) {
   return str
     .replace(/&/g, "&amp;")
@@ -169,7 +188,7 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
-// ---- NOVO: lê o sitemap.xml anterior (se existir) para depois comparar ----
+// Lê o sitemap.xml anterior (se existir) para depois comparar
 // Extrai pares <loc, lastmod> do sitemap antigo, num Map "url -> lastmod"
 function getPreviousUrlMap() {
   const map = new Map();
@@ -192,7 +211,7 @@ function getPreviousUrlMap() {
   return map;
 }
 
-const previousUrls = getPreviousUrlMap(); // <-- novo: captura estado ANTES de reescrever
+const previousUrls = getPreviousUrlMap(); // captura estado ANTES de reescrever
 
 let urls = getUrls(contentDir);
 
@@ -203,12 +222,14 @@ urls = Array.from(
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.map(page => `
   <url>
 <loc>${baseUrl}${page.url}</loc>
   <lastmod>${page.lastmod}</lastmod>
-    <priority>${page.priority}</priority>${page.images.map(img => `
+    <priority>${page.priority}</priority>${page.hreflangs.map(h => `
+    <xhtml:link rel="alternate" hreflang="${h.hreflang}" href="${h.href}"/>`).join("")}${page.images.map(img => `
     <image:image>
       <image:loc>${img.loc}</image:loc>${img.title ? `
       <image:title>${img.title}</image:title>` : ""}
@@ -219,10 +240,11 @@ ${urls.map(page => `
 fs.writeFileSync(sitemapPath, sitemap, "utf8");
 
 const totalImages = urls.reduce((sum, p) => sum + p.images.length, 0);
+const totalHreflangs = urls.reduce((sum, p) => sum + p.hreflangs.length, 0);
 
-console.log(`✔ Sitemap atualizado com ${urls.length} URLs e ${totalImages} imagens.`);
+console.log(`✔ Sitemap atualizado com ${urls.length} URLs, ${totalImages} imagens e ${totalHreflangs} tags hreflang.`);
 
-// ---- NOVO: detecta URLs novas ou com lastmod alterado, e notifica o IndexNow ----
+// Detecta URLs novas ou com lastmod alterado, e notifica o IndexNow
 const changedUrls = urls
   .filter(page => {
     const fullUrl = baseUrl + page.url;
@@ -238,5 +260,4 @@ if (changedUrls.length > 0) {
 } else {
   console.log("→ Nenhuma URL nova ou alterada, IndexNow não foi notificado.");
 }
-
-// CODE PRA RODAR----: node src/sitemap.js
+// CODE PRA RODAR: node src/sitemap.js

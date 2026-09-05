@@ -8,11 +8,24 @@ acc.addEventListener("click", function () {
 });
 
 
+// MENSAGENS RECENTES (várias pastas)
+async function carregarPostsRecentes(url, elementId) {
+  const el = document.getElementById(elementId);
+  if (!el) return; // evita erro se o elemento não existir nessa página
 
-// MENSAGENS RECENTES
-fetch('/recentes/index.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('posts-recentes').innerHTML = html;
-  })
-  .catch(err => console.error('Erro ao carregar posts recentes:', err));
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status} ao buscar ${url}`);
+    const html = await res.text();
+    el.innerHTML = html;
+  } catch (err) {
+    console.error(`Erro ao carregar posts recentes (${url}):`, err);
+    el.innerHTML = '<p>Não foi possível carregar os posts recentes.</p>';
+  }
+}
+
+// Carrega ambos em paralelo, sem um bloquear o outro
+Promise.all([
+  carregarPostsRecentes('/recentes/index.html', 'posts-recentes'),
+  carregarPostsRecentes('/br/recente/index.html', 'posts-recente')
+]);
