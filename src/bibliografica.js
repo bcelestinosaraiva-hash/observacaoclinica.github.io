@@ -29,3 +29,17 @@ Promise.all([
   carregarPostsRecentes('/recentes/index.html', 'posts-recentes'),
   carregarPostsRecentes('/br/recente/index.html', 'posts-recente')
 ]);
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("table").forEach(function (table) {
+    // evita envolver de novo se já estiver dentro de um wrapper
+    if (table.parentElement.classList.contains("table-scroll")) return;
+
+    var wrapper = document.createElement("div");
+    wrapper.classList.add("table-scroll");
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+});
