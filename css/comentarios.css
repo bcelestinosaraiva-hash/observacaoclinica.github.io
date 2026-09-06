@@ -587,20 +587,20 @@ tbody th[scope=row] {
 
 @media (max-width:640px) {
     table {
-        font-size: .7rem
+        font-size: 0.7rem
     }
 
     tbody td,
     tbody th,
     thead th {
-        padding: 10px 12px;
+        padding: 10px 10px;
         font-size: 13px
     }
 
     thead th,
     tr th {
-        font-size: 14px;
-        height: 20px
+        font-size: 13px;
+        height: 18px
     }
 
     thead th {
