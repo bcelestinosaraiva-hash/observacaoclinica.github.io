@@ -7,17 +7,25 @@ export async function onRequest(context) {
     const userAgent = request.headers.get('User-Agent') || '';
     const isBot = /bot|crawl|spider|slurp|facebookexternalhit|whatsapp/i.test(userAgent);
 
-    // já está em /br/ -> não faz nada
-    const isBrPath = pathname === '/br' || pathname.startsWith('/br/');
-
-    // não mexe em arquivos estáticos (imagens, css, js, etc)
+    // não mexe em arquivos estáticos, nas outras functions, nem em bots
     const isAsset = /\.(css|js|mjs|svg|png|jpg|jpeg|webp|ico|woff2?|ttf|xml|txt|json)$/i.test(pathname);
-
-    // não mexe nas outras functions que já existem (newsletter)
     const isApiRoute = /^\/(subscribe|unsubscribe|subscribers)/.test(pathname);
 
-    if (!isBrPath && !isAsset && !isApiRoute && !isBot && country === 'BR') {
+    if (isAsset || isApiRoute || isBot) {
+        return next();
+    }
+
+    const isBrPath = pathname === '/br' || pathname.startsWith('/br/');
+
+    // Brasil, mas está numa página pt-PT -> manda pra /br
+    if (country === 'BR' && !isBrPath) {
         return Response.redirect(`${url.origin}/br${pathname}${url.search}`, 302);
+    }
+
+    // Fora do Brasil, mas está numa página /br -> manda pra pt-PT
+    if (country !== 'BR' && isBrPath) {
+        const newPath = pathname.replace(/^\/br/, '') || '/';
+        return Response.redirect(`${url.origin}${newPath}${url.search}`, 302);
     }
 
     return next();
