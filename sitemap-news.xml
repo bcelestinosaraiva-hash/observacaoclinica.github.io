@@ -3,47 +3,146 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/</loc>
+    <loc>https://observacaoclinica.com/br/saude-az/como-se-prevenir-da-malaria/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
-      <news:title>Como calcular índice de massa corporal (IMC) para saber o seu peso ideal?</news:title>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>Malária seus sinais e sintomas, causas e prevenção</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
+    <loc>https://observacaoclinica.com/br/saude-az/glossario-clinico/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
-      <news:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</news:title>
+      <news:publication_date>2026-09-07T10:11:23+00:00</news:publication_date>
+      <news:title>Glossário com definições de termos usados em prontuário eletrônico | Observação Clínica</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
+    <loc>https://observacaoclinica.com/br/saude-az/hipertensao-arterial-mas-porque/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
-      <news:title>A importância da prevenção de cáries para a saúde bucal</news:title>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>Hipertensão Arterial: o que é, por que acontece e como tratar</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
+    <loc>https://observacaoclinica.com/br/saude-az/insuficiencia-renal/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-05T09:03:10+00:00</news:publication_date>
-      <news:title>Cárie dentária: o que é, causas, sintomas e como evitar de forma eficaz</news:title>
+      <news:publication_date>2026-09-07T05:06:46+00:00</news:publication_date>
+      <news:title>Insuficiência renal crónica: o que é, sintomas, causas e prevenção</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/br/saude-az/o-que-e-avc/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>O que é Acidente Vascular Cerebral (AVC)?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/br/saude-az/o-que-e-bronquiolite/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>Bronquiolite: sintomas, causas e tipos explicados de forma simples</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/br/saude-az/o-que-e-ebola-e-sua-prevencao/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-06T09:03:10+00:00</news:publication_date>
+      <news:title>Ebola: o que é, sintomas, transmissão e como se prevenir</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/br/saude-az/observacao-clinica-o-que-e/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T19:08:08+00:00</news:publication_date>
+      <news:title>Observação clínica: o que é, para que serve e como é feita</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T17:27:21+00:00</news:publication_date>
+      <news:title>Observação clínica - Informação médica, doenças, nutrição e os cuidados.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/nutricao/introducao-de-alimentos/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-06T09:03:10+00:00</news:publication_date>
+      <news:title>Introdução dos alimentos complementares aos seus 6 meses de idades</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>Malária seus sinais e sintomas, causas e prevenção</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-az/o-que-e-bronquite-e-como-prevenir/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-07T09:03:10+00:00</news:publication_date>
+      <news:title>O que é uma bronquite e como prevenir?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-06T09:03:10+00:00</news:publication_date>
+      <news:title>Convulsão e mioclonia: Qual a diferença?</news:title>
     </news:news>
   </url>
 </urlset>

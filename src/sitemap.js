@@ -18,9 +18,10 @@ function getUrls(dir, route = "") {
     if (
       file === "node_modules" ||
       file === ".git" ||
-      file === "/br/recente/index.html" ||
+      file === "recente" ||
       file === "src" ||
       file === "yandex_b5d9e3c953a4c1e6.html" ||
+      file === "br/recente/index.html" ||
       file === "recentes" ||
       file === "/yandex_b5d9e3c953a4c1e6/" ||
       file === "sitemap.xml" ||

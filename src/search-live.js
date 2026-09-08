@@ -12,7 +12,7 @@ const pages = [
   { title: "O que é tuberculose seus sinais e sintomas e suas medidas preventivas?", url: "/saude-az/o-que-e-tuberculose/" },
   { title: "O que é diabetes: as causas, sinais e sintomas que você não deve ignorar", url: "/nutricao/o-que-e-diabetes/" },
   { title: "O que é Malária, sinais e sintomas, causas, prevenção e o tratamento da malaria", url: "/saude-az/como-se-prevenir-da-malaria/" },
-  { title: "O que é uma hipertensão, mas porque?", url: "/saude-az/hipertensao-arterial-mas-porque/" },
+  { title: "Hipertensão arterial: o que é, por que acontece e como tratar", url: "/saude-az/hipertensao-arterial-mas-porque/" },
   { title: "O que é acidente vascular cerebral ou (AVC)?", url: "/saude-az/o-que-e-avc/" },
   { title: "Ansiedade: sintomas, causas e como controlar de forma eficaz", url: "/saude-mental/ansiedade-sintomas/" },
   { title: "Alimentos para idosos: garantindo saúde, energia e qualidade de vida dos idosos", url: "/nutricao/alimentos-para-os-idosos/" },
