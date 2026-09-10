@@ -1118,6 +1118,32 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
+    <script>
+        const commentsSection = document.getElementById("comentarios");
+
+        function loadComentariosScript() {
+            import("/js/comments.js").catch((err) => {
+                console.error("Falha ao carregar comentarios.js:", err);
+            });
+        }
+
+        if (commentsSection && "IntersectionObserver" in window) {
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        observer.disconnect();
+                        loadComentariosScript();
+                    }
+                });
+            }, { rootMargin: "400px" });
+
+            observer.observe(commentsSection);
+
+        } else if (commentsSection) {
+            loadComentariosScript();
+        }
+    </script>
     <script src="/src/avaliacao.js" defer></script>
     <script src="/src/search-live.js" defer></script>
     <script src="/js/push-subscribe.js" defer></script>
