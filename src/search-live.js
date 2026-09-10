@@ -58,6 +58,7 @@ const pages = [
   { title: "Glossário clínico", url: "/saude-az/glossario-clinico/" },
   { title: "Ferro na gravidez: quando suplementar e como escolher", url: "/gravidez/ferro-na-gravidez/" },
   { title: "10 Exercícios para glúteos em casa ou na academia", url: "/fitness/exercicios-para-gluteos/" },
+  { title: "Grávida pode comer atum? veja a quantidade segura e os riscos", url: "/gravidez/gravida-pode-comer-atum/" }
 ];
 
 // =====================================================
