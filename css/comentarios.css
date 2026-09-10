@@ -621,3 +621,8 @@ tbody th[scope=row] {
         font-weight: 600
     }
 }
+
+main.grid>section,
+main.grid>aside {
+    min-width: 0;
+}
