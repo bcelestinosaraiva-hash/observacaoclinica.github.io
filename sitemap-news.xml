@@ -3,39 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/br/gravidez/alimentacao-na-gravidez/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>Alimentação na gravidez: o que comer para uma gestação saudável</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/br/saude-az/o-que-e-sinusite/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>Sinusite: o que é, sinais e sintomas e como prevenir</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/br/saude-mental/ansiedade-sintomas/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>Ansiedade: sintomas, causas e como controlar de forma e eficaz</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/gravidez/gravida-pode-comer-atum/</loc>
     <news:news>
       <news:publication>
@@ -44,39 +11,6 @@
       </news:publication>
       <news:publication_date>2026-09-10T04:34:10+00:00</news:publication_date>
       <news:title>Grávida pode comer atum? Quantidade segura e riscos</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>8 tratamentos de pneumonia: medicamentos, cuidados e recuperação</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/ansiedade-sintomas/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>Ansiedade: sintomas, causas e como controlar de forma e eficaz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-08T09:03:10+00:00</news:publication_date>
-      <news:title>Mioclonia: o que é, causas e tratamento dos espasmos musculares</news:title>
     </news:news>
   </url>
 </urlset>
