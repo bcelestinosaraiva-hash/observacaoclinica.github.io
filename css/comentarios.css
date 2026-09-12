@@ -571,7 +571,7 @@ tbody th[scope=row] {
     font-size: 16px;
     height: 20px;
     font-weight: 400;
-    color: #013f3f
+    color: rgb(61, 61, 61);
 }
 
 .table-scroll {
@@ -602,7 +602,7 @@ tbody th[scope=row] {
         font-size: 13px;
         height: 20px;
         font-weight: 400;
-        color: #013f3f
+        color: rgb(61, 61, 61);
     }
 
     thead th,

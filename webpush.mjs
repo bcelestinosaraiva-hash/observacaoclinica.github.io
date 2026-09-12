@@ -1,6 +1,6 @@
 import { notifyNewArticles } from "./scripts/push-notify.mjs";
 await notifyNewArticles([{
-    title: "Grávida pode comer atum? Quantidade segura e riscos explicados",
-    url: "https://observacaoclinica.com/br/gravidez/gravida-pode-comer-atum//",
-    image: "https://observacaoclinica.com/img/atum-na-gravidez-1200.webp"
+    title: "O que comer antes e depois do treino: Guia completo",
+    url: "https://observacaoclinica.com//br/nutricao/o-que-comer-antes-e-depois-do-treino/",
+    image: "https://observacaoclinica.com/img/alimentos-no-treino-1200.webp"
 }]);

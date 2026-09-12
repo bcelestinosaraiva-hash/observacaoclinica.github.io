@@ -257,7 +257,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/</loc>
-  <lastmod>2026-09-10</lastmod>
+  <lastmod>2026-09-12</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
@@ -317,7 +317,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/nutricao/</loc>
-  <lastmod>2026-09-05</lastmod>
+  <lastmod>2026-09-12</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -330,6 +330,18 @@
     <image:image>
       <image:loc>https://observacaoclinica.com/img/bebe-comendo-introducao-alimentar-1200.webp</image:loc>
       <image:title>Introdução Alimentar aos 6 meses: como começar com segurança</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/br/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
+  <lastmod>2026-09-12</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/br/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/alimentos-no-treino-1200.webp</image:loc>
+      <image:title>O que comer antes e depois do treino: Guia completo</image:title>
     </image:image>
   </url>
   <url>
@@ -1086,7 +1098,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-09-10</lastmod>
+  <lastmod>2026-09-12</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
@@ -1146,7 +1158,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/</loc>
-  <lastmod>2026-09-07</lastmod>
+  <lastmod>2026-09-12</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/nutricao/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/"/>
@@ -1162,6 +1174,18 @@
     <image:image>
       <image:loc>https://observacaoclinica.com/img/bebe-comendo-introducao-alimentar-1200.webp</image:loc>
       <image:title>Introdução dos alimentos complementares aos seus 6 meses de idades</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
+  <lastmod>2026-09-12</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/br/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/alimentos-no-treino-1200.webp</image:loc>
+      <image:title>O que comer antes e depois do treino: Guia completo</image:title>
     </image:image>
   </url>
   <url>
@@ -1614,7 +1638,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
-  <lastmod>2026-09-10</lastmod>
+  <lastmod>2026-09-12</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/"/>
