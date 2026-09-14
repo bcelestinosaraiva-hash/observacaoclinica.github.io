@@ -1,6 +1,5 @@
 .breadcrumbs ol,
 .breadcrumbs ol li,
-.descricao,
 .lermais p,
 .navrede a,
 .navrede h3,
@@ -463,10 +462,21 @@ ul a {
 
 .descricao {
     text-align: center;
-    color: #616060;
-    margin: 13px;
+    color: #4f4e4e;
+    margin: 15px;
     font-size: 12px;
     line-height: 16px
+}
+
+@media (max-width:640px) {
+    .descricao {
+        text-align: center;
+        color: #4f4e4e;
+        margin: 12px;
+        margin-top: -10px;
+        font-size: 10px;
+        line-height: 16px
+    }
 }
 
 .referencia,
