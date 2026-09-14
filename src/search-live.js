@@ -59,7 +59,8 @@ const pages = [
   { title: "Ferro na gravidez: quando suplementar e como escolher", url: "/gravidez/ferro-na-gravidez/" },
   { title: "10 Exercícios para glúteos em casa ou na academia", url: "/fitness/exercicios-para-gluteos/" },
   { title: "Grávida pode comer atum? veja a quantidade segura e os riscos", url: "/gravidez/gravida-pode-comer-atum/" },
-  { title: "O que comer antes e depois do treino: Guia completo", url: "/nutricao/o-que-comer-antes-e-depois-do-treino/" }
+  { title: "O que comer antes e depois do treino: Guia completo", url: "/nutricao/o-que-comer-antes-e-depois-do-treino/" },
+  { title: "Corrimento marrom ou castanho antes da menstruação: o que significa", url: "/saude-intima/corrimento-marrom-antes-da-menstruacao/" },
 ];
 
 // =====================================================

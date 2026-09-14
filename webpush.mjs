@@ -1,6 +1,6 @@
 import { notifyNewArticles } from "./scripts/push-notify.mjs";
 await notifyNewArticles([{
-    title: "O que comer antes e depois do treino: Guia completo",
-    url: "https://observacaoclinica.com//br/nutricao/o-que-comer-antes-e-depois-do-treino/",
-    image: "https://observacaoclinica.com/img/alimentos-no-treino-1200.webp"
+    title: "Corrimento marrom antes da menstruação: o que significa",
+    url: "https://observacaoclinica.com/br/saude-intima/corrimento-marrom-antes-da-menstruacao/",
+    image: "https://observacaoclinica.com/img/corrimento-marrom-1200.webp"
 }]);
