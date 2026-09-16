@@ -21,7 +21,7 @@ function showSubscribePrompt(onAccept) {
       <p>Gostaria de receber notificações sobre os últimos conteúdos e actualizações</p>
       <div class="push-actions">
         <button id="push-dismiss" type="button">Não obrigado</button>
-        <button id="push-accept" type="button">Activar</button>
+        <button id="push-accept" type="button">Ativar</button>
       </div>
     </div>
   `;
@@ -64,7 +64,7 @@ async function initPush() {
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 60000); // espera 60 segundos antes de mostrar a barra
+  }, 30000); // espera 30 segundos antes de mostrar a barra
 }
 
 initPush();

@@ -377,7 +377,7 @@
       <!-- DATA DE ATUALIZACAO -->
       <div class="meta">
         <img src="/favicon/clock.svg" alt="relogio" width="12" height="12">
-        Atualizado  24 de agosto de 2026
+        Atualizado 24 de agosto de 2026
       </div>
       <div class="autora">
         <img src="/img/Beldo.webp" fetchpriority="high" class="object-cover rounded-full" alt="Beldo Celestino Saraiva">
@@ -519,197 +519,192 @@
         <li>Perda de consciência (coma hipoglicêmico).</li>
       </ul>
 
+      <h2>Classificação da glicemia: mg/dl</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Grau</th>
+            <th>valores</th>
+            <th>Sindrome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Normal</td>
+            <td>70–99</td>
+            <td>Sem fome</td>
+          </tr>
+          <tr>
+            <td>Leve</td>
+            <td>&lt; 60–70</td>
+            <td>Consciente</td>
+          </tr>
+          <tr>
+            <td>Moderada</td>
+            <td>40–59</td>
+            <td>Confusão mental</td>
+          </tr>
+          <tr>
+            <td>Grave</td>
+            <td>&lt; 40</td>
+            <td>Inconsciente, convulsão</td>
+          </tr>
+        </tbody>
+      </table>
 
+      <h2>Tratamento de hipoglicemia adultos</h2>
+      <p>Administrar 15–20 g de carbohidrato simples por via oral (ex.: suco, glicose, açúcar), dependendo da
+        consciência da vítima pode administrar glugacon. Reavaliar glicemia em 15 minutos (“regra dos 15”).</p>
 
-      <h2 class="text-center">Classificação da glicemia: mg/dl
-        <div class="max-w-full mx-auto overflow-x-auto rounded-lg border border-gray-200">
-          <table class="w-full text-left text-xs">
-            <thead class="bg-gray-300">
-              <tr>
-                <th class="px-3 py-2 text-gray-900">Grau</th>
-                <th class="px-3 py-2 text-gray-900">valores</th>
-                <th class="px-3 py-2 text-gray-900 text-center">Sindrome</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-blue-50">
-                <td class="px-3 py-2">Normal</td>
-                <td class="px-3 py-2">70–99</td>
-                <td class="px-3 py-2 text-center">Sem fome</td>
-              </tr>
-              <tr class="bg-blue-100">
-                <td class="px-3 py-2">Leve</td>
-                <td class="px-3 py-2">&lt; 60–70</td>
-                <td class="px-3 py-2 text-center">Consciente</td>
-              </tr>
-              <tr class="bg-blue-200">
-                <td class="px-3 py-2">Moderada</td>
-                <td class="px-3 py-2">40–59</td>
-                <td class="px-3 py-2 text-center">Confusão mental</td>
-              </tr>
-              <tr class="bg-blue-300">
-                <td class="px-3 py-2">Grave</td>
-                <td class="px-3 py-2">&lt; 40</td>
-                <td class="px-3 py-2 text-center">inconsciente, convulsão</td>
-              </tr>
-            </tbody>
-          </table>
+      <p>Paciente inconsciente ou com hipoglicemia grave: administrar bolo de dextrose IV (ex.: D50% ou D10%) aqui
+        entra a calculadora de bolo de dextrose. Alternativamente, aplicar glucagon IM ou SC, se a via venosa não
+        estiver disponível.</p>
+
+      <p><b>Glicômetro</b> Glicômetro é um aparelho usado para medir a quantidade de glicose (açúcar) no
+        sangue
+        de forma rápida e prática, geralmente em casa. Ele é essencial para pessoas com diabetes ou para quem
+        precisa monitorar a glicemia regularmente.</p>
+
+      <p>O cálculo do bolo de dextrose 10% baseia-se principalmente no peso corporal do paciente e na dose prescrita
+        em mL/kg. A fórmula Volume (mL) = Peso (kg) × Dose (mL/kg) permite determinar a quantidade necessária para
+        corrigir rapidamente a hipoglicemia.</p>
+      <p> Devido aos riscos associados, a administração deve ser feita apenas por
+        profissionais de saúde capacitados e de acordo com protocolos clínicos estabelecidos.</p>
+
+      <h2>Formação e responsabilidade profissional</h2>
+      <p>Apesar dos avanços tecnológicos, a responsabilidade pela administração segura dos medicamentos continua a
+        pertencer ao profissional de saúde. O conhecimento científico, a interpretação correta da prescrição e o
+        cumprimento dos protocolos institucionais permanecem fundamentais para garantir cuidados de qualidade.</p>
+      <p>A actualização contínua em cálculo de medicamentos, terapêutica intravenosa e segurança do doente contribui
+        para reduzir erros e melhorar os resultados clínicos.
+      </p>
+      <!-- AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section class="avaliacao-secao">
+        <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
+        <div class="buttonsa">
+          <button class="btna btn-yes" onclick="avaliar('Sim')">
+            <img src="/favicon/thumbs-up.svg" alt="sim" width="20" height="20"> SIM
+          </button>
+          <button class="btna btn-no" onclick="avaliar('Não')">
+            <img src="/favicon/thumbs-down.svg" alt="não" width="20" height="20"> NÃO
+          </button>
+        </div>
+        <div id="feedback" style="display:none;">
+          <p class="success" id="msg-sucesso" style="display:none;">
+            ✔ Obrigado pela avaliação, volte sempre!
+          </p>
+          <div id="form-feedback">
+            <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
+            <label for="nome" class="campo-label">Nome</label>
+            <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
+            <label for="email" class="campo-label">Email</label>
+            <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
+            <label for="mensagem" class="campo-label">Mensagem</label>
+            <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
+            <p id="erro-form" class="erro-msg" style="display:none;"></p>
+            <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
+      <hr>
+      <section>
+        <div class="shareing">
+          <span>COMPARTILHE</span>
+          <div class="iconsa">
+            <div class="icona facebook" onclick="shareFacebook()">
+              <img src="/favicon/facebook-25.svg" alt="facebook" width="28" height="28">
+            </div>
+            <div class="icona whatsapp" onclick="shareWhatsApp()">
+              <img src="/favicon/whatsapp-25.svg" alt="whatsapp" width="28" height="28">
+            </div>
+            <div class="icona pinterest" onclick="sharePinterest()">
+              <img src="/favicon/pinterest-25.svg" alt="pinterest" width="28" height="28">
+            </div>
+            <div class="icona share-icona" onclick="shareNative()">
+              <img src="/favicon/share.svg" alt="compartilhar" width="28" height="28">
+            </div>
+          </div>
+        </div>
+        </div>
+        <hr>
+      </section>
+
+      <h2 class="referencia mt-5">BIBLIOGRÁFICAS</h2>
+      <section class="panel">
+        <ul>
+          <li> Organização Mundial da Saúde (WHO). <a
+              href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank"
+              rel="noopener noreferrer"> Patient Safety </a> </li>
+          <li> Infarmed. <a href="https://www.infarmed.pt" target="_blank" rel="noopener noreferrer"> Medicamentos
+              de Uso Humano </a> </li>
+          <li> Direção-Geral da Saúde (DGS). <a href="https://www.dgs.pt" target="_blank" rel="noopener noreferrer">
+              Normas e Orientações Clínicas </a> </li>
+          <li> Institute for Safe Medication Practices (ISMP). <a href="https://www.ismp.org" target="_blank"
+              rel="noopener noreferrer"> Medication Safety Resources </a> </li>
+        </ul>
+      </section>
+      <hr>
+      <!-- COMENTARIOS -->
+      <section id="comentarios" class="comments-section"
+        data-article-id="https://observacaoclinica.com/calculadoras/como-calcular-dextrose/"
+        data-article-title="Comentários">
+        <div class="comments-header">
+          <h2>COMENTÁRIOS</h2>
+          <hr class="p-2">
+          <p>Compartilhe sua experiência ou dúvidas, os comentários são moderados, leia as nossas <a
+              href="/politicas-e-privacidades/" target="_blank" rel="noopener">políticas de
+              comentários</a>.
+          </p>
+        </div>
+        <!-- LOGIN -->
+        <div id="login-area" class="login-card">
+          <div class="login-info">
+            <b>Quer deixar um comentário?</b>
+            <p class="logar">Entre para participar da discussão.</p>
+          </div>
+          <button id="google-login" type="button" class="google-login">
+            <img src="/favicon/google.svg" alt="Google" width="20" height="20">
+            <span>Entrar com Google</span>
+          </button>
         </div>
 
-        <h2>Tratamento de hipoglicemia adultos</h2>
-
-        <p>Administrar 15–20 g de carbohidrato simples por via oral (ex.: suco, glicose, açúcar), dependendo da
-          consciência da vítima pode administrar glugacon. Reavaliar glicemia em 15 minutos (“regra dos 15”).</p>
-
-        <p>Paciente inconsciente ou com hipoglicemia grave: administrar bolo de dextrose IV (ex.: D50% ou D10%) aqui
-          entra a calculadora de bolo de dextrose. Alternativamente, aplicar glucagon IM ou SC, se a via venosa não
-          estiver disponível.</p>
-
-        <p><b>Glicômetro</b> Glicômetro é um aparelho usado para medir a quantidade de glicose (açúcar) no
-          sangue
-          de forma rápida e prática, geralmente em casa. Ele é essencial para pessoas com diabetes ou para quem
-          precisa monitorar a glicemia regularmente.</p>
-
-        <p>O cálculo do bolo de dextrose 10% baseia-se principalmente no peso corporal do paciente e na dose prescrita
-          em mL/kg. A fórmula Volume (mL) = Peso (kg) × Dose (mL/kg) permite determinar a quantidade necessária para
-          corrigir rapidamente a hipoglicemia.</p>
-        <p> Devido aos riscos associados, a administração deve ser feita apenas por
-          profissionais de saúde capacitados e de acordo com protocolos clínicos estabelecidos.</p>
-
-        <h2>Formação e responsabilidade profissional</h2>
-        <p>Apesar dos avanços tecnológicos, a responsabilidade pela administração segura dos medicamentos continua a
-          pertencer ao profissional de saúde. O conhecimento científico, a interpretação correta da prescrição e o
-          cumprimento dos protocolos institucionais permanecem fundamentais para garantir cuidados de qualidade.</p>
-        <p>A actualização contínua em cálculo de medicamentos, terapêutica intravenosa e segurança do doente contribui
-          para reduzir erros e melhorar os resultados clínicos.
-        </p>
-        <!-- AVALIAÇÃO DE CONTEÚDO -->
-        <hr>
-        <section class="avaliacao-secao">
-          <h3>ESTA INFORMAÇÃO FOI ÚTIL PARA VOCÊ?</h3>
-          <div class="buttonsa">
-            <button class="btna btn-yes" onclick="avaliar('Sim')">
-              <img src="/favicon/thumbs-up.svg" alt="sim" width="20" height="20"> SIM
-            </button>
-            <button class="btna btn-no" onclick="avaliar('Não')">
-              <img src="/favicon/thumbs-down.svg" alt="não" width="20" height="20"> NÃO
-            </button>
-          </div>
-          <div id="feedback" style="display:none;">
-            <p class="success" id="msg-sucesso" style="display:none;">
-              ✔ Obrigado pela avaliação, volte sempre!
-            </p>
-            <div id="form-feedback">
-              <small>Sua opinião é muito importante, como podemos melhorar o nosso conteúdo?</small>
-              <label for="nome" class="campo-label">Nome</label>
-              <input type="text" id="nome" placeholder="O teu nome" class="campo-input">
-              <label for="email" class="campo-label">Email</label>
-              <input type="email" id="email" placeholder="o-teu@email.com" class="campo-input">
-              <label for="mensagem" class="campo-label">Mensagem</label>
-              <textarea id="mensagem" placeholder="Escreve a tua mensagem..."></textarea>
-              <p id="erro-form" class="erro-msg" style="display:none;"></p>
-              <button class="submit-btn" onclick="enviar()">ENVIAR</button>
+        <!-- UTILIZADOR LOGADO -->
+        <div id="user-area" class="user-card" hidden>
+          <div class="user-info">
+            <img id="user-photo" class="user-photo" width="44" height="44" src="" alt="">
+            <div>
+              <b id="user-name">Usuário</b>
+              <span id="user-email"></span>
             </div>
           </div>
-        </section>
-        <!-- FIM DE AVALIAÇÃO DE CONTEÚDO -->
-        <hr>
-        <section>
-          <div class="shareing">
-            <span>COMPARTILHE</span>
-            <div class="iconsa">
-              <div class="icona facebook" onclick="shareFacebook()">
-                <img src="/favicon/facebook-25.svg" alt="facebook" width="28" height="28">
-              </div>
-              <div class="icona whatsapp" onclick="shareWhatsApp()">
-                <img src="/favicon/whatsapp-25.svg" alt="whatsapp" width="28" height="28">
-              </div>
-              <div class="icona pinterest" onclick="sharePinterest()">
-                <img src="/favicon/pinterest-25.svg" alt="pinterest" width="28" height="28">
-              </div>
-              <div class="icona share-icona" onclick="shareNative()">
-                <img src="/favicon/share.svg" alt="compartilhar" width="28" height="28">
-              </div>
+          <button id="logout" type="button" class="logout-button">Sair</button>
+        </div>
+        <!-- FORMULÁRIO -->
+        <div id="comments-area" class="comment-form-card" hidden>
+          <form id="comment-form" novalidate>
+            <label for="comment-text">Seu comentário</label>
+            <textarea id="comment-text" name="comment" rows="3" maxlength="1000" placeholder="Escreva seu comentário..."
+              aria-describedby="comment-hint" required></textarea>
+            <div class="comment-form-footer">
+              <small id="comment-hint" class="logar">Seu comentário será analisado pela nossa equipa
+                antes
+                de ser publicado.
+              </small>
+              <button id="submit-comment" type="submit" class="mt-3">Enviar comentário</button>
             </div>
+          </form>
+          <div id="comment-message" role="status" aria-live="polite"></div>
+        </div>
+        <!-- COMENTÁRIOS APROVADOS -->
+        <div class="published-comments">
+          <div id="comments-list" aria-live="polite">
+            <p class="comments-loading">Carregando comentários...</p>
           </div>
-          </div>
-          <hr>
-        </section>
-
-        <h2 class="referencia mt-5">BIBLIOGRÁFICAS</h2>
-        <section class="panel">
-          <ul>
-            <li> Organização Mundial da Saúde (WHO). <a
-                href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank"
-                rel="noopener noreferrer"> Patient Safety </a> </li>
-            <li> Infarmed. <a href="https://www.infarmed.pt" target="_blank" rel="noopener noreferrer"> Medicamentos
-                de Uso Humano </a> </li>
-            <li> Direção-Geral da Saúde (DGS). <a href="https://www.dgs.pt" target="_blank" rel="noopener noreferrer">
-                Normas e Orientações Clínicas </a> </li>
-            <li> Institute for Safe Medication Practices (ISMP). <a href="https://www.ismp.org" target="_blank"
-                rel="noopener noreferrer"> Medication Safety Resources </a> </li>
-          </ul>
-        </section>
-        <hr>
-        <!-- COMENTARIOS -->
-        <section id="comentarios" class="comments-section"
-          data-article-id="https://observacaoclinica.com/calculadoras/como-calcular-dextrose/"
-          data-article-title="Comentários">
-          <div class="comments-header">
-            <h2>COMENTÁRIOS</h2>
-            <hr class="p-2">
-            <p>Compartilhe sua experiência ou dúvidas, os comentários são moderados, leia as nossas <a
-                href="/politicas-e-privacidades/" target="_blank" rel="noopener">políticas de
-                comentários</a>.
-            </p>
-          </div>
-          <!-- LOGIN -->
-          <div id="login-area" class="login-card">
-            <div class="login-info">
-              <b>Quer deixar um comentário?</b>
-              <p class="logar">Entre para participar da discussão.</p>
-            </div>
-            <button id="google-login" type="button" class="google-login">
-              <img src="/favicon/google.svg" alt="Google" width="20" height="20">
-              <span>Entrar com Google</span>
-            </button>
-          </div>
-
-          <!-- UTILIZADOR LOGADO -->
-          <div id="user-area" class="user-card" hidden>
-            <div class="user-info">
-              <img id="user-photo" class="user-photo" width="44" height="44" src="" alt="">
-              <div>
-                <b id="user-name">Usuário</b>
-                <span id="user-email"></span>
-              </div>
-            </div>
-            <button id="logout" type="button" class="logout-button">Sair</button>
-          </div>
-          <!-- FORMULÁRIO -->
-          <div id="comments-area" class="comment-form-card" hidden>
-            <form id="comment-form" novalidate>
-              <label for="comment-text">Seu comentário</label>
-              <textarea id="comment-text" name="comment" rows="3" maxlength="1000"
-                placeholder="Escreva seu comentário..." aria-describedby="comment-hint" required></textarea>
-              <div class="comment-form-footer">
-                <small id="comment-hint" class="logar">Seu comentário será analisado pela nossa equipa
-                  antes
-                  de ser publicado.
-                </small>
-                <button id="submit-comment" type="submit" class="mt-3">Enviar comentário</button>
-              </div>
-            </form>
-            <div id="comment-message" role="status" aria-live="polite"></div>
-          </div>
-          <!-- COMENTÁRIOS APROVADOS -->
-          <div class="published-comments">
-            <div id="comments-list" aria-live="polite">
-              <p class="comments-loading">Carregando comentários...</p>
-            </div>
-          </div>
-        </section>
-        <!-- COMENTARIOS -->
+        </div>
+      </section>
+      <!-- COMENTARIOS -->
     </section>
     <!-- LADO DIREITO: BARRA LATERAL -->
     <aside class="space-y-6 mt-10">
