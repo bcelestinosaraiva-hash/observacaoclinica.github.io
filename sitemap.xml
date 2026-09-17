@@ -77,7 +77,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/calculadoras/</loc>
-  <lastmod>2026-09-05</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/calculadoras/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/"/>
@@ -137,7 +137,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/fitness/</loc>
-  <lastmod>2026-09-03</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/fitness/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/fitness/"/>
@@ -209,7 +209,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/gravidez/</loc>
-  <lastmod>2026-09-10</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/gravidez/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/"/>
@@ -257,7 +257,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/</loc>
-  <lastmod>2026-09-14</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
@@ -317,8 +317,11 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/nutricao/</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/nutricao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/br/nutricao/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/nutricao/introducao-de-alimentos/</loc>
@@ -590,14 +593,14 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/saude-az/observacao-clinica-o-que-e/</loc>
-  <lastmod>2026-09-07</lastmod>
+  <lastmod>2026-09-16</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/br/saude-az/observacao-clinica-o-que-e/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao-clinica-o-que-e-1200.webp</image:loc>
-      <image:title>Observação clínica: o que é, para que serve e como é feita</image:title>
+      <image:title>O que é Observação clínica? Para que serve e como é Feita</image:title>
     </image:image>
   </url>
   <url>
@@ -698,7 +701,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/br/saude-intima/corrimento-transparente-sem-cheiro/</loc>
-  <lastmod>2026-09-07</lastmod>
+  <lastmod>2026-09-16</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>
@@ -1446,14 +1449,14 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
-  <lastmod>2026-09-07</lastmod>
+  <lastmod>2026-09-16</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/br/saude-az/observacao-clinica-o-que-e/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/observacao-clinica-o-que-e-1200.webp</image:loc>
-      <image:title>Observação clínica: o que é, para que serve e como é feita</image:title>
+      <image:title>O que é Observação clínica? Para que serve e como é Feita</image:title>
     </image:image>
   </url>
   <url>
@@ -1554,7 +1557,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
-  <lastmod>2026-09-07</lastmod>
+  <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>

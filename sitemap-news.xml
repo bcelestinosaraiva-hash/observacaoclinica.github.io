@@ -2,4 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
+  <url>
+    <loc>https://observacaoclinica.com/br/saude-intima/corrimento-transparente-sem-cheiro/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-16T09:03:10+00:00</news:publication_date>
+      <news:title>Corrimento transparente sem cheiro: é normal?</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-16T19:08:08+00:00</news:publication_date>
+      <news:title>O que é Observação clínica? Para que serve e como é Feita</news:title>
+    </news:news>
+  </url>
 </urlset>
