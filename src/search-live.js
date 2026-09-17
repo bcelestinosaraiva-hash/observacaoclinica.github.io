@@ -60,6 +60,7 @@ const pages = [
   { title: "10 Exercícios para glúteos em casa ou na academia", url: "/fitness/exercicios-para-gluteos/" },
   { title: "Grávida pode comer atum? veja a quantidade segura e os riscos", url: "/gravidez/gravida-pode-comer-atum/" },
   { title: "O que comer antes e depois do treino: Guia completo", url: "/nutricao/o-que-comer-antes-e-depois-do-treino/" },
+  { title: "Vitamina D baixa: Sintomas, causas e como tratar", url: "/nutricao/vitamina-d-baixa-sintomas-causas/" },
   { title: "Corrimento marrom ou castanho antes da menstruação: o que significa", url: "/saude-intima/corrimento-marrom-antes-da-menstruacao/" },
 ];
 
@@ -209,6 +210,7 @@ const SYNONYMS_EN = {
   "vaginal": "vaginal",
   "ebola": "ebola",
   "clinical": "clinica",
+  "Vitamin": "vitamina"
 };
 
 // aplica as frases (multi-palavra) antes de dividir a query
