@@ -1,0 +1,16 @@
+{
+    "specVersion": "1.0",
+    "host": {
+        "displayName": "Observação Clínica",
+        "identifier": "observacaoclinica.com"
+    },
+    "entries": [
+        {
+            "identifier": "urn:ai:observacaoclinica.com:knowledge:llms-txt",
+            "displayName": "Observação Clínica — índice de conteúdos (llms.txt)",
+            "type": "text/plain",
+            "url": "https://observacaoclinica.com/llms.txt",
+            "description": "Índice curado das páginas do site Observação Clínica — informação sobre saúde, sintomas, nutrição e bem-estar, além de páginas institucionais e de políticas — formatado para leitura por agentes de IA."
+        }
+    ]
+}
