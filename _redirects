@@ -1,3 +1,3 @@
 # Redirect permanente: todas as URLs antigas /br/xxx/ passam a apontar para /xxx/
 # Os slugs são idênticos entre /br/ e a raiz, então um único wildcard cobre todos os artigos.
-/br/*  /:splat  301!
+/br/*  /:splat  301
