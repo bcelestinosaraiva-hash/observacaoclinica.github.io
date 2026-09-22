@@ -3,14 +3,25 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/br/equipa/beldo-celestino-saraiva/</loc>
+    <loc>https://observacaoclinica.com/saude-mental/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-18T09:03:10+00:00</news:publication_date>
-      <news:title>Beldo Celestino Saraiva - Observação clínica</news:title>
+      <news:publication_date>2026-09-21T09:03:10+00:00</news:publication_date>
+      <news:title>Aqui temos as informações ou conteúdos sobre saúde mental, para melhorar o seu intelecto</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/uso-de-ia/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-20T14:26:03+00:00</news:publication_date>
+      <news:title>Política de Uso de Inteligência Artificial — Observação Clínica</news:title>
     </news:news>
   </url>
 </urlset>

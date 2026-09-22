@@ -861,7 +861,7 @@ header img {
 
 .perfil a {
     color: #2a7de1;
-    font-size: 18px
+    font-size: 14px
 }
 
 .botao,
@@ -1693,11 +1693,11 @@ blockquote cite {
     display: block;
     margin-top: 0.7rem;
     font-style: normal;
-    font-size: 15px;
+    font-size: 14px;
     height: 24px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #00638a;
+    color: #02506f;
 }
 
 blockquote cite::before {
