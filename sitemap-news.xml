@@ -3,25 +3,91 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/saude-mental/</loc>
+    <loc>https://observacaoclinica.com/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-21T09:03:10+00:00</news:publication_date>
-      <news:title>Aqui temos as informações ou conteúdos sobre saúde mental, para melhorar o seu intelecto</news:title>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Atraso menstrual: 12 causas além da gravidez que você precisa conhecer</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/uso-de-ia/</loc>
+    <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-20T14:26:03+00:00</news:publication_date>
-      <news:title>Política de Uso de Inteligência Artificial — Observação Clínica</news:title>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Cheiro forte na região íntima: O que pode ser e quando procurar ajuda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/coceira-intima/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Coceira íntima antes da menstruação: causas e o que fazer</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-22T11:41:03+00:00</news:publication_date>
+      <news:title>Corrimento marrom antes da menstruação: o que significa</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Corrimento transparente sem cheiro: quando é normal e quando é sinal de alerta</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Candidíase vaginal: sintomas, causas, tratamento e prevenção</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
+      <news:title>Cólicas menstruais: por que acontecem e como aliviar a dor</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-23T08:44:44+00:00</news:publication_date>
+      <news:title>Convulsão e mioclonia: Qual a diferença?</news:title>
     </news:news>
   </url>
 </urlset>

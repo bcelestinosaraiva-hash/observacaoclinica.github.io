@@ -6,7 +6,7 @@
     },
     "entries": [
         {
-            "identifier": "urn:ai:observacaoclinica.com:knowledge:llms-txt",
+            "identifier": "urn:air:observacaoclinica.com:knowledge:llms-txt",
             "displayName": "Observação Clínica — índice de conteúdos (llms.txt)",
             "type": "text/plain",
             "url": "https://observacaoclinica.com/llms.txt",
