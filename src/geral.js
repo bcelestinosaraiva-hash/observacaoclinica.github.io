@@ -39,7 +39,7 @@ function agendarCarregamentoGTM() {
     }
     let o = ["scroll", "mousemove", "touchstart", "keydown", "click"];
     o.forEach(e => window.addEventListener(e, t, { once: !0, passive: !0 }));
-    var n = setTimeout(t, 5e3)
+    var n = setTimeout(t, 2000)
 }
 
 "accepted" === getConsent() && agendarCarregamentoGTM();
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let k = e("cookie-banner"), E = e("acceptCookies"), C = e("rejectCookies");
     if (k) {
         if (!getConsent()) {
-            setTimeout(() => { k.classList.add("show") }, 4e3);
+            setTimeout(() => { k.classList.add("show") }, 800);
         }
         E && E.addEventListener("click", () => {
             setConsent("accepted");
