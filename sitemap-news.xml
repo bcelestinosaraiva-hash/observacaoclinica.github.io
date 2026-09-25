@@ -3,91 +3,47 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/</loc>
+    <loc>https://observacaoclinica.com/fitness/exercicios-para-gluteos/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Atraso menstrual: 12 causas além da gravidez que você precisa conhecer</news:title>
+      <news:publication_date>2026-09-25T07:02:38+00:00</news:publication_date>
+      <news:title>10 Exercícios para glúteos em casa ou na academia</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
+    <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Cheiro forte na região íntima: O que pode ser e quando procurar ajuda</news:title>
+      <news:publication_date>2026-09-25T15:52:14+00:00</news:publication_date>
+      <news:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/coceira-intima/</loc>
+    <loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Coceira íntima antes da menstruação: causas e o que fazer</news:title>
+      <news:publication_date>2026-09-25T15:52:14+00:00</news:publication_date>
+      <news:title>A importância da prevenção de cáries para a saúde bucal</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/</loc>
+    <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-22T11:41:03+00:00</news:publication_date>
-      <news:title>Corrimento marrom antes da menstruação: o que significa</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Corrimento transparente sem cheiro: quando é normal e quando é sinal de alerta</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Candidíase vaginal: sintomas, causas, tratamento e prevenção</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T11:29:26+00:00</news:publication_date>
-      <news:title>Cólicas menstruais: por que acontecem e como aliviar a dor</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-23T08:44:44+00:00</news:publication_date>
-      <news:title>Convulsão e mioclonia: Qual a diferença?</news:title>
+      <news:publication_date>2026-09-25T11:29:26+00:00</news:publication_date>
+      <news:title>Cárie dentária: causas, sintomas e como evitar</news:title>
     </news:news>
   </url>
 </urlset>
