@@ -3,17 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/fitness/exercicios-para-gluteos/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-25T07:02:38+00:00</news:publication_date>
-      <news:title>10 Exercícios para glúteos em casa ou na academia</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</loc>
     <news:news>
       <news:publication>
@@ -25,36 +14,36 @@
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
+    <loc>https://observacaoclinica.com/gravidez/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-25T15:52:14+00:00</news:publication_date>
-      <news:title>Com que frequência devo ir ao dentista? Saiba quando fazer consultas</news:title>
+      <news:publication_date>2026-09-27T16:00:15+00:00</news:publication_date>
+      <news:title>Informações completas sobre gravidez: sintomas, cuidados e dicas para acompanhar cada fase da sua gestação com mais segurança. Saiba mais.</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
+    <loc>https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-25T15:52:14+00:00</news:publication_date>
-      <news:title>A importância da prevenção de cáries para a saúde bucal</news:title>
+      <news:publication_date>2026-09-27T07:02:38+00:00</news:publication_date>
+      <news:title>O que comer antes e depois do treino: Guia completo</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
+    <loc>https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-25T11:29:26+00:00</news:publication_date>
-      <news:title>Cárie dentária: causas, sintomas e como evitar</news:title>
+      <news:publication_date>2026-09-27T07:02:38+00:00</news:publication_date>
+      <news:title>Vitamina D baixa: Sintomas, causas, como prevenir e tratar</news:title>
     </news:news>
   </url>
 </urlset>

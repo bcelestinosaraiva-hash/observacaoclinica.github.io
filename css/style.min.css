@@ -1672,7 +1672,7 @@ blockquote {
     padding: 1rem 0.8rem 1.0rem 2rem;
     background: #ffffff;
     border-left: 3px solid #0286a4;
-    font-style: italic;
+    font-style: normal;
     border-radius: 10px;
     font-size: 16px;
     line-height: 1.65rem;
@@ -1708,7 +1708,7 @@ blockquote cite::before {
 /* telas maiores */
 @media (min-width: 768px) {
     blockquote {
-        font-style: italic;
+        font-style: normal;
         font-size: 18px;
         line-height: 26px;
     }

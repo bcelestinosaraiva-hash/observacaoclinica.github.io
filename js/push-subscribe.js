@@ -1,7 +1,5 @@
-// push-subscribe.js — inclui este script em todas as páginas do site (antes de </body>)
-
 const VAPID_PUBLIC_KEY = "BB7shUEIi0oN1eM6uBR2hERuLjPokSqJuvZyktBAYnVdMxVEwdquEGWy5xO5Gayw0yBq1HzvAMQ2OdnpdzQT2bc";
-const PUSH_ENDPOINT = ""; // vazio = mesmo domínio do site (Pages Functions)
+const PUSH_ENDPOINT = "";
 
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
@@ -64,7 +62,7 @@ async function initPush() {
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 30000); // espera 30 segundos antes de mostrar a barra
+  }, 6000); // espera 6 segundos antes de mostrar a barra
 }
 
 initPush();
