@@ -62,6 +62,7 @@ const pages = [
   { title: "O que comer antes e depois do treino: Guia completo", url: "/nutricao/o-que-comer-antes-e-depois-do-treino/" },
   { title: "Vitamina D baixa: Sintomas, causas e como tratar", url: "/nutricao/vitamina-d-baixa-sintomas-causas/" },
   { title: "Corrimento marrom ou castanho antes da menstruação: o que significa", url: "/saude-intima/corrimento-marrom-antes-da-menstruacao/" },
+  { title: "Com quantas semanas começam as contrações de treinamento?", url: "/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/" },
 ];
 
 // =====================================================
@@ -331,14 +332,14 @@ document.addEventListener('keydown', (e) => {
 
 (function () {
   const LOCALE_PREFIXES = {
-    'pt-br': '/br',
+    'pt-br': '',
     'pt-pt': '',
-    'pt': '', // português genérico (pt-MZ, pt-AO, etc.) cai no pt-PT
+    'pt': '',
   };
   const DEFAULT_LOCALE_PREFIX = '';
 
   function detectFromPath() {
-    if (/^\/br(\/|$)/.test(window.location.pathname)) return '/br';
+    if (/^\/(\/|$)/.test(window.location.pathname)) return '/';
     return null;
   }
 
