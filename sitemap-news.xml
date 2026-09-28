@@ -25,6 +25,28 @@
     </news:news>
   </url>
   <url>
+    <loc>https://observacaoclinica.com/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T17:27:21+00:00</news:publication_date>
+      <news:title>Observação clínica - Informação médica, doenças, nutrição e os cuidados.</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/nutricao/aleitamento-materno/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T07:02:38+00:00</news:publication_date>
+      <news:title>Aleitamento materno: benefícios para mãe e bebê</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
     <news:news>
       <news:publication>
@@ -33,6 +55,17 @@
       </news:publication>
       <news:publication_date>2026-09-27T07:02:38+00:00</news:publication_date>
       <news:title>O que comer antes e depois do treino: Guia completo</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-28T07:02:38+00:00</news:publication_date>
+      <news:title>Posso comer ovo todos os dias? Benefícios, quantidade e cuidados</news:title>
     </news:news>
   </url>
   <url>
