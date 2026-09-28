@@ -17,7 +17,7 @@ const pages = [
   { title: "Ansiedade: sintomas, causas e como controlar de forma eficaz", url: "/saude-mental/ansiedade-sintomas/" },
   { title: "Alimentos para idosos: garantindo saúde, energia e qualidade de vida dos idosos", url: "/nutricao/alimentos-para-os-idosos/" },
   { title: "Dieta para hipertensos: alimentação saudável para controlar a pressão alta", url: "/nutricao/dieta-para-pessoa-hipertensa/" },
-  { title: "Quem e Beldo Celestino Saraiva", url: "/equipa/beldo-celestino-saraiva/" },
+  { title: "Quem e Beldo Celestino Saraiva", url: "/equipe/beldo-celestino-saraiva/" },
   { title: "Aleitamento materno: importância e benefícios para a mãe e o bebê", url: "/nutricao/aleitamento-materno/" },
   { title: "Sintomas de gravidez: como identificar os primeiros sinais com segurança", url: "/gravidez/sintomas-de-gravidez/" },
   { title: "7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca", url: "/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" },
