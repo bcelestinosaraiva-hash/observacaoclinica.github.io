@@ -47,7 +47,7 @@ const pages = [
   { title: "Alimentação na gravidez: o que comer para uma gestação saudável", url: "/gravidez/alimentacao-na-gravidez/" },
   { title: "Com que frequência devo ir ao dentista? Saiba quando fazer consultas regulares e por quê", url: "/saude-bucal/com-que-frequencia-ir-ao-dentista/" },
   { title: "Como as redes sociais afectam a saúde mental dos adolescentes?", url: "/saude-mental/redes-sociais-nos-adolescentes/" },
-  { title: "Hábitos para dormir melhor: ter um sono mais profundo e reparador", url: "/saude-mental/habitos-para-dormir-melhor/" },
+  { title: "Hábitos para dormir melhor: 12 dicas para um sono mais profundo e reparador", url: "/saude-mental/habitos-para-dormir-melhor/" },
   { title: "Corrimento transparente sem cheiro: é normal?", url: "/saude-intima/corrimento-transparente-sem-cheiro/" },
   { title: "Cheiro forte na região íntima: causas e como tratar", url: "/saude-intima/cheiro-forte-regiao-intima/" },
   { title: "Coceira íntima antes da menstruação: causas, prevenção e alívio", url: "/saude-intima/coceira-intima/" },
@@ -241,7 +241,6 @@ function levenshtein(a, b) {
   return matrix[a.length][b.length];
 }
 
-// verifica se uma palavra da busca casa com o título (exato, aproximado ou via sinônimo em inglês)
 function wordMatchesTitle(qw, nTitle, titleWords) {
   if (nTitle.includes(qw)) return 2; // match exato/substring
 
@@ -339,8 +338,8 @@ document.addEventListener('keydown', (e) => {
   const DEFAULT_LOCALE_PREFIX = '';
 
   function detectFromPath() {
-    if (/^\/(\/|$)/.test(window.location.pathname)) return '/';
-    return null;
+    const m = window.location.pathname.match(/^\/(pt-br|pt-pt|pt)(\/|$)/i);
+    return m ? LOCALE_PREFIXES[m[1].toLowerCase()] : null;
   }
 
   function detectFromBrowser() {
@@ -351,28 +350,21 @@ document.addEventListener('keydown', (e) => {
     for (const lang of langs) {
       const key = lang.toLowerCase();
       if (LOCALE_PREFIXES[key] !== undefined) return LOCALE_PREFIXES[key];
-
       const base = key.split('-')[0];
       if (LOCALE_PREFIXES[base] !== undefined) return LOCALE_PREFIXES[base];
     }
     return DEFAULT_LOCALE_PREFIX;
   }
 
-  function detectLocalePrefix() {
-    const fromPath = detectFromPath();
-    if (fromPath !== null) return fromPath;
-    return detectFromBrowser();
-  }
+  const fromPath = detectFromPath();
+  const LOCALE_PREFIX = fromPath !== null ? fromPath : detectFromBrowser();
 
-  const LOCALE_PREFIX = detectLocalePrefix();
-
-  // Monta a URL final, evitando prefixo duplicado.
   function buildLocaleHref(url) {
+    if (!url.startsWith('/')) return url;
     if (LOCALE_PREFIX && url.startsWith(LOCALE_PREFIX + '/')) return url;
     return LOCALE_PREFIX + url;
   }
 
-  // Expõe globalmente para os outros scripts usarem.
   window.SITE_LOCALE = {
     prefix: LOCALE_PREFIX,
     buildHref: buildLocaleHref,
