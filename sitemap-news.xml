@@ -3,28 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/gravidez/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-27T16:00:15+00:00</news:publication_date>
-      <news:title>Informações completas sobre gravidez: sintomas, cuidados e dicas para acompanhar cada fase da sua gestação com mais segurança. Saiba mais.</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-27T17:27:21+00:00</news:publication_date>
-      <news:title>Observação clínica - Informação médica, doenças, nutrição e os cuidados.</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/nutricao/aleitamento-materno/</loc>
     <news:news>
       <news:publication>
@@ -44,6 +22,17 @@
       </news:publication>
       <news:publication_date>2026-09-29T07:02:38+00:00</news:publication_date>
       <news:title>Necessidades nutricionais das crianças por faixa etária</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/nutricao/dieta-para-pessoa-hipertensa/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-29T07:02:38+00:00</news:publication_date>
+      <news:title>Dieta para hipertensão: alimentação saudável para controlar a pressão alta</news:title>
     </news:news>
   </url>
   <url>
