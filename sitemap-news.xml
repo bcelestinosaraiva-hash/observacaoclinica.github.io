@@ -3,17 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-27T04:07:44+00:00</news:publication_date>
-      <news:title>Com quantas semanas começam as contrações de treinamento?</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/gravidez/</loc>
     <news:news>
       <news:publication>
@@ -47,14 +36,25 @@
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
+    <loc>https://observacaoclinica.com/nutricao/as-necessidades-nutricionais-das-criancas/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-27T07:02:38+00:00</news:publication_date>
-      <news:title>O que comer antes e depois do treino: Guia completo</news:title>
+      <news:publication_date>2026-09-29T07:02:38+00:00</news:publication_date>
+      <news:title>Necessidades nutricionais das crianças por faixa etária</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/nutricao/introducao-de-alimentos/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-29T07:02:38+00:00</news:publication_date>
+      <news:title>Introdução alimentar aos 6 meses: como começar</news:title>
     </news:news>
   </url>
   <url>
@@ -66,17 +66,6 @@
       </news:publication>
       <news:publication_date>2026-09-28T07:02:38+00:00</news:publication_date>
       <news:title>Posso comer ovo todos os dias? Benefícios, quantidade e cuidados</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-27T07:02:38+00:00</news:publication_date>
-      <news:title>Vitamina D baixa: Sintomas, causas, como prevenir e tratar</news:title>
     </news:news>
   </url>
 </urlset>
