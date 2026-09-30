@@ -3,14 +3,14 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/nutricao/aleitamento-materno/</loc>
+    <loc>https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-28T07:02:38+00:00</news:publication_date>
-      <news:title>Aleitamento materno: benefícios para mãe e bebê</news:title>
+      <news:publication_date>2026-09-30T07:02:38+00:00</news:publication_date>
+      <news:title>Alimentos para idosos: o que comer para ter mais saúde</news:title>
     </news:news>
   </url>
   <url>
@@ -47,14 +47,14 @@
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</loc>
+    <loc>https://observacaoclinica.com/nutricao/o-que-e-diabetes/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-09-28T07:02:38+00:00</news:publication_date>
-      <news:title>Posso comer ovo todos os dias? Benefícios, quantidade e cuidados</news:title>
+      <news:publication_date>2026-09-30T07:02:38+00:00</news:publication_date>
+      <news:title>O que é diabetes? Causas, sintomas e tipos</news:title>
     </news:news>
   </url>
 </urlset>
