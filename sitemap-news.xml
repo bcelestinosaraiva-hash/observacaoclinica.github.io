@@ -24,4 +24,70 @@
       <news:title>O que é diabetes? Causas, sintomas e tipos</news:title>
     </news:news>
   </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
+      <news:title>Cheiro forte na região íntima: O que pode ser e quando procurar ajuda</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/coceira-intima/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
+      <news:title>Coceira íntima antes da menstruação: causas e o que fazer</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:41:03+00:00</news:publication_date>
+      <news:title>Corrimento marrom antes da menstruação: o que significa</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
+      <news:title>Corrimento transparente sem cheiro: quando é normal e quando é sinal de alerta</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
+      <news:title>Candidíase vaginal: sintomas, causas, tratamento e prevenção</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
+      <news:title>Cólicas menstruais: por que acontecem e como aliviar a dor</news:title>
+    </news:news>
+  </url>
 </urlset>
