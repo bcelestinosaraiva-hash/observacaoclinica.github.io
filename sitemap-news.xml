@@ -3,28 +3,6 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-30T07:02:38+00:00</news:publication_date>
-      <news:title>Alimentos para idosos: o que comer para ter mais saúde</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/nutricao/o-que-e-diabetes/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-09-30T07:02:38+00:00</news:publication_date>
-      <news:title>O que é diabetes? Causas, sintomas e tipos</news:title>
-    </news:news>
-  </url>
-  <url>
     <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
     <news:news>
       <news:publication>
@@ -77,6 +55,17 @@
       </news:publication>
       <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
       <news:title>Candidíase vaginal: sintomas, causas, tratamento e prevenção</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/saude-intima/o-que-e-clotrimazol-creme-vaginal/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-02T09:03:10+00:00</news:publication_date>
+      <news:title>O que é Clotrimazol 2% creme vaginal, para que é utilizado</news:title>
     </news:news>
   </url>
   <url>
