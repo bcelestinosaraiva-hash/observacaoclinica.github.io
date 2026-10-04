@@ -162,3 +162,91 @@ window.shareWhatsApp = shareWhatsApp;
 window.shareFacebook = shareFacebook;
 window.sharePinterest = sharePinterest;
 window.shareNative = shareNative;
+
+/* ===== Banner de Cookies ===== */
+(function () {
+    var CHAVE = 'cookie_consent'; // 'aceito' | 'recusado'
+    var VALIDADE_DIAS = 180;
+
+    function lerConsentimento() {
+        try {
+            return localStorage.getItem(CHAVE);
+        } catch (e) {
+            var m = document.cookie.match(new RegExp('(?:^|; )' + CHAVE + '=([^;]*)'));
+            return m ? decodeURIComponent(m[1]) : null;
+        }
+    }
+
+    function gravarConsentimento(valor) {
+        try { localStorage.setItem(CHAVE, valor); } catch (e) { }
+        var d = new Date();
+        d.setTime(d.getTime() + VALIDADE_DIAS * 24 * 60 * 60 * 1000);
+        document.cookie = CHAVE + '=' + encodeURIComponent(valor) +
+            '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+    }
+
+    function aplicarConsentimento(valor) {
+        if (valor === 'aceito') {
+            // Carregue aqui o que depende de consentimento (Analytics, anúncios personalizados, Pixel)
+            window.dispatchEvent(new Event('cookies-aceitos'));
+        }
+    }
+
+    // Só adiciona o CSS se a página ainda não o carregar
+    function garantirCSS() {
+        if (document.querySelector('link[href*="/css/ style.min.css"]')) return;
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/css/ style.min.css';
+        document.head.appendChild(link);
+    }
+
+    function mostrarBanner() {
+        garantirCSS();
+
+        var banner = document.createElement('div');
+        banner.id = 'cookie-banner';
+        banner.className = 'cookie-banner';
+        banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-label', 'Aviso de cookies');
+        banner.innerHTML =
+            '<div class="cookie-content">' +
+            '<h3>🍪 Usamos Cookies</h3>' +
+            '<p>Usamos cookies para melhorar sua experiência de navegação, analisar o tráfego do site e exibir anúncios personalizados. ' +
+            'Você pode aceitar ou recusar os cookies não essenciais. ' +
+            'Ao clicar em <b>Aceitar</b>, você concorda com nossa ' +
+            '<a href="/politica-de-cookies/">política de cookies</a>.</p>' +
+            '<div class="cookie-buttons">' +
+            '<button id="acceptCookies" class="btn-primary">Aceitar</button>' +
+            '<button id="rejectCookies" class="btn-secondary">Recusar</button>' +
+            '</div>' +
+            '</div>';
+        document.body.appendChild(banner);
+
+        // É esta classe que torna o banner visível no seu CSS
+        banner.classList.add('show');
+
+        function fechar(valor) {
+            gravarConsentimento(valor);
+            aplicarConsentimento(valor);
+            banner.remove();
+        }
+        document.getElementById('acceptCookies').addEventListener('click', function () { fechar('aceito'); });
+        document.getElementById('rejectCookies').addEventListener('click', function () { fechar('recusado'); });
+    }
+
+    function iniciar() {
+        var c = lerConsentimento();
+        if (c) {
+            aplicarConsentimento(c);
+        } else {
+            mostrarBanner();
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', iniciar);
+    } else {
+        iniciar();
+    }
+})();
