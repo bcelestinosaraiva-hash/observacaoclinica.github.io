@@ -1713,3 +1713,33 @@ blockquote cite::before {
         line-height: 26px;
     }
 }
+
+
+.aviso-calculadora {
+    background: #ecf2f2;
+    border: 1px solid #d0e8ea;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 20px auto;
+    max-width: 640px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    color: #033036;
+}
+
+.aviso-calculadora b {
+    color: #013c43;
+}
+
+@media (prefers-color-scheme: dark) {
+    .aviso-calculadora {
+        background: #0f2a2e;
+        border-color: #1d5760;
+        color: #cdeff3;
+    }
+
+    .aviso-calculadora b {
+        color: #6fd8e4;
+    }
+}

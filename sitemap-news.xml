@@ -3,80 +3,47 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
+    <loc>https://observacaoclinica.com/saude-mental/ansiedade-sintomas/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
-      <news:title>Cheiro forte na região íntima: O que pode ser e quando procurar ajuda</news:title>
+      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
+      <news:title>Ansiedade: sintomas, causas e como controlar de forma e eficaz</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/coceira-intima/</loc>
+    <loc>https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
-      <news:title>Coceira íntima antes da menstruação: causas e o que fazer</news:title>
+      <news:publication_date>2026-10-04T08:44:44+00:00</news:publication_date>
+      <news:title>Hábitos para dormir melhor: 12 dicas para um sono reparador</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/</loc>
+    <loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-01T11:41:03+00:00</news:publication_date>
-      <news:title>Corrimento marrom antes da menstruação: o que significa</news:title>
+      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
+      <news:title>Mioclonia: o que é, causas, tipos e quando se preocupar</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
+    <loc>https://observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
-      <news:title>Corrimento transparente sem cheiro: quando é normal e quando é sinal de alerta</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
-      <news:title>Candidíase vaginal: sintomas, causas, tratamento e prevenção</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-e-clotrimazol-creme-vaginal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-02T09:03:10+00:00</news:publication_date>
-      <news:title>O que é Clotrimazol 2% creme vaginal, para que é utilizado</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-01T11:29:26+00:00</news:publication_date>
-      <news:title>Cólicas menstruais: por que acontecem e como aliviar a dor</news:title>
+      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
+      <news:title>Redes sociais e saúde mental dos adolescentes: riscos, benefícios e como ajudar</news:title>
     </news:news>
   </url>
 </urlset>
