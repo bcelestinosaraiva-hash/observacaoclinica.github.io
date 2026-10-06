@@ -1720,8 +1720,8 @@ blockquote cite::before {
     border: 1px solid #d0e8ea;
     border-radius: 12px;
     padding: 14px 18px;
-    margin: 20px auto;
-    max-width: 640px;
+    margin: 10px auto;
+    max-width: 700px;
     text-align: left;
     font-size: 16px;
     line-height: 26px;

@@ -18,8 +18,8 @@ function showSubscribePrompt(onAccept) {
     <div class="push-content">
       <p>Gostaria de receber notificações sobre os últimos conteúdos e atualizações</p>
       <div class="push-actions">
-        <button id="push-dismiss" type="button">Não obrigado</button>
-        <button id="push-accept" type="button">Ativar</button>
+        <button id="push-dismiss" type="button">Não, obrigado</button>
+        <button id="push-accept" type="button">Aceito</button>
       </div>
     </div>
   `;
