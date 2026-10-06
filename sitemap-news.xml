@@ -3,6 +3,28 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
+    <loc>https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-06T08:44:44+00:00</news:publication_date>
+      <news:title>Calculadora de diluição para enfermagem: fórmula e exemplo</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/calculadoras/como-calcular-dextrose/</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Observação Clínica</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-10-06T08:44:44+00:00</news:publication_date>
+      <news:title>Como calcular o bolus de dextrose a 10%: fórmula e exemplo</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://observacaoclinica.com/saude-mental/ansiedade-sintomas/</loc>
     <news:news>
       <news:publication>
@@ -11,17 +33,6 @@
       </news:publication>
       <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
       <news:title>Ansiedade: sintomas, causas e como controlar de forma e eficaz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-04T08:44:44+00:00</news:publication_date>
-      <news:title>Hábitos para dormir melhor: 12 dicas para um sono reparador</news:title>
     </news:news>
   </url>
   <url>

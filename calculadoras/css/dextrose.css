@@ -1,300 +1,216 @@
-/* ==========================================================================
-   Calculadora de Bolo de Dextrose 10% — estilos
-   Identidade: saúde/clínica moderna, azul-petróleo + toques de âmbar
-   (glicose), cartão com sombra suave, grelha clara de resultados
-   ========================================================================== */
 :root {
-    --primaria: #015d81;
-    --primaria-escura: #01415c;
-    --primaria-clara: #e6f3f8;
-    --acento: #a96d05;
-    --acento-claro: #fffbeb;
-    --texto-principal: #0f2733;
-    --texto-secundario: #5b7480;
-    --borda: #dde5ea;
-    --fundo-secao: #f6fafb;
-    --fundo-card: #ffffff;
-    --sombra-card: 0 20px 45px -22px rgba(181, 189, 191, 0.28);
-    --sombra-suave: 0 4px 14px -6px rgba(1, 65, 92, 0.14);
-    --raio-sm: 10px;
-    --raio-md: 16px;
-    --raio-lg: 22px;
+    --c: #0e8f86;
+    --c-escuro: #0a6f68;
+    --c-claro: #e6f6f4;
+    --c-foco: rgba(14, 143, 134, .28);
+    --bg: #ffffff;
+    --card: #ffffff;
+    --t: #17323a;
+    --m: rgb(61, 61, 61);
+    --l: #e1ecec;
+    --campo-borda: #c5d8d8;
+    --aviso-bg: #fff7e3;
+    --aviso-borda: #f2b13c;
+    --aviso-t: #6b4a07;
+    --erro: rgba(61, 61, 61);
+    --erro-bg: #f4f2f0;
+    --raio: 14px;
+    --sombra: 0 1px 2px rgba(23, 50, 58, .06), 0 8px 24px rgba(23, 50, 58, .08);
 }
 
-/* ---------- cartão principal ---------- */
-.calculadora-bolo {
-    position: relative;
-    max-width: 100%;
-    margin: 32px auto;
-    padding: 40px 32px 34px;
-    background: var(--fundo-card) !important;
-    border-radius: var(--raio-lg) !important;
-    box-shadow: var(--sombra-card);
-    font-family: 'Inter', 'Rubik', Helvetica, Arial, sans-serif;
-    color: var(--texto-principal);
-    overflow: hidden;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c: #3cc4b8;
+        --c-escuro: #2aa89d;
+        --c-claro: #12312f;
+        --c-foco: rgba(60, 196, 184, .35);
+        --acento: #7db4e8;
+        --bg: #0e1b1f;
+        --card: #15272c;
+        --t: #e6f1f2;
+        --m: #9db4b9;
+        --l: #24393f;
+        --campo-borda: #34505a;
+        --aviso-bg: #2d2410;
+        --aviso-borda: #d9a13a;
+        --aviso-t: #f1d9a3;
+        --erro: #ff8a80;
+        --erro-bg: #3a1c1a;
+        --sombra: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+    }
 }
 
-/* faixa decorativa superior */
-.calculadora-bolo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primaria), var(--acento));
+* {
+    box-sizing: border-box;
 }
 
-/* selo tipo "gota" no topo */
-.calculadora-bolo::after {
-    content: "OC";
-    position: absolute;
-    top: 22px;
-    right: 28px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--primaria);
-    background: var(--primaria-clara);
-    border-radius: 50%;
+/* Cartão da calculadora */
+.calc {
+    background: var(--card);
+    border: 1px solid var(--l);
+    border-radius: 20px;
+    padding: clamp(18px, 5vw, 28px);
+    margin: 20px 0;
+    box-shadow: var(--sombra);
+    color: var(--t);
 }
 
-.calculadora-bolo h2 {
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: var(--texto-principal);
-    margin-bottom: 6px;
-    padding-right: 54px;
-    text-align: left !important;
-}
-
-.calculadora-bolo h2::after {
-    content: "";
+.calc label {
     display: block;
-    width: 42px;
-    height: 4px;
-    margin-top: 10px;
-    border-radius: 999px;
-    background: var(--acento);
-}
-
-.calculadora-bolo>p {
-    font-size: 16px;
-    line-height: 1.55;
-    color: rgb(61, 61, 61);
-    margin-bottom: 22px;
-}
-
-/* ---------- linha de campo + botão ---------- */
-.calculadora-bolo .row {
-    display: flex;
-    flex-direction: column;
-}
-
-.calculadora-bolo label {
-    display: block;
-    font-size: 14px;
     font-weight: 600;
-    color: rgb(61, 61, 61);
-    margin-bottom: 8px;
+    font-size: .95rem;
+    margin: 16px 0 8px;
 }
 
-.calculadora-bolo input[type="number"] {
+.calc label:first-child {
+    margin-top: 0;
+}
+
+.calc input,
+.calc select {
     width: 100%;
-    padding: 13px 14px;
+    padding: 14px 14px;
+    font: inherit;
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--texto-principal);
-    background: var(--fundo-secao) !important;
-    border: 1.5px solid var(--borda) !important;
-    border-radius: var(--raio-sm) !important;
-    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    color: var(--t);
+    background: var(--bg);
+    border: 1.5px solid var(--campo-borda);
+    border-radius: 12px;
+    transition: border-color .15s, box-shadow .15s, background .15s;
+}
+
+.calc select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 44px;
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+}
+
+.calc input::placeholder {
+    color: var(--m);
+    opacity: .7;
+}
+
+.calc input:hover,
+.calc select:hover {
+    border-color: var(--c);
+}
+
+.calc input:focus,
+.calc select:focus {
+    outline: none;
+    border-color: var(--c);
+    background-color: var(--card);
+    box-shadow: 0 0 0 4px var(--c-foco);
+}
+
+/* Botão */
+.calc button {
+    margin-top: 22px;
+    padding: 14px 28px;
+    font: inherit;
+    font-size: 1.02rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--c), var(--c-escuro));
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px var(--c-foco);
+    transition: transform .12s, box-shadow .12s, filter .12s;
+}
+
+.calc button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 480px) {
+    .calc button {
+        width: 100%;
+    }
+}
+
+/* Resultado */
+#res {
+    margin-top: 20px;
+    line-height: 1.55;
+}
+
+#res .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--campo-borda);
+}
+
+#res .row span {
+    color: var(--m);
+    font-size: .95rem;
+}
+
+#res .row b {
+    white-space: nowrap;
     font-variant-numeric: tabular-nums;
 }
 
-.calculadora-bolo input[type="number"]:hover {
-    border-color: #b7cdd6 !important;
+#res .row:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 14px 0 16px;
 }
 
-.calculadora-bolo input[type="number"]:focus {
-    outline: none;
-    border-color: var(--primaria) !important;
-    background: #ffffff !important;
-    box-shadow: 0 0 0 4px rgba(1, 93, 129, 0.14);
-}
-
-/* ---------- botão calcular ---------- */
-.calculadora-bolo .flex.justify-center {
-    justify-content: center;
-}
-
-.calculadora-bolo #calcular {
-    width: 60% !important;
-    background: linear-gradient(135deg, var(--primaria), var(--primaria-escura)) !important;
-    letter-spacing: 0.04em;
+#res .row:first-child span {
+    font-size: .8rem;
+    font-weight: 600;
     text-transform: uppercase;
-    box-shadow: var(--sombra-suave);
-    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease !important;
+    letter-spacing: .06em;
+    color: var(--c-escuro);
 }
 
-.calculadora-bolo #calcular:active {
-    transform: translateY(0);
-    filter: brightness(0.95);
+#res .row:first-child b {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+    line-height: 1.15;
+    color: var(--c);
 }
 
-/* ==========================================================================
-   Bloco de resultados
-   ========================================================================== */
-.calculadora-bolo .results {
-    margin-top: 0px;
-    padding-top: 22px;
-    border-top: 1px dashed var(--borda);
-    animation: entrar .4s ease both;
+.err {
+    color: var(--erro);
+    background: var(--erro-bg);
+    font-weight: 500;
+    font-size: .80rem;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin: 12px 0 0;
+}
+
+.nota {
+    font-size: .90rem;
+    color: var(--m);
+    margin: 10px 0 0;
 }
 
 @keyframes entrar {
     from {
         opacity: 0;
-        transform: translateY(8px);
+        transform: translateY(6px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: none;
     }
-}
-
-/* prescrição principal em destaque */
-.calculadora-bolo .results label[aria-label="prescricao"] {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgb(61, 61, 61);
-    margin-bottom: 0;
-}
-
-.calculadora-bolo #prescricao {
-    font-size: 2.1rem !important;
-    font-weight: 600 !important;
-    color: var(--primaria-escura) !important;
-    margin-top: 8px !important;
-    text-align: center;
-}
-
-.calculadora-bolo .results>.row>div {
-    width: 100%;
-    text-align: center;
-    background: var(--fundo-secao);
-    border-radius: var(--raio-md);
-    padding: 18px 16px 16px;
-}
-
-.calculadora-bolo .results>.row+div,
-.calculadora-bolo .results>div>.text-black:not([id]) {
-    text-align: center;
-    font-size: 14px;
-    color: rgb(61, 61, 61);
-    margin-top: 0px;
-}
-
-/* nota de constantes utilizadas */
-.calculadora-bolo .results>div>.text-black:first-child {
-    background: var(--acento-claro);
-    border: 1px solid #fbe4b0;
-    border-radius: var(--raio-sm);
-    padding: 10px 14px;
-    font-size: 0.82rem;
-    color: #694502;
-    text-align: center;
-    font-weight: 500;
-}
-
-/* grelha D5 / D50 */
-.calculadora-bolo div[style*="grid-template-columns"] {
-    margin-top: 14px !important;
-}
-
-.calculadora-bolo div[style*="grid-template-columns"]>div {
-    background: var(--fundo-card);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio-md);
-    padding: 16px 14px;
-    text-align: center;
-    box-shadow: var(--sombra-suave);
-    transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.calculadora-bolo div[style*="grid-template-columns"]>div:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px -12px rgba(1, 65, 92, 0.3);
-}
-
-.calculadora-bolo div[style*="grid-template-columns"] label.small {
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgb(61, 61, 61);
-    margin-bottom: 6px;
-}
-
-.calculadora-bolo div[style*="grid-template-columns"] #qD5,
-.calculadora-bolo div[style*="grid-template-columns"] #qD50 {
-    font-size: 1.5rem !important;
-    font-weight: 600 !important;
-    color: rgb(61, 61, 61);
-}
-
-.calculadora-bolo div[style*="grid-template-columns"] .muted.small {
-    display: block;
-    font-size: 0.75rem;
-    color: rgb(61, 61, 61);
-    margin-top: 4px;
-}
-
-/* separador horizontal mais discreto */
-.calculadora-bolo hr {
-    border-top: 1px dashed var(--borda) !important;
-}
-
-/* ---------- responsivo ---------- */
-@media (max-width: 520px) {
-    .calculadora-bolo {
-        margin: 0;
-        border-radius: 10px;
-        padding: 30px 20px 24px;
-        max-width: 100%;
-    }
-
-    .calculadora-bolo #calcular {
-        width: 80% !important;
-    }
-
-    .calculadora-bolo #prescricao {
-        font-size: 1.8rem !important;
-    }
-}
-
-/* ---------- acessibilidade ---------- */
-.calculadora-bolo button:focus-visible,
-.calculadora-bolo input:focus-visible {
-    outline: 3px solid var(--primaria);
-    outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-    .calculadora-bolo #calcular,
-    .calculadora-bolo .results {
+    * {
         animation: none !important;
         transition: none !important;
     }

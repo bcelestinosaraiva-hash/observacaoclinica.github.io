@@ -1716,12 +1716,13 @@ blockquote cite::before {
 
 
 .aviso-calculadora {
-    background: #ecf2f2;
-    border: 1px solid #d0e8ea;
+    background: #eef2f2;
+    border: 1px solid #eef2f2;
     border-radius: 12px;
     padding: 14px 18px;
     margin: 10px auto;
     max-width: 700px;
+    border-left: 3px solid #4bbfe6;
     text-align: left;
     font-size: 16px;
     line-height: 26px;
@@ -1729,7 +1730,7 @@ blockquote cite::before {
 }
 
 .aviso-calculadora b {
-    color: #013c43;
+    color: #131414;
 }
 
 @media (prefers-color-scheme: dark) {
