@@ -1,16 +1,9 @@
-/* ==========================================================================
-   Calculadora de IMC — estilos
-   Paleta: fundo clínico claro, acento petróleo, cores semânticas por
-   classificação (azul = abaixo do peso, verde = normal, laranja = sobrepeso,
-   vermelhos crescentes = obesidade I/II/III)
-   Tipografia: "Outfit" para títulos/números, "Inter" para corpo e dados
-   ========================================================================== */
 :root {
     --azul-abaixo: #2563eb;
     --azul-abaixo-bg: #eff6ff;
-    --verde-normal: #16a34a;
+    --verde-normal: #15803d;
     --verde-normal-bg: #f0fdf4;
-    --laranja-sobre: #f59e0b;
+    --laranja-sobre: #d97706;
     --laranja-sobre-bg: #fffbeb;
     --vermelho-ob1: #ef4444;
     --vermelho-ob1-bg: #fef2f2;
@@ -20,104 +13,163 @@
     --vermelho-ob3-bg: #fef1f1;
     --petroleo: #015d81;
     --petroleo-escuro: #01415c;
+    --petroleo-claro: #e6f2f7;
     --texto-principal: #0f2733;
-    --texto-secundario: #5b7480;
+    --texto-secundario: rgb(42, 42, 42);
     --borda: #dbe4e8;
     --fundo-card: #ffffff;
-    --sombra: 0 12px 32px -12px rgba(1, 65, 92, 0.18);
+    --fundo-campo: #f8fbfc;
     --raio-sm: 10px;
-    --raio-md: 16px;
-    --raio-lg: 22px;
-    --primaria: #0891b2;
-    --primaria-escura: #0e7490;
-    --primaria-clara: #ecfeff;
-    --acento: #10b981;
-    --acento-claro: #ecfdf5;
-    --texto-principal: #0f2733;
-    --texto-secundario: #64798a;
-    --borda: #dde5ea;
-    --fundo-card: #ffffff;
-    --fundo-secao: #f6fafb;
-    --sombra-card: 0 20px 45px -20px rgba(160, 160, 160, 0.25);
-    --sombra-suave: 0 4px 14px -6px rgba(8, 66, 84, 0.12);
-    --raio-sm: 10px;
-    --raio-md: 16px;
-    --raio-lg: 24px;
+    --raio-md: 14px;
+    --raio-lg: 20px;
+    --sombra-card: 0 24px 48px -24px rgba(1, 65, 92, 0.28), 0 2px 6px rgba(1, 65, 92, 0.06);
 }
 
+.seccao-imc {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 36px 32px 28px;
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-lg);
+    color: var(--texto-principal);
+    font-family: 'Rubik', Helvetica, Arial, sans-serif;
+}
 
-/* faixa decorativa superior */
+.seccao-imc *,
+.seccao-imc *::before,
+.seccao-imc *::after {
+    box-sizing: border-box;
+}
+
+/* faixa superior */
 .seccao-imc::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primaria), var(--acento));
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--petroleo), #5666cf);
 }
 
-/* ícone/selo médico opcional no topo */
-.seccao-imc::after {
-    content: "OC";
-    position: absolute;
-    top: 22px;
-    right: 28px;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--primaria);
-    background: var(--primaria-clara);
-    border-radius: 50%;
+.imc-cabecalho {
+    margin-bottom: 5px;
 }
 
 .seccao-imc h2 {
-    font-size: 1.4rem;
+    margin: 0 0 6px;
+    font-size: 22px;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    line-height: 32px;
+    text-align: left;
     color: var(--texto-principal);
-    margin-bottom: 28px;
-    padding-right: 50px;
 }
 
-.calculadora-diluicao h2::after {
-    content: "";
+.imc-subtitulo {
+    font-size: 0.80rem;
+    color: var(--texto-secundario);
+}
+
+/* ==========================================================================
+   Formulário
+   ========================================================================== */
+
+.imc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.seccao-imc fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.seccao-imc legend,
+.seccao-imc label {
     display: block;
-    width: 42px;
-    height: 4px;
-    margin-top: 10px;
-    border-radius: 999px;
-    background: var(--acento);
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--texto-principal);
 }
 
+.seccao-imc .opcional {
+    font-weight: 400;
+    color: var(--texto-secundario);
+}
 
-/* ---------- estrutura geral da secção ---------- */
-.seccao-imc {
+/* seletor de sexo */
+.escolhersexo {
+    display: flex;
+    gap: 4px;
+    padding: 1px;
+    background: #bfdef4;
+    border-radius: 10px;
+}
+
+.seccao-imc .escolhersexo button[id^="sexo-"] {
+    flex: 1;
+    margin: 0;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--texto-secundario);
+    background: transparent;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.seccao-imc .escolhersexo button[id^="sexo-"]:hover {
     color: var(--texto-principal);
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 36px 32px 32px;
-    background: #ffffff;
-    border-radius: var(--raio-lg);
+}
+
+.seccao-imc .escolhersexo button[id^="sexo-"].bg-purple-300 {
+    background: var(--fundo-card);
+    color: var(--petroleo-escuro);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(1, 65, 92, 0.16);
+}
+
+/* campos numéricos */
+.imc-campos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.campo-input {
     position: relative;
-    overflow: hidden;
 }
 
 .seccao-imc input[type="number"] {
     width: 100%;
+    margin: 0;
+    padding: 13px 44px 13px 14px;
     border: 1.5px solid var(--borda);
-    padding: 12px 14px;
     border-radius: var(--raio-sm);
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    font-size: 0.98rem;
+    font: inherit;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
     color: var(--texto-principal);
-    background: #fafcfd;
+    background: var(--fundo-campo);
     transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.seccao-imc input[type="number"]::-webkit-outer-spin-button,
+.seccao-imc input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .seccao-imc input[type="number"]::placeholder {
@@ -135,57 +187,65 @@
     box-shadow: 0 0 0 4px rgba(1, 93, 129, 0.12);
 }
 
-/* ---------- seletor de sexo (segmented control) ---------- */
-
-.space-x-2>*+* {
-    margin-left: 8px;
+.campo-input .unidade {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    font-size: 0.80rem;
+    color: var(--texto-secundario);
+    pointer-events: none;
 }
 
-.escolhersexo {
-    border-radius: var(--raio-sm);
-    padding: 4px;
-    background: #e2e3e5;
-}
-
-.seccao-imc button[id^="sexo-"] {
-    flex: 1;
-    padding: 10px 0;
+/* botão calcular */
+.seccao-imc #calcular {
+    width: 100%;
+    height: 52px;
+    margin: 4px 0 0;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--raio-md);
+    font: inherit;
+    font-size: 1rem;
     font-weight: 600;
-    font-size: 0.92rem;
-    color: var(--texto-secundario);
-    background: transparent;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--petroleo), var(--petroleo-escuro));
+    box-shadow: 0 10px 20px -10px rgba(1, 65, 92, 0.6);
     cursor: pointer;
-    transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 
-.seccao-imc button[id^="sexo-"].bg-blue-300 {
-    background: transparent;
-    color: var(--texto-secundario);
+.seccao-imc #calcular:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 14px 24px -12px rgba(1, 65, 92, 0.7);
 }
 
-.seccao-imc button[id^="sexo-"].bg-purple-300 {
-    background: var(--fundo-card);
-    color: var(--petroleo-escuro);
-    box-shadow: 0 2px 8px rgba(1, 65, 92, 0.15);
-}
-
-/* ---------- botão calcular ---------- */
-.flex.justify-center {
-    justify-content: center;
-}
-
-#calcular {
-    background: linear-gradient(135deg, var(--petroleo), var(--petroleo-escuro)) !important;
-    letter-spacing: 0.04em;
+.seccao-imc #calcular:active {
+    transform: translateY(1px);
 }
 
 /* ==========================================================================
-   Cartão de resultado
+   Resultado
    ========================================================================== */
+
+#resultado:empty {
+    display: none;
+}
+
+/* mensagem de erro gerada pelo JS (classes Tailwind) */
+#resultado>.bg-white {
+    margin: 20px 0 0;
+    padding: 12px 16px;
+    border: 1px solid var(--vermelho-ob1);
+    border-left-width: 4px;
+    border-radius: var(--raio-sm);
+    background: var(--vermelho-ob1-bg);
+    color: var(--vermelho-ob3);
+    font-size: 0.92rem;
+}
+
 .resultado-card {
-    margin-top: 20px;
+    margin-top: 24px;
     padding-top: 24px;
     border-top: 1px dashed var(--borda);
     animation: entrar .45s ease both;
@@ -204,11 +264,13 @@
 }
 
 .imc-valor {
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    font-weight: 800;
-    font-size: 26px;
+    margin-bottom: 10px;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
     text-align: center;
-    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
 }
 
 .classificacao {
@@ -216,13 +278,12 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-family: 'Rubik', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    padding: 10px 18px;
-    border-radius: 999px;
     width: fit-content;
-    margin: 0 auto 18px;
+    margin: 0 auto 20px;
+    padding: 8px 18px 8px 10px;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
 .check,
@@ -230,27 +291,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 26px;
     height: 26px;
     border-radius: 50%;
     font-size: 0.85rem;
     font-weight: 800;
     color: #ffffff;
-    flex-shrink: 0;
 }
 
-/* checagem = fundo verde sempre */
 .check {
     background: var(--verde-normal);
 }
 
-/* X = fundo definido por classificação (ver secção abaixo).
-   Fallback caso nenhuma classe classe-* esteja presente no ancestral. */
 .xis {
     background: var(--texto-secundario);
 }
 
-/* fundo do ícone X consoante a classificação ativa */
 .classificacao.classe-baixo .xis {
     background: var(--azul-abaixo);
 }
@@ -272,27 +329,26 @@
 }
 
 .recomendacao {
-    background: #ffffff;
+    margin-bottom: 22px;
+    padding: 14px 16px;
     border: 1px solid var(--borda);
     border-left: 4px solid var(--petroleo);
     border-radius: var(--raio-sm);
-    padding: 14px 16px;
+    background: var(--fundo-campo);
     font-size: 0.92rem;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--texto-principal);
-    margin-bottom: 22px;
 }
 
-.recomendacao strong {
+.recomendacao b {
     display: block;
-    color: rgb(61, 61, 61);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    color: var(--texto-secundario);
     margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
 }
 
-/* ---------- tabela de faixas de IMC ---------- */
+/* ---------- tabela de faixas ---------- */
 
 .tabela-imc {
     display: flex;
@@ -304,14 +360,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px 14px;
-    border-radius: 10px;
-    font-size: 0.85rem;
-    color: var(--texto-secundario);
+    padding: 10px 14px;
+    border: 1px solid var(--borda);
+    border-left-width: 4px;
+    border-radius: var(--raio-sm);
     background: #ffffff;
-    border: 1px solid transparent;
+    font-size: 0.86rem;
     transition: transform .2s ease, box-shadow .2s ease;
-    box-shadow: var(--sombra-card);
 }
 
 .tabela-imc span:first-child {
@@ -320,39 +375,45 @@
 
 .tabela-imc span:last-child {
     font-variant-numeric: tabular-nums;
-    opacity: .8;
+    opacity: .85;
 }
 
-/* cor semântica fixa de cada faixa (texto discreto quando não ativa) */
+/* cor semântica de cada faixa */
 .tabela-imc .baixo {
     color: var(--azul-abaixo);
+    border-left-color: var(--azul-abaixo);
 }
 
 .tabela-imc .normal {
     color: var(--verde-normal);
+    border-left-color: var(--verde-normal);
 }
 
 .tabela-imc .sobre {
     color: var(--laranja-sobre);
+    border-left-color: var(--laranja-sobre);
 }
 
 .tabela-imc .ob1 {
     color: var(--vermelho-ob1);
+    border-left-color: var(--vermelho-ob1);
 }
 
 .tabela-imc .ob2 {
     color: var(--vermelho-ob2);
+    border-left-color: var(--vermelho-ob2);
 }
 
 .tabela-imc .ob3 {
     color: var(--vermelho-ob3);
+    border-left-color: var(--vermelho-ob3);
 }
 
-/* linha ativa = a classificação atual do utilizador, destacada */
+/* faixa do utilizador */
 .tabela-imc>div.ativo {
     background: currentColor;
     transform: scale(1.02);
-    box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.3);
 }
 
 .tabela-imc>div.ativo span {
@@ -360,9 +421,7 @@
     opacity: 1;
 }
 
-/* ==========================================================================
-   Classes de cor por classificação (aplicadas ao valor, badge e recomendação)
-   ========================================================================== */
+/* ---------- cores por classificação ---------- */
 
 .classe-baixo {
     color: var(--azul-abaixo);
@@ -414,45 +473,63 @@
 
 .recomendacao.classe-baixo {
     border-left-color: var(--azul-abaixo);
+    color: var(--texto-principal);
 }
 
 .recomendacao.classe-normal {
     border-left-color: var(--verde-normal);
+    color: var(--texto-principal);
 }
 
 .recomendacao.classe-sobre {
     border-left-color: var(--laranja-sobre);
+    color: var(--texto-principal);
 }
 
 .recomendacao.classe-ob1 {
     border-left-color: var(--vermelho-ob1);
+    color: var(--texto-principal);
 }
 
 .recomendacao.classe-ob2 {
     border-left-color: var(--vermelho-ob2);
+    color: var(--texto-principal);
 }
 
 .recomendacao.classe-ob3 {
     border-left-color: var(--vermelho-ob3);
+    color: var(--texto-principal);
 }
 
-/* ---------- responsivo ---------- */
+/* aviso final */
+.imc-aviso {
+    margin: 22px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--borda);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--texto-secundario);
+}
 
+/* ==========================================================================
+   Responsivo, foco e movimento
+   ========================================================================== */
 
 @media (max-width: 520px) {
     .seccao-imc {
         margin: 0;
-        border-radius: 10px;
-        padding: 28px 20px 24px;
-        max-width: 100%;
+        padding: 28px 18px 22px;
+        border-radius: 20px;
+    }
+
+    .imc-campos {
+        grid-template-columns: 1fr;
     }
 
     .imc-valor {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 }
-
-/* ---------- acessibilidade: foco visível ---------- */
 
 .seccao-imc button:focus-visible,
 .seccao-imc input:focus-visible {
@@ -460,12 +537,11 @@
     outline-offset: 2px;
 }
 
-/* ---------- respeita preferência de menos movimento ---------- */
-
 @media (prefers-reduced-motion: reduce) {
 
     .resultado-card,
-    #calcular {
+    .seccao-imc #calcular,
+    .tabela-imc>div {
         animation: none !important;
         transition: none !important;
     }
