@@ -315,6 +315,11 @@ td {
         max-width: 100%;
     }
 
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
     .check {
         width: 44px;
         height: 44px;
