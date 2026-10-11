@@ -3,58 +3,25 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/</loc>
+    <loc>https://observacaoclinica.com/calculadoras/como-calcular-meu-periodo-fertil/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-06T08:44:44+00:00</news:publication_date>
-      <news:title>Calculadora de diluição para enfermagem: fórmula e exemplo</news:title>
+      <news:publication_date>2026-10-10T08:44:44+00:00</news:publication_date>
+      <news:title>Como calcular período fértil e identificar se engravida</news:title>
     </news:news>
   </url>
   <url>
-    <loc>https://observacaoclinica.com/calculadoras/como-calcular-dextrose/</loc>
+    <loc>https://observacaoclinica.com/calculadoras/como-calcular-o-ciclo-menstrual/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-06T08:44:44+00:00</news:publication_date>
-      <news:title>Como calcular o bolus de dextrose a 10%: fórmula e exemplo</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/ansiedade-sintomas/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
-      <news:title>Ansiedade: sintomas, causas e como controlar de forma e eficaz</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
-      <news:title>Mioclonia: o que é, causas, tipos e quando se preocupar</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-05T08:44:44+00:00</news:publication_date>
-      <news:title>Redes sociais e saúde mental dos adolescentes: riscos, benefícios e como ajudar</news:title>
+      <news:publication_date>2026-10-11T08:44:44+00:00</news:publication_date>
+      <news:title>Como calcular o ciclo menstrual e prever a próxima menstruação</news:title>
     </news:news>
   </url>
 </urlset>
