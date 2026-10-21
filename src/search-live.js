@@ -1,5 +1,6 @@
 const pages = [
   { title: "Observação clínica: o que é, para que serve e como é feita", url: "/saude-az/observacao-clinica-o-que-e/" },
+  { title: "Menstruação com muitos coágulos", url: "/saude-intima/menstruacao-com-coagulos-e-normal/" },
   { title: "O que é candidíase vaginal: sintomas, causas, prevenção e tratamento", url: "/saude-intima/o-que-e-candidiase-vaginal/" },
   { title: "O que é Clotrimazol 2% creme vaginal, para que é utilizado, é candidíase?", url: "/saude-intima/o-que-e-clotrimazol-creme-vaginal/" },
   { title: "Ebola: o que é, os sinais e sintomas, transmissão, tratamento e prevenção", url: "/saude-az/o-que-e-ebola-e-sua-prevencao/" },

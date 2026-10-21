@@ -5,15 +5,69 @@
     <link>https://observacaoclinica.com/</link>
     <description>Informação médica confiável sobre saúde, doenças, nutrição e bem-estar.</description>
     <language>pt-PT</language>
-    <lastBuildDate>Mon, 28 Sep 2026 12:57:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 16:53:43 GMT</lastBuildDate>
+
+    <item>
+      <title>Menstruação com muitos coágulos é normal | Observação clínica</title>
+      <link>https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/</link>
+      <description>Coágulos na menstruação são normais? Veja o tamanho que preocupa, causas, sinais de alerta e quando ir ao médico. Leia e tire suas dúvidas agora!</description>
+      <category>Saúde Íntima</category>
+      <pubDate>Wed, 21 Oct 2026 10:23:27 GMT</pubDate>
+      <guid>https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/</guid>
+    </item>
+
+    <item>
+      <title>Sobre Nós - Observação Clínica</title>
+      <link>https://observacaoclinica.com/sobre/</link>
+      <description>A Observação Clínica é uma equipe dedicada à excelência em cuidados de saúde. Conheça nossa missão, visão, valores e equipe.</description>
+      <category>sobre</category>
+      <pubDate>Sun, 04 Oct 2026 08:08:17 GMT</pubDate>
+      <guid>https://observacaoclinica.com/sobre/</guid>
+    </item>
+
+    <item>
+      <title>Termos de uso — Observação clínica</title>
+      <link>https://observacaoclinica.com/termos-e-usos/</link>
+      <description>Leia os Termos de Uso da Observação Clínica e saiba como utilizamos o nosso site, protegemos as suas informações e garantimos a sua segurança online.</description>
+      <category>termos-e-usos</category>
+      <pubDate>Sun, 04 Oct 2026 08:07:54 GMT</pubDate>
+      <guid>https://observacaoclinica.com/termos-e-usos/</guid>
+    </item>
+
+    <item>
+      <title>Políticas e privacidades - Observação clinica</title>
+      <link>https://observacaoclinica.com/politicas-e-privacidades/</link>
+      <description>Temos nossas politicas e privacidades, saiba mais.</description>
+      <category>politicas-e-privacidades</category>
+      <pubDate>Sun, 04 Oct 2026 08:06:49 GMT</pubDate>
+      <guid>https://observacaoclinica.com/politicas-e-privacidades/</guid>
+    </item>
+
+    <item>
+      <title>Políticas de cookies - Observação clinica</title>
+      <link>https://observacaoclinica.com/politica-de-cookies/</link>
+      <description>Temos nossas politicas e privacidades, saiba mais.</description>
+      <category>politica-de-cookies</category>
+      <pubDate>Sun, 04 Oct 2026 08:06:26 GMT</pubDate>
+      <guid>https://observacaoclinica.com/politica-de-cookies/</guid>
+    </item>
 
     <item>
       <title>Descubra como usar correctamente os alimentos| Observação Clínica</title>
       <link>https://observacaoclinica.com/nutricao/</link>
       <description>Descubra como usar corretamente os alimentos: dicas de nutrição, alimentação saudável e cuidados essenciais para toda a família. Confira agora!</description>
       <category>Nutrição</category>
-      <pubDate>Mon, 28 Sep 2026 10:54:11 GMT</pubDate>
+      <pubDate>Sun, 04 Oct 2026 08:05:20 GMT</pubDate>
       <guid>https://observacaoclinica.com/nutricao/</guid>
+    </item>
+
+    <item>
+      <title>Equipe médica e nosso editorial</title>
+      <link>https://observacaoclinica.com/equipe/</link>
+      <description>Equipe médica e nosso editorial</description>
+      <category>equipe</category>
+      <pubDate>Sun, 04 Oct 2026 07:58:20 GMT</pubDate>
+      <guid>https://observacaoclinica.com/equipe/</guid>
     </item>
 
     <item>
@@ -23,51 +77,6 @@
       <category>Gravidez</category>
       <pubDate>Sun, 27 Sep 2026 14:47:23 GMT</pubDate>
       <guid>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</guid>
-    </item>
-
-    <item>
-      <title>Termos de uso — Observação clínica</title>
-      <link>https://observacaoclinica.com/termos-e-usos/</link>
-      <description>Leia os Termos de Uso da Observação Clínica e saiba como utilizamos o nosso site, protegemos as suas informações e garantimos a sua segurança online.</description>
-      <category>termos-e-usos</category>
-      <pubDate>Fri, 25 Sep 2026 05:16:26 GMT</pubDate>
-      <guid>https://observacaoclinica.com/termos-e-usos/</guid>
-    </item>
-
-    <item>
-      <title>Sobre Nós - Observação Clínica</title>
-      <link>https://observacaoclinica.com/sobre/</link>
-      <description>A Observação Clínica é uma equipe dedicada à excelência em cuidados de saúde. Conheça nossa missão, visão, valores e equipe.</description>
-      <category>sobre</category>
-      <pubDate>Fri, 25 Sep 2026 05:16:26 GMT</pubDate>
-      <guid>https://observacaoclinica.com/sobre/</guid>
-    </item>
-
-    <item>
-      <title>Políticas e privacidades - Observação clinica</title>
-      <link>https://observacaoclinica.com/politicas-e-privacidades/</link>
-      <description>Temos nossas politicas e privacidades, saiba mais.</description>
-      <category>politicas-e-privacidades</category>
-      <pubDate>Fri, 25 Sep 2026 05:16:26 GMT</pubDate>
-      <guid>https://observacaoclinica.com/politicas-e-privacidades/</guid>
-    </item>
-
-    <item>
-      <title>Políticas de cookies - Observação clinica</title>
-      <link>https://observacaoclinica.com/politica-de-cookies/</link>
-      <description>Temos nossas politicas e privacidades, saiba mais.</description>
-      <category>politica-de-cookies</category>
-      <pubDate>Fri, 25 Sep 2026 05:16:26 GMT</pubDate>
-      <guid>https://observacaoclinica.com/politica-de-cookies/</guid>
-    </item>
-
-    <item>
-      <title>Equipe médica e nosso editorial</title>
-      <link>https://observacaoclinica.com/equipe/</link>
-      <description>Equipe médica e nosso editorial</description>
-      <category>equipe</category>
-      <pubDate>Fri, 25 Sep 2026 05:16:26 GMT</pubDate>
-      <guid>https://observacaoclinica.com/equipe/</guid>
     </item>
 
     <item>
@@ -86,15 +95,6 @@
       <category>Fitness</category>
       <pubDate>Mon, 31 Aug 2026 11:07:16 GMT</pubDate>
       <guid>https://observacaoclinica.com/fitness/exercicios-para-gluteos/</guid>
-    </item>
-
-    <item>
-      <title>Glossário com definições de termos usados em prontuário eletrônico</title>
-      <link>https://observacaoclinica.com/saude-az/glossario-clinico/</link>
-      <description>Glossário com definições de termos usados em prontuário eletrônico, psicologia, nutrição, fisioterapia, ética e gestão de consultório.</description>
-      <category>Saúde-AZ</category>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
-      <guid>https://observacaoclinica.com/saude-az/glossario-clinico/</guid>
     </item>
   </channel>
 </rss>

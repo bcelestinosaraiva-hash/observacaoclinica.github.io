@@ -246,7 +246,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-10-04</lastmod>
+  <lastmod>2026-10-21</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
@@ -674,13 +674,24 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-intima/</loc>
-  <lastmod>2026-10-04</lastmod>
+  <lastmod>2026-10-21</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-intima-1200.webp</image:loc>
       <image:title>Informações ou conteúdos sobre saúde e problemas sexuais da mulher e do homem</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/</loc>
+  <lastmod>2026-10-21</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/menstruacao-com-coagulos-1200.webp</image:loc>
+      <image:title>Menstruação com muitos coágulos é normal</image:title>
     </image:image>
   </url>
   <url>
