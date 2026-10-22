@@ -113,3 +113,21 @@ async function enviar() {
     form.addEventListener('focusin', pre, { once: true });
     form.addEventListener('pointerdown', pre, { once: true });
 })();
+
+// Abre o Gmail na web (só no computador); no telemóvel usa o mailto: normal
+(function () {
+    const ehTelemovel = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+    if (ehTelemovel) return;
+
+    document.querySelectorAll('a[data-gmail]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const para = link.dataset.gmail;
+            const url = 'https://mail.google.com/mail/?view=cm&fs=1'
+                + '&to=' + encodeURIComponent(para)
+                + '&su=' + encodeURIComponent('Contato via site')
+                + '&body=' + encodeURIComponent('Olá, gostaria de ...');
+            window.open(url, '_blank', 'noopener,noreferrer');
+        });
+    });
+})();
