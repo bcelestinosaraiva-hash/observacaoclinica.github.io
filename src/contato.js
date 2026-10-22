@@ -1,41 +1,35 @@
 let ultimaAvaliacao = null;
 
 // --- LAZY LOAD DO EMAILJS ---
-let emailjsPromise = null;
+// Só carrega a biblioteca do EmailJS (e faz o init) na primeira vez que
+// for mesmo preciso. Antes disso, a página nem descarrega nem executa este
+// script, poupando tempo de bloqueio no arranque da página.
+let emailjsCarregado = false;
 
 function carregarEmailJS() {
-    if (typeof emailjs !== 'undefined' && emailjs.send) {
-        return Promise.resolve();
-    }
-    if (emailjsPromise) return emailjsPromise;
+    return new Promise((resolve, reject) => {
+        if (emailjsCarregado) return resolve();
 
-    emailjsPromise = new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
         script.onload = () => {
-            try {
-                emailjs.init({ publicKey: 'QMRZTfkjBwZgN13Iu' });
-                resolve();
-            } catch (e) {
-                emailjsPromise = null;
-                reject(e);
-            }
+            emailjs.init('QMRZTfkjBwZgN13Iu');
+            emailjsCarregado = true;
+            resolve();
         };
-        script.onerror = () => {
-            emailjsPromise = null;
-            reject(new Error('Não foi possível carregar o serviço de envio.'));
-        };
+        script.onerror = reject;
         document.head.appendChild(script);
     });
-
-    return emailjsPromise;
 }
 // --- FIM DO LAZY LOAD ---
 
-function avaliar(tipo) {
+async function avaliar(tipo) {
     ultimaAvaliacao = tipo;
     const fb = document.getElementById('feedback');
     if (fb) fb.style.display = 'block';
+
+    // Começa a carregar o EmailJS em segundo plano
+    carregarEmailJS().catch((erro) => console.error('Erro ao carregar EmailJS:', erro));
 }
 
 function validarEmail(email) {
@@ -46,9 +40,6 @@ function mostrarErro(texto) {
     const erroEl = document.getElementById('erro-form');
     erroEl.textContent = texto;
     erroEl.style.display = 'block';
-
-    const sucessoEl = document.getElementById('sucesso-form');
-    if (sucessoEl) sucessoEl.style.display = 'none';
 }
 
 async function enviar() {
@@ -56,10 +47,7 @@ async function enviar() {
     const email = document.getElementById('email').value.trim();
     const mensagem = document.getElementById('mensagem').value.trim();
     const erroEl = document.getElementById('erro-form');
-    const sucessoEl = document.getElementById('sucesso-form');
-
     erroEl.style.display = 'none';
-    if (sucessoEl) sucessoEl.style.display = 'none';
 
     if (!nome) {
         mostrarErro('Por favor, escreva o seu nome.');
@@ -79,7 +67,7 @@ async function enviar() {
         email: email,
         avaliacao: ultimaAvaliacao || 'CONTACTO',
         message: mensagem,
-        time: new Date().toLocaleString('pt-PT')
+        time: new Date().toLocaleString('pt-BR')
     };
 
     const enviarBtn = document.querySelector('.submit-btn');
@@ -87,25 +75,22 @@ async function enviar() {
     enviarBtn.textContent = 'A ENVIAR...';
 
     try {
+        // Garante que o EmailJS está carregado antes de enviar
         await carregarEmailJS();
+
         await emailjs.send('service_pbebkmd', 'template_c5ituaj', dados);
 
-        document.getElementById('form-feedback').reset();
-
-        if (sucessoEl) {
-            sucessoEl.style.display = 'block';
-            setTimeout(() => { sucessoEl.style.display = 'none'; }, 5000);
-        }
+        document.getElementById('form-feedback').style.display = 'none';
+        document.getElementById('sucesso-form').style.display = 'block';
     } catch (erro) {
         console.error('Erro completo:', erro);
         mostrarErro('Não foi possível enviar agora: ' + (erro.text || erro.message || 'erro desconhecido'));
-    } finally {
         enviarBtn.disabled = false;
         enviarBtn.textContent = 'ENVIAR';
     }
 }
 
-// Começa a carregar o EmailJS quando o utilizador interage com o formulário
+// Pré-carrega o EmailJS quando a pessoa toca/clica no formulário
 (function () {
     const form = document.getElementById('form-feedback');
     if (!form) return;
@@ -122,9 +107,8 @@ async function enviar() {
     document.querySelectorAll('a[data-gmail]').forEach((link) => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const para = link.dataset.gmail;
             const url = 'https://mail.google.com/mail/?view=cm&fs=1'
-                + '&to=' + encodeURIComponent(para)
+                + '&to=' + encodeURIComponent(link.dataset.gmail)
                 + '&su=' + encodeURIComponent('Contato via site')
                 + '&body=' + encodeURIComponent('Olá, gostaria de ...');
             window.open(url, '_blank', 'noopener,noreferrer');
