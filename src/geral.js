@@ -1,49 +1,3 @@
-const GA_ID = "G-64EH1WD16Y";
-const CONSENT_KEY = "cookieConsent";
-const CONSENT_TTL_DIAS = 180;
-
-function getConsent() {
-    try {
-        let raw = localStorage.getItem(CONSENT_KEY);
-        if (!raw) return null;
-        let data = JSON.parse(raw);
-        let idadeDias = (Date.now() - data.timestamp) / 864e5;
-        if (idadeDias > CONSENT_TTL_DIAS) {
-            localStorage.removeItem(CONSENT_KEY);
-            return null;
-        }
-        return data.status;
-    } catch (e) {
-        return null;
-    }
-}
-
-function setConsent(status) {
-    try {
-        localStorage.setItem(CONSENT_KEY, JSON.stringify({ status, timestamp: Date.now() }));
-    } catch (e) { }
-}
-
-function carregarGTM() {
-    if (window.gtmCarregado) return;
-    function e() { window.dataLayer.push(arguments) }
-    window.gtmCarregado = !0, window.dataLayer = window.dataLayer || [], window.gtag = e, e("js", new Date), e("config", GA_ID);
-    let t = document.createElement("script");
-    t.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, t.async = !0, document.head.appendChild(t)
-}
-
-function agendarCarregamentoGTM() {
-    let e = !1;
-    function t() {
-        e || (e = !0, o.forEach(e => window.removeEventListener(e, t)), clearTimeout(n), carregarGTM())
-    }
-    let o = ["scroll", "mousemove", "touchstart", "keydown", "click"];
-    o.forEach(e => window.addEventListener(e, t, { once: !0, passive: !0 }));
-    var n = setTimeout(t, 2000)
-}
-
-"accepted" === getConsent() && agendarCarregamentoGTM();
-
 function shareWhatsApp() {
     let e = `https://api.whatsapp.com/send?text=${encodeURIComponent("Veja isso: " + window.location.href)}`;
     window.open(e, "_blank", "noopener,noreferrer")
@@ -133,23 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     b && (b.href = `https://wa.me/?text=${v}%20${g}`);
     L && (L.href = `mailto:?subject=${v}&body=${v}%0A${g}`);
 
-
-
-    let k = e("cookie-banner"), E = e("acceptCookies"), C = e("rejectCookies");
-    if (k) {
-        if (!getConsent()) {
-            setTimeout(() => { k.classList.add("show") }, 800);
-        }
-        E && E.addEventListener("click", () => {
-            setConsent("accepted");
-            k.classList.remove("show"), carregarGTM()
-        });
-        C && C.addEventListener("click", () => {
-            setConsent("rejected");
-            k.classList.remove("show")
-        });
-    }
-
     // Toggle "Saúde de A-Z" — versão desktop
     let saudeAzBtn = e("saude-az-toggle");
     saudeAzBtn && saudeAzBtn.addEventListener("click", () => {
@@ -194,10 +131,10 @@ window.shareNative = shareNative;
 
     // Só adiciona o CSS se a página ainda não o carregar
     function garantirCSS() {
-        if (document.querySelector('link[href*="/css/ style.min.css"]')) return;
+        if (document.querySelector('link[href*="/css/style.min.css"]')) return;
         var link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/css/ style.min.css';
+        link.href = '/css/style.min.css';
         document.head.appendChild(link);
     }
 
@@ -212,10 +149,10 @@ window.shareNative = shareNative;
         banner.innerHTML =
             '<div class="cookie-content">' +
             '<h3>🍪 Usamos Cookies</h3>' +
-            '<p>Usamos cookies para melhorar sua experiência de navegação, analisar o tráfego do site e exibir anúncios personalizados. ' +
+            '<p>Usamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. ' +
             'Você pode aceitar ou recusar os cookies não essenciais. ' +
             'Ao clicar em <b>Aceitar</b>, você concorda com nossa ' +
-            '<a href="/politica-de-cookies/">política de cookies</a>.</p>' +
+            '<a href="/politicas-e-privacidades/">política de privacidade</a>.</p>' +
             '<div class="cookie-buttons">' +
             '<button id="acceptCookies" class="btn-primary">Aceitar</button>' +
             '<button id="rejectCookies" class="btn-secondary">Recusar</button>' +

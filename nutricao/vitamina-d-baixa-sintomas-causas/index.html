@@ -129,23 +129,14 @@
 }
 </script>
     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y"></script>
     <script>
-        function loadGTM() {
-            var script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-64EH1WD16Y';
-            script.async = true;
-            document.head.appendChild(script);
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-64EH1WD16Y');
-        }
-        ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function (evt) {
-            window.addEventListener(evt, loadGTM, { once: true, passive: true });
-        });
-        setTimeout(loadGTM, 2000);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-64EH1WD16Y');
     </script>
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -156,7 +147,7 @@
     { "@type": "ListItem", "position": 3, "name": "Vitamina D", "item": "https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/" }
   ]
 }
-</script>
+   </script>
 
     <!-- JSON-LD: Artigo -->
     <script type="application/ld+json">
