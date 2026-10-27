@@ -41,7 +41,7 @@ async function initPush() {
   if (localStorage.getItem("push-dismissed") === "1") return;
   if (Notification.permission === "denied") return;
 
-  const registration = await navigator.serviceWorker.register("/sw.js");
+  const registration = await navigator.serviceWorker.register("/swi.js");
   const existing = await registration.pushManager.getSubscription();
   if (existing) return;
 
