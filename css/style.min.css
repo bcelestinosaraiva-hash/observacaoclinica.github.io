@@ -186,6 +186,25 @@ nav {
         font-weight: 400
     }
 
+    /* tira a linha e as margens do botão */
+    #mobile-menu nav button#saude-az-toggle-mobile,
+    #mobile-menu nav button#bemestar-toggle-mobile {
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 12px 0 !important;
+    }
+
+    /* a linha passa para o bloco (botão + submenu) */
+    #mobile-menu nav>div {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* espaço entre o último link do submenu e a linha */
+    #mobile-menu nav>div .spana {
+        padding-bottom: 12px;
+        margin-top: 0;
+    }
+
     nav {
         padding: 20px
     }
