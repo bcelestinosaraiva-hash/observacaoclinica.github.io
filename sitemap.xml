@@ -4,30 +4,8 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-<loc>https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/como-calcular-a-diluicao/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/diluicao-1200.webp</image:loc>
-      <image:title>Calculadora de diluição para enfermagem: fórmula e exemplo</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/calculadoras/como-calcular-dextrose/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/como-calcular-dextrose/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/como-calcular-dextrose/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/hipoglicemia-1200.webp</image:loc>
-      <image:title>Como calcular o bolus de dextrose a 10%: fórmula e exemplo</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/calculadoras/como-calcular-indice-de-massa-corporal/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/como-calcular-indice-de-massa-corporal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/como-calcular-indice-de-massa-corporal/"/>
@@ -38,7 +16,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/calculadoras/como-calcular-meu-periodo-fertil/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/como-calcular-meu-periodo-fertil/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/como-calcular-meu-periodo-fertil/"/>
@@ -49,7 +27,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/calculadoras/como-calcular-o-ciclo-menstrual/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/como-calcular-o-ciclo-menstrual/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/como-calcular-o-ciclo-menstrual/"/>
@@ -60,7 +38,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/calculadoras/idade-gestacional/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/idade-gestacional/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/idade-gestacional/"/>
@@ -71,32 +49,32 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/calculadoras/</loc>
-  <lastmod>2026-10-22</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/calculadoras/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/calculadoras/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/imc-1200.webp</image:loc>
-      <image:title>Ferramentas para calcular índice de massa corporal, ciclo menstrual e outras funcionalidades</image:title>
+      <image:title>Ferramentas para calcular índice de massa corporal, ciclo menstrual e outras</image:title>
     </image:image>
   </url>
   <url>
 <loc>https://observacaoclinica.com/contato/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/contato/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/contato/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/correcao-de-conteudos/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/correcao-de-conteudos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/correcao-de-conteudos/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/equipe/beldo-celestino-saraiva/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/equipe/beldo-celestino-saraiva/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/equipe/beldo-celestino-saraiva/"/>
@@ -107,58 +85,14 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/equipe/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/equipe/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/equipe/"/>
   </url>
   <url>
-<loc>https://observacaoclinica.com/fitness/exercicios-para-gluteos/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/fitness/exercicios-para-gluteos/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/fitness/exercicios-para-gluteos/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/pelvica-1200.webp</image:loc>
-      <image:title>10 Exercícios para glúteos em casa ou na academia</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/fitness/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/fitness/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/fitness/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/fitness-1200.webp</image:loc>
-      <image:title>Tudo sobre fitness: treinos, bem-estar físico e mental</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/fitness/treino-para-ganhar-massa-muscular/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/fitness/treino-para-ganhar-massa-muscular/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/fitness/treino-para-ganhar-massa-muscular/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/exercicios-para-ganhar-massa-1200.webp</image:loc>
-      <image:title>Treino de força e hipertrofia: para ganhar massa muscular</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/gravidez/alimentacao-na-gravidez/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/alimentacao-na-gravidez/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/alimentacao-na-gravidez/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/alimentacao-na-gravidez-1200.webp</image:loc>
-      <image:title>Alimentação na gravidez: o que comer e o que evitar</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/"/>
@@ -169,7 +103,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/como-promover-uma-gravidez-saudavel/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/como-promover-uma-gravidez-saudavel/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/como-promover-uma-gravidez-saudavel/"/>
@@ -180,7 +114,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/ferro-na-gravidez/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/ferro-na-gravidez/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/ferro-na-gravidez/"/>
@@ -191,7 +125,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/gravida-pode-comer-atum/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/gravida-pode-comer-atum/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/gravida-pode-comer-atum/"/>
@@ -202,7 +136,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/"/>
@@ -213,7 +147,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/"/>
@@ -224,7 +158,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sinais-de-trabalho-de-parto/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/sinais-de-trabalho-de-parto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/sinais-de-trabalho-de-parto/"/>
@@ -235,7 +169,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/gravidez/sintomas-de-gravidez/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/sintomas-de-gravidez/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/sintomas-de-gravidez/"/>
@@ -246,7 +180,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/</loc>
-  <lastmod>2026-10-22</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
@@ -257,7 +191,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/aleitamento-materno/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/aleitamento-materno/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/aleitamento-materno/"/>
@@ -268,7 +202,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/alimentos-para-os-idosos/"/>
@@ -279,7 +213,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/as-necessidades-nutricionais-das-criancas/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/as-necessidades-nutricionais-das-criancas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/as-necessidades-nutricionais-das-criancas/"/>
@@ -290,7 +224,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/dieta-para-pessoa-hipertensa/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/dieta-para-pessoa-hipertensa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/dieta-para-pessoa-hipertensa/"/>
@@ -301,14 +235,14 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/introducao-de-alimentos/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/introducao-de-alimentos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/introducao-de-alimentos/"/>
@@ -319,7 +253,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/o-que-comer-antes-e-depois-do-treino/"/>
@@ -329,19 +263,8 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/nutricao/o-que-e-diabetes/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/o-que-e-diabetes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/o-que-e-diabetes/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/diabetes-1200.webp</image:loc>
-      <image:title>O que é diabetes? Causas, sintomas e tipos</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/posso-comer-ovo-todos-os-dias/"/>
@@ -352,7 +275,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/"/>
@@ -363,21 +286,21 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/politica-de-cookies/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/politica-de-cookies/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/politica-de-cookies/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/politicas-e-privacidades/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/politicas-e-privacidades/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/politicas-e-privacidades/"/>
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/7-sintomas-de-meningite-que-parecem-gripe/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/7-sintomas-de-meningite-que-parecem-gripe/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/7-sintomas-de-meningite-que-parecem-gripe/"/>
@@ -387,19 +310,8 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-az/asma-sintomas-tratamento/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/asma-sintomas-tratamento/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/asma-sintomas-tratamento/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/asma-1200.webp</image:loc>
-      <image:title>Asma: sintomas, fatores de riscos, causas e prevenção</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/colesterol-hdl-bom-ou-ruim/"/>
@@ -409,30 +321,19 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-az/convulsao-e-mioclonia-qual-a-diferenca/</loc>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/como-se-prevenir-da-malaria/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/convulsao-e-mioclonia-qual-a-diferenca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/convulsao-e-mioclonia-qual-a-diferenca/"/>
     <image:image>
-      <image:loc>https://observacaoclinica.com/img/malaria-1200.webp</image:loc>
-      <image:title>Sintomas da Malária: sinais de alerta</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/doencas-respiratorias/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/doencas-respiratorias/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/doencas-respiratorias/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/dr-1200.webp</image:loc>
-      <image:title>Conheça informações úteis sobre doenças respiratórias, incluindo causas, sintomas, prevenção, diagnóstico e opções de tratamento.</image:title>
+      <image:loc>https://observacaoclinica.com/img/convulsoes-e-mioclonia-1200.webp</image:loc>
+      <image:title>Convulsão e mioclonia: Qual a diferença?</image:title>
     </image:image>
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/glossario-clinico/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/glossario-clinico/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/glossario-clinico/"/>
@@ -443,7 +344,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/hipertensao-arterial-mas-porque/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/hipertensao-arterial-mas-porque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/hipertensao-arterial-mas-porque/"/>
@@ -454,7 +355,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-30</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/"/>
@@ -465,7 +366,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-az/insuficiencia-renal/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/insuficiencia-renal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/insuficiencia-renal/"/>
@@ -475,41 +376,8 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-avc/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-avc/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-avc/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/avc-1200.webp</image:loc>
-      <image:title>O que é Acidente Vascular Cerebral (AVC)?</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-bronquiolite/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-bronquiolite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-bronquiolite/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/bronquiolite-1200.webp</image:loc>
-      <image:title>O que é uma bronquiolite: sinais, sintomas, causas e tipos</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-bronquite-e-como-prevenir/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-bronquite-e-como-prevenir/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-bronquite-e-como-prevenir/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/bronquite-1200.webp</image:loc>
-      <image:title>O que é uma bronquite e como prevenir?</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/saude-az/o-que-e-ebola-e-sua-prevencao/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-ebola-e-sua-prevencao/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-ebola-e-sua-prevencao/"/>
@@ -519,52 +387,8 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-pneumonia/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-pneumonia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-pneumonia/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/pneumonia-1200.webp</image:loc>
-      <image:title>O que é pneumonia: sinais, sintomas, causas e fatores de riscos</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-sinusite/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-sinusite/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-sinusite/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/sinusite-1200.webp</image:loc>
-      <image:title>O que é sinusite: os sinais, sintomas e prevenção</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/o-que-e-tuberculose/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-que-e-tuberculose/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-que-e-tuberculose/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/tuberculose-1200.webp</image:loc>
-      <image:title>O que é tuberculose, sinais, sintomas e medidas preventivas?</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/o-tratamento-da-pneumonia/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/tratamento-1200.webp</image:loc>
-      <image:title>8 tratamentos de pneumonia: medicamentos e cuidados</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-11-02</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-az/observacao-clinica-o-que-e/"/>
@@ -575,7 +399,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/"/>
@@ -585,19 +409,8 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/importancia-da-prevencao-de-carie-dentaria/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/carie-dentaria-1200.webp</image:loc>
-      <image:title>A importância da prevenção de cáries para a saúde bucal</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/saude-bucal/</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/"/>
@@ -608,7 +421,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/"/>
@@ -618,191 +431,136 @@
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/atraso-menstrual-12-causas-alem-da-gravidez/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/atraso-menstrual-12-causas-alem-da-gravidez/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/atraso-menstrual-12-causas-alem-da-gravidez/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/atraso-menstrual-12-causas-alem-da-gravidez/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/atraso-da-menstruacao-1200.webp</image:loc>
       <image:title>Atraso menstrual: 12 causas além da gravidez que precisa conhecer</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/cheiro-forte-regiao-intima/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/cheiro-forte-regiao-intima/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/cheiro-forte-regiao-intima/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/cheiro-forte-regiao-intima/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/cheiro-forte-regiao-intima-1200.webp</image:loc>
       <image:title>Cheiro forte na região íntima: O que pode ser?</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/coceira-intima/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/coceira-intima/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/coceira-intima/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/coceira-intima/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/coceira-intima/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/coceira-intima/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/coceira-intima-1200.webp</image:loc>
       <image:title>Coceira íntima antes da menstruação: causas e o que fazer?</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/corrimento-marrom-antes-da-menstruacao/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/corrimento-marrom-antes-da-menstruacao/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/corrimento-marrom-antes-da-menstruacao/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/corrimento-marrom-antes-da-menstruacao/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/corrimento-marrom-1200.webp</image:loc>
       <image:title>Corrimento marrom antes da menstruação: o que significa?</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/corrimento-transparente-sem-cheiro/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/corrimento-transparente-sem-cheiro/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/corrimento-transparente-sem-cheiro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/corrimento-transparente-sem-cheiro/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/corrimento-transparente-1200.webp</image:loc>
       <image:title>Corrimento transparente sem cheiro: quando é normal?</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/</loc>
-  <lastmod>2026-10-23</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/saude-intima-1200.webp</image:loc>
       <image:title>Informações ou conteúdos sobre saúde e problemas sexuais</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/menstruacao-com-coagulos-e-normal/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/menstruacao-com-coagulos-e-normal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/menstruacao-com-coagulos-e-normal/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/menstruacao-com-coagulos-1200.webp</image:loc>
       <image:title>Menstruação com muitos coágulos é normal?</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/o-que-e-candidiase-vaginal/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/o-que-e-candidiase-vaginal/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/o-que-e-candidiase-vaginal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/o-que-e-candidiase-vaginal/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/candidiasevaginal-1200.webp</image:loc>
       <image:title>Candidíase vaginal: sintomas, causas e prevenção</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-intima/o-que-e-clotrimazol-creme-vaginal/</loc>
-  <lastmod>2026-10-24</lastmod>
+<loc>https://observacaoclinica.com/saude-da-mulher/o-que-sao-colicas-menstruais/</loc>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/o-que-e-clotrimazol-creme-vaginal/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/o-que-e-clotrimazol-creme-vaginal/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/clotrimazol-1200.webp</image:loc>
-      <image:title>O que é Clotrimazol 2% creme vaginal e para que é utilizado</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-intima/o-que-sao-colicas-menstruais/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/o-que-sao-colicas-menstruais/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/o-que-sao-colicas-menstruais/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/colicas-menstruais-1200.webp</image:loc>
       <image:title>Cólicas menstruais: por que acontecem e como aliviar a dor</image:title>
     </image:image>
   </url>
   <url>
-<loc>https://observacaoclinica.com/saude-mental/ansiedade-sintomas/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/ansiedade-sintomas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/ansiedade-sintomas/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/ansiedade-1200.webp</image:loc>
-      <image:title>Ansiedade: sintomas, causas e como controlar de forma eficaz</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/convulsao-e-mioclonia-qual-a-diferenca/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/convulsoes-e-mioclonia-1200.webp</image:loc>
-      <image:title>Convulsão e mioclonia: Qual a diferença?</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/habitos-para-dormir-melhor/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/habitos-de-dormir-1200.webp</image:loc>
-      <image:title>Hábitos para dormir melhor: 12 dicas para sono reparador</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-mental/</loc>
-  <lastmod>2026-10-23</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/saude-mental-1200.webp</image:loc>
-      <image:title>Informações ou conteúdos sobre saúde mental, para melhorar o seu intelecto</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/o-que-e-mioclonia/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/mioclonia-1200.webp</image:loc>
-      <image:title>Mioclonia: o que é, causas, tipos e quando se preocupar</image:title>
-    </image:image>
-  </url>
-  <url>
-<loc>https://observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/</loc>
-  <lastmod>2026-10-24</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-mental/redes-sociais-nos-adolescentes/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/redes-sociais-nos-adolescentes.webp</image:loc>
-      <image:title>Redes sociais nos adolescentes: riscos e como ajudar</image:title>
-    </image:image>
-  </url>
-  <url>
 <loc>https://observacaoclinica.com/sobre/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sobre/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sobre/"/>
   </url>
   <url>
+<loc>https://observacaoclinica.com/sono/habitos-para-dormir-melhor/</loc>
+  <lastmod>2026-10-30</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sono/habitos-para-dormir-melhor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/habitos-para-dormir-melhor/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/habitos-de-dormir-1200.webp</image:loc>
+      <image:title>Hábitos para dormir melhor: 12 dicas para um sono saudável</image:title>
+    </image:image>
+  </url>
+  <url>
+<loc>https://observacaoclinica.com/sono/</loc>
+  <lastmod>2026-10-30</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sono/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/sono-1200.webp</image:loc>
+      <image:title>Informações ou conteúdos sobre saúde mental, para melhorar o seu intelecto</image:title>
+    </image:image>
+  </url>
+  <url>
 <loc>https://observacaoclinica.com/termos-e-usos/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/termos-e-usos/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/termos-e-usos/"/>
@@ -813,7 +571,7 @@
   </url>
   <url>
 <loc>https://observacaoclinica.com/uso-de-ia/</loc>
-  <lastmod>2026-10-24</lastmod>
+  <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/uso-de-ia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/uso-de-ia/"/>

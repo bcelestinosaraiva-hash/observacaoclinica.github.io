@@ -75,7 +75,12 @@
     width: 100%;
     max-width: auto;
     padding: 0;
-    color: var(--color-text)
+    color: var(--color-text);
+    margin: 0;
+    padding: 25px;
+    color: var(--color-muted);
+    background: var(--color-surface-alt);
+    border-radius: var(--radius-md)
 }
 
 .comments-header {
@@ -455,7 +460,10 @@ a {
 
 @media (max-width:700px) {
     .comments-section {
-        padding: 0
+        padding: 20px;
+        color: var(--color-muted);
+        background: var(--color-surface-alt);
+        border-radius: var(--radius-md);
     }
 
     .comments-header h2 {

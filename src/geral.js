@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         c = e("saude-az-icon-mobile"),
         l = e("bemestar-toggle-mobile"),
         m = e("bemestar-submenu-mobile"),
-        h = e("fitness-icon-mobile");
+        h = e("bemestar-icon-mobile");
 
     function fecharSubmenu(e, t, o) {
         if (!e || !t || !o) return;

@@ -68,7 +68,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Observação clínica", "item": "https://observacaoclinica.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Saúde-AZ", "item": "https://observacaoclinica.com/saude-az/" },
+    { "@type": "ListItem", "position": 2, "name": "Doenças e condições", "item": "https://observacaoclinica.com/saude-az/" },
     { "@type": "ListItem", "position": 3, "name": "Sintomas de meningite", "item": "https://observacaoclinica.com/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" }
   ]
 }
@@ -214,15 +214,11 @@
           </button>
           <div id="submenu-saude" role="menu" aria-label="Submenu Saúde" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
                           group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-            <a href="/saude-mental/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
-              MENTAL</a>
-            <a href="/saude-intima/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
-              ÍNTIMA</a>
+            <a href="/saude-da-mulher/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">SAÚDE
+              DA MULHER</a>
             <a href="/saude-az/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">DOENÇAS E
               CONDIÇÕES
             </a>
-            <a href="/saude-az/glossario-clinico/" role="menuitem"
-              class="block px-4 py-2 rounded-lg hover:text-blue-400">GLOSSÁRIO CLÍNICO</a>
           </div>
         </div>
         <!-- BEM-ESTAR -->
@@ -235,8 +231,8 @@
           </button>
           <div id="submenu-bemestar" role="menu" aria-label="Submenu Bem-estar" class="absolute left-0 mt-2 w-48 rounded-lg shadow-lg opacity-0 invisible
                        group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 bg-white">
-            <a href="/fitness/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
-              FITNESS
+            <a href="/sono/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
+              SONO
             </a>
             <a href="/saude-bucal/" role="menuitem" class="block px-4 py-2 rounded-lg hover:text-blue-400">
               SAÚDE BUCAL
@@ -313,17 +309,11 @@
           </button>
           <div id="saude-az-submenu-mobile" role="menu" aria-label="Submenu Saúde mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
                           opacity-0 transform -translate-y-1 transition-all duration-300">
-            <a href="/saude-mental/" role="menuitem" class="hover:text-blue-400">
-              SAÚDE MENTAL
-            </a>
-            <a href="/saude-intima/" role="menuitem" class="hover:text-blue-400">
-              SAÚDE ÍNTIMA
+            <a href="/saude-da-mulher/" role="menuitem" class="hover:text-blue-400">
+              SAÚDE DA MULHER
             </a>
             <a href="/saude-az/" role="menuitem" class="hover:text-blue-400">
               DOENÇAS E CONDIÇÕES
-            </a>
-            <a href="/saude-az/glossario-clinico/" role="menuitem" class="hover:text-blue-400">
-              GLOSSÁRIO CLÍNICO
             </a>
           </div>
         </div>
@@ -334,19 +324,16 @@
             class="flex justify-between items-center w-full hover:text-blue-400 transition-colors">
             <span>BEM-ESTAR</span>
             <img src="/favicon/chevron-down.svg" class="w-3 h-3 chevron-icon transition-transform duration-300"
-              id="fitness-icon-mobile" alt="bem-estar" aria-hidden="true">
+              id="bemestar-icon-mobile" alt="bem-estar" aria-hidden="true">
           </button>
           <div id="bemestar-submenu-mobile" role="menu" aria-label="Submenu Bem-estar mobile" class="spana ml-4 mt-2 flex flex-col space-y-3 hidden
                          opacity-0 transform -translate-y-1 transition-all duration-300">
-            <a href="/fitness/" role="menuitem" class="hover:text-blue-400">
-              FITNESS
-            </a>
+            <a href="/sono/" role="menuitem" class="hover:text-blue-400">
+              SONO</a>
             <a href="/saude-bucal/" role="menuitem" class="hover:text-blue-400">
-              SAÚDE-BUCAL
-            </a>
+              SAÚDE BUCAL</a>
           </div>
         </div>
-
         <!-- CALCULADORAS -->
         <a href="/calculadoras/" class="border-b border-solid border-gray-200 hover:text-blue-400 py-3">
           CALCULADORAS
@@ -380,8 +367,8 @@
       <nav aria-label="breadcrumb" class="breadcrumbs">
         <ol>
           <li><a href="https://observacaoclinica.com/">Observação clínica</a></li>
-          <li><a href="https://observacaoclinica.com/saude-az/">Saúde-AZ</a></li>
-          <li aria-current="page">Sintoma de meningite</li>
+          <li><a href="https://observacaoclinica.com/saude-az/">Doenças e condições</a></li>
+          <li aria-current="page">Meningite</li>
         </ol>
       </nav>
       <h1>7 Sintomas de meningite que parecem gripe</h1>
@@ -413,7 +400,8 @@
         class="block w-full aspect-video object-cover rounded h-auto"
         alt="7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca">
 
-      <p>Os sintomas de meningite no começo costumam se parecer com os de uma gripe forte: febre, dor de cabeça, enjoo e
+      <p>
+        Os sintomas de meningite no começo costumam se parecer com os de uma gripe forte: febre, dor de cabeça, enjoo e
         dor pelo corpo. Esse é justamente o problema. Os primeiros sinais podem lembrar gripe, virose intestinal ou até
         ressaca, e a doença pode piorar em questão de horas.
       </p>
@@ -442,8 +430,7 @@
       <p>A confusão com a gripe acontece porque os primeiros sintomas são inespecíficos. Eles podem surgir em qualquer
         ordem, e alguns podem nem aparecer. Por isso, não existe uma lista que todo paciente apresente por completo.
         Autoridades de saúde britânicas destacam, ainda, que quem tem meningite tende a ficar mais doente, e mais
-        rápido, do que em um resfriado ou uma gripe comum. Leia também: <a
-          href="/saude-az/asma-sintomas-tratamento/">asma: sintomas, fatores de riscos e causas.</a>
+        rápido, do que em um resfriado ou uma gripe comum.
       </p>
 
       <h2>Os 7 sintomas de meningite que parecem gripe</h2>
@@ -586,7 +573,7 @@
 
       <p>Qualquer pessoa pode ter meningite, ela é mais frequente em bebês e crianças pequenas,
         adolescentes e adultos jovens, idosos e pessoas com o sistema imunológico enfraquecido, como quem vive com HIV
-        ou faz quimioterapia.
+        ou faz quimioterapia. Leia também sobre: <a href="/saude-az/insuficiencia-renal/">insuficiência renal.</a>
       </p>
 
       <h2>Diagnóstico e tratamento da meningite</h2>
@@ -634,8 +621,7 @@
       <p><b>A vacinação é a principal forma de prevenção, sobretudo contra as meningites bacterianas.</b> O
         Ministério da Saúde informa que o SUS oferece, pelo Programa Nacional de Imunizações, as seguintes vacinas:</p>
       <ul>
-        <li><b>Vacina de BCG:</b> protege contra formas graves da <a
-            href="/saude-az/o-que-e-tuberculose/">tuberculose</a>, também a meningite;</li>
+        <li><b>Vacina de BCG:</b> protege contra formas graves da tuberculose, também a meningite;</li>
         <li><b>Pneumocócica:</b> previne doenças invasivas causadas pelo pneumococo, entre elas a meningite;
         </li>
         <li><b>Penta:</b> protege contra a bactéria Haemophilus influenzae tipo b;</li>
@@ -652,7 +638,7 @@
         não elimina o risco por completo, por isso os sintomas devem ser levados a sério mesmo em quem está vacinado.
       </p>
 
-      <h2>Conclusão: o que lembrar sobre os sintomas de meningite</h2>
+      <h2>Conclusão</h2>
       <p>Os sintomas de meningite no início se misturam com os de infecções comuns: febre, dor de cabeça, vômitos, dores
         no corpo, cansaço, mãos e pés frios e, às vezes, diarreia. O que muda o cenário é a intensidade, a rapidez da
         piora e o surgimento de sinais como pescoço rígido, desconforto com a luz, confusão, sonolência extrema,
@@ -665,7 +651,7 @@
         diagnóstico.
       </p>
 
-      <h2>Perguntas frequentes sobre sintomas de meningite</h2>
+      <h2>Perguntas frequentes</h2>
       <h3>A meningite pode começar como uma gripe?</h3>
       <p>Pode. Febre, dor de cabeça, enjoo e dor pelo corpo estão entre os primeiros sinais e também ocorrem em
         infecções comuns. Os sintomas podem surgir em qualquer ordem e o quadro pode piorar em poucas horas. Por isso,
@@ -745,6 +731,7 @@
         </div>
         <hr>
       </section>
+
       <h2 class="referencia">REFERÊNCIAS BIBLIOGRÁFICAS</h2>
       <div class="panel">
         <ul>
@@ -831,22 +818,7 @@
     <!-- LADO DIREITO: BARRA LATERAL -->
     <aside class="space-y-6 mt-10">
       <article>
-        <a href="/saude-mental/o-que-e-mioclonia/">
-          <img src="/img/mioclonia-372.webp" srcset="
-                     /img/mioclonia-280.webp 280w,
-                     /img/mioclonia-372.webp 372w,
-                     /img/mioclonia-744.webp 744w
-                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
-            alt="O que é Mioclonia: sinais e sintomas, factores, causas e tratamentos"
-            class="w-full h-auto object-cover">
-          <span class="tag">DOENÇAS E CONDIÇÕES</span>
-          <h3>O que é Mioclonia: sinais e sintomas, factores de riscos, causas e tratamentos, saiba mais.
-          </h3>
-        </a>
-      </article>
-
-      <article>
-        <a href="/saude-intima/o-que-e-candidiase-vaginal/">
+        <a href="/saude-da-mulher/o-que-e-candidiase-vaginal/">
           <img src="/img/candidiasevaginal-372.webp" srcset="
                      /img/candidiasevaginal-280.webp 280w,
                      /img/candidiasevaginal-372.webp 372w,
@@ -860,20 +832,7 @@
       </article>
 
       <article>
-        <a href="/saude-intima/o-que-e-clotrimazol-creme-vaginal/">
-          <img src="/img/clotrimazol-372.webp" srcset="
-                     /img/clotrimazol-280.webp 280w,
-                     /img/clotrimazol-372.webp 372w,
-                     /img/clotrimazol-744.webp 744w
-                    " sizes="(max-width: 768px) 50vw, 33vw" width="372" height="209" loading="lazy"
-            alt="O que é Clotrimazol 2% creme vaginal, para que é utilizado" class="w-full h-auto object-cover">
-          <span class="tag">ANTIFÚNGICOS</span>
-          <h3>O que é Clotrimazol 2% creme vaginal, para que é utilizado este medicamentos, saiba mais.</h3>
-        </a>
-      </article>
-
-      <article>
-        <a href="/saude-intima/o-que-sao-colicas-menstruais/">
+        <a href="/saude-da-mulher/o-que-sao-colicas-menstruais/">
           <img src="/img/colicas-menstruais-372.webp" srcset="
                      /img/colicas-menstruais-280.webp 280w,
                      /img/colicas-menstruais-372.webp 372w,
@@ -891,91 +850,87 @@
   </main>
   <!-- Mensagen relacionadas -->
   <section class="max-w-6xl w-full mx-auto px-4">
-    <!-- MENSAGEM RELACIONADAS -->
     <h2>Mensagens em destaque</h2>
     <hr>
     <section class="agora">
       <section class="cartao">
-        <a href="/saude-az/7-sintomas-de-meningite-que-parecem-gripe/" aria-label="7 sintomas de meningite">
-          <img src="/img/meningite-280.webp" srcset="
-             /img/meningite-140.webp 140w,
-             /img/meningite-280.webp 280w,
-             /img/meningite-372.webp 372w
+        <a href="/nutricao/alimentos-para-os-idosos/">
+          <img src="/img/idososalimentos-280.webp" srcset="
+             /img/idososalimentos-140.webp 140w,
+             /img/idososalimentos-280.webp 280w,
+             /img/idososalimentos-372.webp 372w
              " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
-            alt="7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez na nuca.">
+            alt="Alimentos para os idosos: o envelhecimento causa perda de massa muscular">
           <section class="cartao-content">
-            <span class="tag">MENINGITE</span>
-            <h3>7 Sintomas de Meningite que parecem gripe: Não espere pela rigidez, mais. </h3>
+            <span class="tag">ALIMENTOS PARA IDOSOS</span>
+            <h3>Alimentos para os idosos: o envelhecimento causa perda de massa muscular.</h3>
           </section>
         </a>
       </section>
 
       <section class="cartao">
-        <a href="/saude-bucal/importancia-da-prevencao-de-carie-dentaria/">
+        <a href="/nutricao/introducao-de-alimentos/">
           <img src="/img/redes-sociais-nos-adolescentes-280.webp" srcset="
-             /img/carie-dentaria-140.webp 140w,
-             /img/carie-dentaria-280.webp 280w,
-             /img/carie-dentaria-372.webp 372w
+             /img/bebe-comendo-introducao-alimentar-140.webp 140w,
+             /img/bebe-comendo-introducao-alimentar-280.webp 280w,
+             /img/bebe-comendo-introducao-alimentar-372.webp 372w
              " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
-            alt="Importância da prevenção de cáries para a saúde bucal">
+            alt="Introdução de alimentos complementares nas crianças aos seus 6 meses de idade">
           <section class="cartao-content">
-            <span class="tag">CÁRIE DENTÁRIAS</span>
+            <span class="tag">INTRODUÇÃO ALIMENTAR</span>
             <h3>
-              Importância da prevenção de cáries para a saúde bucal, leia mais.
+              Introdução de alimentos complementares nas crianças aos seus 6 meses.
             </h3>
           </section>
         </a>
       </section>
 
       <!-- cartao 3 -->
-      <section class="cartao">
-        <a href="/saude-mental/ansiedade-sintomas/">
-          <img src="/img/ansiedade-280.webp" srcset="
-             /img/ansiedade-140.webp 140w,
-             /img/ansiedade-280.webp 280w,
-             /img/ansiedade-372.webp 372w
-             " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
-            alt="A ansiedade é resposta natural do organismo diante de situações de perigo.">
-          <section class="cartao-content">
-            <span class="tag">ANSIEDADE</span>
-            <h3>A ansiedade é resposta natural do organismo diante de situações.</h3>
-          </section>
+      <div class="cartao">
+        <a href="/saude-da-mulher/corrimento-transparente-sem-cheiro/">
+          <img src="/img/corrimento-transparente-280.webp" srcset="
+                      /img/corrimento-transparente-140.webp 140w,
+                      /img/corrimento-transparente-280.webp 280w,
+                      /img/corrimento-transparente-372.webp 372w
+                      " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
+            alt="Corrimento transparente sem cheiro: é normal?">
+          <div class="cartao-content">
+            <div class="tag">CORRIMENTO VAGINAL</div>
+            <h3>Corrimento transparente sem cheiro: é normal?</h3>
+          </div>
         </a>
-      </section>
+      </div>
 
-      <!-- cartao 4 -->
       <section class="cartao">
-        <a href="/nutricao/introducao-de-alimentos/">
-          <img src="/img/bebe-comendo-introducao-alimentar-280.webp" srcset="
-             /img/bebe-comendo-introducao-alimentar-140.webp 140w,
-             /img/bebe-comendo-introducao-alimentar-280.webp 280w,
-             /img/bebe-comendo-introducao-alimentar-372.webp 372w
+        <a href="/saude-az/insuficiencia-renal/">
+          <img src="/img/insuficiencia-renal-280.webp" srcset="
+             /img/insuficiencia-renal-140.webp 140w,
+             /img/insuficiencia-renal-280.webp 280w,
+             /img/insuficiencia-renal-372.webp 372w
              " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
-            alt="Introdução de alimento complementar aos seus 6 meses anos de idades">
+            alt="Insuficiência renal crônica: o que é, sintomas, causas e prevenção">
           <section class="cartao-content">
-            <span class="tag">INTRODUÇÃO ALIMENTAR</span>
-            <h3>
-              Introdução de alimentos complementares aos seus 6 meses anos, leia.
-            </h3>
+            <span class="tag">INSUFICIÊNCIA RENAL</span>
+            <h3>Insuficiência renal crônica: o que é, sintomas, causas e prevenção</h3>
           </section>
         </a>
       </section>
 
       <!-- cartao 5 -->
-      <section class="cartao">
-        <a href="/nutricao/o-que-e-diabetes/">
-          <img src="/img/diabetes-280.webp" srcset="
-             /img/diabetes-140.webp 140w,
-             /img/diabetes-280.webp 280w,
-             /img/diabetes-372.webp 372w
+      <div class="cartao">
+        <a href="/saude-da-mulher/cheiro-forte-regiao-intima/">
+          <img src="/img/cheiro-forte-regiao-intima-280.webp" srcset="
+             /img/cheiro-forte-regiao-intima-140.webp 140w,
+             /img/cheiro-forte-regiao-intima-280.webp 280w,
+             /img/cheiro-forte-regiao-intima-372.webp 372w
              " sizes="(max-width: 640px) 45vw, 280px" width="280" height="157" loading="lazy"
-            alt=" Diabetes é doença crônica causada pela dificuldade da insulina, saiba mais.">
-          <section class="cartao-content">
-            <span class="tag">DIABETES</span>
-            <h3>Diabetes é doença crônica causada pela dificuldade da insulina.</h3>
-          </section>
+            alt="Cheiro forte na região íntima: causas e como tratar">
+          <div class="cartao-content">
+            <div class="tag">CHEIRO ÍNTIMO</div>
+            <h3>Cheiro forte na região íntima: causas e como tratar</h3>
+          </div>
         </a>
-      </section>
+      </div>
 
       <!-- cartao 6 -->
       <section class="cartao">
@@ -1000,17 +955,17 @@
         <!-- LOGO -->
         <div class="logo">
           <a href="/">
-            <img src="/img/observacao.svg" alt="Observação clinica">
+            <img src="/img/observacao.svg" alt="Observação clinica" width="153" height="40"> </a>
           </a>
         </div>
       </div>
       <div class="footer-topa">
-        <!-- aviso -->
         <p class="aviso">
           É um espaço informativo, de divulgação e educação sobre temas relacionados com saúde, nutrição e
           bem-estar. As
           informações publicadas não devem ser utilizadas como substituto ao diagnóstico ou tratamento
-          especializado, e consulte sempre um profissional de saúde. </p>
+          especializado, e consulte sempre um profissional de saúde.
+        </p>
         <!-- REDES -->
         <div class="rede">
           <div class="flex gap-10 text-2xl">
@@ -1049,14 +1004,13 @@
         </div>
         <div class="column">
           <b>SAÚDE-AZ</b>
-          <a href="/saude-mental/">Saúde mental</a>
-          <a href="/saude-az/">Doenças</a>
+          <a href="/saude-da-mulher/">Saúde da mulher</a>
+          <a href="/saude-az/">Doenças e condições</a>
         </div>
         <div class="column">
           <b>BEM-ESTAR</b>
+          <a href="/sono/">Sono</a>
           <a href="/saude-bucal/">Saúde bucal</a>
-          <a href="/fitness/">Fitness</a>
-          <a href="/calculadoras/">Calculadoras</a>
         </div>
       </div>
     </div>
