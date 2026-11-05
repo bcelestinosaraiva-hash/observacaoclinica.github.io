@@ -3,25 +3,14 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
   <url>
-    <loc>https://observacaoclinica.com/saude-intima/</loc>
+    <loc>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</loc>
     <news:news>
       <news:publication>
         <news:name>Observação Clínica</news:name>
         <news:language>pt</news:language>
       </news:publication>
-      <news:publication_date>2026-10-21T16:00:15+00:00</news:publication_date>
-      <news:title>Informações ou conteúdos sobre saúde e problemas sexuais da mulher e do homem</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/saude-intima/menstruacao-com-coagulos-e-normal/</loc>
-    <news:news>
-      <news:publication>
-        <news:name>Observação Clínica</news:name>
-        <news:language>pt</news:language>
-      </news:publication>
-      <news:publication_date>2026-10-21T16:09:23+00:00</news:publication_date>
-      <news:title>Menstruação com muitos coágulos é normal</news:title>
+      <news:publication_date>2026-11-05T06:36:53+00:00</news:publication_date>
+      <news:title>Com quantas semanas começam as contrações de treinamento?</news:title>
     </news:news>
   </url>
 </urlset>
