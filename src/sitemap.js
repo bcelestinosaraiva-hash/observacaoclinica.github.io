@@ -1,145 +1,165 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 const { notifyIndexNow } = require("./indexnow"); // notifica o IndexNow sobre URLs novas/alteradas
+
 const baseUrl = "https://observacaoclinica.com";
+const baseHost = new URL(baseUrl).hostname;
 const contentDir = path.join(__dirname, "../");
 const sitemapPath = path.join(contentDir, "sitemap.xml");
 
-function getUrls(dir, route = "") {
-  let urls = [];
+// Pastas/ficheiros ignorados pelo nome
+const IGNORED_NAMES = new Set([
+  "node_modules",
+  "src",
+  "recente",
+  "recentes",
+  "sitemap.xml",
+  "404.html"
+]);
 
-  const files = fs.readdirSync(dir);
+// Rotas ignoradas pelo caminho completo (ex.: "/br/recente")
+const IGNORED_ROUTES = ["/recente", "/recentes", "/br/recente", "/br/recentes"];
 
-  files.forEach(file => {
-    const fullPath = path.join(dir, file);
-    const stat = fs.statSync(fullPath);
-
-    // Pastas e ficheiros a ignorar
-    if (
-      file === "node_modules" ||
-      file === ".git" ||
-      file === "recente" ||
-      file === "src" ||
-      file === "yandex_b5d9e3c953a4c1e6.html" ||
-      file === "br/recente/index.html" ||
-      file === "recentes" ||
-      file === "/yandex_b5d9e3c953a4c1e6/" ||
-      file === "sitemap.xml" ||
-      file.startsWith(".")
-    ) {
-      return;
-    }
-
-    if (stat.isDirectory()) {
-      urls = urls.concat(getUrls(fullPath, route + "/" + file));
-    } else if (file.endsWith(".html")) {
-
-      let url = route + "/" + file;
-
-      // Converter index.html em /
-      url = url.replace("/index.html", "/");
-
-      // Remover .html
-      url = url.replace(".html", "");
-
-      // Corrigir barras duplicadas
-      url = url.replace(/\/+/g, "/");
-
-      // Garantir barra final, exceto na raiz
-      if (url !== "/" && !url.endsWith("/")) {
-        url += "/";
-      }
-
-      // Prioridades
-      let priority = "0.7";
-
-      if (url === "/") {
-        priority = "1.0";
-      } else if (url.split("/").filter(Boolean).length === 1) {
-        // categorias: /nutricao, /saude-az, etc.
-        priority = "0.8";
-      }
-
-      const html = fs.readFileSync(fullPath, "utf8");
-
-      // Extrair imagem principal da página
-      const images = getImagesFromHtml(html);
-
-      // Extrair tags hreflang da página
-      const hreflangs = getHreflangFromHtml(html);
-
-      urls.push({
-        url,
-        lastmod: stat.mtime.toISOString().split("T")[0],
-        priority,
-        images,
-        hreflangs
-      });
-    }
-  });
-
-  return urls;
+// Ficheiros de verificação (Yandex, Google, Bing...) que não são páginas
+function isVerificationFile(file) {
+  return (
+    /^yandex_[a-z0-9]+\.html$/i.test(file) ||
+    /^google[a-z0-9]+\.html$/i.test(file) ||
+    /^BingSiteAuth\.xml$/i.test(file)
+  );
 }
 
-// Extrai APENAS a imagem oficial/principal da página (uma só por página),
-// lendo por ordem de prioridade:
-// 1) JSON-LD (schema.org) -> campo "image"
-// 2) <meta property="og:image">
-// 3) <meta name="twitter:image">
-function getImagesFromHtml(html) {
-  let src = null;
-  let title = null;
+function isIgnoredRoute(route) {
+  return IGNORED_ROUTES.some(r => route === r || route.startsWith(r + "/"));
+}
 
-  // 1) Tentar extrair do JSON-LD
-  const ldJsonMatches = html.match(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi) || [];
+// ---------- Datas ----------
 
-  for (const block of ldJsonMatches) {
-    const jsonText = block.replace(/<script[^>]*>/i, "").replace(/<\/script>/i, "");
+// Converte qualquer data válida para YYYY-MM-DD (ou null se inválida)
+function toYmd(value) {
+  if (!value) return null;
+  const d = new Date(value);
+  if (isNaN(d.getTime())) return null;
+  return d.toISOString().split("T")[0];
+}
+
+// Data do último commit que mexeu no ficheiro (funciona se o repositório
+// tiver histórico completo; em clones "shallow" devolve null)
+function getGitDate(fullPath) {
+  try {
+    const out = execSync(`git log -1 --format=%cI -- "${fullPath}"`, {
+      cwd: contentDir,
+      stdio: ["ignore", "pipe", "ignore"]
+    })
+      .toString()
+      .trim();
+    return toYmd(out);
+  } catch (e) {
+    return null;
+  }
+}
+
+// Prioridade da data de modificação:
+// 1) JSON-LD "dateModified"
+// 2) <meta property="article:modified_time">
+// 3) data do último commit no Git
+// 4) data do ficheiro (mtime) - último recurso, muda a cada deploy/clone
+function getLastmod(html, fullPath, stat) {
+  const ld = getJsonLdObjects(html);
+  for (const obj of ld) {
+    const d = toYmd(obj.dateModified);
+    if (d) return d;
+  }
+
+  const metaMatch = html.match(
+    /<meta[^>]*property=["']article:modified_time["'][^>]*content=["']([^"']+)["']/i
+  );
+  if (metaMatch) {
+    const d = toYmd(metaMatch[1]);
+    if (d) return d;
+  }
+
+  const gitDate = getGitDate(fullPath);
+  if (gitDate) return gitDate;
+
+  return toYmd(stat.mtime);
+}
+
+// ---------- HTML helpers ----------
+
+// Devolve todos os objetos JSON-LD da página (suporta arrays e @graph)
+function getJsonLdObjects(html) {
+  const objects = [];
+  const blocks =
+    html.match(
+      /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
+    ) || [];
+
+  for (const block of blocks) {
+    const jsonText = block
+      .replace(/<script[^>]*>/i, "")
+      .replace(/<\/script>/i, "");
     try {
       const data = JSON.parse(jsonText);
-      const imageField = data.image;
-
-      if (imageField) {
-        if (typeof imageField === "string") {
-          src = imageField;
-        } else if (typeof imageField === "object" && imageField.url) {
-          src = imageField.url;
+      const list = Array.isArray(data) ? data : [data];
+      for (const item of list) {
+        if (item && Array.isArray(item["@graph"])) {
+          objects.push(...item["@graph"]);
+        } else if (item) {
+          objects.push(item);
         }
       }
-
-      if (!title && data.headline) {
-        title = data.headline;
-      }
-
-      if (src) break;
     } catch (e) {
-      // JSON-LD mal formado nesta página; ignora e tenta o próximo bloco/fallback
+      // JSON-LD mal formado nesta página; ignora
     }
   }
+  return objects;
+}
 
-  // 2) Fallback: og:image
+// Páginas com noindex não devem estar no sitemap
+function hasNoindex(html) {
+  return /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+}
+
+// Se o canonical apontar para outra URL, a página não deve estar no sitemap
+function getCanonical(html) {
+  const m = html.match(/<link[^>]*rel=["']canonical["'][^>]*>/i);
+  if (!m) return null;
+  const href = m[0].match(/href=["']([^"']+)["']/i);
+  return href ? href[1] : null;
+}
+
+// Extrai APENAS a imagem principal da página:
+// 1) JSON-LD "image"  2) og:image  3) twitter:image
+function getImagesFromHtml(html) {
+  let src = null;
+
+  for (const obj of getJsonLdObjects(html)) {
+    let img = obj.image;
+    if (Array.isArray(img)) img = img[0];
+    if (img) {
+      if (typeof img === "string") src = img;
+      else if (typeof img === "object" && img.url) src = img.url;
+    }
+    if (src) break;
+  }
+
   if (!src) {
-    const ogMatch = html.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i);
-    if (ogMatch) src = ogMatch[1];
+    const og = html.match(
+      /<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i
+    );
+    if (og) src = og[1];
   }
 
-  // 3) Fallback: twitter:image
   if (!src) {
-    const twMatch = html.match(/<meta[^>]*name=["']twitter:image["'][^>]*content=["']([^"']+)["']/i);
-    if (twMatch) src = twMatch[1];
+    const tw = html.match(
+      /<meta[^>]*name=["']twitter:image["'][^>]*content=["']([^"']+)["']/i
+    );
+    if (tw) src = tw[1];
   }
 
-  // Fallback do título: og:title, ou <title>
-  if (!title) {
-    const ogTitleMatch = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i);
-    if (ogTitleMatch) title = ogTitleMatch[1];
-  }
-  if (!title) {
-    const titleTagMatch = html.match(/<title>([^<]+)<\/title>/i);
-    if (titleTagMatch) title = titleTagMatch[1];
-  }
-
-  if (!src) return []; // página sem imagem definida
+  if (!src) return [];
 
   // Normalizar para URL absoluta
   if (!/^https?:\/\//i.test(src)) {
@@ -147,33 +167,27 @@ function getImagesFromHtml(html) {
     src = baseUrl + src;
   }
 
-  // Ignorar se for de outro domínio (segurança extra)
-  if (!src.includes("observacaoclinica.com")) return [];
+  // Ignorar imagens de outros domínios (compara o host, não texto solto)
+  try {
+    if (new URL(src).hostname !== baseHost) return [];
+  } catch (e) {
+    return [];
+  }
 
-  return [
-    {
-      loc: src,
-      title: title ? escapeXml(title.trim().replace(/\s+/g, " ")) : ""
-    }
-  ];
+  // Só <image:loc>. O Google descontinuou <image:title> e <image:caption>.
+  return [{ loc: src }];
 }
 
-// Extrai as tags <link rel="alternate" hreflang="..." href="...">
-// (aceita qualquer ordem de atributos)
+// Extrai <link rel="alternate" hreflang="..." href="...">
 function getHreflangFromHtml(html) {
   const links = [];
-  const regex = /<link[^>]*rel=["']alternate["'][^>]*>/gi;
-  const tags = html.match(regex) || [];
+  const tags = html.match(/<link[^>]*rel=["']alternate["'][^>]*>/gi) || [];
 
   tags.forEach(tag => {
     const hreflangMatch = tag.match(/hreflang=["']([^"']+)["']/i);
     const hrefMatch = tag.match(/href=["']([^"']+)["']/i);
-
     if (hreflangMatch && hrefMatch) {
-      links.push({
-        hreflang: hreflangMatch[1],
-        href: hrefMatch[1]
-      });
+      links.push({ hreflang: hreflangMatch[1], href: hrefMatch[1] });
     }
   });
 
@@ -181,7 +195,7 @@ function getHreflangFromHtml(html) {
 }
 
 function escapeXml(str) {
-  return str
+  return String(str)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -189,14 +203,68 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
-// Lê o sitemap.xml anterior (se existir) para depois comparar
-// Extrai pares <loc, lastmod> do sitemap antigo, num Map "url -> lastmod"
+// ---------- Varrer o site ----------
+
+function getUrls(dir, route = "") {
+  let urls = [];
+  const files = fs.readdirSync(dir);
+
+  files.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+
+    if (
+      file.startsWith(".") ||
+      IGNORED_NAMES.has(file) ||
+      isVerificationFile(file)
+    ) {
+      return;
+    }
+
+    if (stat.isDirectory()) {
+      const childRoute = route + "/" + file;
+      if (isIgnoredRoute(childRoute)) return;
+      urls = urls.concat(getUrls(fullPath, childRoute));
+      return;
+    }
+
+    if (!file.endsWith(".html")) return;
+
+    let url = route + "/" + file;
+    url = url.replace(/\/index\.html$/, "/"); // index.html -> /
+    url = url.replace(/\.html$/, "");         // remove .html
+    url = url.replace(/\/+/g, "/");           // barras duplicadas
+    if (url !== "/" && !url.endsWith("/")) url += "/";
+
+    const html = fs.readFileSync(fullPath, "utf8");
+
+    // Fora do sitemap: páginas noindex
+    if (hasNoindex(html)) return;
+
+    // Fora do sitemap: páginas cujo canonical aponta para outra URL
+    const canonical = getCanonical(html);
+    if (canonical) {
+      const normalize = u => u.replace(/\/+$/, "");
+      const self = normalize(baseUrl + url);
+      if (normalize(canonical) !== self) return;
+    }
+
+    urls.push({
+      url,
+      lastmod: getLastmod(html, fullPath, stat),
+      images: getImagesFromHtml(html),
+      hreflangs: getHreflangFromHtml(html)
+    });
+  });
+
+  return urls;
+}
+
+// ---------- Sitemap anterior (para detetar mudanças) ----------
+
 function getPreviousUrlMap() {
   const map = new Map();
-
-  if (!fs.existsSync(sitemapPath)) {
-    return map; // primeira vez a correr, não há sitemap anterior
-  }
+  if (!fs.existsSync(sitemapPath)) return map;
 
   const oldXml = fs.readFileSync(sitemapPath, "utf8");
   const blocks = oldXml.match(/<url>[\s\S]*?<\/url>/g) || [];
@@ -204,58 +272,77 @@ function getPreviousUrlMap() {
   blocks.forEach(block => {
     const locMatch = block.match(/<loc>([^<]+)<\/loc>/);
     const lastmodMatch = block.match(/<lastmod>([^<]+)<\/lastmod>/);
-    if (locMatch) {
-      map.set(locMatch[1], lastmodMatch ? lastmodMatch[1] : null);
-    }
+    if (locMatch) map.set(locMatch[1], lastmodMatch ? lastmodMatch[1] : null);
   });
 
   return map;
 }
 
-const previousUrls = getPreviousUrlMap(); // captura estado ANTES de reescrever
+const previousUrls = getPreviousUrlMap();
+const isFirstRun = previousUrls.size === 0;
 
 let urls = getUrls(contentDir);
 
-// Remover duplicados (mantendo o último encontrado)
-urls = Array.from(
-  new Map(urls.map(item => [item.url, item])).values()
+// Remover duplicados e ordenar para o ficheiro ser estável entre execuções
+urls = Array.from(new Map(urls.map(item => [item.url, item])).values()).sort(
+  (a, b) => a.url.localeCompare(b.url)
 );
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.map(page => `
-  <url>
-<loc>${baseUrl}${page.url}</loc>
-  <lastmod>${page.lastmod}</lastmod>
-    <priority>${page.priority}</priority>${page.hreflangs.map(h => `
-    <xhtml:link rel="alternate" hreflang="${h.hreflang}" href="${h.href}"/>`).join("")}${page.images.map(img => `
+${urls
+    .map(
+      page => `  <url>
+    <loc>${escapeXml(baseUrl + page.url)}</loc>${page.lastmod
+          ? `
+    <lastmod>${page.lastmod}</lastmod>`
+          : ""
+        }${page.hreflangs
+          .map(
+            h => `
+    <xhtml:link rel="alternate" hreflang="${escapeXml(h.hreflang)}" href="${escapeXml(h.href)}"/>`
+          )
+          .join("")}${page.images
+            .map(
+              img => `
     <image:image>
-      <image:loc>${img.loc}</image:loc>${img.title ? `
-      <image:title>${img.title}</image:title>` : ""}
-    </image:image>`).join("")}
-  </url>`).join("")}
-</urlset>`;
+      <image:loc>${escapeXml(img.loc)}</image:loc>
+    </image:image>`
+            )
+            .join("")}
+  </url>`
+    )
+    .join("\n")}
+</urlset>
+`;
 
 fs.writeFileSync(sitemapPath, sitemap, "utf8");
 
 const totalImages = urls.reduce((sum, p) => sum + p.images.length, 0);
 const totalHreflangs = urls.reduce((sum, p) => sum + p.hreflangs.length, 0);
+const semData = urls.filter(p => !p.lastmod).length;
 
-console.log(`✔ Sitemap atualizado com ${urls.length} URLs, ${totalImages} imagens e ${totalHreflangs} tags hreflang.`);
+console.log(
+  `✔ Sitemap atualizado com ${urls.length} URLs, ${totalImages} imagens e ${totalHreflangs} tags hreflang.`
+);
+if (semData > 0) {
+  console.log(`⚠ ${semData} URL(s) sem data de modificação válida.`);
+}
 
-// Detecta URLs novas ou com lastmod alterado, e notifica o IndexNow
+// ---------- IndexNow ----------
+
 const changedUrls = urls
   .filter(page => {
-    const fullUrl = baseUrl + page.url;
-    const previousLastmod = previousUrls.get(fullUrl);
-    // novo (não existia antes) OU lastmod mudou desde a última vez
+    const previousLastmod = previousUrls.get(baseUrl + page.url);
     return previousLastmod === undefined || previousLastmod !== page.lastmod;
   })
   .map(page => baseUrl + page.url);
 
-if (changedUrls.length > 0) {
+if (isFirstRun) {
+  console.log("→ Primeira execução (sem sitemap anterior), IndexNow não foi notificado.");
+} else if (changedUrls.length > 0) {
   console.log(`→ ${changedUrls.length} URL(s) nova(s)/atualizada(s), notificando o IndexNow...`);
   notifyIndexNow(changedUrls);
 } else {
