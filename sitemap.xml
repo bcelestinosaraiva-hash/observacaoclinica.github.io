@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://observacaoclinica.com/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
     <image:image>
@@ -459,6 +459,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/sono-1200.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://observacaoclinica.com/sono/como-dormir-rapido/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sono/como-dormir-rapido/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/como-dormir-rapido/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/como-dormir-rapido-1200.webp</image:loc>
     </image:image>
   </url>
   <url>

@@ -36,6 +36,7 @@ const pages = [
   { title: "Convulsão e mioclonia: Qual a diferença?", url: "/saude-az/convulsao-e-mioclonia-qual-a-diferenca/" },
   { title: "Colesterol HDL: É bom ou ruim? Entenda os valores ideais", url: "/saude-az/colesterol-hdl-bom-ou-ruim/" },
   { title: "Glossário clínico", url: "/saude-az/glossario-clinico/" },
+  { title: "Como dormir rápido: hábitos que ajudam a pegar no sono", url: "/sono/como-dormir-rapido/" },
   { title: "Ferro na gravidez: quando suplementar e como escolher", url: "/gravidez/ferro-na-gravidez/" },
   { title: "Grávida pode comer atum? veja a quantidade segura e os riscos", url: "/gravidez/gravida-pode-comer-atum/" },
   { title: "O que comer antes e depois do treino: Guia completo", url: "/nutricao/o-que-comer-antes-e-depois-do-treino/" },
