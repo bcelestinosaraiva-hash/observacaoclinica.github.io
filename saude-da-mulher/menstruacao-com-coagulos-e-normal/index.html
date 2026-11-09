@@ -301,7 +301,8 @@
                         alt="Observação clínica" fetchpriority="high">
                 </a>
                 <button id="close-menu" class="text-2xl focus:outline-none" aria-label="Fechar menu">
-                    <img src="/favicon/x.svg" width="12" height="12" class="w-3 h-3" alt="" aria-hidden="true">
+                    <img src="/favicon/x.svg" width="12" height="12" class="w-3 h-3" alt="close-menu"
+                        aria-hidden="true">
                 </button>
             </div>
         </div>
@@ -400,7 +401,10 @@
                     Escrito por:
                     <a href="/equipe/beldo-celestino-saraiva/" aria-label="Beldo Celestino Saraiva">Beldo Celestino
                         Saraiva</a><br>
-                    Formado em: Técnico de Enfermagem Geral<br>
+                    Técnico de Enfermagem Geral<br>
+                    <div class="subinfo">
+                        Pesquisa e redação nas fontes: (NHS, FEBRASGO, ACOG)
+                    </div>
                 </div>
             </div>
 
@@ -1062,32 +1066,6 @@
             © 2026 Observação clínica - Todos os direitos reservados
         </div>
     </footer>
-    <script>
-        const commentsSection = document.getElementById("comentarios");
-
-        function loadComentariosScript() {
-            import("/js/comments.js").catch((err) => {
-                console.error("Falha ao carregar comentarios.js:", err);
-            });
-        }
-
-        if (commentsSection && "IntersectionObserver" in window) {
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        observer.disconnect();
-                        loadComentariosScript();
-                    }
-                });
-            }, { rootMargin: "400px" });
-
-            observer.observe(commentsSection);
-
-        } else if (commentsSection) {
-            loadComentariosScript();
-        }
-    </script>
     <script src="/src/avaliacao.js" defer></script>
     <script src="/js/push-subscribe.js" defer></script>
     <script src="/src/geral.js" defer></script>
