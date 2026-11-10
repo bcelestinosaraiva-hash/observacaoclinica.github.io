@@ -578,7 +578,7 @@ ul a {
 .autora-info,
 .meta,
 .subinfo {
-    line-height: 15px
+    line-height: 16px
 }
 
 .column b {
@@ -755,9 +755,12 @@ header img {
     font-size: 11px
 }
 
-.subinfo,
 .tag {
     font-size: 12px
+}
+
+.subinfo {
+    font-size: 10.6px
 }
 
 .autora-info a {
@@ -1490,8 +1493,7 @@ textarea {
     }
 
     .breadcrumbs,
-    .breadcrumbs ol li,
-    .subinfo {
+    .breadcrumbs ol li {
         font-size: 14px;
         line-height: 20px
     }
@@ -1761,5 +1763,39 @@ blockquote cite::before {
 
     .aviso-calculadora b {
         color: #6fd8e4;
+    }
+}
+
+
+.autora-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.btn-compartilhar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b8b6b6;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .btn-compartilhar {
+        width: 32px;
+        height: 32px;
+        transform: translateY(-12px);
+    }
+
+    .btn-compartilhar img {
+        width: 16px;
+        height: 16px;
     }
 }
