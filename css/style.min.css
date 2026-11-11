@@ -1799,3 +1799,33 @@ blockquote cite::before {
         height: 16px;
     }
 }
+
+.warning {
+    background: #eef2f2;
+    border: 1px solid #eef2f2;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 10px auto;
+    max-width: 100%;
+    border-left: 3px solid #4bbfe6;
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    color: #033036;
+}
+
+.warning b {
+    color: #131414;
+}
+
+@media (prefers-color-scheme: dark) {
+    .warning {
+        background: #0f2a2e;
+        border-color: #1d5760;
+        color: #cdeff3;
+    }
+
+    .warning b {
+        color: #6fd8e4;
+    }
+}
