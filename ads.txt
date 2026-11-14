@@ -1,1 +1,7 @@
 google.com, pub-3907823750994099, DIRECT, f08c47fec0942fa0
+
+<script type="text/javascript">
+var infolinks_pid = 3449582;
+var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
