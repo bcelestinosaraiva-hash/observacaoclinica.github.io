@@ -5,7 +5,43 @@
     <link>https://observacaoclinica.com/</link>
     <description>Informação médica confiável sobre saúde, doenças, nutrição e bem-estar.</description>
     <language>pt-PT</language>
-    <lastBuildDate>Thu, 05 Nov 2026 09:20:03 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 07:23:47 GMT</lastBuildDate>
+
+    <item>
+      <title>Como escovar os dentes corretamente: passo a passo completo</title>
+      <link>https://observacaoclinica.com/saude-bucal/como-escovar-os-dentes-corretamente/</link>
+      <description>Veja como escovar os dentes corretamente: passo a passo da técnica, tempo, frequência, creme dental com flúor, escova e quando procurar o dentista.</description>
+      <category>saude-bucal</category>
+      <pubDate>Sat, 14 Nov 2026 09:29:19 GMT</pubDate>
+      <guid>https://observacaoclinica.com/saude-bucal/como-escovar-os-dentes-corretamente/</guid>
+    </item>
+
+    <item>
+      <title>Sobre Nós</title>
+      <link>https://observacaoclinica.com/sobre/</link>
+      <description>A Observação Clínica é uma equipe dedicada à excelência em cuidados de saúde. Conheça nossa missão, visão, valores e equipe.</description>
+      <category>sobre</category>
+      <pubDate>Fri, 13 Nov 2026 16:41:57 GMT</pubDate>
+      <guid>https://observacaoclinica.com/sobre/</guid>
+    </item>
+
+    <item>
+      <title>Descubra como usar correctamente os alimentos</title>
+      <link>https://observacaoclinica.com/nutricao/</link>
+      <description>Descubra como usar corretamente os alimentos: dicas de nutrição, alimentação saudável e cuidados essenciais para toda a família. Confira agora!</description>
+      <category>Nutrição</category>
+      <pubDate>Wed, 11 Nov 2026 06:01:24 GMT</pubDate>
+      <guid>https://observacaoclinica.com/nutricao/</guid>
+    </item>
+
+    <item>
+      <title>Como dormir rápido: hábitos que ajudam a pegar no sono</title>
+      <link>https://observacaoclinica.com/sono/como-dormir-rapido/</link>
+      <description>Como dormir rápido? Veja rotina, quarto ideal, cuidados com telas e cafeína, relaxamento e o que fazer quando o sono não vem, com sinais de alerta.</description>
+      <category>sono</category>
+      <pubDate>Mon, 09 Nov 2026 04:22:10 GMT</pubDate>
+      <guid>https://observacaoclinica.com/sono/como-dormir-rapido/</guid>
+    </item>
 
     <item>
       <title>Equipe técnica e nosso editorial</title>
@@ -26,30 +62,12 @@
     </item>
 
     <item>
-      <title>Descubra como usar correctamente os alimentos</title>
-      <link>https://observacaoclinica.com/nutricao/</link>
-      <description>Descubra como usar corretamente os alimentos: dicas de nutrição, alimentação saudável e cuidados essenciais para toda a família. Confira agora!</description>
-      <category>Nutrição</category>
-      <pubDate>Mon, 02 Nov 2026 06:55:14 GMT</pubDate>
-      <guid>https://observacaoclinica.com/nutricao/</guid>
-    </item>
-
-    <item>
       <title>Termos de uso</title>
       <link>https://observacaoclinica.com/termos-e-usos/</link>
       <description>Leia os Termos de Uso da Observação Clínica e saiba como utilizamos o nosso site, protegemos as suas informações e garantimos a sua segurança online.</description>
       <category>termos-e-usos</category>
       <pubDate>Thu, 29 Oct 2026 07:24:13 GMT</pubDate>
       <guid>https://observacaoclinica.com/termos-e-usos/</guid>
-    </item>
-
-    <item>
-      <title>Sobre Nós</title>
-      <link>https://observacaoclinica.com/sobre/</link>
-      <description>A Observação Clínica é uma equipe dedicada à excelência em cuidados de saúde. Conheça nossa missão, visão, valores e equipe.</description>
-      <category>sobre</category>
-      <pubDate>Thu, 29 Oct 2026 07:23:50 GMT</pubDate>
-      <guid>https://observacaoclinica.com/sobre/</guid>
     </item>
 
     <item>
@@ -77,24 +95,6 @@
       <category>saude-da-mulher</category>
       <pubDate>Wed, 21 Oct 2026 10:23:27 GMT</pubDate>
       <guid>https://observacaoclinica.com/saude-da-mulher/menstruacao-com-coagulos-e-normal/</guid>
-    </item>
-
-    <item>
-      <title>Com quantas semanas começam as contrações de treinamento?</title>
-      <link>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</link>
-      <description>As contrações de treinamento costumam surgir entre a 16ª e a 32ª semana. Entenda como identificá-las e quando elas merecem atenção médica.</description>
-      <category>Gravidez</category>
-      <pubDate>Sun, 27 Sep 2026 11:07:16 GMT</pubDate>
-      <guid>https://observacaoclinica.com/gravidez/com-quantas-semanas-comecam-contracoes-de-treinamento/</guid>
-    </item>
-
-    <item>
-      <title>Vitamina D baixa: Sintomas, causas, como prevenir e tratar</title>
-      <link>https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/</link>
-      <description>Cansaço, dor no corpo e queda de cabelo podem ser vitamina D baixa. Veja sintomas, causas, valores do exame e como tratar com segurança.</description>
-      <category>Nutrição</category>
-      <pubDate>Thu, 17 Sep 2026 06:32:58 GMT</pubDate>
-      <guid>https://observacaoclinica.com/nutricao/vitamina-d-baixa-sintomas-causas/</guid>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://observacaoclinica.com/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/"/>
     <image:image>
@@ -97,7 +97,7 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/gravidez/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/"/>
     <image:image>
@@ -138,15 +138,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/gravida-pode-comer-atum/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/img/atum-na-gravidez-1200.webp</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/</loc>
-    <lastmod>2026-09-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/gravidez/na-gravidez-pode-tomar-paracetamol/"/>
-    <image:image>
-      <image:loc>https://observacaoclinica.com/img/paracetamol-na-gravidez-1200.webp</image:loc>
     </image:image>
   </url>
   <url>
@@ -349,7 +340,7 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/</loc>
-    <lastmod>2026-11-12</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/com-que-frequencia-ir-ao-dentista/"/>
     <image:image>
@@ -357,8 +348,17 @@
     </image:image>
   </url>
   <url>
+    <loc>https://observacaoclinica.com/saude-bucal/como-escovar-os-dentes-corretamente/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/como-escovar-os-dentes-corretamente/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/como-escovar-os-dentes-corretamente/"/>
+    <image:image>
+      <image:loc>https://observacaoclinica.com/img/como-escovar-corretamente-1200.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-bucal/o-que-e-carie-dentaria/"/>
     <image:image>
@@ -367,7 +367,7 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/saude-da-mulher/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/saude-da-mulher/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/saude-da-mulher/"/>
     <image:image>
@@ -448,13 +448,13 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/sobre/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sobre/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sobre/"/>
   </url>
   <url>
     <loc>https://observacaoclinica.com/sono/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sono/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/"/>
     <image:image>
