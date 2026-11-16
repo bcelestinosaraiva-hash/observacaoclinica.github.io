@@ -57,11 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let estavaAberto = !e.classList.contains("hidden");
 
-        // fecha os dois submenus antes de decidir o que fazer
         fecharSubmenu(d, c, r);
         fecharSubmenu(m, h, l);
 
-        // se este já estava aberto, só fecha (clique = toggle); senão, abre
         if (!estavaAberto) {
             e.classList.remove("hidden");
             requestAnimationFrame(() => { e.classList.remove("opacity-0", "-translate-y-1"); e.classList.add("opacity-100", "translate-y-0") });
@@ -124,12 +122,10 @@ window.shareNative = shareNative;
 
     function aplicarConsentimento(valor) {
         if (valor === 'aceito') {
-            // Carregue aqui o que depende de consentimento (Analytics, anúncios personalizados, Pixel)
             window.dispatchEvent(new Event('cookies-aceitos'));
         }
     }
 
-    // Só adiciona o CSS se a página ainda não o carregar
     function garantirCSS() {
         if (document.querySelector('link[href*="/css/style.min.css"]')) return;
         var link = document.createElement('link');
@@ -152,17 +148,14 @@ window.shareNative = shareNative;
             '<p>Usamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. ' +
             'Você pode aceitar ou recusar os cookies não essenciais. ' +
             'Ao clicar em <b>Aceitar</b>, você concorda com nossa ' +
-            '<a href="/politicas-e-privacidades/">política de privacidade</a>.</p>' +
+            '<a href="/politicas-e-privacidades/">políticas de privacidades</a></p>' +
             '<div class="cookie-buttons">' +
             '<button id="acceptCookies" class="btn-primary">Aceitar</button>' +
             '<button id="rejectCookies" class="btn-secondary">Recusar</button>' +
             '</div>' +
             '</div>';
         document.body.appendChild(banner);
-
-        // É esta classe que torna o banner visível no seu CSS
         banner.classList.add('show');
-
         function fechar(valor) {
             gravarConsentimento(valor);
             aplicarConsentimento(valor);
@@ -187,7 +180,6 @@ window.shareNative = shareNative;
         iniciar();
     }
 })();
-
 
 document.getElementById('btnCompartilhar').addEventListener('click', async () => {
     const dados = { title: document.title, url: location.href };

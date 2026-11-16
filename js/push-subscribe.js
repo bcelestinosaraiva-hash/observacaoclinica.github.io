@@ -13,7 +13,7 @@ function showSubscribePrompt(onAccept) {
   bar.id = "push-prompt";
   bar.innerHTML = `
     <div class="push-icon">
-      <img src="/favicon/logo.png" alt="Observação Clínica" />
+      <img src="/favicon/logo.png" alt="Observação Clínica">
     </div>
     <div class="push-content">
       <p>Gostaria de receber notificações sobre os últimos conteúdos e atualizações</p>
@@ -62,7 +62,7 @@ async function initPush() {
         console.error("Falha ao subscrever notificações push:", err);
       }
     });
-  }, 6000); // espera 6 segundos antes de mostrar a barra
+  }, 10000);
 }
 
 initPush();
