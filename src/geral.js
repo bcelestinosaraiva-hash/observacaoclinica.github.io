@@ -148,7 +148,7 @@ window.shareNative = shareNative;
             '<p>Usamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. ' +
             'Você pode aceitar ou recusar os cookies não essenciais. ' +
             'Ao clicar em <b>Aceitar</b>, você concorda com nossa ' +
-            '<a href="/politicas-e-privacidades/">políticas de privacidades</a></p>' +
+            '<a href="/politicas-de-privacidade/">políticas de privacidade</a></p>' +
             '<div class="cookie-buttons">' +
             '<button id="acceptCookies" class="btn-primary">Aceitar</button>' +
             '<button id="rejectCookies" class="btn-secondary">Recusar</button>' +
