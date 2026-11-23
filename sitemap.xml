@@ -73,7 +73,7 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/equipe/</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/equipe/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/equipe/"/>
   </url>
@@ -160,7 +160,7 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/nutricao/</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/nutricao/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/nutricao/"/>
   </url>
@@ -238,15 +238,15 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/politica-de-cookies/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/politica-de-cookies/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/politica-de-cookies/"/>
   </url>
   <url>
     <loc>https://observacaoclinica.com/politicas-de-privacidade/</loc>
     <lastmod>2026-11-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/politicas-e-privacidades/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/politicas-e-privacidades/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/politicas-de-privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/politicas-de-privacidade/"/>
   </url>
   <url>
     <loc>https://observacaoclinica.com/saude-az/</loc>
@@ -448,13 +448,13 @@
   </url>
   <url>
     <loc>https://observacaoclinica.com/sobre/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sobre/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sobre/"/>
   </url>
   <url>
     <loc>https://observacaoclinica.com/sono/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/sono/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/sono/"/>
     <image:image>
@@ -482,8 +482,8 @@
   <url>
     <loc>https://observacaoclinica.com/termos-de-uso/</loc>
     <lastmod>2026-11-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/termos-e-usos/"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/termos-e-usos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://observacaoclinica.com/termos-de-uso/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://observacaoclinica.com/termos-de-uso/"/>
     <image:image>
       <image:loc>https://observacaoclinica.com/favicon/observacao.svg</image:loc>
     </image:image>
