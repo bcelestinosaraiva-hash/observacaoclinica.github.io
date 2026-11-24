@@ -36,6 +36,7 @@ const pages = [
   { title: "Convulsão e mioclonia: Qual a diferença?", url: "/saude-az/convulsao-e-mioclonia-qual-a-diferenca/" },
   { title: "Colesterol HDL: É bom ou ruim? Entenda os valores ideais", url: "/saude-az/colesterol-hdl-bom-ou-ruim/" },
   { title: "Glossário clínico", url: "/saude-az/glossario-clinico/" },
+  { title: "Como tratar a água em casa para prevenir a cólera", url: "/saude-az/como-tratar-agua-em-casa-prevenir-colera/" },
   { title: "Como escovar os dentes corretamente: passo a passo completo", url: "/saude-bucal/como-escovar-os-dentes-corretamente/" },
   { title: "Como dormir rápido: hábitos que ajudam a pegar no sono", url: "/sono/como-dormir-rapido/" },
   { title: "Ferro na gravidez: quando suplementar e como escolher", url: "/gravidez/ferro-na-gravidez/" },
@@ -127,6 +128,7 @@ const PHRASES_EN = {
   "vaginal discharge": "corrimento",
   "sleep habits": "habitos para dormir",
   "mental health": "saude mental",
+  "Chorela": "Cólera",
 };
 
 // =====================
