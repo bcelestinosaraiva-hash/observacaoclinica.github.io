@@ -144,10 +144,10 @@ window.shareNative = shareNative;
         banner.setAttribute('aria-label', 'Aviso de cookies');
         banner.innerHTML =
             '<div class="cookie-content">' +
-            '<h3>🍪 Usamos Cookies</h3>' +
+            '<h3>Usamos Cookies</h3>' +
             '<p>Usamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. ' +
             'Você pode aceitar ou recusar os cookies não essenciais. ' +
-            'Ao clicar em <b>Aceitar</b>, você concorda com nossa ' +
+            'Ao clicar em <b>Aceitar</b>, você concorda com nossas ' +
             '<a href="/politicas-de-privacidade/">políticas de privacidade</a></p>' +
             '<div class="cookie-buttons">' +
             '<button id="acceptCookies" class="btn-primary">Aceitar</button>' +
